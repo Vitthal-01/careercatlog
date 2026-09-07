@@ -1,0 +1,4 @@
+document.querySelectorAll('a[href^="#"]').forEach((link)=>link.addEventListener('click',(event)=>{const target=document.querySelector(link.getAttribute('href'));if(target){event.preventDefault();target.scrollIntoView({behavior:'smooth'});}}));
+const observer=new IntersectionObserver((entries)=>entries.forEach(({isIntersecting,target})=>{if(isIntersecting){target.classList.add('visible');observer.unobserve(target)}}),{threshold:.12});
+document.querySelectorAll('.service,.articles article,.process li').forEach((el,i)=>{el.style.transition=`opacity .65s ${i*70}ms ease, transform .65s ${i*70}ms ease`;el.style.opacity='0';el.style.transform='translateY(16px)';el.classList.add('reveal');observer.observe(el)});
+document.head.insertAdjacentHTML('beforeend','<style>.reveal.visible{opacity:1!important;transform:translateY(0)!important}</style>');
