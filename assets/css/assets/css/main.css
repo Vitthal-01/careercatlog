@@ -1,1 +1,475 @@
+/* ===========================================
+   MILESTONE CAREERS
+   MAIN STYLESHEET
+=========================================== */
 
+:root{
+
+    --primary:#0F172A;
+    --secondary:#2563EB;
+    --accent:#3B82F6;
+
+    --white:#ffffff;
+    --light:#F8FAFC;
+    --border:#E2E8F0;
+    --text:#475569;
+
+    --shadow:0 15px 40px rgba(15,23,42,.08);
+
+    --radius:16px;
+
+    --transition:.35s ease;
+
+    --container:1280px;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Manrope',sans-serif;
+    background:var(--white);
+    color:var(--primary);
+    overflow-x:hidden;
+
+}
+
+img{
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+
+    width:min(92%,var(--container));
+    margin:auto;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    transition:.4s;
+
+}
+
+.header.scrolled{
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(226,232,240,.9);
+
+    box-shadow:var(--shadow);
+
+}
+
+.header .container{
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.logo-icon{
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#2563EB,#60A5FA);
+
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:20px;
+
+}
+
+.logo-text h2{
+
+    font-size:22px;
+    font-weight:800;
+    line-height:1;
+
+}
+
+.logo-text span{
+
+    font-size:14px;
+
+    color:var(--text);
+
+}
+
+/* ===========================
+NAVIGATION
+=========================== */
+
+.nav-links{
+
+    display:flex;
+
+    gap:38px;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    transition:var(--transition);
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--secondary);
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover,
+.nav-links .active{
+
+    color:var(--secondary);
+
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+BUTTONS
+=========================== */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.login-btn{
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.primary-btn{
+
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+
+    color:#fff;
+
+    padding:14px 24px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.35);
+
+}
+
+.secondary-btn{
+
+    border:2px solid var(--border);
+
+    padding:14px 24px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ===========================
+MENU BUTTON
+=========================== */
+
+.menu-btn{
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-size:24px;
+
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+    padding-top:170px;
+
+    padding-bottom:120px;
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+
+}
+
+.hero h1{
+
+    font-size:68px;
+
+    line-height:1.08;
+
+    margin-bottom:28px;
+
+    font-weight:800;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    max-width:700px;
+
+}
+
+.hero-buttons{
+
+    margin-top:45px;
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:991px){
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    .navbar{
+
+        position:absolute;
+
+        top:90px;
+
+        left:0;
+
+        width:100%;
+
+        background:#fff;
+
+        display:none;
+
+        border-top:1px solid var(--border);
+
+        box-shadow:var(--shadow);
+
+    }
+
+    .navbar.active{
+
+        display:block;
+
+    }
+
+    .nav-links{
+
+        flex-direction:column;
+
+        padding:30px;
+
+        gap:24px;
+
+    }
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        margin:auto;
+
+    }
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+
+        font-size:36px;
+
+    }
+
+    .hero p{
+
+        font-size:17px;
+
+    }
+
+    .header-actions .login-btn{
+
+        display:none;
+
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        width:100%;
+
+    }
+
+}
