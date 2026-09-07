@@ -1,6 +1,6 @@
 /* ==========================================
    MILESTONE CAREERS
-   Premium UI v1
+   Premium Landing Page
 ========================================== */
 
 *{
@@ -11,17 +11,17 @@
 
 :root{
 
-    --bg:#050505;
+    --background:#050505;
 
-    --surface:rgba(255,255,255,.04);
+    --surface:rgba(255,255,255,.05);
 
     --border:rgba(255,255,255,.08);
 
     --text:#ffffff;
 
-    --muted:#b8b8b8;
+    --muted:#9f9f9f;
 
-    --accent:#ffffff;
+    --primary:#ffffff;
 
 }
 
@@ -33,17 +33,20 @@ html{
 
 body{
 
-    background:var(--bg);
+    background:var(--background);
 
     color:var(--text);
 
-    font-family:Inter,Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
+
+    overflow-x:hidden;
 
 }
 
-/*============================
- NAVIGATION
-=============================*/
+
+/* ==============================
+        HEADER
+============================== */
 
 header{
 
@@ -59,7 +62,7 @@ header{
 
     justify-content:center;
 
-    z-index:1000;
+    z-index:999;
 
 }
 
@@ -69,7 +72,7 @@ header{
 
     max-width:1400px;
 
-    height:74px;
+    height:78px;
 
     display:flex;
 
@@ -79,28 +82,31 @@ header{
 
     padding:0 35px;
 
-    border-radius:22px;
+    background:rgba(15,15,15,.75);
 
-    background:rgba(20,20,20,.72);
+    border:1px solid var(--border);
 
-    backdrop-filter:blur(20px);
+    border-radius:24px;
 
-    -webkit-backdrop-filter:blur(20px);
+    backdrop-filter:blur(18px);
 
-    border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-    0 15px 45px rgba(0,0,0,.35);
+    box-shadow:0 15px 50px rgba(0,0,0,.35);
 
 }
 
 .logo{
 
-    font-size:24px;
+    font-size:28px;
 
     font-weight:700;
 
-    letter-spacing:-.5px;
+    letter-spacing:-1px;
+
+}
+
+.logo span{
+
+    color:#7aa8ff;
 
 }
 
@@ -108,7 +114,7 @@ header{
 
     display:flex;
 
-    gap:40px;
+    gap:42px;
 
     list-style:none;
 
@@ -116,15 +122,15 @@ header{
 
 .nav-links a{
 
-    color:#d8d8d8;
+    color:#d6d6d6;
 
     text-decoration:none;
-
-    font-size:15px;
 
     transition:.35s;
 
     position:relative;
+
+    font-size:15px;
 
 }
 
@@ -134,9 +140,9 @@ header{
 
     position:absolute;
 
-    bottom:-8px;
-
     left:50%;
+
+    bottom:-8px;
 
     width:0;
 
@@ -144,9 +150,9 @@ header{
 
     background:white;
 
-    transition:.35s;
-
     transform:translateX(-50%);
+
+    transition:.35s;
 
 }
 
@@ -162,17 +168,17 @@ header{
 
 }
 
-.btn{
+.nav-button{
 
-    padding:14px 24px;
-
-    background:white;
+    text-decoration:none;
 
     color:black;
 
-    border-radius:999px;
+    background:white;
 
-    text-decoration:none;
+    padding:15px 26px;
+
+    border-radius:999px;
 
     font-weight:600;
 
@@ -180,10 +186,219 @@ header{
 
 }
 
-.btn:hover{
+.nav-button:hover{
 
     transform:translateY(-2px);
 
-    box-shadow:0 10px 25px rgba(255,255,255,.15);
+    box-shadow:0 10px 30px rgba(255,255,255,.18);
+
+}
+
+
+/* ==============================
+          HERO
+============================== */
+
+main{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:140px 20px 80px;
+
+}
+
+.hero{
+
+    width:100%;
+
+    max-width:1000px;
+
+    text-align:center;
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    padding:12px 20px;
+
+    border-radius:999px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    color:#d5d5d5;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:40px;
+
+}
+
+.hero h1{
+
+    font-size:82px;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    margin-bottom:35px;
+
+}
+
+.hero p{
+
+    width:100%;
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+.hero-buttons{
+
+    margin-top:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.primary-btn{
+
+    text-decoration:none;
+
+    background:white;
+
+    color:black;
+
+    padding:18px 34px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 35px rgba(255,255,255,.18);
+
+}
+
+.secondary-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:18px 34px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
+}
+
+.secondary-btn:hover{
+
+    background:rgba(255,255,255,.05);
+
+}
+
+
+/* ==============================
+      RESPONSIVE
+============================== */
+
+@media(max-width:992px){
+
+.hero h1{
+
+    font-size:58px;
+
+}
+
+.nav-links{
+
+    display:none;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:100%;
+
+    max-width:320px;
+
+    text-align:center;
+
+}
+
+.navbar{
+
+    padding:0 20px;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
 
 }
