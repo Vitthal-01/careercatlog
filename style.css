@@ -1,1 +1,189 @@
+/* ==========================================
+   MILESTONE CAREERS
+   Premium UI v1
+========================================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --bg:#050505;
+
+    --surface:rgba(255,255,255,.04);
+
+    --border:rgba(255,255,255,.08);
+
+    --text:#ffffff;
+
+    --muted:#b8b8b8;
+
+    --accent:#ffffff;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:Inter,Arial,sans-serif;
+
+}
+
+/*============================
+ NAVIGATION
+=============================*/
+
+header{
+
+    position:fixed;
+
+    top:20px;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    z-index:1000;
+
+}
+
+.navbar{
+
+    width:92%;
+
+    max-width:1400px;
+
+    height:74px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 35px;
+
+    border-radius:22px;
+
+    background:rgba(20,20,20,.72);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 15px 45px rgba(0,0,0,.35);
+
+}
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    letter-spacing:-.5px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:#d8d8d8;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    left:50%;
+
+    width:0;
+
+    height:2px;
+
+    background:white;
+
+    transition:.35s;
+
+    transform:translateX(-50%);
+
+}
+
+.nav-links a:hover{
+
+    color:white;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.btn{
+
+    padding:14px 24px;
+
+    background:white;
+
+    color:black;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(255,255,255,.15);
+
+}
