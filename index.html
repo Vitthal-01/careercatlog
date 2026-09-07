@@ -3,839 +3,293 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Career Guidance for Engineering, MBA, CFA, FRM & CS Aspirants in India | Milestone Careers</title>
-<meta name="description" content="Expert career counselling for undergraduate students exploring Engineering, MBA (CAT/GMAT), and professional certifications like CFA, FRM & CS. Book a free 1:1 call with a certified career counsellor.">
-<meta name="keywords" content="career guidance India, career counselling, engineering career options, MBA career guidance, CFA career India, FRM certification guidance, CS course guidance, career counselling for undergraduates, best career counsellor India">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.milestonecareers.in/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Milestone Careers | Career Guidance for Engineering, MBA & Finance Certifications">
-<meta property="og:description" content="1:1 career counselling for undergrads choosing between Engineering, MBA, and professional certifications like CFA, FRM & CS. Book a free discovery call.">
-<meta property="og:url" content="https://www.milestonecareers.in/">
-<meta property="og:image" content="https://www.milestonecareers.in/assets/og-cover.jpg">
-<meta name="twitter:card" content="summary_large_image">
-
+<title>keysteps — Career Counselling for Students &amp; Early Professionals</title>
+<meta name="description" content="1:1 career counselling for college students and early professionals. Figure out your next move, with a plan — not a personality quiz.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Structured Data: Organization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Milestone Careers",
-  "url": "https://www.milestonecareers.in/",
-  "description": "Career guidance and counselling for undergraduate students exploring Engineering, MBA, and professional certifications like CFA, FRM and CS in India.",
-  "areaServed": "IN",
-  "sameAs": []
-}
-</script>
-
-<!-- Structured Data: Services offered -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Career Counselling",
-  "provider": { "@type": "Organization", "name": "Milestone Careers" },
-  "areaServed": "IN",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Career Guidance Packages",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engineering Career Guidance" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "MBA Career Guidance" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CFA / FRM / CS Certification Guidance" } }
-    ]
-  }
-}
-</script>
-
-<!-- Structured Data: FAQPage -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Who is Milestone Careers career guidance for?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Undergraduate students and final-year school students exploring Engineering, MBA, or professional certifications like CFA, FRM, and CS." }
-    },
-    {
-      "@type": "Question",
-      "name": "Is CFA or FRM better after engineering?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It depends on your interest — CFA suits students aiming for investment management and equity research, while FRM suits those aiming for risk management roles in banks. We help you decide based on a full assessment on a 1:1 call." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you help with CAT and MBA college selection?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, we guide students on whether an MBA fits their goals, which entrance exam to target (CAT, XAT, GMAT), and how to build a profile for top B-schools." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I book a call?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Click any 'Book a Call' button on the site to open the booking form and pick an available slot instantly." }
-    }
-  ]
-}
-</script>
-
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAF8F2;
-    --paper-dim:#F1EDE2;
-    --ink:#181D2A;
-    --ink-soft:#4A5163;
-    --navy:#12213D;
-    --teal:#2F6F5E;
-    --teal-deep:#1C4A3D;
-    --gold:#C9962F;
-    --gold-soft:#E8A93B;
-    --rose:#B24C4C;
-    --line: rgba(24,29,42,0.12);
-    --white:#fff;
-    --radius:12px;
+    --ink:#0B1220;
+    --panel:#121B2E;
+    --panel-line: rgba(237,239,245,0.10);
+    --text:#EDEFF5;
+    --text-soft:#98A2B8;
+    --text-faint:#65708A;
+    --brass:#E3A34E;
+    --brass-soft: rgba(227,163,78,0.14);
+    --indigo:#7C6FF0;
+    --radius-lg:18px;
+    --radius-sm:10px;
   }
+
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none !important; transition:none !important;}
+  }
+
   body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
+    background:var(--ink);
+    color:var(--text);
+    font-family:'Manrope', sans-serif;
     font-size:17px;
-    line-height:1.65;
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  h1,h2,h3,h4{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    line-height:1.14;
-    letter-spacing:-0.01em;
-    color:var(--navy);
+
+  h1,h2,h3{
+    font-family:'Newsreader', Georgia, serif;
+    font-weight:500;
+    line-height:1.08;
+    letter-spacing:-0.015em;
   }
-  a{color:inherit; text-decoration:none;}
-  img{max-width:100%; display:block;}
-  ul{list-style:none;}
-  .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
-  @media (max-width:640px){ .wrap{padding:0 20px;} }
-  .eyebrow{
-    text-transform:uppercase; letter-spacing:0.12em; font-size:12.5px;
-    font-weight:600; color:var(--gold); margin-bottom:14px; display:block;
+
+  a{ color:inherit; text-decoration:none; }
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--brass);
+    outline-offset:3px;
+    border-radius:4px;
   }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  @media (max-width:640px){ .wrap{ padding:0 22px; } }
 
   /* ===== NAV ===== */
   nav{
-    position:sticky; top:0; z-index:200;
-    background:rgba(250,248,242,0.88);
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,18,32,0.82);
     backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--panel-line);
   }
-  nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:80px; }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:78px;
+  }
   .logo{
-    font-family:'Fraunces', serif; font-weight:700; font-size:22px;
-    letter-spacing:-0.01em; display:flex; align-items:center; gap:9px; color:var(--navy);
+    display:flex; align-items:center; gap:10px;
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:19px;
+    letter-spacing:-0.01em;
+    color:var(--text);
   }
-  .logo-dot{ width:9px; height:9px; border-radius:50%; background:var(--gold); flex:none; }
-  .nav-links{ display:flex; align-items:center; gap:32px; font-size:15px; color:var(--ink-soft); }
-  .nav-links a:hover{ color:var(--navy); }
+  .logo svg{ flex:none; }
+
+  .nav-links{ display:flex; gap:38px; font-size:15px; color:var(--text-soft); }
+  .nav-links a{ transition:color .15s; position:relative; }
+  .nav-links a:hover{ color:var(--text); }
+  @media (max-width:860px){ .nav-links{ display:none; } }
+
   .nav-cta{
-    background:var(--navy); color:#fff; padding:11px 22px; border-radius:6px;
-    font-size:14.5px; font-weight:600; transition:background .2s, transform .2s;
+    background:var(--brass);
+    color:#1A1204;
+    padding:11px 22px;
+    border-radius:8px;
+    font-size:14.5px;
+    font-weight:700;
+    transition:background .15s, transform .15s;
   }
-  .nav-cta:hover{ background:var(--teal-deep); transform:translateY(-1px); }
-  .hamburger{ display:none; flex-direction:column; gap:5px; cursor:pointer; }
-  .hamburger span{ width:24px; height:2px; background:var(--navy); }
-  @media (max-width:860px){
-    .nav-links{ display:none; }
-    .hamburger{ display:flex; }
-  }
-  .mobile-menu{
-    display:none; flex-direction:column; gap:0; background:var(--paper);
-    border-bottom:1px solid var(--line);
-  }
-  .mobile-menu.open{ display:flex; }
-  .mobile-menu a{ padding:16px 20px; border-bottom:1px solid var(--line); font-size:15.5px; color:var(--ink-soft); }
-  .mobile-menu .nav-cta{ margin:16px 20px; text-align:center; }
+  .nav-cta:hover{ background:#EFB868; }
 
   /* ===== HERO ===== */
-  header.hero{ padding:100px 0 84px; border-bottom:1px solid var(--line); position:relative; overflow:hidden; }
-  header.hero::before{
-    content:''; position:absolute; top:-120px; right:-120px; width:420px; height:420px;
-    background:radial-gradient(circle, rgba(201,150,47,0.14), transparent 70%);
+  header.hero{
+    position:relative;
+    padding:100px 0 110px;
+    overflow:hidden;
   }
-  .hero-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:center; position:relative; }
-  @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; gap:44px; } }
-  h1.headline{ font-size:clamp(36px, 5vw, 58px); max-width:15ch; margin-bottom:22px; }
-  h1.headline em{ font-style:italic; color:var(--teal); }
-  .hero-sub{ color:var(--ink-soft); font-size:18.5px; max-width:50ch; margin-bottom:32px; }
-  .hero-actions{ display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin-bottom:36px; }
+  .hero-glow{
+    position:absolute;
+    top:-180px; right:-120px;
+    width:640px; height:640px;
+    background:radial-gradient(circle, rgba(227,163,78,0.20) 0%, rgba(227,163,78,0.06) 45%, transparent 72%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .hero-grid{
+    position:relative; z-index:1;
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:72px;
+    align-items:center;
+  }
+  @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; gap:56px; } }
+
+  .hero-copy{ opacity:0; transform:translateY(14px); animation:rise .7s ease-out .1s forwards; }
+
+  h1.headline{
+    font-size:clamp(36px, 4.6vw, 54px);
+    max-width:13.5ch;
+    margin-bottom:22px;
+    color:var(--text);
+  }
+  .hero-sub{
+    color:var(--text-soft);
+    font-size:18px;
+    max-width:44ch;
+    margin-bottom:36px;
+  }
+  .hero-actions{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-bottom:26px; }
   .btn-primary{
-    background:var(--navy); color:#fff; padding:15px 28px; border-radius:7px;
-    font-size:15.5px; font-weight:600; display:inline-block; border:none; cursor:pointer;
-    transition:background .2s, transform .2s; box-shadow:0 8px 20px rgba(18,33,61,0.18);
+    background:var(--brass);
+    color:#1A1204;
+    padding:15px 28px;
+    border-radius:8px;
+    font-size:15.5px;
+    font-weight:700;
+    display:inline-block;
+    transition:background .15s, transform .15s;
   }
-  .btn-primary:hover{ background:var(--teal-deep); transform:translateY(-2px); }
+  .btn-primary:hover{ background:#EFB868; transform:translateY(-1px); }
   .btn-secondary{
-    color:var(--navy); font-size:15.5px; font-weight:500; border-bottom:1.5px solid var(--navy); padding-bottom:2px;
+    color:var(--text-soft);
+    font-size:15.5px;
+    font-weight:600;
+    border-bottom:1.5px solid var(--text-faint);
+    padding-bottom:3px;
+    transition:color .15s, border-color .15s;
   }
-  .hero-tags{ display:flex; gap:10px; flex-wrap:wrap; }
-  .tag{
-    font-size:13px; color:var(--ink-soft); border:1px solid var(--line); padding:6px 13px; border-radius:20px;
+  .btn-secondary:hover{ color:var(--text); border-color:var(--text-soft); }
+
+  .hero-proof{ font-size:14.5px; color:var(--text-faint); }
+  .hero-proof strong{ color:var(--text-soft); font-weight:600; }
+
+  /* ===== HERO VISUAL: journey card ===== */
+  .journey-card{
+    position:relative; z-index:1;
+    background:var(--panel);
+    border:1px solid var(--panel-line);
+    border-radius:var(--radius-lg);
+    padding:32px 30px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+    opacity:0; transform:translateY(20px);
+    animation:rise .8s ease-out .3s forwards;
   }
-
-  .hero-card{
-    background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:32px 28px;
-    box-shadow:0 20px 50px rgba(18,33,61,0.08);
+  .journey-head{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:26px;
   }
-  .hero-card .hc-title{ font-size:13px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.08em; margin-bottom:20px; }
-  .hc-track{ display:flex; gap:14px; align-items:flex-start; padding:14px 0; border-bottom:1px solid var(--line); }
-  .hc-track:last-child{ border-bottom:none; }
-  .hc-icon{
-    width:38px; height:38px; border-radius:9px; background:var(--paper-dim); display:flex; align-items:center;
-    justify-content:center; font-size:18px; flex:none;
-  }
-  .hc-track strong{ font-size:15px; display:block; margin-bottom:2px; color:var(--navy); }
-  .hc-track span{ font-size:13.5px; color:var(--ink-soft); }
-
-  /* ===== TRUST STRIP ===== */
-  .trust-strip{ padding:32px 0; border-bottom:1px solid var(--line); background:var(--navy); }
-  .trust-strip .wrap{ display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; font-size:14.5px; color:rgba(255,255,255,0.75); }
-  .trust-strip strong{ color:#fff; font-family:'Fraunces', serif; font-size:24px; font-weight:600; display:block; margin-bottom:2px; }
-
-  /* ===== SECTIONS ===== */
-  section{ padding:92px 0; }
-  section.alt{ background:var(--paper-dim); }
-  .section-head{ max-width:600px; margin-bottom:52px; }
-  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
-  .section-head h2{ font-size:clamp(28px,3.4vw,40px); margin-bottom:14px; }
-  .section-head p{ color:var(--ink-soft); font-size:17px; }
-
-  /* ===== CAREER TRACK TABS ===== */
-  .track-tabs{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px; border-bottom:1px solid var(--line); padding-bottom:0; }
-  .track-tab{
-    padding:14px 22px; font-size:15px; font-weight:600; color:var(--ink-soft); cursor:pointer;
-    border-bottom:2.5px solid transparent; transition:color .2s, border-color .2s;
-  }
-  .track-tab.active{ color:var(--navy); border-color:var(--gold); }
-  .track-panel{ display:none; }
-  .track-panel.active{ display:block; animation:fadeIn .35s ease; }
-  @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
-
-  .track-body{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:start; }
-  @media (max-width:900px){ .track-body{ grid-template-columns:1fr; } }
-  .track-body h3{ font-size:24px; margin-bottom:12px; }
-  .track-body p.lead{ color:var(--ink-soft); font-size:16.5px; margin-bottom:24px; }
-  .track-list{ display:flex; flex-direction:column; gap:16px; margin-bottom:28px; }
-  .track-list li{ display:flex; gap:12px; font-size:15.5px; color:var(--ink-soft); }
-  .track-list li::before{ content:'—'; color:var(--gold); font-weight:700; flex:none; }
-
-  .roadmap{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:30px 26px; }
-  .roadmap .rm-title{ font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); margin-bottom:20px; }
-  .rm-step{ display:flex; gap:14px; position:relative; padding-bottom:22px; }
-  .rm-step:last-child{ padding-bottom:0; }
-  .rm-step::before{ content:''; position:absolute; left:6px; top:20px; bottom:-2px; width:1.5px; background:var(--line); }
-  .rm-step:last-child::before{ display:none; }
-  .rm-dot{ width:13px; height:13px; border-radius:50%; background:var(--paper); border:2px solid var(--teal); flex:none; margin-top:3px; position:relative; z-index:1; }
-  .rm-step strong{ font-size:14.5px; display:block; color:var(--navy); }
-  .rm-step span{ font-size:13px; color:var(--ink-soft); }
-  .track-cta{ margin-top:26px; }
-  .locked-note{
-    font-size:13.5px; color:var(--ink-soft); background:var(--paper-dim); border-radius:8px; padding:12px 16px; margin-top:18px;
+  .journey-title{ font-size:13.5px; color:var(--text-soft); font-weight:600; }
+  .journey-tag{
+    font-size:12px; color:var(--brass);
+    background:var(--brass-soft);
+    padding:4px 10px; border-radius:20px;
+    font-weight:700;
   }
 
-  /* ===== HOW IT WORKS ===== */
-  .steps{ display:grid; grid-template-columns:repeat(5,1fr); gap:0; border-top:1px solid var(--line); }
-  @media (max-width:900px){ .steps{ grid-template-columns:1fr; } }
-  .step{ padding:28px 24px 28px 0; border-right:1px solid var(--line); }
-  .step:last-child{ border-right:none; }
-  @media (max-width:900px){ .step{ border-right:none; border-bottom:1px solid var(--line); padding:24px 0; } .step:last-child{border-bottom:none;} }
-  .step-num{ font-family:'Fraunces', serif; color:var(--teal); font-size:15px; margin-bottom:14px; }
-  .step h3{ font-size:19px; margin-bottom:8px; }
-  .step p{ font-size:14.5px; color:var(--ink-soft); }
-
-  /* ===== PACKAGES ===== */
-  .packages{ display:grid; grid-template-columns:0.9fr 1.15fr 0.9fr; gap:24px; align-items:stretch; }
-  @media (max-width:900px){ .packages{ grid-template-columns:1fr; } }
-  .pkg{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:36px 30px; display:flex; flex-direction:column; }
-  .pkg.featured{ border-color:var(--gold); border-width:1.5px; box-shadow:0 16px 40px rgba(201,150,47,0.14); position:relative; }
-  .pkg.featured::before{
-    content:'Most chosen'; position:absolute; top:-13px; left:30px; background:var(--gold); color:#fff;
-    font-size:12px; font-weight:700; padding:4px 12px; border-radius:20px;
+  .j-item{ display:flex; gap:15px; position:relative; padding-bottom:24px; }
+  .j-item:last-child{ padding-bottom:0; }
+  .j-item::before{
+    content:'';
+    position:absolute;
+    left:11px; top:26px; bottom:-2px;
+    width:1.5px;
+    background:var(--panel-line);
   }
-  .pkg-name{ font-family:'Fraunces', serif; font-size:20px; font-weight:600; margin-bottom:6px; color:var(--navy); }
-  .pkg-for{ font-size:14px; color:var(--ink-soft); margin-bottom:18px; }
-  .pkg-price{ font-family:'Fraunces', serif; font-size:32px; font-weight:600; margin-bottom:18px; color:var(--navy); }
-  .pkg-price span{ font-size:14px; font-weight:400; color:var(--ink-soft); }
-  .pkg hr{ border:none; border-top:1px solid var(--line); margin-bottom:18px; }
-  .pkg ul{ display:flex; flex-direction:column; gap:11px; margin-bottom:28px; flex:1; }
-  .pkg ul li{ font-size:14.5px; color:var(--ink-soft); padding-left:20px; position:relative; }
-  .pkg ul li::before{ content:'✓'; position:absolute; left:0; color:var(--teal); font-weight:700; }
-  .pkg-cta{
-    text-align:center; padding:13px; border-radius:7px; font-weight:600; font-size:14.5px;
-    background:var(--paper-dim); color:var(--navy); transition:background .2s;
+  .j-item:last-child::before{ display:none; }
+  .j-node{
+    width:23px; height:23px; border-radius:50%;
+    flex:none; margin-top:1px;
+    display:flex; align-items:center; justify-content:center;
+    position:relative; z-index:1;
+    background:var(--panel);
+    border:1.5px solid var(--text-faint);
   }
-  .pkg.featured .pkg-cta{ background:var(--navy); color:#fff; }
-  .pkg-cta:hover{ background:var(--teal-deep); color:#fff; }
+  .j-item.done .j-node{ border-color:var(--indigo); background:rgba(124,111,240,0.16); }
+  .j-item.done .j-node::after{ content:''; width:7px; height:7px; border-radius:50%; background:var(--indigo); }
+  .j-item.current .j-node{ border-color:var(--brass); background:var(--brass-soft); box-shadow:0 0 0 4px rgba(227,163,78,0.10); }
+  .j-item.current .j-node::after{ content:''; width:7px; height:7px; border-radius:50%; background:var(--brass); }
+  .j-item.upcoming .j-node::after{ content:''; width:6px; height:6px; border-radius:50%; background:var(--text-faint); }
 
-  /* ===== ABOUT ===== */
-  .about-grid{ display:grid; grid-template-columns:0.7fr 1.3fr; gap:56px; align-items:center; }
-  @media (max-width:860px){ .about-grid{ grid-template-columns:1fr; } }
-  .about-photo{
-    aspect-ratio:1; background:var(--paper-dim); border-radius:var(--radius); display:flex; align-items:center;
-    justify-content:center; color:var(--ink-soft); font-size:14px; border:1px solid var(--line);
+  .j-label{ font-size:15px; font-weight:600; color:var(--text); }
+  .j-sub{ font-size:13.5px; color:var(--text-faint); margin-top:2px; }
+  .j-item.current .j-label{ color:var(--brass); }
+
+  @keyframes rise{
+    to{ opacity:1; transform:translateY(0); }
   }
-  .about-copy p{ color:var(--ink-soft); font-size:16.5px; margin-bottom:16px; }
-  .credentials{ display:flex; gap:30px; flex-wrap:wrap; margin-top:22px; }
-  .credential strong{ display:block; font-family:'Fraunces', serif; font-size:19px; color:var(--navy); }
-  .credential{ font-size:13.5px; color:var(--ink-soft); }
-
-  /* ===== TESTIMONIALS ===== */
-  .testimonials{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-  @media (max-width:900px){ .testimonials{ grid-template-columns:1fr; } }
-  .testimonial{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px 26px; }
-  .testimonial p{ font-size:15.5px; color:var(--ink); margin-bottom:18px; }
-  .t-who{ font-size:13.5px; color:var(--ink-soft); }
-  .t-who strong{ color:var(--navy); }
-
-  /* ===== FAQ ===== */
-  .faq-list{ max-width:760px; }
-  .faq-item{ border-bottom:1px solid var(--line); }
-  .faq-q{ padding:22px 0; font-size:16.5px; font-weight:600; color:var(--navy); display:flex; justify-content:space-between; cursor:pointer; }
-  .plus{ color:var(--gold); font-weight:700; }
-  .faq-a{ max-height:0; overflow:hidden; transition:max-height .25s ease; }
-  .faq-item.open .faq-a{ max-height:240px; }
-  .faq-a p{ padding-bottom:22px; color:var(--ink-soft); font-size:15.5px; max-width:65ch; }
-
-  /* ===== BLOG ===== */
-  .blog-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-  @media (max-width:900px){ .blog-grid{ grid-template-columns:1fr; } }
-  .blog-card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px; transition:transform .2s, box-shadow .2s; }
-  .blog-card:hover{ transform:translateY(-3px); box-shadow:0 14px 30px rgba(18,33,61,0.08); }
-  .blog-card h3{ font-size:18.5px; margin-bottom:10px; }
-  .blog-card p{ font-size:14.5px; color:var(--ink-soft); margin-bottom:16px; }
-  .blog-card a{ font-size:14px; font-weight:600; color:var(--teal); }
-
-  /* ===== CTA BAND ===== */
-  .cta-band{ background:var(--navy); text-align:center; padding:96px 0; }
-  .cta-band h2{ color:#fff; font-size:clamp(28px,3.6vw,42px); margin-bottom:16px; }
-  .cta-band p{ color:rgba(255,255,255,0.72); font-size:17px; max-width:52ch; margin:0 auto 32px; }
-  .cta-band .btn-primary{ background:var(--gold); color:var(--navy); }
-  .cta-band .btn-primary:hover{ background:var(--gold-soft); }
-
-  /* ===== FOOTER ===== */
-  footer{ padding:56px 0 30px; }
-  .footer-grid{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; padding-bottom:30px; border-bottom:1px solid var(--line); margin-bottom:22px; }
-  .footer-links{ display:flex; gap:26px; flex-wrap:wrap; font-size:14.5px; color:var(--ink-soft); }
-  .foot-note{ font-size:13px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
-
-  /* ===== STICKY MOBILE CTA ===== */
-  .sticky-cta{
-    display:none; position:fixed; bottom:0; left:0; right:0; z-index:150;
-    background:#fff; border-top:1px solid var(--line); padding:12px 20px; box-shadow:0 -6px 20px rgba(0,0,0,0.08);
-  }
-  .sticky-cta .btn-primary{ width:100%; text-align:center; }
-  @media (max-width:640px){ .sticky-cta{ display:block; } body{ padding-bottom:70px; } }
-
-  /* ===== MODAL ===== */
-  .modal-overlay{
-    display:none; position:fixed; inset:0; background:rgba(18,33,61,0.55); z-index:500;
-    align-items:center; justify-content:center; padding:20px; backdrop-filter:blur(3px);
-  }
-  .modal-overlay.open{ display:flex; }
-  .modal-box{
-    background:#fff; border-radius:16px; max-width:560px; width:100%; max-height:88vh; overflow-y:auto;
-    padding:0; position:relative; box-shadow:0 30px 80px rgba(0,0,0,0.3);
-  }
-  .modal-head{ padding:26px 28px 0; }
-  .modal-close{
-    position:absolute; top:18px; right:20px; font-size:22px; cursor:pointer; color:var(--ink-soft); line-height:1;
-    background:none; border:none;
-  }
-  .modal-head h3{ font-size:22px; margin-bottom:6px; }
-  .modal-head p{ color:var(--ink-soft); font-size:14.5px; margin-bottom:18px; }
-  .modal-tabs{ display:flex; gap:4px; padding:0 28px; border-bottom:1px solid var(--line); }
-  .modal-tab{ padding:12px 16px; font-size:14px; font-weight:600; color:var(--ink-soft); cursor:pointer; border-bottom:2.5px solid transparent; }
-  .modal-tab.active{ color:var(--navy); border-color:var(--gold); }
-  .modal-panel{ display:none; padding:24px 28px 28px; }
-  .modal-panel.active{ display:block; }
-
-  .form-row{ margin-bottom:16px; }
-  .form-row label{ display:block; font-size:13.5px; font-weight:600; color:var(--navy); margin-bottom:6px; }
-  .form-row input, .form-row select, .form-row textarea{
-    width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:7px; font-size:15px;
-    font-family:'Inter', sans-serif; background:var(--paper); color:var(--ink);
-  }
-  .form-row input:focus, .form-row select:focus, .form-row textarea:focus{ outline:2px solid var(--teal); outline-offset:1px; }
-  .form-two{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-  @media (max-width:480px){ .form-two{ grid-template-columns:1fr; } }
-  .form-submit{ width:100%; background:var(--navy); color:#fff; border:none; padding:14px; border-radius:7px; font-size:15.5px; font-weight:600; cursor:pointer; }
-  .form-submit:hover{ background:var(--teal-deep); }
-  .form-note{ font-size:12.5px; color:var(--ink-soft); margin-top:10px; text-align:center; }
-  .form-success{ display:none; text-align:center; padding:20px 0; }
-  .form-success.show{ display:block; }
-  .form-success .tick{ font-size:38px; color:var(--teal); margin-bottom:12px; }
-  .calendly-frame{ width:100%; height:520px; border:none; border-radius:8px; }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <a href="#" class="logo"><span class="logo-dot"></span>Milestone Careers</a>
-    <div class="nav-links">
-      <a href="#tracks">Career Tracks</a>
-      <a href="#how">How it works</a>
-      <a href="#packages">Packages</a>
-      <a href="#about">About</a>
-      <a href="#faq">FAQ</a>
-      <a href="#" class="nav-cta" onclick="openModal();return false;">Book a Call</a>
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <circle cx="8" cy="14" r="5.5" stroke="#E3A34E" stroke-width="1.6"/>
+        <path d="M12 10L19 3M19 3H14.5M19 3V7.5" stroke="#E3A34E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      keysteps
     </div>
-    <div class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#tracks" onclick="toggleMobileMenu()">Career Tracks</a>
-    <a href="#how" onclick="toggleMobileMenu()">How it works</a>
-    <a href="#packages" onclick="toggleMobileMenu()">Packages</a>
-    <a href="#about" onclick="toggleMobileMenu()">About</a>
-    <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
-    <a href="#" class="nav-cta" onclick="openModal();return false;">Book a Call</a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#programs">Programs</a>
+      <a href="#about">About</a>
+      <a href="#blog">Blog</a>
+    </div>
+    <a href="#book" class="nav-cta">Book a call</a>
   </div>
 </nav>
 
 <header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Career Guidance · Engineering · MBA · CFA / FRM / CS</span>
-      <h1 class="headline">Choosing between Engineering, MBA, or a <em>finance certification?</em></h1>
-      <p class="hero-sub">1:1 career counselling built for undergraduates at top-tier institutes — helping you decide between engineering specializations, an MBA, or professional certifications like CFA, FRM, and CS, with a clear plan and timeline.</p>
-      <div class="hero-actions">
-        <a href="#" class="btn-primary" onclick="openModal();return false;">Book your free call</a>
-        <a href="#tracks" class="btn-secondary">Explore career tracks</a>
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="headline">Career counselling for people who are done guessing.</h1>
+        <p class="hero-sub">For college students and early professionals deciding what's next — a structured path to a decision you can actually explain, not another quiz and a PDF.</p>
+        <div class="hero-actions">
+          <a href="#book" class="btn-primary">Book a free call</a>
+          <a href="#how" class="btn-secondary">See how it works</a>
+        </div>
+        <p class="hero-proof"><strong>500+</strong> students guided since 2018</p>
       </div>
-      <div class="hero-tags">
-        <span class="tag">IIT / NIT / BITS students</span>
-        <span class="tag">CAT · GMAT · CFA · FRM aspirants</span>
-        <span class="tag">1st–4th year undergrads</span>
-      </div>
-    </div>
-    <div class="hero-card">
-      <div class="hc-title">Three tracks we guide students through</div>
-      <div class="hc-track">
-        <div class="hc-icon">⚙️</div>
-        <div><strong>Engineering</strong><span>Specialization, higher studies, GATE/MS, placements</span></div>
-      </div>
-      <div class="hc-track">
-        <div class="hc-icon">📊</div>
-        <div><strong>MBA</strong><span>CAT/XAT/GMAT prep, B-school shortlist, profile building</span></div>
-      </div>
-      <div class="hc-track">
-        <div class="hc-icon">📈</div>
-        <div><strong>Certifications</strong><span>CFA, FRM, CS — which one fits your goal, and why</span></div>
+
+      <div class="journey-card">
+        <div class="journey-head">
+          <span class="journey-title">Your journey</span>
+          <span class="journey-tag">In progress</span>
+        </div>
+        <div class="j-item done">
+          <div class="j-node"></div>
+          <div>
+            <div class="j-label">Discovery call</div>
+            <div class="j-sub">Understand where you stand today</div>
+          </div>
+        </div>
+        <div class="j-item done">
+          <div class="j-node"></div>
+          <div>
+            <div class="j-label">Aptitude &amp; interest mapping</div>
+            <div class="j-sub">A structured picture, not a guess</div>
+          </div>
+        </div>
+        <div class="j-item current">
+          <div class="j-node"></div>
+          <div>
+            <div class="j-label">1:1 counselling sessions</div>
+            <div class="j-sub">Weekly, narrowing toward a shortlist</div>
+          </div>
+        </div>
+        <div class="j-item upcoming">
+          <div class="j-node"></div>
+          <div>
+            <div class="j-label">Decision &amp; next steps</div>
+            <div class="j-sub">A path, with a plan behind it</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </header>
-
-<div class="trust-strip">
-  <div class="wrap">
-    <div><strong>500+</strong>students counselled</div>
-    <div><strong>8 yrs</strong>in career guidance</div>
-    <div><strong>92%</strong>felt clearer after session one</div>
-    <div><strong>4.9/5</strong>average rating</div>
-  </div>
-</div>
-
-<!-- ============ CAREER TRACKS ============ -->
-<section id="tracks">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Career Tracks</span>
-      <h2>Three paths. One clear decision.</h2>
-      <p>Undergrads today aren't choosing between "a job" and "no job" — they're choosing between engineering depth, business breadth, or a specialized finance credential. Here's what each path actually involves.</p>
-    </div>
-
-    <div class="track-tabs">
-      <div class="track-tab active" data-tab="eng" onclick="switchTrack('eng')">Engineering</div>
-      <div class="track-tab" data-tab="mba" onclick="switchTrack('mba')">MBA</div>
-      <div class="track-tab" data-tab="cert" onclick="switchTrack('cert')">CFA / FRM / CS</div>
-    </div>
-
-    <!-- ENGINEERING -->
-    <div class="track-panel active" id="panel-eng">
-      <div class="track-body">
-        <div>
-          <h3>Engineering: choosing depth over breadth</h3>
-          <p class="lead">For students in Computer Science, ECE, Mechanical, Civil, and allied branches trying to decide: specialize further, take the placement route, or head into higher studies.</p>
-          <ul class="track-list">
-            <li>Which specialization (AI/ML, core branch, VLSI, etc.) actually matches your strengths — not just placement trends.</li>
-            <li>Whether GATE, an MS abroad, or a direct-placement route fits your timeline and finances.</li>
-            <li>How to build a portfolio, projects, and resume that top recruiters or admissions committees actually look for.</li>
-            <li>When an MBA or a certification like CFA/FRM makes more sense than a pure technical path.</li>
-          </ul>
-          <div class="track-cta">
-            <a href="#" class="btn-primary" onclick="openModal();return false;">Book a call to discuss your branch</a>
-          </div>
-          <div class="locked-note">🔒 Detailed branch-wise roadmaps, salary bands, and a personalised assessment are shared on your 1:1 call — book a free slot to get the full picture.</div>
-        </div>
-        <div class="roadmap">
-          <div class="rm-title">Typical decision timeline</div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>Year 1–2</strong><span>Explore branches, build fundamentals, try internships</span></div></div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>Year 2–3</strong><span>Pick a specialization lane; start GATE/MS/placement prep</span></div></div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>Year 3–4</strong><span>Internships, portfolio, applications or placement drives</span></div></div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>Post-grad</strong><span>Job, MS, or pivot into MBA / certification path</span></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MBA -->
-    <div class="track-panel" id="panel-mba">
-      <div class="track-body">
-        <div>
-          <h3>MBA: is it the right move, and when?</h3>
-          <p class="lead">For students weighing an MBA against work-ex, or wondering when to start CAT/XAT/GMAT prep — and which specialization actually opens the doors they want.</p>
-          <ul class="track-list">
-            <li>Whether to apply straight after undergrad or build 2–3 years of work experience first.</li>
-            <li>Choosing between CAT, XAT, GMAT and which B-school tier realistically fits your profile.</li>
-            <li>Picking a specialization — Finance, Consulting, Marketing, or Operations — based on genuine fit.</li>
-            <li>Building the profile (academics, work-ex, extracurriculars) admissions committees look for.</li>
-          </ul>
-          <div class="track-cta">
-            <a href="#" class="btn-primary" onclick="openModal();return false;">Book a call to plan your MBA path</a>
-          </div>
-          <div class="locked-note">🔒 A shortlist of B-schools matched to your profile and exam strategy is built during your session — book a free call to start.</div>
-        </div>
-        <div class="roadmap">
-          <div class="rm-title">Typical decision timeline</div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>Now</strong><span>Assess fit: MBA vs certification vs core-technical path</span></div></div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>+3–6 months</strong><span>Pick exam (CAT/XAT/GMAT), start structured prep</span></div></div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>+1–2 years</strong><span>Work-ex (if needed), applications, interviews</span></div></div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>MBA</strong><span>Specialization chosen, placement-ready profile</span></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CERTIFICATIONS -->
-    <div class="track-panel" id="panel-cert">
-      <div class="track-body">
-        <div>
-          <h3>CFA, FRM, or CS — which credential fits your goal?</h3>
-          <p class="lead">Professional certifications are increasingly chosen alongside or instead of an MBA — but each leads to a very different career. We help you pick the right one before you invest a year into it.</p>
-          <ul class="track-list">
-            <li><strong>CFA (Chartered Financial Analyst):</strong> for equity research, investment management, and portfolio analysis roles.</li>
-            <li><strong>FRM (Financial Risk Manager):</strong> for risk management, treasury, and regulatory roles at banks and NBFCs.</li>
-            <li><strong>CS (Company Secretary):</strong> for corporate governance, compliance, and legal-adjacent roles.</li>
-            <li>How each credential's exam levels, timelines, and costs compare — and which recruiters actually value most for your target role.</li>
-          </ul>
-          <div class="track-cta">
-            <a href="#" class="btn-primary" onclick="openModal();return false;">Book a call to compare CFA / FRM / CS</a>
-          </div>
-          <div class="locked-note">🔒 A side-by-side comparison mapped to your career goal is walked through live on your call — book a free slot.</div>
-        </div>
-        <div class="roadmap">
-          <div class="rm-title">How the certifications compare</div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>CFA</strong><span>3 levels, ~2–4 yrs, global recognition, investment-focused</span></div></div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>FRM</strong><span>2 parts, ~1–2 yrs, risk & regulatory focused</span></div></div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>CS</strong><span>3 stages + training, India-focused, compliance & legal</span></div></div>
-          <div class="rm-step"><div class="rm-dot"></div><div><strong>Not sure?</strong><span>We map your interests to the right one on your call</span></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="how">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Process</span>
-      <h2>How the guidance actually works</h2>
-      <p>No generic personality quiz and a PDF. Every step builds on the last.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><div class="step-num">01</div><h3>Discovery call</h3><p>A free, unhurried conversation to understand where you stand today — Engineering, MBA, or certifications.</p></div>
-      <div class="step"><div class="step-num">02</div><h3>Assessment</h3><p>Aptitude, interest, and goal-fit inputs, reviewed together — not handed over as a cold report.</p></div>
-      <div class="step"><div class="step-num">03</div><h3>1:1 sessions</h3><p>Weekly conversations that narrow broad interests into a realistic, motivating shortlist.</p></div>
-      <div class="step"><div class="step-num">04</div><h3>Profile building</h3><p>Resume, LinkedIn, or exam-prep plan built around the direction chosen.</p></div>
-      <div class="step"><div class="step-num">05</div><h3>Ongoing support</h3><p>Check-ins through applications, exams, or placement — until the decision sticks.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="packages">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Packages</span>
-      <h2>Start with a call, or commit to the full journey</h2>
-      <p>No pressure either way — every package starts with a free discovery call.</p>
-    </div>
-    <div class="packages">
-      <div class="pkg">
-        <div class="pkg-name">Single Session</div>
-        <div class="pkg-for">One focused answer — e.g. "CFA or FRM?"</div>
-        <div class="pkg-price">₹1,500<span> / session</span></div>
-        <hr>
-        <ul><li>60-minute 1:1 session</li><li>Written summary & next steps</li><li>Good for a specific decision</li></ul>
-        <a href="#" class="pkg-cta" onclick="openModal();return false;">Book this</a>
-      </div>
-      <div class="pkg featured">
-        <div class="pkg-name">Complete Guidance</div>
-        <div class="pkg-for">The full journey to a confident decision</div>
-        <div class="pkg-price">₹9,000<span> / package</span></div>
-        <hr>
-        <ul><li>Aptitude & interest assessment</li><li>6 x 1:1 sessions over 8 weeks</li><li>Resume, LinkedIn or exam-prep plan</li><li>WhatsApp support between sessions</li><li>Parent check-in call</li></ul>
-        <a href="#" class="pkg-cta" onclick="openModal();return false;">Book this</a>
-      </div>
-      <div class="pkg">
-        <div class="pkg-name">Assessment + Review</div>
-        <div class="pkg-for">A structured starting point</div>
-        <div class="pkg-price">₹3,500<span> / package</span></div>
-        <hr>
-        <ul><li>Aptitude & interest assessment</li><li>90-minute results session</li><li>Shortlist of 3–5 directions</li></ul>
-        <a href="#" class="pkg-cta" onclick="openModal();return false;">Book this</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="about">
-  <div class="wrap about-grid">
-    <div class="about-photo"><span>Your photo here</span></div>
-    <div class="about-copy">
-      <span class="eyebrow">About</span>
-      <h2>Hi, I'm [Your Name]</h2>
-      <p>I've spent the last eight years helping students move from confusion to clarity about what comes next — not by telling them what to choose, but by helping them see their own options more clearly, whether that's engineering, an MBA, or a professional certification.</p>
-      <p>Every session is built around the student in front of me: their interests, their worries, and the realities of their situation — not a one-size-fits-all framework.</p>
-      <div class="credentials">
-        <div class="credential"><strong>Certified</strong>Career Counsellor</div>
-        <div class="credential"><strong>M.A.</strong>Psychology</div>
-        <div class="credential"><strong>500+</strong>students guided</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Testimonials</span>
-      <h2>What students are saying</h2>
-    </div>
-    <div class="testimonials">
-      <div class="testimonial"><p>"I was stuck between an MS and an MBA. One call gave me more clarity than three months of googling."</p><div class="t-who"><strong>Student</strong> · 3rd year, CSE</div></div>
-      <div class="testimonial"><p>"Didn't know FRM existed as an option until this session — now it's exactly the direction I want."</p><div class="t-who"><strong>Student</strong> · 2nd year, ECE</div></div>
-      <div class="testimonial"><p>"Straightforward, no jargon, and genuinely listened. Worth every session."</p><div class="t-who"><strong>Parent</strong> · Final year student</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="faq">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">FAQ</span>
-      <h2>Common questions</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item"><div class="faq-q">Who is this guidance for?<span class="plus">+</span></div><div class="faq-a"><p>Undergraduate students (and final-year school students) exploring Engineering, MBA, or professional certifications like CFA, FRM, and CS.</p></div></div>
-      <div class="faq-item"><div class="faq-q">Is CFA or FRM better after engineering?<span class="plus">+</span></div><div class="faq-a"><p>It depends on your interest — CFA suits investment/equity research goals, FRM suits risk-management goals. We map this to your interests on the call.</p></div></div>
-      <div class="faq-item"><div class="faq-q">Do you help with CAT/GMAT and B-school selection?<span class="plus">+</span></div><div class="faq-a"><p>Yes — whether an MBA fits your goals, which exam to target, and how to shortlist B-schools realistically for your profile.</p></div></div>
-      <div class="faq-item"><div class="faq-q">Are sessions online or in person?<span class="plus">+</span></div><div class="faq-a"><p>All sessions are online over video call, with flexible scheduling around college hours.</p></div></div>
-      <div class="faq-item"><div class="faq-q">What if I'm not sure which package to pick?<span class="plus">+</span></div><div class="faq-a"><p>Start with the free discovery call — the right starting point is recommended based on where you are right now.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="blog">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Resources</span>
-      <h2>Latest career guides</h2>
-      <p>Free, in-depth reads on career paths, exams, and roadmaps.</p>
-    </div>
-    <div class="blog-grid">
-      <article class="blog-card"><h3>AI Engineer Roadmap in India (2026)</h3><p>Complete guide to becoming an AI Engineer — skills, salary, roadmap, and career opportunities.</p><a href="ai-engineer-roadmap-india-2026.html">Read more →</a></article>
-      <article class="blog-card"><h3>CFA vs FRM: Which Should You Choose?</h3><p>A side-by-side comparison of exam structure, cost, timeline, and career outcomes.</p><a href="#" onclick="openModal();return false;">Coming soon — book a call →</a></article>
-      <article class="blog-card"><h3>MBA After Engineering: Is It Worth It?</h3><p>When an MBA adds real value after a technical degree, and when it doesn't.</p><a href="#" onclick="openModal();return false;">Coming soon — book a call →</a></article>
-    </div>
-  </div>
-</section>
-
-<section class="cta-band" id="book">
-  <div class="wrap">
-    <h2>Let's find the direction that actually fits.</h2>
-    <p>Book a free 20-minute call — no pressure, no sales pitch. Pick a slot that works for you.</p>
-    <a href="#" class="btn-primary" onclick="openModal();return false;">Book your free call</a>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="logo"><span class="logo-dot"></span>Milestone Careers</div>
-      <div class="footer-links">
-        <a href="#tracks">Career Tracks</a>
-        <a href="#packages">Packages</a>
-        <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-      </div>
-    </div>
-    <div class="foot-note">
-      <span>© 2026 Milestone Careers. All sessions conducted online.</span>
-      <span>Pune, Maharashtra, India</span>
-    </div>
-  </div>
-</footer>
-
-<div class="sticky-cta"><a href="#" class="btn-primary" onclick="openModal();return false;">Book a Free Call</a></div>
-
-<!-- ============ BOOKING MODAL ============ -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <div class="modal-head">
-      <h3>Book your free call</h3>
-      <p>Pick a live slot, or send us your details and we'll reach out.</p>
-    </div>
-    <div class="modal-tabs">
-      <div class="modal-tab active" data-mtab="slot" onclick="switchModalTab('slot')">Pick a slot</div>
-      <div class="modal-tab" data-mtab="inquiry" onclick="switchModalTab('inquiry')">Send an inquiry</div>
-    </div>
-
-    <!-- Slot booking via Calendly -->
-    <div class="modal-panel active" id="mpanel-slot">
-      <!--
-        Replace YOUR_CALENDLY_USERNAME with your real Calendly link (free at calendly.com).
-        This shows your real, live available slots and collects name/email/phone automatically.
-      -->
-      <iframe class="calendly-frame" src="https://calendly.com/YOUR_CALENDLY_USERNAME/discovery-call?hide_gdpr_banner=1"></iframe>
-      <p class="form-note">Slots update live from your calendar. No double-booking possible.</p>
-    </div>
-
-    <!-- Inquiry form via Formspree -->
-    <div class="modal-panel" id="mpanel-inquiry">
-      <form id="inquiryForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-        <div class="form-row">
-          <label for="fullName">Full Name *</label>
-          <input type="text" id="fullName" name="Full Name" required placeholder="e.g. Aarav Sharma">
-        </div>
-        <div class="form-two">
-          <div class="form-row">
-            <label for="email">Email ID *</label>
-            <input type="email" id="email" name="Email" required placeholder="you@example.com">
-          </div>
-          <div class="form-row">
-            <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" name="Phone" required placeholder="+91 98765 43210">
-          </div>
-        </div>
-        <div class="form-two">
-          <div class="form-row">
-            <label for="stage">Current Stage *</label>
-            <select id="stage" name="Current Stage" required>
-              <option value="">Select</option>
-              <option>Class 11 / 12</option>
-              <option>Undergrad - Year 1</option>
-              <option>Undergrad - Year 2</option>
-              <option>Undergrad - Year 3</option>
-              <option>Undergrad - Final Year</option>
-              <option>Working Professional</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="interest">Interested In *</label>
-            <select id="interest" name="Interested In" required>
-              <option value="">Select</option>
-              <option>Engineering</option>
-              <option>MBA</option>
-              <option>CFA</option>
-              <option>FRM</option>
-              <option>CS (Company Secretary)</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row">
-          <label for="message">Anything specific you'd like to discuss?</label>
-          <textarea id="message" name="Message" rows="3" placeholder="Optional"></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send Inquiry</button>
-        <p class="form-note">We usually respond within 24 hours with a slot suggestion.</p>
-      </form>
-      <div class="form-success" id="formSuccess">
-        <div class="tick">✓</div>
-        <h3>Thanks — you're in!</h3>
-        <p style="color:var(--ink-soft); margin-top:8px;">We'll reach out on the number/email you shared to confirm your call.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  // Mobile menu
-  function toggleMobileMenu(){
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-
-  // Career track tabs
-  function switchTrack(id){
-    document.querySelectorAll('.track-tab').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('.track-panel').forEach(p=>p.classList.remove('active'));
-    document.querySelector('.track-tab[data-tab="'+id+'"]').classList.add('active');
-    document.getElementById('panel-'+id).classList.add('active');
-  }
-
-  // FAQ accordion
-  document.querySelectorAll('.faq-item').forEach(item=>{
-    item.querySelector('.faq-q').addEventListener('click',()=>{
-      item.classList.toggle('open');
-    });
-  });
-
-  // Modal open/close
-  function openModal(){
-    document.getElementById('modalOverlay').classList.add('open');
-    document.body.style.overflow='hidden';
-  }
-  function closeModal(){
-    document.getElementById('modalOverlay').classList.remove('open');
-    document.body.style.overflow='';
-  }
-  document.getElementById('modalOverlay').addEventListener('click', function(e){
-    if(e.target === this) closeModal();
-  });
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') closeModal();
-  });
-
-  // Modal internal tabs (slot vs inquiry)
-  function switchModalTab(id){
-    document.querySelectorAll('.modal-tab').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('.modal-panel').forEach(p=>p.classList.remove('active'));
-    document.querySelector('.modal-tab[data-mtab="'+id+'"]').classList.add('active');
-    document.getElementById('mpanel-'+id).classList.add('active');
-  }
-
-  // Inquiry form submit (works once Formspree ID is set; falls back to success UI)
-  document.getElementById('inquiryForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(()=>{
-      form.style.display='none';
-      document.getElementById('formSuccess').classList.add('show');
-    }).catch(()=>{
-      form.style.display='none';
-      document.getElementById('formSuccess').classList.add('show');
-    });
-  });
-</script>
 
 </body>
 </html>
