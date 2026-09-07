@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>keysteps — Career Counselling for Students &amp; Early Professionals</title>
-<meta name="description" content="1:1 career counselling for college students and early professionals. Figure out your next move, with a plan — not a personality quiz.">
+<title>keysteps — Career Counselling &amp; Skill Training</title>
+<meta name="description" content="1:1 career counselling for students and early professionals, backed by a specialist team. Tech and AI-focused training when the path calls for new skills.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -84,11 +84,17 @@
   }
   .logo svg{ flex:none; }
 
-  .nav-links{ display:flex; gap:38px; font-size:15px; color:var(--text-soft); }
-  .nav-links a{ transition:color .15s; position:relative; }
+  .nav-links{ display:flex; gap:36px; font-size:15px; color:var(--text-soft); }
+  .nav-links a{ transition:color .15s; position:relative; padding:4px 0; }
   .nav-links a:hover{ color:var(--text); }
-  @media (max-width:860px){ .nav-links{ display:none; } }
+  .nav-links a.active{ color:var(--text); }
+  .nav-links a.active::after{
+    content:''; position:absolute; left:0; right:0; bottom:-3px;
+    height:2px; background:var(--brass); border-radius:2px;
+  }
+  @media (max-width:900px){ .nav-links{ display:none; } }
 
+  .nav-right{ display:flex; align-items:center; gap:20px; }
   .nav-cta{
     background:var(--brass);
     color:#1A1204;
@@ -97,13 +103,14 @@
     font-size:14.5px;
     font-weight:700;
     transition:background .15s, transform .15s;
+    white-space:nowrap;
   }
   .nav-cta:hover{ background:#EFB868; }
 
   /* ===== HERO ===== */
   header.hero{
     position:relative;
-    padding:100px 0 110px;
+    padding:96px 0 108px;
     overflow:hidden;
   }
   .hero-glow{
@@ -125,19 +132,26 @@
 
   .hero-copy{ opacity:0; transform:translateY(14px); animation:rise .7s ease-out .1s forwards; }
 
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14px; color:var(--text-soft);
+    margin-bottom:20px;
+  }
+  .hero-eyebrow .sep{ color:var(--text-faint); }
+
   h1.headline{
-    font-size:clamp(36px, 4.6vw, 54px);
-    max-width:13.5ch;
+    font-size:clamp(34px, 4.4vw, 52px);
+    max-width:14ch;
     margin-bottom:22px;
     color:var(--text);
   }
   .hero-sub{
     color:var(--text-soft);
     font-size:18px;
-    max-width:44ch;
+    max-width:46ch;
     margin-bottom:36px;
   }
-  .hero-actions{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-bottom:26px; }
+  .hero-actions{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-bottom:30px; }
   .btn-primary{
     background:var(--brass);
     color:#1A1204;
@@ -159,8 +173,23 @@
   }
   .btn-secondary:hover{ color:var(--text); border-color:var(--text-soft); }
 
-  .hero-proof{ font-size:14.5px; color:var(--text-faint); }
-  .hero-proof strong{ color:var(--text-soft); font-weight:600; }
+  .hero-proof{
+    display:flex; align-items:center; gap:14px;
+    font-size:14px; color:var(--text-faint);
+  }
+  .hero-proof strong{ color:var(--text-soft); font-weight:700; }
+  .avatar-stack{ display:flex; }
+  .avatar-stack span{
+    width:28px; height:28px; border-radius:50%;
+    border:2px solid var(--ink);
+    margin-left:-8px;
+    display:inline-block;
+  }
+  .avatar-stack span:first-child{ margin-left:0; }
+  .av1{ background:#C9915A; }
+  .av2{ background:#8E7EE8; }
+  .av3{ background:#5A8BC9; }
+  .av4{ background:#C95A7E; }
 
   /* ===== HERO VISUAL: journey card ===== */
   .journey-card{
@@ -216,6 +245,12 @@
   @keyframes rise{
     to{ opacity:1; transform:translateY(0); }
   }
+
+  /* temporary end-of-build marker, remove once full page is assembled */
+  .build-note{
+    text-align:center; padding:40px 0 60px; color:var(--text-faint); font-size:13.5px;
+    border-top:1px dashed var(--panel-line); margin-top:20px;
+  }
 </style>
 </head>
 <body>
@@ -230,12 +265,15 @@
       keysteps
     </div>
     <div class="nav-links">
-      <a href="#how">How it works</a>
-      <a href="#programs">Programs</a>
-      <a href="#about">About</a>
-      <a href="#blog">Blog</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="success-stories.html">Success Stories</a>
+      <a href="blog.html">Blog</a>
     </div>
-    <a href="#book" class="nav-cta">Book a call</a>
+    <div class="nav-right">
+      <a href="https://calendly.com/keysteps/intro-call" class="nav-cta" target="_blank" rel="noopener">Book a call</a>
+    </div>
   </div>
 </nav>
 
@@ -244,13 +282,19 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1 class="headline">Career counselling for people who are done guessing.</h1>
-        <p class="hero-sub">For college students and early professionals deciding what's next — a structured path to a decision you can actually explain, not another quiz and a PDF.</p>
+        <div class="hero-eyebrow">Career counselling <span class="sep">&amp;</span> tech-focused training</div>
+        <h1 class="headline">The next right step, mapped by people who've actually done the work.</h1>
+        <p class="hero-sub">1:1 career counselling for students and early professionals, from a team of specialists — with hands-on training when the path calls for new skills.</p>
         <div class="hero-actions">
-          <a href="#book" class="btn-primary">Book a free call</a>
-          <a href="#how" class="btn-secondary">See how it works</a>
+          <a href="https://calendly.com/keysteps/intro-call" class="btn-primary" target="_blank" rel="noopener">Book a free call</a>
+          <a href="programs.html" class="btn-secondary">Explore programs</a>
         </div>
-        <p class="hero-proof"><strong>500+</strong> students guided since 2018</p>
+        <div class="hero-proof">
+          <div class="avatar-stack">
+            <span class="av1"></span><span class="av2"></span><span class="av3"></span><span class="av4"></span>
+          </div>
+          <span><strong>500+</strong> students guided across India</span>
+        </div>
       </div>
 
       <div class="journey-card">
@@ -290,6 +334,8 @@
     </div>
   </div>
 </header>
+
+<div class="build-note">Rest of the homepage builds here, section by section — this marker disappears once we're done.</div>
 
 </body>
 </html>
