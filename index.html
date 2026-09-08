@@ -1,62 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CareerCatalog — Career Guidance, AI & Content Insights</title>
-  <meta name="description" content="CareerCatalog helps students and early-career professionals navigate job trends, build in-demand skills, and stay ahead with AI and content industry insights." />
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CareerCatalog — Career Guidance, AI & Content Insights</title>
+<meta name="description" content="CareerCatalog helps students and early-career professionals navigate job trends, build in-demand skills, and stay ahead with AI and content industry insights." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0B1120',
+          paper: '#FAFAFA',
+          indigo: '#4338CA',
+          cyan: '#06B6D4',
+          amber: '#F59E0B',
+          slate: '#475569',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['"Inter"', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
+  .gradient-text {
+    background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+</style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-paper text-ink">
 
-  <!-- Navigation -->
-  <nav class="border-b border-gray-200">
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-slate/10">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="/milestone-careers/" class="text-xl font-semibold tracking-tight">CareerCatalog</a>
-      <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-        <a href="/milestone-careers/blog" class="hover:text-gray-900">AI & Content Blog</a>
-        <a href="/milestone-careers/career" class="hover:text-gray-900">Career Guidance</a>
-        <a href="/milestone-careers/about" class="hover:text-gray-900">About</a>
+      <a href="/milestone-careers/" class="display text-lg font-semibold">CareerCatalog</a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate">
+        <a href="/milestone-careers/blog" class="hover:text-ink transition-colors">AI & Content</a>
+        <a href="/milestone-careers/career" class="hover:text-ink transition-colors">Career Guidance</a>
+        <a href="/milestone-careers/about" class="hover:text-ink transition-colors">About</a>
       </div>
-      <a href="/milestone-careers/subscribe" class="text-sm font-medium bg-gray-900 text-white px-4 py-2 rounded-full hover:bg-gray-700">Subscribe</a>
+      <a href="/milestone-careers/subscribe" class="text-sm font-medium text-white px-5 py-2.5 rounded-lg bg-gradient-to-r from-indigo to-cyan hover:opacity-90 transition-opacity">Subscribe</a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="max-w-6xl mx-auto px-6 py-24 text-center">
-    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-      Navigate your career with clarity, backed by AI-driven insight.
-    </h1>
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-      Guidance for students and early-career professionals, plus in-depth analysis on where AI and content are headed next.
-    </p>
-    <div class="flex justify-center gap-4">
-      <a href="/milestone-careers/career" class="bg-gray-900 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-700">Explore Career Guidance</a>
-      <a href="/milestone-careers/blog" class="border border-gray-300 px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-50">Read the Blog</a>
+  <!-- Hero: asymmetric split -->
+  <section class="max-w-6xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-5 gap-12 items-center">
+    <div class="md:col-span-3">
+      <h1 class="display text-4xl md:text-5xl font-semibold leading-[1.1] mb-6">
+        Your career, mapped with <span class="gradient-text">clarity</span>.
+      </h1>
+      <p class="text-lg text-slate max-w-md mb-8 leading-relaxed">
+        Job market trends, in-demand skills, and career guidance for students and early professionals — plus sharp analysis on where AI and content are headed next.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/milestone-careers/career" class="px-6 py-3 rounded-lg text-sm font-medium text-white bg-ink hover:bg-indigo transition-colors">Get career guidance</a>
+        <a href="/milestone-careers/blog" class="px-6 py-3 rounded-lg text-sm font-medium border border-slate/20 hover:border-slate/40 transition-colors">Read the blog</a>
+      </div>
+    </div>
+
+    <!-- Abstract trajectory graphic -->
+    <div class="md:col-span-2">
+      <svg viewBox="0 0 320 240" class="w-full h-auto">
+        <defs>
+          <linearGradient id="pathGrad" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" stop-color="#4338CA"/>
+            <stop offset="100%" stop-color="#06B6D4"/>
+          </linearGradient>
+        </defs>
+        <path d="M 10 210 C 80 210, 90 140, 140 130 S 210 60, 250 55 S 300 30, 310 15"
+              fill="none" stroke="url(#pathGrad)" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="10" cy="210" r="6" fill="#4338CA"/>
+        <circle cx="140" cy="130" r="5" fill="#4338CA" opacity="0.7"/>
+        <circle cx="250" cy="55" r="5" fill="#06B6D4" opacity="0.85"/>
+        <circle cx="310" cy="15" r="7" fill="#06B6D4"/>
+      </svg>
     </div>
   </section>
 
-  <!-- Two Pillars -->
-  <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
-    <div class="border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition">
-      <h2 class="text-xl font-semibold mb-3">AI & Content Insights</h2>
-      <p class="text-gray-600 mb-4">Deep dives on AI tools, trends, and the future of content — written for people who create, not just consume.</p>
-      <a href="/milestone-careers/blog" class="text-sm font-medium underline">Browse articles →</a>
+  <!-- Two pillars: visually distinct, not matching cards -->
+  <section class="max-w-6xl mx-auto px-6 pb-24 grid md:grid-cols-5 gap-6">
+    <!-- Dark gradient panel: AI & Content -->
+    <div class="md:col-span-3 rounded-2xl p-10 bg-ink text-paper relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo/30 to-cyan/10"></div>
+      <div class="relative">
+        <h2 class="display text-2xl font-semibold mb-3">AI & Content Insights</h2>
+        <p class="text-paper/70 max-w-sm mb-6 leading-relaxed">Deep dives on AI tools, trends, and the future of content — written for people who build, not just scroll.</p>
+        <a href="/milestone-careers/blog" class="inline-block text-sm font-medium text-white border-b border-cyan pb-0.5 hover:border-white transition-colors">Browse the blog</a>
+      </div>
     </div>
-    <div class="border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition">
-      <h2 class="text-xl font-semibold mb-3">Career Guidance</h2>
-      <p class="text-gray-600 mb-4">Job market trends, in-demand skills, and practical advice for students and early-career professionals.</p>
-      <a href="/milestone-careers/career" class="text-sm font-medium underline">Get guidance →</a>
+    <!-- Light bordered panel: Career Guidance -->
+    <div class="md:col-span-2 rounded-2xl p-10 border border-slate/15">
+      <h2 class="display text-2xl font-semibold mb-3">Career Guidance</h2>
+      <p class="text-slate mb-6 leading-relaxed">Job trends, skills worth learning, and practical next steps for students and early-career professionals.</p>
+      <a href="/milestone-careers/career" class="inline-block text-sm font-medium text-ink border-b border-indigo pb-0.5 hover:border-ink transition-colors">Explore guidance</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-200 mt-16">
-    <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-500 flex justify-between">
+  <footer class="border-t border-slate/10">
+    <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-slate flex flex-wrap justify-between gap-4">
       <span>© 2026 CareerCatalog</span>
       <div class="flex gap-6">
-        <a href="/milestone-careers/about" class="hover:text-gray-900">About</a>
-        <a href="/milestone-careers/contact" class="hover:text-gray-900">Contact</a>
+        <a href="/milestone-careers/about" class="hover:text-ink transition-colors">About</a>
+        <a href="/milestone-careers/contact" class="hover:text-ink transition-colors">Contact</a>
       </div>
     </div>
   </footer>
