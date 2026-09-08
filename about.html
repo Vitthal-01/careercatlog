@@ -67,6 +67,33 @@
   }
   .path-tab:not(.active):hover { background: rgba(11,17,32,0.05); color: #0B1120; }
 
+  /* Option cards — the entry menu of the five stages */
+  .option-card {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: 1px solid rgba(71,85,105,0.15);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .option-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(11,17,32,0.08); }
+  .option-card.active {
+    border-color: transparent;
+    background: linear-gradient(135deg, #4338CA 0%, #06B6D4 100%);
+    box-shadow: 0 10px 28px rgba(67,56,202,0.3);
+  }
+  .option-card .option-icon { color: #4338CA; transition: color 0.2s ease; }
+  .option-card.active .option-icon { color: #fff; }
+  .option-card h3 { transition: color 0.2s ease; }
+  .option-card.active h3 { color: #fff; }
+  .option-card p { transition: color 0.2s ease; }
+  .option-card.active p { color: rgba(255,255,255,0.85); }
+  .option-card .option-arrow { opacity: 0; transform: translateX(-4px); transition: all 0.2s ease; }
+  .option-card.active .option-arrow { opacity: 1; transform: translateX(0); color: #fff; }
+
   .path-panel { display: none; }
   .path-panel.active { display: block; }
 
@@ -153,7 +180,7 @@
         Wherever you are, there's a <span class="gradient-text">genuine</span> next step.
       </h1>
       <p class="text-lg text-slate leading-relaxed max-w-2xl mx-auto">
-        Pick the stage you're at. Every option below is a real path Indian students are actually choosing right now — not a textbook list.
+        Tap the stage you're at below to see it — every option is a real path Indian students are actually choosing right now, not a textbook list.
       </p>
     </div>
   </section>
@@ -161,17 +188,42 @@
   <!-- Career Path Explorer -->
   <section id="paths" class="max-w-6xl mx-auto px-6 pb-24 scroll-mt-20">
 
-    <!-- Tabs -->
-    <div class="flex flex-wrap gap-2 mb-10 justify-center" role="tablist" aria-label="Career stages">
-      <button class="path-tab active" data-tab="p12" role="tab" aria-selected="true">After 12th</button>
-      <button class="path-tab" data-tab="pug" role="tab" aria-selected="false">After UG</button>
-      <button class="path-tab" data-tab="pcert" role="tab" aria-selected="false">Certifications</button>
-      <button class="path-tab" data-tab="pskill" role="tab" aria-selected="false">Multidisciplinary Skills</button>
-      <button class="path-tab" data-tab="pjob" role="tab" aria-selected="false">Job Seeker</button>
+    <!-- Option menu — pick a stage to explore -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-14" role="tablist" aria-label="Career stages">
+      <button class="option-card active" data-tab="p12" role="tab" aria-selected="true">
+        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+        <h3 class="display text-base font-semibold mb-1">After 12th</h3>
+        <p class="text-slate text-xs leading-relaxed">Engineering, medical, commerce, design & law</p>
+        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
+      </button>
+      <button class="option-card" data-tab="pug" role="tab" aria-selected="false">
+        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="1"/><path d="M9 21V10M4 10l8-6 8 6"/></svg>
+        <h3 class="display text-base font-semibold mb-1">After UG</h3>
+        <p class="text-slate text-xs leading-relaxed">Placement, higher studies, govt exams, pivots</p>
+        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
+      </button>
+      <button class="option-card" data-tab="pcert" role="tab" aria-selected="false">
+        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 6.6H21l-5.4 4 2 6.6L12 15l-5.6 4.2 2-6.6L3 8.6h6.8z"/></svg>
+        <h3 class="display text-base font-semibold mb-1">Certifications</h3>
+        <p class="text-slate text-xs leading-relaxed">Data, marketing, cloud, product & finance</p>
+        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
+      </button>
+      <button class="option-card" data-tab="pskill" role="tab" aria-selected="false">
+        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+        <h3 class="display text-base font-semibold mb-1">Multidisciplinary Skills</h3>
+        <p class="text-slate text-xs leading-relaxed">Skill combinations that stand out today</p>
+        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
+      </button>
+      <button class="option-card" data-tab="pjob" role="tab" aria-selected="false">
+        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/><path d="M9 13h6M9 17h4"/></svg>
+        <h3 class="display text-base font-semibold mb-1">Job Seeker</h3>
+        <p class="text-slate text-xs leading-relaxed">Resume, platforms, interviews, internships</p>
+        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
+      </button>
     </div>
 
     <!-- Panel: After 12th -->
-    <div id="panel-p12" class="path-panel active" role="tabpanel">
+    <div id="panel-p12" class="path-panel active scroll-mt-24" role="tabpanel">
       <div class="grid md:grid-cols-2 gap-5">
         <div class="path-card">
           <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
@@ -201,7 +253,7 @@
     </div>
 
     <!-- Panel: After UG -->
-    <div id="panel-pug" class="path-panel" role="tabpanel">
+    <div id="panel-pug" class="path-panel scroll-mt-24" role="tabpanel">
       <div class="grid md:grid-cols-2 gap-5">
         <div class="path-card">
           <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="1"/><path d="M9 21V10M4 10l8-6 8 6"/></svg>
@@ -231,7 +283,7 @@
     </div>
 
     <!-- Panel: Certifications -->
-    <div id="panel-pcert" class="path-panel" role="tabpanel">
+    <div id="panel-pcert" class="path-panel scroll-mt-24" role="tabpanel">
       <div class="grid md:grid-cols-2 gap-5">
         <div class="path-card">
           <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
@@ -261,7 +313,7 @@
     </div>
 
     <!-- Panel: Multidisciplinary Skills -->
-    <div id="panel-pskill" class="path-panel" role="tabpanel">
+    <div id="panel-pskill" class="path-panel scroll-mt-24" role="tabpanel">
       <div class="grid md:grid-cols-2 gap-5">
         <div class="path-card">
           <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
@@ -291,7 +343,7 @@
     </div>
 
     <!-- Panel: Job Seeker -->
-    <div id="panel-pjob" class="path-panel" role="tabpanel">
+    <div id="panel-pjob" class="path-panel scroll-mt-24" role="tabpanel">
       <div class="grid md:grid-cols-2 gap-5">
         <div class="path-card">
           <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/><path d="M9 13h6M9 17h4"/></svg>
@@ -322,13 +374,16 @@
   </section>
 
   <script>
-    document.querySelectorAll('.path-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.path-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected','true');
+    document.querySelectorAll('.option-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.option-card').forEach(c => { c.classList.remove('active'); c.setAttribute('aria-selected','false'); });
+        card.classList.add('active');
+        card.setAttribute('aria-selected','true');
+
         document.querySelectorAll('.path-panel').forEach(p => p.classList.remove('active'));
-        document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+        const panel = document.getElementById('panel-' + card.dataset.tab);
+        panel.classList.add('active');
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   </script>
