@@ -6,7 +6,7 @@
 <title>CareerCatalog — Career Guidance, AI & Content Insights</title>
 <meta name="description" content="CareerCatalog helps Indian students and early-career professionals navigate job trends, build in-demand skills, and stay ahead with AI and content industry insights." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -32,6 +32,7 @@
   body { font-family: 'Inter', sans-serif; }
   h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
   html { scroll-behavior: smooth; }
+
   .gradient-text {
     background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
     -webkit-background-clip: text;
@@ -42,20 +43,12 @@
     background: radial-gradient(circle at 20% 10%, rgba(67,56,202,0.10), transparent 55%),
                 radial-gradient(circle at 85% 0%, rgba(6,182,212,0.10), transparent 50%);
   }
-  .btn-primary {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(11,17,32,0.18);
-  }
-  .panel {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .panel:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(11,17,32,0.12);
-  }
+  .btn-primary { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,17,32,0.18); }
+
+  .panel { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .panel:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(11,17,32,0.12); }
+
   .glass-tabs {
     background: rgba(255,255,255,0.55);
     backdrop-filter: blur(16px);
@@ -63,19 +56,14 @@
     border: 1px solid rgba(11,17,32,0.08);
     box-shadow: 0 8px 32px rgba(11,17,32,0.08);
   }
-  .glass-tab {
-    transition: all 0.25s ease;
-    color: #475569;
-  }
+  .glass-tab { transition: all 0.25s ease; color: #475569; }
   .glass-tab.active {
     background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
     color: white;
     box-shadow: 0 4px 14px rgba(67,56,202,0.3);
   }
-  .glass-tab:not(.active):hover {
-    background: rgba(11,17,32,0.05);
-    color: #0B1120;
-  }
+  .glass-tab:not(.active):hover { background: rgba(11,17,32,0.05); color: #0B1120; }
+
   .step-num {
     font-family: 'Space Grotesk', sans-serif;
     background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
@@ -83,18 +71,29 @@
     background-clip: text;
     color: transparent;
   }
-  .blog-thumb {
-    position: relative;
-    overflow: hidden;
+  .blog-thumb { position: relative; overflow: hidden; }
+  .quote-mark { font-family: 'Space Grotesk', sans-serif; line-height: 0.6; }
+
+  /* Premium tile used inside the gradient guidance section */
+  .glass-tile {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.22);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: transform 0.25s ease, background 0.25s ease;
   }
-  .quote-mark {
-    font-family: 'Space Grotesk', sans-serif;
-    line-height: 0.6;
-  }
+  .glass-tile:hover { transform: translateY(-4px); background: rgba(255,255,255,0.16); }
+
+  /* Mobile menu */
+  #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  #mobile-menu.open { max-height: 320px; }
+  #menu-btn[aria-expanded="true"] .icon-open { display: none; }
+  #menu-btn[aria-expanded="false"] .icon-close { display: none; }
+
   @media (prefers-reduced-motion: reduce) {
-    .btn-primary, .panel { transition: none; }
+    .btn-primary, .panel, .glass-tile, #mobile-menu { transition: none; }
   }
-  a:focus-visible, button:focus-visible {
+  a:focus-visible, button:focus-visible, input:focus-visible {
     outline: 2px solid #4338CA;
     outline-offset: 3px;
   }
@@ -107,31 +106,62 @@
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="/milestone-careers/" class="display text-lg font-semibold">CareerCatalog</a>
 
-      <!-- Glass tab bar -->
+      <!-- Desktop tabs -->
       <div class="hidden md:flex items-center gap-1 glass-tabs rounded-full p-1.5">
-        <a href="/milestone-careers/career" class="glass-tab px-5 py-2 rounded-full text-sm font-medium">Career Guidance</a>
-        <a href="#services" class="glass-tab px-5 py-2 rounded-full text-sm font-medium">Services</a>
+        <a href="#guidance" class="glass-tab px-5 py-2 rounded-full text-sm font-medium">Career Guidance</a>
         <a href="/milestone-careers/blog" class="glass-tab px-5 py-2 rounded-full text-sm font-medium">Tech Blogs / Articles</a>
         <a href="#about" class="glass-tab px-5 py-2 rounded-full text-sm font-medium">About</a>
       </div>
 
-      <a href="/milestone-careers/subscribe" class="text-sm font-medium text-white px-5 py-2.5 rounded-lg bg-gradient-to-r from-indigo to-cyan hover:opacity-90 transition-opacity">Subscribe</a>
+      <div class="flex items-center gap-3">
+        <a href="/milestone-careers/subscribe" class="hidden sm:inline-block text-sm font-medium text-white px-5 py-2.5 rounded-lg bg-gradient-to-r from-indigo to-cyan hover:opacity-90 transition-opacity">Subscribe</a>
+        <!-- Mobile menu button -->
+        <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden p-2 -mr-2 rounded-lg hover:bg-slate/10">
+          <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#0B1120" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#0B1120" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden border-t border-slate/10 bg-paper">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1 text-sm font-medium">
+        <a href="#guidance" class="py-2.5 px-2 rounded-lg hover:bg-slate/5">Career Guidance</a>
+        <a href="/milestone-careers/blog" class="py-2.5 px-2 rounded-lg hover:bg-slate/5">Tech Blogs / Articles</a>
+        <a href="#about" class="py-2.5 px-2 rounded-lg hover:bg-slate/5">About</a>
+        <a href="/milestone-careers/subscribe" class="mt-2 text-center text-white px-5 py-2.5 rounded-lg bg-gradient-to-r from-indigo to-cyan">Subscribe</a>
+      </div>
     </div>
   </nav>
 
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
   <!-- Hero: asymmetric split -->
   <section class="glow">
-    <div class="max-w-6xl mx-auto px-6 pt-20 pb-20 md:pt-28 md:pb-24 grid md:grid-cols-5 gap-12 items-center">
+    <div class="max-w-6xl mx-auto px-6 pt-16 pb-16 md:pt-28 md:pb-24 grid md:grid-cols-5 gap-12 items-center">
       <div class="md:col-span-3">
         <p class="text-xs font-semibold tracking-[0.2em] uppercase text-indigo mb-6">Career Guidance · AI & Content</p>
-        <h1 class="display text-5xl md:text-6xl font-semibold leading-[1.08] mb-8 tracking-tight">
+        <h1 class="display text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.08] mb-8 tracking-tight">
           Your career, mapped with <span class="gradient-text">clarity</span>.
         </h1>
         <p class="text-lg text-slate max-w-md mb-10 leading-relaxed">
           Simple, honest career guidance for students and early professionals in India — what to learn, in what order, and why. Plus sharp, easy-to-read takes on where AI and content are headed next.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="/milestone-careers/career" class="btn-primary px-7 py-3.5 rounded-lg text-sm font-medium text-white bg-ink">Get career guidance</a>
+          <a href="#guidance" class="btn-primary px-7 py-3.5 rounded-lg text-sm font-medium text-white bg-ink">Get career guidance</a>
           <a href="/milestone-careers/blog" class="btn-primary px-7 py-3.5 rounded-lg text-sm font-medium border border-slate/20">Read the blog</a>
         </div>
       </div>
@@ -178,64 +208,53 @@
     </div>
   </section>
 
-  <!-- Two pillars: visually distinct, not matching cards -->
-  <section class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-5 gap-6">
-    <!-- Dark gradient panel: AI & Content -->
-    <div class="panel md:col-span-3 rounded-2xl p-10 bg-ink text-paper relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-indigo/30 to-cyan/10"></div>
+  <!-- Career Guidance + Services — ONE unified, premium gradient section -->
+  <section id="guidance" class="max-w-6xl mx-auto px-6 py-20 scroll-mt-20">
+    <div class="rounded-3xl bg-gradient-to-br from-indigo via-indigo to-cyan p-8 sm:p-12 md:p-16 text-white relative overflow-hidden">
+      <!-- decorative shapes -->
+      <div class="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/10"></div>
+      <div class="absolute -bottom-24 -left-10 w-64 h-64 rounded-full bg-white/5"></div>
+
       <div class="relative">
-        <h2 class="display text-2xl font-semibold mb-3">AI & Content Insights</h2>
-        <p class="text-paper/70 max-w-sm mb-6 leading-relaxed">Deep dives on AI tools, trends, and the future of content — written for people who build, not just scroll.</p>
-        <a href="/milestone-careers/blog" class="inline-block text-sm font-medium text-white border-b border-cyan pb-0.5 hover:border-white transition-colors">Browse the blog</a>
-      </div>
-    </div>
-    <!-- Light bordered panel: Career Guidance -->
-    <div class="panel md:col-span-2 rounded-2xl p-10 border border-slate/15 bg-white">
-      <h2 class="display text-2xl font-semibold mb-3">Career Guidance</h2>
-      <p class="text-slate mb-6 leading-relaxed">Job trends, skills worth learning, and practical next steps for students and early-career professionals.</p>
-      <a href="/milestone-careers/career" class="inline-block text-sm font-medium text-ink border-b border-indigo pb-0.5 hover:border-ink transition-colors">Explore guidance</a>
-    </div>
-  </section>
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-white/70 mb-5">Career Guidance</p>
+        <h2 class="display text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 tracking-tight max-w-2xl leading-tight">
+          Everything you need to move your career forward, in one place.
+        </h2>
+        <p class="text-white/85 leading-relaxed max-w-xl mb-14 text-lg">
+          Job trends, in-demand skills, and practical next steps — plus the hands-on help students ask for most. No confusing jargon, no generic advice copied from ten other websites.
+        </p>
 
-  <!-- Services -->
-  <section id="services" class="max-w-6xl mx-auto px-6 py-20 scroll-mt-20">
-    <div class="max-w-lg mb-12">
-      <h2 class="display text-3xl md:text-4xl font-semibold mb-4 tracking-tight">What we help you with</h2>
-      <p class="text-slate leading-relaxed">No confusing jargon. No generic advice copied from ten other websites. Just clear help with the three things students ask us about the most.</p>
-    </div>
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="glass-tile rounded-2xl p-8">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" class="mb-6">
+              <path d="M6 26 L14 16 L20 21 L30 6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="30" cy="6" r="3" fill="white"/>
+            </svg>
+            <h3 class="display text-xl font-semibold mb-2">Career roadmaps</h3>
+            <p class="text-white/80 text-sm leading-relaxed mb-6">Step-by-step plans for tech, content, and business roles — so you always know what to learn next.</p>
+            <a href="/milestone-careers/career" class="inline-block text-sm font-medium border-b border-white/60 pb-0.5 hover:border-white transition-colors">See a sample roadmap</a>
+          </div>
 
-    <div class="grid md:grid-cols-5 gap-6">
-      <!-- Large panel -->
-      <div class="panel md:col-span-3 md:row-span-2 rounded-2xl p-10 bg-ink text-paper relative overflow-hidden flex flex-col justify-between min-h-[320px]">
-        <div class="absolute inset-0 bg-gradient-to-tr from-indigo/40 to-transparent"></div>
-        <div class="relative">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="mb-6">
-            <path d="M6 30 L14 20 L20 25 L34 8" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="34" cy="8" r="3" fill="#06B6D4"/>
-          </svg>
-          <h3 class="display text-2xl font-semibold mb-3">Career roadmaps</h3>
-          <p class="text-paper/70 leading-relaxed max-w-sm">Simple, step-by-step plans for tech, content, and business roles — so you always know what to learn next, and why it matters.</p>
+          <div class="glass-tile rounded-2xl p-8">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" class="mb-6">
+              <rect x="7" y="5" width="22" height="26" rx="2" stroke="white" stroke-width="2"/>
+              <path d="M12 13h12M12 18h12M12 23h7" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <h3 class="display text-xl font-semibold mb-2">Resume & LinkedIn fixes</h3>
+            <p class="text-white/80 text-sm leading-relaxed mb-6">Practical edits that help recruiters notice you — no fluff, no fake buzzwords.</p>
+            <a href="/milestone-careers/career" class="inline-block text-sm font-medium border-b border-white/60 pb-0.5 hover:border-white transition-colors">Get the checklist</a>
+          </div>
+
+          <div class="glass-tile rounded-2xl p-8">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" class="mb-6">
+              <circle cx="18" cy="18" r="12" stroke="white" stroke-width="2"/>
+              <path d="M18 11v7l5 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3 class="display text-xl font-semibold mb-2">AI & skills guides</h3>
+            <p class="text-white/80 text-sm leading-relaxed mb-6">Plain-English explainers on AI tools and skills that are actually worth your time right now.</p>
+            <a href="/milestone-careers/blog" class="inline-block text-sm font-medium border-b border-white/60 pb-0.5 hover:border-white transition-colors">Browse the blog</a>
+          </div>
         </div>
-        <a href="/milestone-careers/career" class="relative inline-block text-sm font-medium text-white border-b border-cyan pb-0.5 w-fit mt-8 hover:border-white transition-colors">See a sample roadmap</a>
-      </div>
-
-      <!-- Two smaller panels -->
-      <div class="panel md:col-span-2 rounded-2xl p-8 border border-slate/15 bg-white">
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" class="mb-5">
-          <rect x="6" y="4" width="22" height="26" rx="2" stroke="#4338CA" stroke-width="2"/>
-          <path d="M11 12h12M11 17h12M11 22h7" stroke="#4338CA" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <h3 class="display text-xl font-semibold mb-2">Resume & LinkedIn fixes</h3>
-        <p class="text-slate text-sm leading-relaxed">Practical edits that help recruiters notice you — no fluff, no fake buzzwords.</p>
-      </div>
-
-      <div class="panel md:col-span-2 rounded-2xl p-8 border border-slate/15 bg-white">
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" class="mb-5">
-          <circle cx="17" cy="17" r="12" stroke="#06B6D4" stroke-width="2"/>
-          <path d="M17 10v7l5 3" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h3 class="display text-xl font-semibold mb-2">AI & skills guides</h3>
-        <p class="text-slate text-sm leading-relaxed">Plain-English explainers on AI tools and skills that are actually worth your time right now.</p>
       </div>
     </div>
   </section>
@@ -387,16 +406,15 @@
 
   <!-- Footer -->
   <footer class="border-t border-slate/10">
-    <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-4 gap-10">
-      <div class="md:col-span-2">
+    <div class="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div class="sm:col-span-2">
         <a href="/milestone-careers/" class="display text-lg font-semibold">CareerCatalog</a>
         <p class="text-sm text-slate mt-4 max-w-xs leading-relaxed">Career guidance and AI & content insights for Indian students and early-career professionals.</p>
       </div>
       <div>
         <p class="text-sm font-semibold mb-4">Explore</p>
         <div class="flex flex-col gap-3 text-sm text-slate">
-          <a href="/milestone-careers/career" class="hover:text-ink transition-colors">Career Guidance</a>
-          <a href="#services" class="hover:text-ink transition-colors">Services</a>
+          <a href="#guidance" class="hover:text-ink transition-colors">Career Guidance</a>
           <a href="/milestone-careers/blog" class="hover:text-ink transition-colors">Tech Blogs / Articles</a>
           <a href="#about" class="hover:text-ink transition-colors">About</a>
         </div>
