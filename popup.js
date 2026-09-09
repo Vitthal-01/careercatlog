@@ -16,7 +16,7 @@
 
 (function () {
   // ---- CONFIG -------------------------------------------------
-  var WHATSAPP_NUMBER = "919168796201"; // <-- replace with your number, country code + number, no + or spaces
+  var WHATSAPP_NUMBER = "919145723608"; // <-- replace with your number, country code + number, no + or spaces
   var SHOW_DELAY_MS = 3000;
   var SESSION_KEY = "cc_popup_shown_v1";
 
