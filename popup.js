@@ -175,7 +175,7 @@
 
         <form class="cc-popup-form" id="cc-popup-form">
           <input type="text" id="cc-name" placeholder="Your name" required />
-          <input type="tel" id="cc-phone" placeholder="WhatsApp / phone number" required pattern="[0-9]{10}" maxlength="10" />
+          <input type="tel" id="cc-phone" placeholder="WhatsApp number" required pattern="[0-9]{10}" maxlength="10" />
           <button type="submit" class="cc-popup-submit">Book my call</button>
         </form>
 
