@@ -1,11 +1,16 @@
 /* ============================================================
    CareerCatalog — Floating "Book a Call" popup
-   Appears 3 seconds after the page loads, once per browser session.
+   Appears 3 seconds after the page loads, once per browser session,
+   AND can be triggered manually at any time (e.g. from a "Book a
+   call" hover chip on the career guidance page) via:
+
+     window.CareerCatalog.openBookingPopup()
+
    Self-contained: injects its own CSS + HTML, no dependencies.
 
    HOW TO USE:
    Add this one line right before the closing </body> tag
-   on any page where you want the popup to appear:
+   on any page where you want the popup available:
 
      <script src="popup.js"></script>
 
@@ -19,10 +24,6 @@
   var WHATSAPP_NUMBER = "919145723608"; // <-- replace with your number, country code + number, no + or spaces
   var SHOW_DELAY_MS = 3000;
   var SESSION_KEY = "cc_popup_shown_v1";
-
-  // Show once per browser session (won't nag on every page you visit).
-  // Remove this "if" check entirely if you want it on every page load instead.
-  if (sessionStorage.getItem(SESSION_KEY)) return;
 
   // ---- STYLES ---------------------------------------------------
   var style = document.createElement("style");
@@ -190,8 +191,19 @@
   `;
   document.body.appendChild(overlay);
 
+  // Reset to the form view every time the popup opens, so a stale
+  // "success" state from a previous open isn't shown again.
+  var form = overlay.querySelector("#cc-popup-form");
+  var success = overlay.querySelector("#cc-popup-success");
+  function resetForm() {
+    form.classList.remove("cc-hide");
+    success.classList.remove("cc-show");
+    form.reset();
+  }
+
   // ---- BEHAVIOUR --------------------------------------------------
   function openPopup() {
+    resetForm();
     overlay.classList.add("cc-open");
     sessionStorage.setItem(SESSION_KEY, "1");
   }
@@ -199,7 +211,13 @@
     overlay.classList.remove("cc-open");
   }
 
-  setTimeout(openPopup, SHOW_DELAY_MS);
+  // Auto-show once per browser session, after a short delay.
+  // (Manual opens via CareerCatalog.openBookingPopup() are unaffected
+  // by this check — they should always work, e.g. from a "Book a
+  // call" hover prompt on the career guidance page.)
+  if (!sessionStorage.getItem(SESSION_KEY)) {
+    setTimeout(openPopup, SHOW_DELAY_MS);
+  }
 
   overlay.querySelector(".cc-popup-close").addEventListener("click", closePopup);
   overlay.addEventListener("click", function (e) {
@@ -209,8 +227,6 @@
     if (e.key === "Escape") closePopup();
   });
 
-  var form = overlay.querySelector("#cc-popup-form");
-  var success = overlay.querySelector("#cc-popup-success");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var name = overlay.querySelector("#cc-name").value.trim();
@@ -225,4 +241,11 @@
     form.classList.add("cc-hide");
     success.classList.add("cc-show");
   });
+
+  // ---- PUBLIC API ---------------------------------------------------
+  // Lets any page/element (e.g. a "Book a call" chip on a career-guidance
+  // subsection) open the same popup on demand.
+  window.CareerCatalog = window.CareerCatalog || {};
+  window.CareerCatalog.openBookingPopup = openPopup;
+  window.CareerCatalog.closeBookingPopup = closePopup;
 })();
