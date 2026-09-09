@@ -168,7 +168,7 @@
         <div class="cc-price-row">
           <div class="cc-price-label">
             1:1 career call
-            <strong>10 minutes · over phone/video</strong>
+            <strong>10 minutes</strong>
           </div>
           <div class="cc-price-value">₹99<span> only</span></div>
         </div>
@@ -176,7 +176,7 @@
         <form class="cc-popup-form" id="cc-popup-form">
           <input type="text" id="cc-name" placeholder="Your name" required />
           <input type="tel" id="cc-phone" placeholder="WhatsApp / phone number" required pattern="[0-9]{10}" maxlength="10" />
-          <button type="submit" class="cc-popup-submit">Book my call — ₹99</button>
+          <button type="submit" class="cc-popup-submit">Book my call</button>
         </form>
 
         <div class="cc-popup-success" id="cc-popup-success">
