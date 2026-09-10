@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-IN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Meta Tags -->
+  <title>The Job Seeker Playbook | Career Catalog India</title>
+  <meta name="title" content="The Job Seeker Playbook | Career Catalog India" />
+  <meta name="description" content="Stop getting ghosted. Master the 6-second ATS resume, learn cold emailing strategies, and ace your interviews with the 2026 Job Seeker Playbook." />
+  <meta name="keywords" content="ATS resume format India, cold email templates for freshers, STAR method interview, campus placement prep, how to get a job 2026" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Integration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: { 
+          colors: { ink: '#0B1120', paper: '#FAFAFA', indigo: '#4338CA', cyan: '#06B6D4', emerald: '#10B981', slate: '#475569', amber: '#F59E0B' }, 
+          fontFamily: { display: ['"Space Grotesk"', 'sans-serif'], body: ['"Inter"', 'sans-serif'] } 
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #0B1120; }
+    h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
+    .gradient-text { background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    
+    .glow { background: radial-gradient(circle at 20% 10%, rgba(67,56,202,0.06), transparent 55%), radial-gradient(circle at 85% 0%, rgba(6,182,212,0.06), transparent 50%); }
+
+    .btn-primary { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px -5px rgba(67, 56, 202, 0.3), 0 8px 10px -6px rgba(67, 56, 202, 0.1); }
+
+    /* Glass Navigation Tabs */
+    .glass-tabs { background: rgba(255,255,255,0.75); backdrop-filter: blur(16px); border: 1px solid rgba(11,17,32,0.08); box-shadow: 0 4px 24px rgba(11,17,32,0.04); }
+    .glass-tab { transition: all 0.2s ease; color: #475569; }
+    .glass-tab.active, .glass-tab:hover { background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); color: white; box-shadow: 0 4px 14px rgba(67,56,202,0.25); }
+
+    /* Module Cards */
+    .module-card { border: 1px solid rgba(71,85,105,0.12); border-radius: 1.5rem; background: #fff; padding: 2.5rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+    .module-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(11,17,32,0.08); border-color: rgba(67,56,202,0.3); }
+    
+    .step-badge { display: inline-flex; items-center; justify-content: center; width: 2rem; height: 2rem; border-radius: 0.5rem; background: rgba(67,56,202,0.1); color: #4338CA; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.25rem; }
+    
+    .module-card ul li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; color: #475569; font-weight: 500; line-height: 1.6; }
+    .module-card ul li::before { content: "→"; position: absolute; left: 0; color: #06B6D4; font-weight: 700; }
+
+    /* Mobile Menu */
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    #mobile-menu.open { max-height: 400px; border-bottom: 1px solid rgba(71,85,105,0.1); }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER & NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-slate/10">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="display text-2xl font-bold tracking-tight text-ink hover:opacity-80 transition-opacity">Career Catalog</a>
+
+      <div class="hidden md:flex items-center gap-1 glass-tabs rounded-full p-1.5">
+        <a href="career-guidance.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Career Guidance</a>
+        <a href="job-seeker.html" class="glass-tab active px-5 py-2 rounded-full text-sm font-semibold">Job Seeker</a>
+        <a href="blog.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Insights</a>
+        <a href="index.html#about" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">About</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-white px-7 py-3 rounded-full bg-gradient-to-r from-indigo to-cyan btn-primary shadow-md">
+          Talk to an Expert
+        </button>
+        <button id="menu-btn" class="md:hidden p-2 -mr-2 rounded-lg text-ink hover:bg-slate/10 transition-colors" aria-label="Toggle Menu">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="md:hidden bg-paper/95 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-2 text-base font-semibold">
+        <a href="career-guidance.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Career Guidance</a>
+        <a href="job-seeker.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-indigo transition-colors">Job Seeker</a>
+        <a href="blog.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Insights</a>
+        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="mt-4 w-full text-center text-white px-6 py-4 rounded-xl bg-gradient-to-r from-indigo to-cyan font-bold shadow-lg">
+          Talk to an Expert
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="glow">
+      <div class="max-w-4xl mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-20 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald/10 text-emerald text-xs font-bold tracking-widest uppercase mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald animate-pulse"></span> The 2026 Playbook
+        </div>
+        <h1 class="display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-ink leading-[1.1]">
+          Stop applying into the <span class="gradient-text">void.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate font-medium max-w-2xl mx-auto leading-relaxed">
+          Cold applying on job portals has a ~2% success rate. Learn how to bypass the HR black hole, format your resume for ATS parsers, and get directly in front of hiring managers.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= PLAYBOOK MODULES ================= -->
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Module 1: The Resume -->
+        <div class="module-card">
+          <div class="step-badge">1</div>
+          <h3 class="display text-2xl font-bold mb-4 text-ink">The 6-Second ATS Resume</h3>
+          <p class="text-slate text-base font-medium mb-6 leading-relaxed">
+            Recruiters scan resumes for exactly 6 seconds. If your resume uses double columns, graphics, or progress bars, Automated Tracking Systems (ATS) will auto-reject you before a human ever sees it.
+          </p>
+          <ul class="mb-8">
+            <li><strong>Strictly 1 Page:</strong> Unless you have 10+ years of experience.</li>
+            <li><strong>Single Column Format:</strong> Black and white text only.</li>
+            <li><strong>The XYZ Formula:</strong> "Accomplished [X] as measured by [Y], by doing [Z]."</li>
+            <li><strong>Kill the Objective:</strong> Replace it with a hard-hitting summary of your technical stack.</li>
+          </ul>
+          <button onclick="window.CareerCatalog.openBookingPopup()" class="w-full sm:w-auto btn-primary px-6 py-3.5 rounded-xl text-sm font-bold bg-indigo/10 text-indigo hover:bg-indigo hover:text-white transition-colors border border-indigo/20">
+            Audit my resume
+          </button>
+        </div>
+
+        <!-- Module 2: Outreach -->
+        <div class="module-card">
+          <div class="step-badge">2</div>
+          <h3 class="display text-2xl font-bold mb-4 text-ink">Bypassing the Portal</h3>
+          <p class="text-slate text-base font-medium mb-6 leading-relaxed">
+            Applying through "Easy Apply" guarantees you are competing against 5,000 other people. The top 1% of candidates find the hiring manager directly on LinkedIn and send a cold email.
+          </p>
+          <div class="bg-slate-50 border border-slate-100 rounded-xl p-5 mb-8">
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Winning Cold Email Structure</p>
+            <p class="text-sm text-slate-700 font-medium leading-relaxed italic">
+              "Hi [Name],<br><br>I saw [Company] is hiring a [Role]. I recently built a project using [Tech Stack] that solves [Specific Problem related to company].<br><br>I’ve attached my single-page resume and linked my portfolio. Let me know if you have 5 minutes next week to chat."
+            </p>
+          </div>
+          <button onclick="window.CareerCatalog.openBookingPopup()" class="w-full sm:w-auto btn-primary px-6 py-3.5 rounded-xl text-sm font-bold bg-cyan/10 text-cyan-700 hover:bg-cyan-500 hover:text-white transition-colors border border-cyan/20">
+            Build an outreach strategy
+          </button>
+        </div>
+
+        <!-- Module 3: The Interview -->
+        <div class="module-card">
+          <div class="step-badge">3</div>
+          <h3 class="display text-2xl font-bold mb-4 text-ink">Mastering the Interview</h3>
+          <p class="text-slate text-base font-medium mb-6 leading-relaxed">
+            When asked behavioral questions (e.g., "Tell me about a time you failed"), rambling is an instant red flag. You must strictly adhere to the STAR format to keep your answer under 2 minutes.
+          </p>
+          <ul class="mb-8">
+            <li><strong>Situation:</strong> Set the scene contextually (10 seconds).</li>
+            <li><strong>Task:</strong> What was your specific goal? (10 seconds).</li>
+            <li><strong>Action:</strong> What did *you* (not your team) actually do? (60 seconds).</li>
+            <li><strong>Result:</strong> State the quantifiable outcome (e.g., "Saved 15 hours a week").</li>
+          </ul>
+          <button onclick="window.CareerCatalog.openBookingPopup()" class="w-full sm:w-auto btn-primary px-6 py-3.5 rounded-xl text-sm font-bold bg-indigo/10 text-indigo hover:bg-indigo hover:text-white transition-colors border border-indigo/20">
+            Schedule a mock interview
+          </button>
+        </div>
+
+        <!-- Module 4: The PPO -->
+        <div class="module-card">
+          <div class="step-badge">4</div>
+          <h3 class="display text-2xl font-bold mb-4 text-ink">Securing the PPO</h3>
+          <p class="text-slate text-base font-medium mb-6 leading-relaxed">
+            Your internship is a 3-month behavioral interview. Pre-Placement Offers (PPOs) aren't given to the smartest intern; they are given to the intern who makes the manager's life the easiest.
+          </p>
+          <ul class="mb-8">
+            <li><strong>Over-Communicate:</strong> Send a brief End-of-Day (EOD) status update on Slack.</li>
+            <li><strong>Be Low-Maintenance:</strong> Google the error code *before* asking for help.</li>
+            <li><strong>Document Everything:</strong> Leave behind a guide for the next intern.</li>
+          </ul>
+          <button onclick="window.CareerCatalog.openBookingPopup()" class="w-full sm:w-auto btn-primary px-6 py-3.5 rounded-xl text-sm font-bold bg-cyan/10 text-cyan-700 hover:bg-cyan-500 hover:text-white transition-colors border border-cyan/20">
+            Talk to an Expert
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HIGH CONTRAST CTA ================= -->
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+      <div class="rounded-[2.5rem] bg-ink p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-2xl relative overflow-hidden">
+        <!-- Decorative bg -->
+        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-emerald/30 rounded-full blur-3xl"></div>
+        <div class="absolute -left-10 -top-10 w-48 h-48 bg-indigo/30 rounded-full blur-2xl"></div>
+
+        <div class="max-w-xl text-center md:text-left relative z-10">
+          <h2 class="display text-3xl md:text-5xl font-bold mb-4">Is your resume holding you back?</h2>
+          <p class="text-white/80 text-lg font-medium leading-relaxed">Stop guessing why you aren't getting callbacks. Let us audit your resume, fix your formatting, and optimize your keywords in a focused 10-minute strategy call.</p>
+        </div>
+        <div class="w-full md:w-auto flex-shrink-0 relative z-10">
+          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="w-full md:w-auto btn-primary px-9 py-5 rounded-2xl text-lg font-bold bg-white text-ink shadow-xl hover:bg-slate-100 transition-colors">
+            Book a Strategy Call
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate/20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-12">
+      <div class="sm:col-span-2">
+        <a href="index.html" class="display text-2xl font-bold text-ink">Career Catalog</a>
+        <p class="text-base text-slate mt-4 max-w-sm leading-relaxed font-medium">Premium career guidance, skill mapping, and hiring insights engineered for Indian students and early-career professionals.</p>
+      </div>
+      <div>
+        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Explore</p>
+        <div class="flex flex-col gap-4 text-base font-medium text-slate">
+          <a href="career-guidance.html" class="hover:text-indigo transition-colors">Career Guidance</a>
+          <a href="job-seeker.html" class="hover:text-indigo transition-colors text-indigo font-bold">Job Seeker</a>
+          <a href="blog.html" class="hover:text-indigo transition-colors">Insights Blog</a>
+          <a href="index.html#about" class="hover:text-indigo transition-colors">About Us</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Action</p>
+        <div class="flex flex-col gap-4 text-base font-medium text-slate">
+          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="text-left hover:text-indigo transition-colors font-bold text-indigo">Talk to an Expert</button>
+          <a href="#" class="hover:text-indigo transition-colors">Contact</a>
+          <a href="#" class="hover:text-indigo transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-6 border-t border-slate/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm font-medium text-slate">
+      <p>© 2026 Career Catalog. All rights reserved.</p>
+      <p>Built for India.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Auto-Close Logic -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
+
+  <!-- Load popup script locally -->
+  <script src="popup.js"></script>
+</body>
+</html>
