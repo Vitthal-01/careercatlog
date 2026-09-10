@@ -1,488 +1,621 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN" class="scroll-smooth">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Career Guidance — CareerCatalog</title>
-<meta name="description" content="Real, current career paths for Indian students — 12th, UG, certifications, multidisciplinary skills, and job-seeker guidance." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          ink: '#0B1120',
-          paper: '#FAFAFA',
-          indigo: '#4338CA',
-          cyan: '#06B6D4',
-          amber: '#F59E0B',
-          slate: '#475569',
-        },
-        fontFamily: {
-          display: ['"Space Grotesk"', 'sans-serif'],
-          body: ['"Inter"', 'sans-serif'],
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Career Guidance & Paths | Career Catalog India</title>
+  <meta name="title" content="Career Guidance & Paths | Career Catalog India" />
+  <meta name="description" content="Explore real, current career paths for Indian students and freshers. Step-by-step guidance for 12th, UG, Certifications, and Job Seekers. Book a ₹99 strategy call." />
+  <meta name="keywords" content="career paths India, jobs after 12th, certifications for freshers, highest paying skills India, job seeker roadmap, resume format 2026" />
+  <meta name="author" content="Career Catalog" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://careercatalog.in/career-guidance.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://careercatalog.in/career-guidance.html" />
+  <meta property="og:title" content="Career Guidance & Paths | Career Catalog India" />
+  <meta property="og:description" content="Explore real, current career paths for Indian students and freshers. Step-by-step guidance for 12th, UG, Certifications, and Job Seekers." />
+  <meta property="og:image" content="https://careercatalog.in/assets/og-image.jpg" />
+  <meta property="og:site_name" content="Career Catalog" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://careercatalog.in/career-guidance.html" />
+  <meta property="twitter:title" content="Career Guidance & Paths | Career Catalog" />
+  <meta property="twitter:description" content="Explore real, current career paths for Indian students and freshers. Step-by-step guidance for 12th, UG, Certifications, and Job Seekers." />
+  <meta property="twitter:image" content="https://careercatalog.in/assets/og-image.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0B1120',
+            paper: '#FAFAFA',
+            indigo: '#4338CA',
+            cyan: '#06B6D4',
+            amber: '#F59E0B',
+            slate: '#475569',
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          }
         }
       }
     }
-  }
-</script>
-<style>
-  body { font-family: 'Inter', sans-serif; }
-  h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
-  html { scroll-behavior: smooth; }
+  </script>
 
-  .gradient-text {
-    background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .glow {
-    background: radial-gradient(circle at 20% 10%, rgba(67,56,202,0.10), transparent 55%),
-                radial-gradient(circle at 85% 0%, rgba(6,182,212,0.10), transparent 50%);
-  }
-  .btn-primary { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,17,32,0.18); }
-
-  /* Career path explorer — tabs */
-  .path-tab {
-    padding: 0.65rem 1.25rem;
-    border-radius: 9999px;
-    border: 1px solid rgba(11,17,32,0.12);
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #475569;
-    background: #fff;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    cursor: pointer;
-  }
-  .path-tab.active {
-    background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
-    color: #fff;
-    border-color: transparent;
-    box-shadow: 0 4px 14px rgba(67,56,202,0.3);
-  }
-  .path-tab:not(.active):hover { background: rgba(11,17,32,0.05); color: #0B1120; }
-
-  /* Option cards — the entry menu of the five stages */
-  .option-card {
-    display: block;
-    width: 100%;
-    text-align: left;
-    border: 1px solid rgba(71,85,105,0.15);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    background: #fff;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  }
-  .option-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(11,17,32,0.08); }
-  .option-card.active {
-    border-color: transparent;
-    background: linear-gradient(135deg, #4338CA 0%, #06B6D4 100%);
-    box-shadow: 0 10px 28px rgba(67,56,202,0.3);
-  }
-  .option-card .option-icon { color: #4338CA; transition: color 0.2s ease; }
-  .option-card.active .option-icon { color: #fff; }
-  .option-card h3 { transition: color 0.2s ease; }
-  .option-card.active h3 { color: #fff; }
-  .option-card p { transition: color 0.2s ease; }
-  .option-card.active p { color: rgba(255,255,255,0.85); }
-  .option-card .option-arrow { opacity: 0; transform: translateX(-4px); transition: all 0.2s ease; }
-  .option-card.active .option-arrow { opacity: 1; transform: translateX(0); color: #fff; }
-
-  .path-panel { display: none; }
-  .path-panel.active { display: block; }
-
-  /* Subsection cards inside each panel — now hoverable to reveal a
-     "Book a call" prompt, and clickable to open the booking popup. */
-  .path-card {
-    position: relative;
-    border: 1px solid rgba(71,85,105,0.15);
-    border-radius: 1rem;
-    padding: 1.75rem;
-    background: #fff;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    height: 100%;
-    cursor: pointer;
-  }
-  .path-card:hover,
-  .path-card:focus-within {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(11,17,32,0.10);
-    border-color: rgba(67,56,202,0.35);
-  }
-  .path-icon { color: #4338CA; }
-  .path-tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    color: #4338CA;
-    background: rgba(67,56,202,0.08);
-    padding: 0.25rem 0.65rem;
-    border-radius: 9999px;
-    margin-bottom: 0.9rem;
-  }
-
-  /* "Book a call" hover prompt, injected into every .path-card by JS */
-  .path-card-cta {
-    position: absolute;
-    top: 0.9rem; right: 0.9rem;
-    display: inline-flex; align-items: center; gap: 0.35rem;
-    font-size: 0.72rem; font-weight: 600;
-    color: #fff;
-    background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
-    padding: 0.4rem 0.75rem;
-    border-radius: 9999px;
-    border: none; cursor: pointer;
-    box-shadow: 0 6px 16px rgba(67,56,202,0.35);
-    opacity: 0; transform: translateY(-4px) scale(0.96);
-    transition: opacity 0.18s ease, transform 0.18s ease;
-    pointer-events: none;
-    white-space: nowrap;
-    z-index: 2;
-  }
-  .path-card:hover .path-card-cta,
-  .path-card:focus-within .path-card-cta,
-  .path-card-cta.cc-force-show {
-    opacity: 1; transform: translateY(0) scale(1);
-    pointer-events: auto;
-  }
-  .path-card-cta:hover { filter: brightness(1.06); }
-  .path-card-cta svg { width: 12px; height: 12px; }
-
-  @media (hover: none) {
-    /* Touch devices can't hover: show a quieter, always-visible chip instead. */
-    .path-card-cta {
-      opacity: 1; transform: none; pointer-events: auto;
-      position: static; margin-top: 1rem;
-      background: rgba(67,56,202,0.08); color: #4338CA;
-      box-shadow: none;
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #0B1120; }
+    h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-  }
+    
+    .glow {
+      background: radial-gradient(circle at 20% 10%, rgba(67,56,202,0.06), transparent 55%),
+                  radial-gradient(circle at 85% 0%, rgba(6,182,212,0.06), transparent 50%);
+    }
 
-  /* Mobile menu */
-  #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-  #mobile-menu.open { max-height: 320px; }
-  #menu-btn[aria-expanded="true"] .icon-open { display: none; }
-  #menu-btn[aria-expanded="false"] .icon-close { display: none; }
+    .btn-primary { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(67, 56, 202, 0.4), 0 8px 10px -6px rgba(67, 56, 202, 0.1); }
 
-  @media (prefers-reduced-motion: reduce) {
-    .btn-primary, .path-card, .path-card-cta, #mobile-menu { transition: none; }
-  }
-  a:focus-visible, button:focus-visible { outline: 2px solid #4338CA; outline-offset: 3px; }
-</style>
+    .glass-tabs {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(11,17,32,0.08);
+      box-shadow: 0 4px 24px rgba(11,17,32,0.04);
+    }
+    .glass-tab { transition: all 0.2s ease; color: #475569; }
+    .glass-tab.active { background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); color: white; box-shadow: 0 4px 14px rgba(67,56,202,0.25); }
+    .glass-tab:not(.active):hover { background: rgba(11,17,32,0.06); color: #0B1120; }
+
+    /* Interactive Stage Cards (The Tabs) */
+    .option-card {
+      display: block; width: 100%; text-align: left;
+      border: 1px solid rgba(71,85,105,0.15); border-radius: 1.25rem;
+      padding: 1.75rem; background: #fff; cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .option-card:hover:not(.active) { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(11,17,32,0.06); border-color: rgba(67,56,202,0.2); }
+    .option-card.active {
+      border-color: transparent;
+      background: linear-gradient(135deg, #4338CA 0%, #06B6D4 100%);
+      box-shadow: 0 15px 35px rgba(67,56,202,0.3);
+      transform: translateY(-4px);
+    }
+    .option-card .option-icon { color: #4338CA; transition: color 0.3s ease; }
+    .option-card.active .option-icon { color: #fff; }
+    .option-card h3 { transition: color 0.3s ease; }
+    .option-card.active h3 { color: #fff; }
+    .option-card p { transition: color 0.3s ease; }
+    .option-card.active p { color: rgba(255,255,255,0.85); }
+    .option-card .option-arrow { opacity: 0; transform: translateY(-5px); transition: all 0.3s ease; color: #fff; display: inline-flex; items-center; gap: 4px; }
+    .option-card.active .option-arrow { opacity: 1; transform: translateY(0); }
+
+    .path-panel { display: none; opacity: 0; animation: fadeIn 0.4s ease forwards; }
+    .path-panel.active { display: block; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Path Content Cards */
+    .path-card {
+      position: relative; border: 1px solid rgba(71,85,105,0.12);
+      border-radius: 1.25rem; padding: 2rem; background: #fff;
+      transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;
+    }
+    .path-card:hover {
+      transform: translateY(-5px); box-shadow: 0 20px 40px rgba(11,17,32,0.08); border-color: rgba(67,56,202,0.35);
+    }
+    .path-icon { color: #4338CA; margin-bottom: 1.25rem; }
+    .path-tag {
+      display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      color: #4338CA; background: rgba(67,56,202,0.08); padding: 0.3rem 0.75rem; border-radius: 9999px; margin-bottom: 1rem;
+    }
+    
+    /* Hardcoded, highly visible booking button inside cards */
+    .card-book-btn {
+      margin-top: auto; padding-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.875rem; font-weight: 700; color: #4338CA; cursor: pointer;
+      transition: color 0.2s ease; border: none; background: transparent; width: max-content;
+    }
+    .card-book-btn:hover { color: #06B6D4; }
+    .card-book-btn svg { transition: transform 0.2s ease; }
+    .card-book-btn:hover svg { transform: translateX(4px); }
+
+    /* Mobile menu */
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    #mobile-menu.open { max-height: 400px; border-bottom: 1px solid rgba(71,85,105,0.1); }
+    #menu-btn[aria-expanded="true"] .icon-open { display: none; }
+    #menu-btn[aria-expanded="false"] .icon-close { display: none; }
+
+    .skip-link { position: absolute; left: -9999px; top: 0; background: #0B1120; color: #fff; padding: 12px 20px; border-radius: 0 0 8px 0; z-index: 100; font-size: 14px; font-weight: 600; }
+    .skip-link:focus { left: 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn-primary, .path-card, .option-card, #mobile-menu, .path-panel { transition: none; animation: none; }
+    }
+    a:focus-visible, button:focus-visible { outline: 2px solid #4338CA; outline-offset: 3px; }
+  </style>
 </head>
-<body class="bg-paper text-ink">
+<body>
 
-  <!-- Nav -->
-  <nav class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-slate/10">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="display text-lg font-semibold">CareerCatalog</a>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-      <div class="hidden md:flex items-center gap-1 bg-white/60 border border-slate/10 rounded-full p-1.5">
-        <a href="career-guidance.html" class="px-5 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-indigo to-cyan text-white">Career Guidance</a>
-        <a href="index.html#blog" class="px-5 py-2 rounded-full text-sm font-medium text-slate hover:text-ink">Insights</a>
-        <a href="index.html#about" class="px-5 py-2 rounded-full text-sm font-medium text-slate hover:text-ink">About</a>
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-slate/10">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Main Navigation">
+      <a href="/" class="display text-xl font-bold tracking-tight text-ink hover:opacity-80 transition-opacity">Career Catalog</a>
+
+      <div class="hidden md:flex items-center gap-1 glass-tabs rounded-full p-1.5">
+        <a href="/career-guidance.html" class="glass-tab active px-5 py-2 rounded-full text-sm font-semibold">Career Guidance</a>
+        <a href="/career-guidance.html#panel-pjob" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold" onclick="document.querySelector('[data-tab=\'pjob\']').click();">Job Seeker</a>
+        <a href="/blog.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Insights</a>
+        <a href="/#about" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">About</a>
       </div>
 
-      <div class="flex items-center gap-3">
-        <a href="index.html#subscribe" class="hidden sm:inline-block text-sm font-medium text-white px-5 py-2.5 rounded-lg bg-gradient-to-r from-indigo to-cyan hover:opacity-90 transition-opacity">Subscribe</a>
-        <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden p-2 -mr-2 rounded-lg hover:bg-slate/10">
-          <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#0B1120" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#0B1120" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="flex items-center gap-4">
+        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-white px-6 py-2.5 rounded-full bg-gradient-to-r from-indigo to-cyan btn-primary">
+          Book ₹99 Call
+        </button>
+        <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation" class="md:hidden p-2 -mr-2 rounded-lg text-ink hover:bg-slate/10 transition-colors">
+          <svg class="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="md:hidden bg-paper/95 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-2 text-base font-semibold">
+        <a href="/career-guidance.html" class="py-3 px-3 rounded-xl hover:bg-indigo/5 text-indigo">Career Guidance</a>
+        <a href="/career-guidance.html#panel-pjob" class="py-3 px-3 rounded-xl hover:bg-indigo/5 text-ink" onclick="document.querySelector('[data-tab=\'pjob\']').click();">Job Seeker</a>
+        <a href="/blog.html" class="py-3 px-3 rounded-xl hover:bg-indigo/5 text-ink">Insights</a>
+        <a href="/#about" class="py-3 px-3 rounded-xl hover:bg-indigo/5 text-ink">About</a>
+        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="mt-4 w-full text-center text-white px-6 py-3.5 rounded-xl bg-gradient-to-r from-indigo to-cyan font-bold shadow-md">
+          Book ₹99 Career Call
         </button>
       </div>
     </div>
+  </header>
 
-    <div id="mobile-menu" class="md:hidden border-t border-slate/10 bg-paper">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1 text-sm font-medium">
-        <a href="career-guidance.html" class="py-2.5 px-2 rounded-lg hover:bg-slate/5">Career Guidance</a>
-        <a href="index.html#blog" class="py-2.5 px-2 rounded-lg hover:bg-slate/5">Insights</a>
-        <a href="index.html#about" class="py-2.5 px-2 rounded-lg hover:bg-slate/5">About</a>
-        <a href="index.html#subscribe" class="mt-2 text-center text-white px-5 py-2.5 rounded-lg bg-gradient-to-r from-indigo to-cyan">Subscribe</a>
+  <main id="main">
+    <!-- Page Header -->
+    <section class="glow">
+      <div class="max-w-4xl mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-16 text-center">
+        <p class="text-xs font-bold tracking-[0.2em] uppercase text-indigo mb-5">Stage-by-Stage Mapping</p>
+        <h1 class="display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight text-ink">
+          Wherever you are, there's a <span class="gradient-text">genuine</span> next step.
+        </h1>
+        <p class="text-lg text-slate leading-relaxed font-medium max-w-2xl mx-auto">
+          Select your current stage below to uncover reality-checked career paths. See a path that fits? Tap the button inside to book a focused, 10-minute strategy call with us.
+        </p>
       </div>
-    </div>
-  </nav>
+    </section>
 
+    <!-- Career Path Explorer Grid -->
+    <section id="paths" class="max-w-7xl mx-auto px-6 pb-32 scroll-mt-24">
+
+      <!-- Stage Selector Tabs -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-16" role="tablist" aria-label="Career stages">
+        
+        <button class="option-card active focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo/50" data-tab="p12" role="tab" aria-selected="true" aria-controls="panel-p12" id="tab-p12">
+          <svg class="option-icon mb-4" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+          <h3 class="display text-lg font-bold mb-1 text-ink">After 12th</h3>
+          <p class="text-slate text-sm leading-relaxed font-medium mb-3">Engineering, medical, commerce, design & law</p>
+          <span class="option-arrow text-xs font-bold tracking-wide uppercase"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg> Viewing</span>
+        </button>
+
+        <button class="option-card focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo/50" data-tab="pug" role="tab" aria-selected="false" aria-controls="panel-pug" id="tab-pug">
+          <svg class="option-icon mb-4" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="1"/><path d="M9 21V10M4 10l8-6 8 6"/></svg>
+          <h3 class="display text-lg font-bold mb-1 text-ink">After UG</h3>
+          <p class="text-slate text-sm leading-relaxed font-medium mb-3">Placement, higher studies, govt exams, pivots</p>
+          <span class="option-arrow text-xs font-bold tracking-wide uppercase"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg> Viewing</span>
+        </button>
+
+        <button class="option-card focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo/50" data-tab="pcert" role="tab" aria-selected="false" aria-controls="panel-pcert" id="tab-pcert">
+          <svg class="option-icon mb-4" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 6.6H21l-5.4 4 2 6.6L12 15l-5.6 4.2 2-6.6L3 8.6h6.8z"/></svg>
+          <h3 class="display text-lg font-bold mb-1 text-ink">Certifications</h3>
+          <p class="text-slate text-sm leading-relaxed font-medium mb-3">Data, marketing, cloud, product & finance</p>
+          <span class="option-arrow text-xs font-bold tracking-wide uppercase"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg> Viewing</span>
+        </button>
+
+        <button class="option-card focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo/50" data-tab="pskill" role="tab" aria-selected="false" aria-controls="panel-pskill" id="tab-pskill">
+          <svg class="option-icon mb-4" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+          <h3 class="display text-lg font-bold mb-1 text-ink">Skill Combos</h3>
+          <p class="text-slate text-sm leading-relaxed font-medium mb-3">Multidisciplinary skills that stand out today</p>
+          <span class="option-arrow text-xs font-bold tracking-wide uppercase"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg> Viewing</span>
+        </button>
+
+        <button class="option-card focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo/50" data-tab="pjob" role="tab" aria-selected="false" aria-controls="panel-pjob" id="tab-pjob">
+          <svg class="option-icon mb-4" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/><path d="M9 13h6M9 17h4"/></svg>
+          <h3 class="display text-lg font-bold mb-1 text-ink">Job Seeker</h3>
+          <p class="text-slate text-sm leading-relaxed font-medium mb-3">Resume, platforms, interviews, networking</p>
+          <span class="option-arrow text-xs font-bold tracking-wide uppercase"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg> Viewing</span>
+        </button>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- PANEL 1: After 12th                            -->
+      <!-- ============================================== -->
+      <div id="panel-p12" class="path-panel active scroll-mt-24" role="tabpanel" aria-labelledby="tab-p12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+            <div>
+              <p class="path-tag">High Volume · PCM</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Engineering & Tech (JEE / CET)</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">The default for PCM. However, merely getting a B.Tech isn't enough. Specializations in AI, Data Science, and core CS branches heavily dominate placement drives compared to traditional streams.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss this path <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v-3a6 6 0 0112 0v3"/><circle cx="4" cy="17" r="2"/><circle cx="16" cy="17" r="2"/><path d="M20 9V7a2 2 0 00-2-2"/></svg>
+            <div>
+              <p class="path-tag">Alternatives · PCB</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Medical & Allied Health</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">MBBS (NEET) is brutally competitive. Smart PCB students are pivoting to high-demand allied fields like Physiotherapy, Clinical Research, and Biotech for a faster, guaranteed entry into healthcare.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss this path <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M3 12h18"/></svg>
+            <div>
+              <p class="path-tag">Dependable · Commerce</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Commerce, CA & Finance</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">CA remains highly respected with exceptional ROI. B.Com/BBA students who stack certifications (like CFA Level 1 or Financial Modeling) are outcompeting engineers for entry-level analyst roles.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss this path <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0112 0v2"/><path d="M2 21h20"/></svg>
+            <div>
+              <p class="path-tag">Creative Edge · Arts</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Design, Law & Humanities</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">NID/UCEED for UX Design and CLAT for Corporate Law offer salaries rivaling top tech tiers—without needing PCM. Psychology majors are also finding massive demand in HR analytics.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss this path <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- PANEL 2: After UG                              -->
+      <!-- ============================================== -->
+      <div id="panel-pug" class="path-panel scroll-mt-24" role="tabpanel" aria-labelledby="tab-pug">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="1"/><path d="M9 21V10M4 10l8-6 8 6"/></svg>
+            <div>
+              <p class="path-tag">Direct Entry</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Campus Placement Strategy</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">The most frictionless route. Pre-final year internships heavily dictate who gets shortlisted. Your focus should be on building 2 high-quality projects rather than 10 generic ones.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss placement strategy <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V4H6.5A2.5 2.5 0 004 6.5v13z"/><path d="M8 8h8M8 12h6"/></svg>
+            <div>
+              <p class="path-tag">Long-Term ROI</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Higher Studies (MBA, M.Tech, MS)</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">CAT for Management, GATE for Tech, GRE for Abroad. Only pursue this if it significantly alters your salary band or role—doing it just for the sake of a degree is a costly mistake.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss higher studies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 6.6H21l-5.4 4 2 6.6L12 15l-5.6 4.2 2-6.6L3 8.6h6.8z"/></svg>
+            <div>
+              <p class="path-tag">Stability + Prestige</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Government Exams & PSU</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">UPSC, IBPS, and SSC remain highly sought after for absolute job security. Requires 1–2 years of intensive, undistracted preparation. Have a strict backup plan.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss backup planning <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3.6-7.2M21 4v5h-5"/></svg>
+            <div>
+              <p class="path-tag">Fastest Growing</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Skill-Up & Industry Pivot</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Degrees matter less than verifiable skills. A rigorous 3–6 month certification in Data Analytics, Product, or Cloud allows arts or commerce grads to pivot successfully into tech.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss pivoting fields <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- PANEL 3: Certifications                        -->
+      <!-- ============================================== -->
+      <div id="panel-pcert" class="path-panel scroll-mt-24" role="tabpanel" aria-labelledby="tab-pcert">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            <div>
+              <p class="path-tag">Highest Hiring Interest</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Data Analytics & AI</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Google/IBM Data Analyst certs. Pair Python, SQL, and Power BI. This is the fastest way to make a non-technical degree immediately attractive to tech and finance recruiters.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Audit my tech skills <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-7 18-3-8-8-3z"/></svg>
+            <div>
+              <p class="path-tag">In-Demand Content</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Digital & Performance Marketing</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Meta/Google Ads certs. A legitimate path for creative students who want measurable ROI. You must prove you know how to lower Customer Acquisition Cost (CAC) to get hired.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss marketing path <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 000-9 6 6 0 00-11.4-1.6A4 4 0 007 16h10.5z"/></svg>
+            <div>
+              <p class="path-tag">High-Paying Infrastructure</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Cloud Computing (AWS/Azure)</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">AWS Solutions Architect or Azure Fundamentals. Basic cloud knowledge is now a baseline expectation for any backend developer or IT infrastructure role.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss cloud certs <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+            <div>
+              <p class="path-tag">Elite Tier ROI</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Finance (CFA/FRM) & Product</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">CFA Level 1 gets you into high-finance doors that are normally locked to non-target colleges. Product Management certs (like Reforge) teach you how to build what users actually want.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss finance/product <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- PANEL 4: Skill Combos                          -->
+      <!-- ============================================== -->
+      <div id="panel-pskill" class="path-panel scroll-mt-24" role="tabpanel" aria-labelledby="tab-pskill">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+            <div>
+              <p class="path-tag">The Multiplier Effect</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Core Degree + Applied AI</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">A Mechanical Engineer who knows how to train AI models for predictive maintenance, or a B.Com student using Python to automate ledgers. This combo is worth 3x the base degree.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Map my skill combo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
+            <div>
+              <p class="path-tag">Corporate Fast-Track</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Data Tech + Business Strategy</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Companies don't just want a dashboard; they want to know what to *do* with the data. Being fluent in both SQL and P&L statements makes you prime material for Business Analyst roles.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Map my skill combo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20l9-9-4-4-9 9v4h4z"/><path d="M14 6l4 4"/></svg>
+            <div>
+              <p class="path-tag">Content Leaders</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Writing + SEO / Analytics</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Writers are being replaced by AI. Writers who understand keyword research, conversion rate optimization, and A/B testing are being hired to lead the AI tools.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Map my skill combo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="15" width="7" height="7" rx="1"/><rect x="14" y="15" width="7" height="7" rx="1"/></svg>
+            <div>
+              <p class="path-tag">The Builder's Edge</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">UI/UX Design + No-Code Dev</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Designers who can actually ship working products using Webflow, Bubble, or Framer are bypassing junior roles entirely and charging premium rates as product engineers.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Map my skill combo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- PANEL 5: Job Seeker                            -->
+      <!-- ============================================== -->
+      <div id="panel-pjob" class="path-panel scroll-mt-24" role="tabpanel" aria-labelledby="tab-pjob">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="path-card border-indigo/20">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/><path d="M9 13h6M9 17h4"/></svg>
+            <div>
+              <p class="path-tag">Step 1</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">The 6-Second Resume</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Recruiters scan for exactly 6 seconds. Single-column format, stark black-and-white, zero progress bars. Lead with hard metrics (e.g., "Increased sales by 15%") instead of vague adjectives.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Audit my resume (₹99) <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card border-indigo/20">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            <div>
+              <p class="path-tag">Step 2</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Bypassing the ATS Black Hole</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Cold applying on Naukri has a ~2% success rate. Learn to use LinkedIn boolean searches to find hiring managers directly, and send cold emails with a link to your live portfolio.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Learn cold outreach <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card border-indigo/20">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <div>
+              <p class="path-tag">Step 3</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Mastering the STAR Method</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Situation, Task, Action, Result. When asked behavioral questions, structure your answers tightly. Always have two intelligent, company-specific questions prepared to ask them at the end.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Mock interview strategy <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          
+          <div class="path-card border-indigo/20">
+            <svg class="path-icon mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21H6a2 2 0 01-2-2v-2a4 4 0 014-4h1M17 11a4 4 0 10-4-4"/><path d="M20 8l-4 4-2-2"/></svg>
+            <div>
+              <p class="path-tag">Step 4</p>
+              <h3 class="display text-xl font-bold mb-2 text-ink">Converting Internships to PPOs</h3>
+              <p class="text-slate text-sm leading-relaxed font-medium mb-4">Treat your 3-month internship as an extended behavioral interview. Over-communicate, deliver on small tasks flawlessly, and make your manager's life actively easier.</p>
+            </div>
+            <button onclick="window.CareerCatalog.openBookingPopup()" class="card-book-btn">
+              Discuss PPO strategies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script for Tab System -->
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-  </script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.option-card');
+      const panels = document.querySelectorAll('.path-panel');
 
-  <!-- Page header -->
-  <section class="glow">
-    <div class="max-w-4xl mx-auto px-6 pt-16 pb-12 md:pt-20 md:pb-16 text-center">
-      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-indigo mb-5">Career Guidance</p>
-      <h1 class="display text-4xl sm:text-5xl font-semibold mb-6 tracking-tight leading-tight">
-        Wherever you are, there's a <span class="gradient-text">genuine</span> next step.
-      </h1>
-      <p class="text-lg text-slate leading-relaxed max-w-2xl mx-auto">
-        Tap a stage below to see it, then tap any path that fits you to book a free-to-ask, ₹99, 10-minute call with us about it.
-      </p>
-    </div>
-  </section>
+      tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          // Remove active classes
+          tabs.forEach(t => { 
+            t.classList.remove('active'); 
+            t.setAttribute('aria-selected', 'false'); 
+          });
+          panels.forEach(p => p.classList.remove('active'));
 
-  <!-- Career Path Explorer -->
-  <section id="paths" class="max-w-6xl mx-auto px-6 pb-24 scroll-mt-20">
+          // Add active class to selected
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          
+          const panelId = 'panel-' + tab.dataset.tab;
+          const activePanel = document.getElementById(panelId);
+          activePanel.classList.add('active');
 
-    <!-- Option menu — pick a stage to explore -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-14" role="tablist" aria-label="Career stages">
-      <button class="option-card active" data-tab="p12" role="tab" aria-selected="true">
-        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
-        <h3 class="display text-base font-semibold mb-1">12th</h3>
-        <p class="text-slate text-xs leading-relaxed">Engineering, medical, commerce, design & law</p>
-        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
-      </button>
-      <button class="option-card" data-tab="pug" role="tab" aria-selected="false">
-        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="1"/><path d="M9 21V10M4 10l8-6 8 6"/></svg>
-        <h3 class="display text-base font-semibold mb-1">UG</h3>
-        <p class="text-slate text-xs leading-relaxed">Placement, higher studies, govt exams, pivots</p>
-        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
-      </button>
-      <button class="option-card" data-tab="pcert" role="tab" aria-selected="false">
-        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 6.6H21l-5.4 4 2 6.6L12 15l-5.6 4.2 2-6.6L3 8.6h6.8z"/></svg>
-        <h3 class="display text-base font-semibold mb-1">Certifications</h3>
-        <p class="text-slate text-xs leading-relaxed">Data, marketing, cloud, product & finance</p>
-        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
-      </button>
-      <button class="option-card" data-tab="pskill" role="tab" aria-selected="false">
-        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
-        <h3 class="display text-base font-semibold mb-1">Multidisciplinary Skills</h3>
-        <p class="text-slate text-xs leading-relaxed">Skill combinations that stand out today</p>
-        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
-      </button>
-      <button class="option-card" data-tab="pjob" role="tab" aria-selected="false">
-        <svg class="option-icon mb-4" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/><path d="M9 13h6M9 17h4"/></svg>
-        <h3 class="display text-base font-semibold mb-1">Job Seeker</h3>
-        <p class="text-slate text-xs leading-relaxed">Resume, platforms, interviews, internships</p>
-        <span class="option-arrow inline-block mt-3 text-xs font-medium">Viewing ↓</span>
-      </button>
-    </div>
-
-    <!-- Panel: 12th -->
-    <div id="panel-p12" class="path-panel active scroll-mt-24" role="tabpanel">
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
-          <p class="path-tag">Most chosen · PCM</p>
-          <h3 class="display text-lg font-semibold mb-2">Engineering & tech (JEE / state CETs)</h3>
-          <p class="text-slate text-sm leading-relaxed">Still the default for PCM students. Within B.Tech, AI, Data Science, and core CS branches are pulling ahead of traditional streams in recruiter demand.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v-3a6 6 0 0112 0v3"/><circle cx="4" cy="17" r="2"/><circle cx="16" cy="17" r="2"/><path d="M20 9V7a2 2 0 00-2-2"/></svg>
-          <p class="path-tag">High demand · PCB</p>
-          <h3 class="display text-lg font-semibold mb-2">Medical & allied health (NEET)</h3>
-          <p class="text-slate text-sm leading-relaxed">MBBS seats are limited and competitive, so more PCB students are seriously considering nursing, physiotherapy, and other allied health degrees as a faster, genuine route in.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M3 12h18"/></svg>
-          <p class="path-tag">Dependable · Commerce</p>
-          <h3 class="display text-lg font-semibold mb-2">Commerce, CA & BBA</h3>
-          <p class="text-slate text-sm leading-relaxed">B.Com and BBA remain solid choices, and CA is still one of India's most respected qualifications — tough exams, but strong long-term payoff.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0112 0v2"/><path d="M2 21h20"/></svg>
-          <p class="path-tag">Fast-growing · Arts</p>
-          <h3 class="display text-lg font-semibold mb-2">Design, law & humanities</h3>
-          <p class="text-slate text-sm leading-relaxed">UCEED/NID for design and CLAT for law are drawing more students each year, as families see these pay well without needing PCM.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel: UG -->
-    <div id="panel-pug" class="path-panel scroll-mt-24" role="tabpanel">
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="1"/><path d="M9 21V10M4 10l8-6 8 6"/></svg>
-          <p class="path-tag">Direct entry</p>
-          <h3 class="display text-lg font-semibold mb-2">Campus placement</h3>
-          <p class="text-slate text-sm leading-relaxed">Still the most common route straight into a core job — the internship you did in your pre-final year often decides which companies shortlist you.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V4H6.5A2.5 2.5 0 004 6.5v13z"/><path d="M8 8h8M8 12h6"/></svg>
-          <p class="path-tag">Long-term</p>
-          <h3 class="display text-lg font-semibold mb-2">Higher studies — M.Tech, MBA, MS</h3>
-          <p class="text-slate text-sm leading-relaxed">CAT for MBA, GATE for M.Tech, or GRE/IELTS for studying abroad. Worth it when it clearly changes your role or salary band, not just for the degree.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 6.6H21l-5.4 4 2 6.6L12 15l-5.6 4.2 2-6.6L3 8.6h6.8z"/></svg>
-          <p class="path-tag">Stability + prestige</p>
-          <h3 class="display text-lg font-semibold mb-2">Government exams</h3>
-          <p class="text-slate text-sm leading-relaxed">UPSC, banking (IBPS), and SSC still attract huge numbers of graduates every year for the job security and social respect they carry.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3.6-7.2M21 4v5h-5"/></svg>
-          <p class="path-tag">Fastest-growing</p>
-          <h3 class="display text-lg font-semibold mb-2">Skill-up & pivot</h3>
-          <p class="text-slate text-sm leading-relaxed">A 3–6 month certification in data, product, or digital marketing is helping graduates from any stream move into roles that don't match their original degree.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel: Certifications -->
-    <div id="panel-pcert" class="path-panel scroll-mt-24" role="tabpanel">
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-          <p class="path-tag">Highest hiring interest</p>
-          <h3 class="display text-lg font-semibold mb-2">Data analytics & AI</h3>
-          <p class="text-slate text-sm leading-relaxed">Python, SQL, and Power BI through Google's or Coursera's data certificates — one of the fastest ways to make a non-tech degree tech-relevant.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-7 18-3-8-8-3z"/></svg>
-          <p class="path-tag">In demand · content</p>
-          <h3 class="display text-lg font-semibold mb-2">Digital marketing</h3>
-          <p class="text-slate text-sm leading-relaxed">Google and Meta certifications, specialising in either performance marketing or SEO — a genuine path for students who like content but want measurable results.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 000-9 6 6 0 00-11.4-1.6A4 4 0 007 16h10.5z"/></svg>
-          <p class="path-tag">High-paying · tech</p>
-          <h3 class="display text-lg font-semibold mb-2">Cloud computing</h3>
-          <p class="text-slate text-sm leading-relaxed">AWS, Azure, or GCP associate-level certifications — increasingly asked for even in roles that aren't purely "cloud engineer."</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
-          <p class="path-tag">Steady growth</p>
-          <h3 class="display text-lg font-semibold mb-2">Product & finance</h3>
-          <p class="text-slate text-sm leading-relaxed">PM certifications for product roles, and CFA or NISM for a serious finance track — both open doors that a general degree alone often doesn't.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel: Multidisciplinary Skills -->
-    <div id="panel-pskill" class="path-panel scroll-mt-24" role="tabpanel">
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
-          <p class="path-tag">The real trend</p>
-          <h3 class="display text-lg font-semibold mb-2">AI layered on your core degree</h3>
-          <p class="text-slate text-sm leading-relaxed">A mechanical engineer who understands AI in manufacturing, or a law student who understands AI and data privacy — the combination is worth more than either skill alone.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
-          <p class="path-tag">Business-facing</p>
-          <h3 class="display text-lg font-semibold mb-2">Data + business sense</h3>
-          <p class="text-slate text-sm leading-relaxed">Companies need people who can read a dashboard and explain what to actually do about it — not just build the dashboard.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20l9-9-4-4-9 9v4h4z"/><path d="M14 6l4 4"/></svg>
-          <p class="path-tag">Content careers</p>
-          <h3 class="display text-lg font-semibold mb-2">Writing + marketing know-how</h3>
-          <p class="text-slate text-sm leading-relaxed">Good writers who also understand SEO and basic analytics get picked over writers who only write — this pairing is now a genuine hiring filter.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="15" width="7" height="7" rx="1"/><rect x="14" y="15" width="7" height="7" rx="1"/></svg>
-          <p class="path-tag">Builder's edge</p>
-          <h3 class="display text-lg font-semibold mb-2">Design + no-code tools</h3>
-          <p class="text-slate text-sm leading-relaxed">Students who can design and actually ship a working app or website using no-code tools stand out in internship applications, without needing a full dev background.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel: Job Seeker -->
-    <div id="panel-pjob" class="path-panel scroll-mt-24" role="tabpanel">
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/><path d="M9 13h6M9 17h4"/></svg>
-          <p class="path-tag">Step 1</p>
-          <h3 class="display text-lg font-semibold mb-2">A resume recruiters read</h3>
-          <p class="text-slate text-sm leading-relaxed">One page, simple format, numbers over adjectives. Most freshers lose the recruiter in the first ten seconds with a cluttered layout.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
-          <p class="path-tag">Step 2</p>
-          <h3 class="display text-lg font-semibold mb-2">Where to actually look</h3>
-          <p class="text-slate text-sm leading-relaxed">Naukri, LinkedIn, and Internshala for volume — but a referral from someone you know still converts far better than a cold application.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          <p class="path-tag">Step 3</p>
-          <h3 class="display text-lg font-semibold mb-2">Interview prep that works</h3>
-          <p class="text-slate text-sm leading-relaxed">Research the company, prepare real examples using a simple situation-action-result structure, and prepare two honest questions to ask them back.</p>
-        </div>
-        <div class="path-card" tabindex="0">
-          <svg class="path-icon mb-5" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21H6a2 2 0 01-2-2v-2a4 4 0 014-4h1M17 11a4 4 0 10-4-4"/><path d="M20 8l-4 4-2-2"/></svg>
-          <p class="path-tag">Step 4</p>
-          <h3 class="display text-lg font-semibold mb-2">Turn internships into offers</h3>
-          <p class="text-slate text-sm leading-relaxed">Treat your internship as an extended interview — most pre-placement offers go to interns who asked good questions and delivered on small tasks reliably.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    // ---- Stage tabs (12th / UG / Certifications / ...) ----
-    document.querySelectorAll('.option-card').forEach(card => {
-      card.addEventListener('click', () => {
-        document.querySelectorAll('.option-card').forEach(c => { c.classList.remove('active'); c.setAttribute('aria-selected','false'); });
-        card.classList.add('active');
-        card.setAttribute('aria-selected','true');
-
-        document.querySelectorAll('.path-panel').forEach(p => p.classList.remove('active'));
-        const panel = document.getElementById('panel-' + card.dataset.tab);
-        panel.classList.add('active');
-        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-
-    // ---- "Book a call" hover prompt on every subsection card ----
-    // Hovering (or focusing, for keyboard users) a .path-card reveals a
-    // small "Book a call" chip; clicking the chip — or the card itself —
-    // opens the same booking popup used across the site.
-    document.querySelectorAll('.path-card').forEach(card => {
-      const cta = document.createElement('button');
-      cta.type = 'button';
-      cta.className = 'path-card-cta';
-      cta.setAttribute('aria-label', 'Book a call about ' + (card.querySelector('h3')?.textContent || 'this path'));
-      cta.innerHTML = `
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0122 16.92z"/>
-        </svg>
-        Book a call
-      `;
-      cta.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (window.CareerCatalog && window.CareerCatalog.openBookingPopup) {
-          window.CareerCatalog.openBookingPopup();
-        }
-      });
-      card.appendChild(cta);
-
-      // Clicking anywhere on the card also opens the popup (touch-friendly).
-      card.addEventListener('click', () => {
-        if (window.CareerCatalog && window.CareerCatalog.openBookingPopup) {
-          window.CareerCatalog.openBookingPopup();
-        }
-      });
-      // Enter/Space on a focused card (keyboard users) does the same.
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          if (window.CareerCatalog && window.CareerCatalog.openBookingPopup) {
-            window.CareerCatalog.openBookingPopup();
+          // Smooth scroll to panel if on mobile to avoid jumping
+          if(window.innerWidth < 768 && e.isTrusted) {
+            tab.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
-        }
+        });
+
+        // Keyboard navigation for accessibility
+        tab.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            tab.click();
+          }
+        });
       });
+
+      // Check if URL hash matches a tab (e.g., #panel-pjob)
+      if (window.location.hash) {
+        const hash = window.location.hash.replace('#panel-', '');
+        const targetTab = document.querySelector(`[data-tab="${hash}"]`);
+        if (targetTab) {
+          targetTab.click();
+          setTimeout(() => {
+            document.getElementById('paths').scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
     });
   </script>
 
   <!-- Footer -->
-  <footer class="border-t border-slate/10">
-    <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-slate flex flex-wrap justify-between gap-4">
-      <span>© 2026 CareerCatalog</span>
-      <a href="index.html" class="hover:text-ink transition-colors">Back to homepage</a>
+  <footer class="border-t border-slate/10 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-12">
+      <div class="sm:col-span-2">
+        <a href="/" class="display text-2xl font-bold text-ink">Career Catalog</a>
+        <p class="text-base text-slate mt-4 max-w-sm leading-relaxed font-medium">Premium career guidance, skill mapping, and hiring insights engineered for Indian students and early-career professionals.</p>
+      </div>
+      <div>
+        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Explore</p>
+        <div class="flex flex-col gap-4 text-base font-medium text-slate">
+          <a href="/career-guidance.html" class="hover:text-indigo transition-colors text-indigo font-bold">Career Guidance</a>
+          <button onclick="document.querySelector('[data-tab=\'pjob\']').click(); document.getElementById('paths').scrollIntoView({behavior:'smooth'});" class="text-left hover:text-indigo transition-colors">Job Seeker</button>
+          <a href="/blog.html" class="hover:text-indigo transition-colors">Insights Blog</a>
+          <a href="/#about" class="hover:text-indigo transition-colors">About Us</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Action</p>
+        <div class="flex flex-col gap-4 text-base font-medium text-slate">
+          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="text-left hover:text-indigo transition-colors font-bold text-indigo">Book ₹99 Call</button>
+          <a href="/contact.html" class="hover:text-indigo transition-colors">Contact</a>
+          <a href="/privacy.html" class="hover:text-indigo transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-6 border-t border-slate/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm font-medium text-slate">
+      <p>© 2026 Career Catalog. All rights reserved.</p>
+      <p>Built for India.</p>
     </div>
   </footer>
 
-  <script src="popup.js?v=5"></script>
+  <!-- Popup Script -->
+  <script src="/popup.js?v=7"></script>
 </body>
 </html>
