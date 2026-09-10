@@ -4,117 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- Primary SEO Meta Tags -->
   <title>Career Catalog | Honest Career Guidance & Job Strategies for Indian Students</title>
   <meta name="title" content="Career Catalog | Honest Career Guidance & Job Strategies for Indian Students" />
   <meta name="description" content="Clear, reality-checked career guidance for Indian students and freshers. Explore high-paying 2026 career paths, bypass ATS systems, and book a 1:1 strategy call for just ₹99." />
-  <meta name="keywords" content="career guidance India, job seeker strategy, highest paying jobs India 2026, AI ML fresher jobs, resume format for freshers, alternative careers after 12th" />
-  <meta name="author" content="Career Catalog" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://careercatalog.in/" />
-  <meta property="og:title" content="Career Catalog | Real Career Guidance for India" />
-  <meta property="og:description" content="Clear, no-nonsense career guidance for Indian students and early-career professionals. Discover high-paying paths and job-seeker strategies." />
-  <meta property="og:site_name" content="Career Catalog" />
-  <meta property="og:locale" content="en_IN" />
-
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS Integration -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            ink: '#0B1120', paper: '#FAFAFA', indigo: '#4338CA',
-            cyan: '#06B6D4', emerald: '#10B981', slate: '#475569',
-          },
-          fontFamily: {
-            display: ['"Space Grotesk"', 'sans-serif'], body: ['"Inter"', 'sans-serif'],
-          }
+          colors: { ink: '#0B1120', paper: '#FAFAFA', indigo: '#4338CA', cyan: '#06B6D4', emerald: '#10B981', slate: '#475569' },
+          fontFamily: { display: ['"Space Grotesk"', 'sans-serif'], body: ['"Inter"', 'sans-serif'] }
         }
       }
     }
-  </script>
-
-  <!-- Structured Data (Schema.org) for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Career Catalog",
-    "url": "https://careercatalog.in/",
-    "description": "Premium career coaching, skill mapping, and job-seeker strategies for Indian students and early-career professionals.",
-    "sameAs": []
-  }
   </script>
 
   <style>
     body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #0B1120; }
     h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
     
-    .gradient-text {
-      background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    
-    .glow {
-      background: radial-gradient(circle at 20% 10%, rgba(67,56,202,0.07), transparent 55%),
-                  radial-gradient(circle at 85% 0%, rgba(6,182,212,0.07), transparent 50%);
-    }
-
+    .gradient-text { background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .glow { background: radial-gradient(circle at 20% 10%, rgba(67,56,202,0.07), transparent 55%), radial-gradient(circle at 85% 0%, rgba(6,182,212,0.07), transparent 50%); }
     .btn-primary { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
     .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px -5px rgba(67, 56, 202, 0.3), 0 8px 10px -6px rgba(67, 56, 202, 0.1); }
 
-    .panel { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .panel:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(11,17,32,0.08); }
-
-    .glass-tabs {
-      background: rgba(255,255,255,0.75); backdrop-filter: blur(16px);
-      border: 1px solid rgba(11,17,32,0.08); box-shadow: 0 4px 24px rgba(11,17,32,0.04);
-    }
+    .glass-tabs { background: rgba(255,255,255,0.75); backdrop-filter: blur(16px); border: 1px solid rgba(11,17,32,0.08); box-shadow: 0 4px 24px rgba(11,17,32,0.04); }
     .glass-tab { transition: all 0.2s ease; color: #475569; }
-    .glass-tab.active, .glass-tab:hover {
-      background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); color: white;
-      box-shadow: 0 4px 14px rgba(67,56,202,0.25);
-    }
+    .glass-tab.active, .glass-tab:hover { background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); color: white; box-shadow: 0 4px 14px rgba(67,56,202,0.25); }
 
     .step-num { font-family: 'Space Grotesk', sans-serif; background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
     
-    /* Interactive Career Cards */
-    .career-card {
-      border: 1px solid rgba(71,85,105,0.12); border-radius: 1.25rem;
-      background: #fff; padding: 2rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; cursor: default;
-    }
+    .career-card { border: 1px solid rgba(71,85,105,0.12); border-radius: 1.25rem; background: #fff; padding: 2rem; transition: all 0.3s ease; height: 100%; cursor: default; }
     .career-card:hover { transform: translateY(-6px); box-shadow: 0 22px 40px rgba(11,17,32,0.08); border-color: rgba(67,56,202,0.3); }
     
-    .demand-pill {
-      display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
-      padding: 0.35rem 0.85rem; border-radius: 9999px; margin-bottom: 1.2rem; text-transform: uppercase;
-    }
+    .demand-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; padding: 0.35rem 0.85rem; border-radius: 9999px; margin-bottom: 1.2rem; text-transform: uppercase; }
     .demand-high { background: rgba(6,182,212,0.12); color: #0E7490; }
     .demand-rising { background: rgba(245,158,11,0.14); color: #B45309; }
     .demand-top { background: rgba(67,56,202,0.12); color: #4338CA; }
 
-    /* Mobile Menu */
-    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
     #mobile-menu.open { max-height: 400px; border-bottom: 1px solid rgba(71,85,105,0.1); }
   </style>
 </head>
 <body>
 
-  <!-- ================= HEADER & NAVIGATION ================= -->
+  <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-slate/10">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="display text-2xl font-bold tracking-tight text-ink hover:opacity-80 transition-opacity">Career Catalog</a>
 
-      <!-- Desktop Tabs -->
       <div class="hidden md:flex items-center gap-1 glass-tabs rounded-full p-1.5">
         <a href="career-guidance.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Career Guidance</a>
         <a href="career-guidance.html#panel-pjob" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Job Seeker</a>
@@ -126,7 +71,6 @@
         <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-white px-7 py-3 rounded-full bg-gradient-to-r from-indigo to-cyan btn-primary shadow-md">
           Book ₹99 Call
         </button>
-        <!-- Mobile Menu Toggle -->
         <button id="menu-btn" class="md:hidden p-2 -mr-2 rounded-lg text-ink hover:bg-slate/10 transition-colors" aria-label="Toggle Menu">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -134,24 +78,20 @@
     </nav>
     <div id="mobile-menu" class="md:hidden bg-paper/95 backdrop-blur-md">
       <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-2 text-base font-semibold">
-        <a href="career-guidance.html" class="py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Career Guidance</a>
-        <a href="career-guidance.html#panel-pjob" class="py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Job Seeker</a>
-        <a href="blog.html" class="py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Insights</a>
+        <a href="career-guidance.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink">Career Guidance</a>
+        <a href="career-guidance.html#panel-pjob" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink">Job Seeker</a>
+        <a href="blog.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink">Insights</a>
         <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="mt-4 w-full text-center text-white px-6 py-4 rounded-xl bg-gradient-to-r from-indigo to-cyan font-bold shadow-lg">
           Book ₹99 Career Call
         </button>
       </div>
     </div>
   </header>
-  <script>
-    document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('open'));
-  </script>
 
+  <!-- Hero Section -->
   <main>
-    <!-- ================= HERO SECTION ================= -->
     <section class="glow relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-28 md:pb-32 grid md:grid-cols-5 gap-12 items-center">
-        
         <div class="md:col-span-3 z-10">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo/10 border border-indigo/20 text-indigo text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
             <span class="w-2 h-2 rounded-full bg-indigo animate-pulse"></span> India's Premier Career Playbook
@@ -163,16 +103,11 @@
             Straightforward, reality-checked guidance for students and freshers. Know exactly what to learn, how to bypass HR portals, and land high-paying roles in 2026.
           </p>
           <div class="flex flex-col sm:flex-row flex-wrap gap-4">
-            <a href="career-guidance.html" class="btn-primary text-center px-8 py-4 rounded-xl text-base font-bold text-white bg-ink shadow-xl">
-              Explore Career Paths
-            </a>
-            <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="btn-primary text-center px-8 py-4 rounded-xl text-base font-bold text-ink bg-white border border-slate/20 shadow-md hover:border-indigo/40 hover:bg-slate/5">
-              Book a 10-Min Strategy Call
-            </button>
+            <a href="career-guidance.html" class="btn-primary text-center px-8 py-4 rounded-xl text-base font-bold text-white bg-ink shadow-xl">Explore Career Paths</a>
+            <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="btn-primary text-center px-8 py-4 rounded-xl text-base font-bold text-ink bg-white border border-slate/20 shadow-md">Book a 10-Min Strategy Call</button>
           </div>
         </div>
 
-        <!-- Abstract Graphic & Trust Badge -->
         <div class="md:col-span-2 relative hidden md:block">
           <svg viewBox="0 0 320 240" class="w-full h-auto drop-shadow-2xl opacity-90">
             <defs>
@@ -186,8 +121,6 @@
             <circle cx="250" cy="55" r="7" fill="#06B6D4" opacity="0.9"/>
             <circle cx="310" cy="15" r="9" fill="#06B6D4"/>
           </svg>
-
-          <!-- Floating Trust Badge -->
           <div class="absolute -bottom-4 left-0 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-slate/10 px-6 py-5 flex items-center gap-4 max-w-[270px] transform hover:-translate-y-2 transition-transform duration-300">
             <div class="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-indigo to-cyan flex items-center justify-center shadow-inner">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
@@ -199,40 +132,16 @@
           </div>
         </div>
       </div>
-
-      <!-- Trust Strip -->
-      <div class="border-y border-slate/10 bg-white/50 backdrop-blur-sm mt-8 md:mt-0">
-        <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
-          <div>
-            <p class="display text-2xl md:text-3xl font-bold leading-tight text-ink">Plain English</p>
-            <p class="text-sm font-medium text-slate mt-2">Zero confusing corporate jargon</p>
-          </div>
-          <div>
-            <p class="display text-2xl md:text-3xl font-bold leading-tight text-ink">Made for India</p>
-            <p class="text-sm font-medium text-slate mt-2">Built for the 2026 hiring market</p>
-          </div>
-          <div>
-            <p class="display text-3xl font-bold text-ink">Zero Spam</p>
-            <p class="text-sm font-medium text-slate mt-2">Highly actionable content only</p>
-          </div>
-          <div>
-            <p class="display text-3xl font-bold text-ink">₹99 Flat</p>
-            <p class="text-sm font-medium text-slate mt-2">For a 10-minute 1:1 strategy call</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- ================= JOB SEEKER SECTION ================= -->
-    <section id="job-seeker" class="max-w-7xl mx-auto px-6 py-24 scroll-mt-24">
+    <!-- JOB SEEKER SECTION -->
+    <section id="job-seeker" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate/10">
       <div class="flex flex-col lg:flex-row gap-16 items-center">
         <div class="lg:w-1/2">
           <p class="text-sm font-bold tracking-[0.2em] uppercase text-indigo mb-4">The 2026 Playbook</p>
-          <h2 class="display text-4xl sm:text-5xl font-bold mb-6 tracking-tight text-ink leading-tight">
-            Bypass the HR black hole. Land offers directly.
-          </h2>
+          <h2 class="display text-4xl sm:text-5xl font-bold mb-6 tracking-tight text-ink leading-tight">Bypass the HR black hole. Land offers directly.</h2>
           <p class="text-lg text-slate leading-relaxed font-medium mb-8">
-            Cold applying on job portals has a ~2% success rate for freshers. Our <strong class="text-ink">Job Seeker</strong> module gives you the exact ATS-friendly resume frameworks, cold-email templates, and LinkedIn strategies used by the top 1% of candidates to get hired today.
+            Cold applying on Naukri has a ~2% success rate for freshers. Our <strong class="text-ink">Job Seeker</strong> module gives you the exact ATS-friendly resume frameworks, cold-email templates, and interview strategies used by the top 1% of candidates to get hired today.
           </p>
           <ul class="space-y-5 mb-10">
             <li class="flex items-start gap-4">
@@ -245,24 +154,16 @@
             <li class="flex items-start gap-4">
               <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-emerald/10 flex items-center justify-center text-emerald"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
               <div>
-                <p class="font-bold text-ink text-base">Cold Outreach & Networking Strategies</p>
+                <p class="font-bold text-ink text-base">Cold Outreach & Networking</p>
                 <p class="text-sm text-slate font-medium mt-1">Find and email hiring managers directly using boolean search.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-emerald/10 flex items-center justify-center text-emerald"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <div>
-                <p class="font-bold text-ink text-base">STAR Method Interview Mastery</p>
-                <p class="text-sm text-slate font-medium mt-1">Answer behavioral questions with a bulletproof structural framework.</p>
               </div>
             </li>
           </ul>
           <a href="career-guidance.html#panel-pjob" class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold bg-ink text-white shadow-lg">
-            Unlock Job Seeker Strategies <span aria-hidden="true">&rarr;</span>
+            Unlock Job Seeker Strategies &rarr;
           </a>
         </div>
         <div class="lg:w-1/2 w-full">
-          <!-- Abstract representation of passing ATS / getting an offer -->
           <div class="relative w-full aspect-square md:aspect-video lg:aspect-square bg-gradient-to-br from-indigo/5 to-cyan/10 rounded-[2.5rem] border border-slate/10 overflow-hidden flex items-center justify-center shadow-inner">
              <div class="absolute w-64 h-64 bg-white rounded-2xl shadow-2xl border border-slate/10 p-6 transform -rotate-6 z-10 transition-transform duration-500 hover:rotate-0">
                <div class="w-1/3 h-4 bg-slate/20 rounded mb-6"></div>
@@ -277,36 +178,8 @@
       </div>
     </section>
 
-    <!-- ================= CAREER GUIDANCE TEASER ================= -->
-    <section class="max-w-7xl mx-auto px-6 py-12">
-      <div class="rounded-[2.5rem] bg-ink p-8 sm:p-14 md:p-20 text-white relative overflow-hidden shadow-2xl">
-        <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-indigo/40 via-ink to-cyan/20 opacity-60"></div>
-        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-indigo/40 blur-3xl"></div>
-        <div class="absolute -bottom-32 -left-20 w-80 h-80 rounded-full bg-cyan/30 blur-3xl"></div>
-        
-        <div class="relative z-10 max-w-3xl">
-          <p class="text-sm font-bold tracking-[0.2em] uppercase text-cyan mb-6">Master Your Trajectory</p>
-          <h2 class="display text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Everything you need to move your career forward, mapped perfectly.
-          </h2>
-          <p class="text-white/80 leading-relaxed text-lg mb-10 font-medium max-w-2xl">
-            Whether you're finishing 12th, completing your UG degree, or looking for the right skill combination — we have a reality-checked path for you.
-          </p>
-          <div class="flex flex-wrap gap-3 mb-10">
-            <a href="career-guidance.html#panel-p12" class="text-sm font-bold bg-white/10 hover:bg-white/20 border border-white/10 transition-colors px-5 py-2.5 rounded-full">After 12th</a>
-            <a href="career-guidance.html#panel-pug" class="text-sm font-bold bg-white/10 hover:bg-white/20 border border-white/10 transition-colors px-5 py-2.5 rounded-full">After UG</a>
-            <a href="career-guidance.html#panel-pcert" class="text-sm font-bold bg-white/10 hover:bg-white/20 border border-white/10 transition-colors px-5 py-2.5 rounded-full">Certifications</a>
-            <a href="career-guidance.html#panel-pskill" class="text-sm font-bold bg-white/10 hover:bg-white/20 border border-white/10 transition-colors px-5 py-2.5 rounded-full">Skill Combos</a>
-          </div>
-          <a href="career-guidance.html" class="btn-primary inline-flex items-center gap-2 px-9 py-4 rounded-xl text-base font-bold bg-white text-ink">
-            Explore All Guides &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= TOP IN-DEMAND CAREERS ================= -->
-    <section class="bg-white border-y border-slate/10 mt-12">
+    <!-- TOP IN-DEMAND CAREERS -->
+    <section class="bg-white border-y border-slate/10">
       <div class="max-w-7xl mx-auto px-6 py-24">
         <div class="max-w-2xl mb-16">
           <h2 class="display text-3xl md:text-4xl font-bold mb-5 tracking-tight text-ink">Top in-demand careers in India (2026)</h2>
@@ -317,84 +190,44 @@
           <div class="career-card">
             <span class="demand-pill demand-top">Highest Demand</span>
             <h3 class="display text-2xl font-bold mb-3 text-ink">AI & Machine Learning</h3>
-            <p class="text-slate text-base font-medium mb-3">Average Fresher: ₹6–12 LPA</p>
-            <p class="text-slate text-sm leading-relaxed font-medium">Building and deploying models behind automation. Deep Python, Prompt Engineering, and RAG architectures outweigh generic tech degrees.</p>
+            <p class="text-slate text-base font-medium mb-3">Fresher: ₹6–12 LPA</p>
+            <p class="text-slate text-sm leading-relaxed font-medium">Deep Python, Prompt Engineering, and RAG architectures outweigh generic tech degrees.</p>
           </div>
-          
           <div class="career-card">
             <span class="demand-pill demand-top">Highest Demand</span>
             <h3 class="display text-2xl font-bold mb-3 text-ink">Data Analytics & BI</h3>
-            <p class="text-slate text-base font-medium mb-3">Average Fresher: ₹5–10 LPA</p>
-            <p class="text-slate text-sm leading-relaxed font-medium">Turning massive data sets into business decisions. Mastery of SQL, Python, and Power BI guarantees entry across all major industries.</p>
+            <p class="text-slate text-base font-medium mb-3">Fresher: ₹5–10 LPA</p>
+            <p class="text-slate text-sm leading-relaxed font-medium">Turning data sets into decisions. Mastery of SQL, Python, and Power BI guarantees entry.</p>
           </div>
-
           <div class="career-card">
             <span class="demand-pill demand-high">High Demand</span>
-            <h3 class="display text-2xl font-bold mb-3 text-ink">Fintech & Quant Finance</h3>
-            <p class="text-slate text-base font-medium mb-3">Average Fresher: ₹7–14 LPA</p>
-            <p class="text-slate text-sm leading-relaxed font-medium">The intersection of finance and coding. CFA candidates who also master Python and Financial Modeling are outcompeting traditional commerce graduates.</p>
+            <h3 class="display text-2xl font-bold mb-3 text-ink">Fintech & Quant</h3>
+            <p class="text-slate text-base font-medium mb-3">Fresher: ₹7–14 LPA</p>
+            <p class="text-slate text-sm leading-relaxed font-medium">CFA candidates who also master Python and Financial Modeling are actively outcompeting others.</p>
           </div>
-
           <div class="career-card">
             <span class="demand-pill demand-high">High Demand</span>
             <h3 class="display text-2xl font-bold mb-3 text-ink">Cybersecurity Analyst</h3>
-            <p class="text-slate text-base font-medium mb-3">Average Fresher: ₹4–9 LPA</p>
-            <p class="text-slate text-sm leading-relaxed font-medium">With massive digital shifts, every firm needs threat monitoring. Entry-level demand heavily outpaces the supply of formally trained candidates.</p>
+            <p class="text-slate text-base font-medium mb-3">Fresher: ₹4–9 LPA</p>
+            <p class="text-slate text-sm leading-relaxed font-medium">With massive digital shifts, entry-level demand heavily outpaces the supply of trained candidates.</p>
           </div>
-
           <div class="career-card">
             <span class="demand-pill demand-high">High Demand</span>
-            <h3 class="display text-2xl font-bold mb-3 text-ink">Cloud & DevOps Engineer</h3>
-            <p class="text-slate text-base font-medium mb-3">Average Fresher: ₹5–10 LPA</p>
-            <p class="text-slate text-sm leading-relaxed font-medium">Keeping apps running securely. Just one respected associate-level cloud certification (AWS/Azure) is frequently enough to secure an interview.</p>
+            <h3 class="display text-2xl font-bold mb-3 text-ink">Cloud & DevOps</h3>
+            <p class="text-slate text-base font-medium mb-3">Fresher: ₹5–10 LPA</p>
+            <p class="text-slate text-sm leading-relaxed font-medium">Just one respected associate-level cloud certification (AWS/Azure) is frequently enough to secure an interview.</p>
           </div>
-
           <div class="career-card">
             <span class="demand-pill demand-rising">Fast-Rising</span>
             <h3 class="display text-2xl font-bold mb-3 text-ink">Performance Marketing</h3>
-            <p class="text-slate text-base font-medium mb-3">Average Fresher: ₹5–11 LPA</p>
-            <p class="text-slate text-sm leading-relaxed font-medium">As ad costs rise, companies strictly hire specialists who can prove ROI. Digital marketing with a heavy analytical focus is booming.</p>
-          </div>
-        </div>
-
-        <div class="mt-14 text-center md:text-left">
-          <a href="career-guidance.html#panel-pskill" class="inline-flex items-center gap-2 text-lg font-bold text-indigo hover:text-ink transition-colors group">
-            See the exact skills needed to break into these roles 
-            <span class="transform group-hover:translate-x-2 transition-transform">&rarr;</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= HOW IT WORKS ================= -->
-    <section class="max-w-7xl mx-auto px-6 py-24 bg-paper">
-      <h2 class="display text-3xl md:text-4xl font-bold mb-16 tracking-tight text-center md:text-left text-ink">How Career Catalog works</h2>
-      <div class="grid md:grid-cols-3 gap-12">
-        <div class="relative">
-          <p class="step-num text-6xl font-bold mb-4 opacity-40 absolute -top-8 -left-4 z-0">1</p>
-          <div class="relative z-10">
-            <h3 class="display text-xl font-bold mb-3 text-ink">Identify your starting point</h3>
-            <p class="text-slate text-base leading-relaxed font-medium">Whether you are a 12th pass-out, a final year student, or a fresher trying to pivot — your current stage dictates your exact roadmap.</p>
-          </div>
-        </div>
-        <div class="relative">
-          <p class="step-num text-6xl font-bold mb-4 opacity-40 absolute -top-8 -left-4 z-0">2</p>
-          <div class="relative z-10">
-            <h3 class="display text-xl font-bold mb-3 text-ink">Get an honest roadmap</h3>
-            <p class="text-slate text-base leading-relaxed font-medium">We break down the precise skills you need to learn, the optimal order to learn them in, and a realistic timeframe to get hired.</p>
-          </div>
-        </div>
-        <div class="relative">
-          <p class="step-num text-6xl font-bold mb-4 opacity-40 absolute -top-8 -left-4 z-0">3</p>
-          <div class="relative z-10">
-            <h3 class="display text-xl font-bold mb-3 text-ink">Execute and apply</h3>
-            <p class="text-slate text-base leading-relaxed font-medium">Use our Job Seeker framework to fix your resume, bypass broken application portals, and ace technical interviews directly.</p>
+            <p class="text-slate text-base font-medium mb-3">Fresher: ₹5–11 LPA</p>
+            <p class="text-slate text-sm leading-relaxed font-medium">As ad costs rise, companies hire specialists who can prove ROI. Digital marketing is booming.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= ABOUT SECTION ================= -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="bg-ink text-paper">
       <div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-5 gap-16 items-center">
         <div class="lg:col-span-3">
@@ -422,7 +255,7 @@
       </div>
     </section>
 
-    <!-- ================= FINAL CTA ================= -->
+    <!-- FINAL CTA -->
     <section class="max-w-7xl mx-auto px-6 py-24">
       <div class="rounded-[2.5rem] bg-gradient-to-r from-indigo to-cyan p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-2xl">
         <div class="max-w-xl text-center md:text-left">
@@ -438,8 +271,7 @@
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-slate/20 bg-white mt-12">
+  <footer class="border-t border-slate/20 bg-white">
     <div class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-12">
       <div class="sm:col-span-2">
         <a href="index.html" class="display text-2xl font-bold text-ink">Career Catalog</a>
@@ -468,6 +300,24 @@
       <p>Built for India.</p>
     </div>
   </footer>
+
+  <!-- Menu Auto-Close Logic -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
 
   <!-- Include Popup Script Locally -->
   <script src="popup.js"></script>
