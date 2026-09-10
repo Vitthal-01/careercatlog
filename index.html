@@ -23,7 +23,7 @@
         extend: {
           colors: {
             ink: '#0B1120', paper: '#FAFAFA', indigo: '#4338CA',
-            cyan: '#06B6D4', emerald: '#10B981', slate: '#475569',
+            cyan: '#06B6D4', emerald: '#10B981', slate: '#475569', amber: '#F59E0B',
           },
           fontFamily: {
             display: ['"Space Grotesk"', 'sans-serif'], body: ['"Inter"', 'sans-serif'],
@@ -75,6 +75,11 @@
     .demand-rising { background: rgba(245,158,11,0.14); color: #B45309; }
     .demand-top { background: rgba(67,56,202,0.12); color: #4338CA; }
 
+    /* Quiz Widget Styles */
+    .quiz-container { background: #fff; border: 1px solid rgba(71,85,105,0.15); border-radius: 2rem; box-shadow: 0 20px 40px rgba(11,17,32,0.06); }
+    .quiz-option { transition: all 0.2s ease; border: 1.5px solid #E2E8F0; }
+    .quiz-option:hover { border-color: #4338CA; background: rgba(67,56,202,0.02); transform: translateY(-2px); }
+
     /* Mobile Menu */
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
     #mobile-menu.open { max-height: 400px; border-bottom: 1px solid rgba(71,85,105,0.1); }
@@ -96,7 +101,6 @@
       </div>
 
       <div class="flex items-center gap-4">
-        <!-- CTA completely stripped of pricing -->
         <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-white px-7 py-3 rounded-full bg-gradient-to-r from-indigo to-cyan btn-primary shadow-md">
           Talk to an Expert
         </button>
@@ -234,6 +238,49 @@
       </div>
     </section>
 
+    <!-- ================= INTERACTIVE DIAGNOSTIC QUIZ ================= -->
+    <section class="max-w-4xl mx-auto px-6 py-10 mb-16">
+      <div class="quiz-container p-8 md:p-12">
+        <div id="quiz-intro">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo/10 text-indigo text-xs font-bold uppercase mb-4">
+            Interactive Assessment
+          </div>
+          <h2 class="display text-3xl md:text-4xl font-bold mb-4 text-ink">Are you actually ready for the 2026 job market?</h2>
+          <p class="text-slate text-base md:text-lg mb-8 font-medium">Take our 60-second diagnostic check to evaluate your skill stack, resume strength, and interview preparedness.</p>
+          <button onclick="startQuiz()" class="btn-primary px-8 py-4 rounded-xl text-base font-bold text-white bg-ink shadow-lg">
+            Start Free Assessment &rarr;
+          </button>
+        </div>
+
+        <!-- Question View (Hidden by default) -->
+        <div id="quiz-box" class="hidden">
+          <div class="flex justify-between items-center mb-6">
+            <span id="quiz-progress" class="text-xs font-bold uppercase tracking-widest text-indigo">Question 1 of 3</span>
+            <span id="quiz-step-count" class="text-xs font-bold text-slate-400">33%</span>
+          </div>
+          <h3 id="quiz-question" class="display text-2xl md:text-3xl font-bold mb-6 text-ink"></h3>
+          <div id="quiz-options" class="space-y-4 mb-8"></div>
+        </div>
+
+        <!-- Results View (Hidden by default) -->
+        <div id="quiz-results" class="hidden text-center">
+          <div class="w-16 h-16 rounded-full bg-amber/10 text-amber flex items-center justify-center mx-auto mb-6">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 class="display text-2xl md:text-3xl font-bold mb-3 text-ink">Assessment Complete: High Risk of ATS Rejection</h3>
+          <p id="quiz-feedback" class="text-slate text-base md:text-lg mb-8 max-w-xl mx-auto font-medium leading-relaxed"></p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="btn-primary px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-indigo to-cyan shadow-lg">
+              Book a Strategy Call to Fix This
+            </button>
+            <button onclick="resetQuiz()" class="px-6 py-4 rounded-xl text-base font-semibold text-slate bg-slate-100 hover:bg-slate-200">
+              Retake Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= TOP IN-DEMAND CAREERS ================= -->
     <section class="bg-paper border-t border-slate/10">
       <div class="max-w-7xl mx-auto px-6 py-24">
@@ -313,7 +360,6 @@
           <p class="text-white/90 text-lg font-medium leading-relaxed">Jump on a quick 10-minute strategy call to audit your resume or map out your next career move. No fluff, just clarity.</p>
         </div>
         <div class="w-full md:w-auto flex-shrink-0">
-          <!-- CTA stripped of pricing -->
           <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="w-full md:w-auto btn-primary px-9 py-5 rounded-2xl text-lg font-bold bg-ink text-white shadow-xl hover:bg-white hover:text-ink">
             Talk to an Expert
           </button>
@@ -323,7 +369,7 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-slate/20 bg-white mt-12">
+  <footer class="border-t border-slate/20 bg-white">
     <div class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-12">
       <div class="sm:col-span-2">
         <a href="index.html" class="display text-2xl font-bold text-ink">Career Catalog</a>
@@ -341,7 +387,7 @@
       <div>
         <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Action</p>
         <div class="flex flex-col gap-4 text-base font-medium text-slate">
-          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="text-left hover:text-indigo transition-colors font-bold text-indigo">Book a Call</button>
+          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="text-left hover:text-indigo transition-colors font-bold text-indigo">Talk to an Expert</button>
           <a href="#" class="hover:text-indigo transition-colors">Contact</a>
           <a href="#" class="hover:text-indigo transition-colors">Privacy Policy</a>
         </div>
@@ -353,17 +399,106 @@
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
+    // Mobile Menu Script
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
     mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+    // Quiz Script Logic
+    const quizData = [
+      {
+        question: "What format is your current resume in?",
+        options: [
+          { text: "A flashy 2-column Canva template with graphics/icons", score: 0, feedback: "Canva templates look nice to humans, but Automated Tracking Systems (ATS) cannot parse them. You are getting auto-rejected." },
+          { text: "Standard Microsoft Word or PDF, but unstructured", score: 1, feedback: "Decent, but lacking the hard metrics and XYZ formatting required to pass modern HR filters." },
+          { text: "Single-column, black & white ATS-optimized format", score: 2, feedback: "Great job! Your resume format is structurally sound." }
+        ]
+      },
+      {
+        question: "How do you primarily search for jobs?",
+        options: [
+          { text: "Clicking 'Easy Apply' on Naukri / LinkedIn job portals", score: 0, feedback: "Portal cold-applying has a ~2% conversion rate. You are competing against 10,000 other freshers blindly." },
+          { text: "Applying directly on company career pages", score: 1, feedback: "Better than portals, but still leaves you at the mercy of automated keyword screeners." },
+          { text: "Combining portal applications with direct cold outreach to managers", score: 2, feedback: "Excellent. Direct outreach is how the top 1% bypass the queue." }
+        ]
+      },
+      {
+        question: "Which best describes your technical skill stack for 2026?",
+        options: [
+          { text: "Only what my college syllabus taught me (Java/C++ basics)", score: 0, feedback: "College syllabi are 4 years behind the market. You need modern tools like SQL, Python, or Cloud." },
+          { text: "I have taken a few online video certificates", score: 1, feedback: "Certificates are good, but without a live portfolio project, recruiters cannot verify your skills." },
+          { text: "I have built and deployed 2+ real-world portfolio projects", score: 2, feedback: "Fantastic. Verifiable proof of work is your strongest asset." }
+        ]
+      }
+    ];
+
+    let currentQuestion = 0;
+    let totalScore = 0;
+
+    function startQuiz() {
+      document.getElementById('quiz-intro').classList.add('hidden');
+      document.getElementById('quiz-box').classList.remove('hidden');
+      currentQuestion = 0;
+      totalScore = 0;
+      loadQuestion();
+    }
+
+    function loadQuestion() {
+      const q = quizData[currentQuestion];
+      document.getElementById('quiz-progress').textContent = `Question ${currentQuestion + 1} of ${quizData.length}`;
+      document.getElementById('quiz-step-count').textContent = `${Math.round(((currentQuestion + 1) / quizData.length) * 100)}%`;
+      document.getElementById('quiz-question').textContent = q.question;
+
+      const optionsContainer = document.getElementById('quiz-options');
+      optionsContainer.innerHTML = '';
+
+      q.options.forEach((opt) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option w-full text-left p-4 rounded-xl text-base font-medium text-slate-700 bg-white flex items-center justify-between';
+        btn.innerHTML = `<span>${opt.text}</span> <span class="text-indigo font-bold">&rarr;</span>`;
+        btn.onclick = () => selectOption(opt.score, opt.feedback);
+        optionsContainer.appendChild(btn);
+      });
+    }
+
+    function selectOption(score, feedback) {
+      totalScore += score;
+      currentQuestion++;
+
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        showResults();
+      }
+    }
+
+    function showResults() {
+      document.getElementById('quiz-box').classList.add('hidden');
+      document.getElementById('quiz-results').classList.remove('hidden');
+
+      let summaryText = "";
+      if (totalScore <= 2) {
+        summaryText = "Your current strategy has major blind spots, especially regarding resume formatting and job hunting channels. Without a fix, you risk getting ghosted by recruiters.";
+      } else if (totalScore <= 4) {
+        summaryText = "You have the right foundation, but you're missing the execution edge needed to stand out against thousands of other applicants in 2026.";
+      } else {
+        summaryText = "You're in a strong position! However, optimizing your outreach strategy can help you secure higher salary bands instantly.";
+      }
+      document.getElementById('quiz-feedback').textContent = summaryText;
+    }
+
+    function resetQuiz() {
+      document.getElementById('quiz-results').classList.add('hidden');
+      document.getElementById('quiz-intro').classList.remove('hidden');
+    }
   </script>
 
-  <!-- Popup Script -->
+  <!-- Include Popup Script Locally -->
   <script src="popup.js"></script>
 </body>
 </html>
