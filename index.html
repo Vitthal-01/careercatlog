@@ -1,2110 +1,642 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Career Catalog | Honest Career Guidance for Indian Students & Freshers</title>
+  <meta name="title" content="Career Catalog | Honest Career Guidance for Indian Students & Freshers" />
+  <meta name="description" content="Clear, no-nonsense career guidance for Indian students and early-career professionals. Discover high-paying career paths, top skills, and job-seeker strategies. Book a 1:1 career call for just ₹99." />
+  <meta name="keywords" content="career guidance India, job seeker tips, highest paying jobs India, skills for freshers, engineering alternative careers, resume tips for freshers" />
+  <meta name="author" content="Career Catalog" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://careercatalog.in/" />
 
-<title>Career Catalog | Career Guidance for Engineering, AI, Data Science, Commerce, Finance & Business</title>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://careercatalog.in/" />
+  <meta property="og:title" content="Career Catalog | Honest Career Guidance for Indian Students" />
+  <meta property="og:description" content="Clear, no-nonsense career guidance for Indian students. Discover high-paying career paths, top skills, and job-seeker strategies. Book a 1:1 career call for just ₹99." />
+  <meta property="og:image" content="https://careercatalog.in/assets/og-image.jpg" />
+  <meta property="og:site_name" content="Career Catalog" />
+  <meta property="og:locale" content="en_IN" />
 
-<meta name="description" content="Career Catalog helps Indian students and early professionals discover the right career in Engineering, AI, Data Science, Business, Commerce and Finance through roadmaps, career guidance and ₹99 personalized career calls.">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://careercatalog.in/" />
+  <meta property="twitter:title" content="Career Catalog | Honest Career Guidance" />
+  <meta property="twitter:description" content="Clear, no-nonsense career guidance for Indian students and early-career professionals. Book a 1:1 career call for just ₹99." />
+  <meta property="twitter:image" content="https://careercatalog.in/assets/og-image.jpg" />
 
-<meta name="keywords" content="career guidance india, career counseling, engineering careers, AI careers, data science careers, commerce careers, finance careers, CFA, FRM, business analyst, product manager, career roadmap">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-<meta name="author" content="Career Catalog">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0B1120',
+            paper: '#FAFAFA',
+            indigo: '#4338CA',
+            cyan: '#06B6D4',
+            amber: '#F59E0B',
+            emerald: '#10B981',
+            slate: '#475569',
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Career Catalog",
+    "url": "https://careercatalog.in/",
+    "logo": "https://careercatalog.in/assets/logo.png",
+    "description": "Premium career guidance and skill mapping for Indian students and early-career professionals.",
+    "sameAs": []
+  }
+  </script>
 
-<link rel="canonical" href="https://careercatalog.in/">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #0B1120; }
+    h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .glow {
+      background: radial-gradient(circle at 20% 10%, rgba(67,56,202,0.08), transparent 55%),
+                  radial-gradient(circle at 85% 0%, rgba(6,182,212,0.08), transparent 50%);
+    }
 
-<!-- Open Graph -->
+    .btn-primary { 
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+    .btn-primary:hover { 
+      transform: translateY(-2px); 
+      box-shadow: 0 10px 25px -5px rgba(67, 56, 202, 0.4), 0 8px 10px -6px rgba(67, 56, 202, 0.1); 
+    }
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Career Catalog">
-<meta property="og:description" content="Career Guidance for Engineering, AI, Data Science, Commerce, Finance & Business.">
-<meta property="og:url" content="https://careercatalog.in">
-<meta property="og:image" content="assets/images/og-image.jpg">
+    .panel { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .panel:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(11,17,32,0.08); }
 
-<!-- Twitter -->
+    .glass-tabs {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(11,17,32,0.08);
+      box-shadow: 0 4px 24px rgba(11,17,32,0.04);
+    }
+    .glass-tab { transition: all 0.2s ease; color: #475569; }
+    .glass-tab.active {
+      background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
+      color: white;
+      box-shadow: 0 4px 14px rgba(67,56,202,0.25);
+    }
+    .glass-tab:not(.active):hover { background: rgba(11,17,32,0.06); color: #0B1120; }
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Career Catalog">
-<meta name="twitter:description" content="India's Career Platform for Engineering, AI, Data, Finance & Business Careers.">
-<meta name="twitter:image" content="assets/images/og-image.jpg">
+    .step-num {
+      font-family: 'Space Grotesk', sans-serif;
+      background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    .blog-thumb { position: relative; overflow: hidden; transition: transform 0.5s ease; }
+    .panel:hover .blog-thumb svg { transform: scale(1.05); transition: transform 0.5s ease; }
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    .quote-mark { font-family: 'Space Grotesk', sans-serif; line-height: 0.6; }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    /* In-demand career chips */
+    .career-card {
+      border: 1px solid rgba(71,85,105,0.12);
+      border-radius: 1.25rem;
+      background: #fff;
+      padding: 1.75rem;
+      transition: all 0.3s ease;
+      height: 100%;
+      cursor: default;
+    }
+    .career-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(11,17,32,0.06);
+      border-color: rgba(67,56,202,0.3);
+    }
+    
+    .demand-pill {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    .demand-high { background: rgba(6,182,212,0.12); color: #0E7490; }
+    .demand-rising { background: rgba(245,158,11,0.14); color: #B45309; }
+    .demand-top { background: rgba(67,56,202,0.12); color: #4338CA; }
 
-<link rel="stylesheet" href="assets/css/style.css">
+    /* Mobile menu */
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    #mobile-menu.open { max-height: 400px; border-bottom: 1px solid rgba(71,85,105,0.1); }
+    #menu-btn[aria-expanded="true"] .icon-open { display: none; }
+    #menu-btn[aria-expanded="false"] .icon-close { display: none; }
 
-<link rel="icon" href="assets/images/favicon.png">
+    .skip-link {
+      position: absolute; left: -9999px; top: 0;
+      background: #0B1120; color: #fff; padding: 12px 20px;
+      border-radius: 0 0 8px 0; z-index: 100; font-size: 14px; font-weight: 600;
+    }
+    .skip-link:focus { left: 0; }
 
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"Organization",
-"name":"Career Catalog",
-"url":"https://careercatalog.in",
-"logo":"https://careercatalog.in/assets/images/logo.png",
-"description":"Career Guidance Platform for Engineering, AI, Data Science, Commerce, Finance and Business."
-}
-</script>
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"WebSite",
-"name":"Career Catalog",
-"url":"https://careercatalog.in",
-"potentialAction":{
-"@type":"SearchAction",
-"target":"https://careercatalog.in/search?q={search_term_string}",
-"query-input":"required name=search_term_string"
-}
-}
-</script>
-
+    @media (prefers-reduced-motion: reduce) {
+      .btn-primary, .panel, .career-card, #mobile-menu, .blog-thumb svg { transition: none; }
+    }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid #4338CA;
+      outline-offset: 3px;
+    }
+  </style>
 </head>
-
 <body>
-
-<a href="#main-content" class="skip-link">
-Skip to Content
-</a>
-
-<header class="header">
-
-<div class="container">
-
-<a href="index.html" class="logo">
-
-<img src="assets/images/logo.svg" alt="Career Catalog Logo">
-
-<span>Career Catalog</span>
-
-</a>
-
-<nav>
-
-<ul>
-
-<li>
-<a href="index.html" class="active">
-Home
-</a>
-</li>
-
-<li>
-<a href="career-guidance.html">
-Career Guidance
-</a>
-</li>
-
-<li>
-<a href="job-seeker.html">
-Job Seeker
-</a>
-</li>
-
-<li>
-<a href="insights.html">
-Insights
-</a>
-</li>
-
-<li>
-<a href="about.html">
-About
-</a>
-</li>
-
-</ul>
-
-</nav>
-
-<div class="header-buttons">
-
-<a href="#career-compass" class="btn-secondary">
-
-Career Compass
-
-</a>
-
-<button id="bookCallBtn" class="btn-primary">
-
-Book ₹99 Call
-
-</button>
-
-</div>
-
-<div class="mobile-menu-button">
-
-☰
-
-</div>
-
-</div>
-
-</header>
-
-<main id="main-content">
-
-<section class="hero">
-
-<div class="container hero-grid">
-
-<div class="hero-left">
-
-<span class="hero-badge">
-
-Future Ready Careers
-
-</span>
-
-<h1>
-
-Stop Guessing.
-
-Build the Right Career with Confidence.
-
-</h1>
-
-<p>
-
-Career Catalog helps Indian students and early professionals discover high-growth careers in Engineering, Artificial Intelligence, Data Science, Commerce, Finance and Business through expert guidance and practical career roadmaps.
-
-</p>
-
-<div class="hero-buttons">
-
-<button class="btn-primary popup-trigger">
-
-Book ₹99 Career Call
-
-</button>
-
-<a href="#career-compass" class="btn-secondary">
-
-Find My Career
-
-</a>
-
-</div>
-
-<div class="hero-trust">
-
-<div>
-
-✅ India Focused
-
-</div>
-
-<div>
-
-🤖 AI Ready Careers
-
-</div>
-
-<div>
-
-📈 Industry Driven Roadmaps
-
-</div>
-
-</div>
-
-</div>
-
-<div class="hero-right">
-
-<div class="career-card">
-
-<h3>
-
-Career Compass™
-
-</h3>
-
-<p>
-
-Discover careers that match your interests.
-
-</p>
-
-<form id="careerCompass">
-
-<div class="option">
-
-<input type="radio" name="stage">
-
-<label>
-
-After 10th
-
-</label>
-
-</div>
-
-<div class="option">
-
-<input type="radio" name="stage">
-
-<label>
-
-After 12th
-
-</label>
-
-</div>
-
-<div class="option">
-
-<input type="radio" name="stage">
-
-<label>
-
-College Student
-
-</label>
-
-</div>
-
-<div class="option">
-
-<input type="radio" name="stage">
-
-<label>
-
-Job Seeker
-
-</label>
-
-</div>
-
-<div class="option">
-
-<input type="radio" name="stage">
-
-<label>
-
-Working Professional
-
-</label>
-
-</div>
-
-<div class="option">
-
-<input type="radio" name="stage">
-
-<label>
-
-Career Switch
-
-</label>
-
-</div>
-
-<button class="btn-primary">
-
-Start Assessment →
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="audience-section">
-
-<div class="container">
-
-<h2>
-
-Who are you?
-
-</h2>
-
-<div class="audience-grid">
-
-<a href="career-guidance.html#after10">
-
-<div class="audience-card">
-
-🎒
-
-<h3>
-
-After 10th
-
-</h3>
-
-<p>
-
-Explore future-ready streams.
-
-</p>
-
-</div>
-
-</a>
-
-<a href="career-guidance.html#after12">
-
-<div class="audience-card">
-
-🎓
-
-<h3>
-
-After 12th
-
-</h3>
-
-<p>
-
-Choose the right degree and career.
-
-</p>
-
-</div>
-
-</a>
-
-<a href="career-guidance.html#college">
-
-<div class="audience-card">
-
-🏛
-
-<h3>
-
-College Student
-
-</h3>
-
-<p>
-
-Build skills that employers value.
-
-</p>
-
-</div>
-
-</a>
-
-<a href="job-seeker.html">
-
-<div class="audience-card">
-
-💼
-
-<h3>
-
-Job Seeker
-
-</h3>
-
-<p>
-
-Resume, Interview & Placement Guidance.
-
-</p>
-
-</div>
-
-</a>
-
-<a href="career-guidance.html#switch">
-
-<div class="audience-card">
-
-🚀
-
-<h3>
-
-Career Switch
-
-</h3>
-
-<p>
-
-Transition into high-growth industries.
-
-</p>
-
-</div>
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Booking Popup -->
-
-<div class="popup-overlay" id="bookingPopup">
-
-<div class="popup-box">
-
-<button class="close-popup">
-
-×
-
-</button>
-
-<h2>
-
-🚀 Confused About Your Career?
-
-</h2>
-
-<p>
-
-Book a personalized Career Guidance Call for just ₹99.
-
-Get expert guidance on careers, roadmaps, skills and future opportunities.
-
-</p>
-
-<button id="popupWhatsapp" class="btn-primary">
-
-Book on WhatsApp
-
-</button>
-
-<button class="btn-secondary closePopup">
-
-Explore Careers
-
-</button>
-
-</div>
-
-</div>
-
-<!-- Floating WhatsApp -->
-
-<a href="#" id="floatingWhatsapp" class="floating-whatsapp">
-
-<img src="assets/images/whatsapp.svg" alt="WhatsApp">
-
-<span>
-
-Book Career Call
-
-</span>
-
-</a>
-
-<!-- Mobile Sticky CTA -->
-
-<div class="mobile-sticky-booking">
-
-<button class="btn-primary">
-
-Book ₹99 Career Call
-
-</button>
-
-<!-- ========================= -->
-<!-- WHY CAREER CATALOG -->
-<!-- ========================= -->
-
-<section class="why-section section-padding" id="why-career-catalog">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Why Career Catalog
-
-</span>
-
-<h2>
-
-Career Guidance Designed for Today's Job Market
-
-</h2>
-
-<p>
-
-Career Catalog helps Indian students and early professionals make informed career decisions using industry trends, AI-ready career roadmaps, salary insights, and personalized guidance instead of outdated advice.
-
-</p>
-
-</div>
-
-<div class="why-grid">
-
-<article class="feature-card">
-
-<div class="feature-icon">🎯</div>
-
-<h3>Personalized Career Guidance</h3>
-
-<p>
-
-No generic advice. Get recommendations based on your education, interests and career goals.
-
-</p>
-
-</article>
-
-<article class="feature-card">
-
-<div class="feature-icon">📈</div>
-
-<h3>Industry Driven Roadmaps</h3>
-
-<p>
-
-Roadmaps are built using current hiring trends, skills employers expect and future demand.
-
-</p>
-
-</article>
-
-<article class="feature-card">
-
-<div class="feature-icon">🤖</div>
-
-<h3>AI Ready Careers</h3>
-
-<p>
-
-Understand how Artificial Intelligence is changing every profession and prepare accordingly.
-
-</p>
-
-</article>
-
-<article class="feature-card">
-
-<div class="feature-icon">💼</div>
-
-<h3>Job Seeker Support</h3>
-
-<p>
-
-Resume reviews, interview preparation, LinkedIn optimization and job search strategy.
-
-</p>
-
-</article>
-
-<article class="feature-card">
-
-<div class="feature-icon">🧭</div>
-
-<h3>Career Compass</h3>
-
-<p>
-
-Find careers that match your strengths instead of following the crowd.
-
-</p>
-
-</article>
-
-<article class="feature-card">
-
-<div class="feature-icon">💬</div>
-
-<h3>₹99 Career Call</h3>
-
-<p>
-
-Talk directly with a mentor on WhatsApp and receive practical next steps.
-
-</p>
-
-</article>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- CAREER CATEGORIES -->
-<!-- ========================= -->
-
-<section class="career-categories section-padding" id="career-categories">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Explore Careers
-
-</span>
-
-<h2>
-
-Career Categories
-
-</h2>
-
-<p>
-
-Explore future-ready careers across technology, finance, business and emerging industries.
-
-</p>
-
-</div>
-
-<div class="category-grid">
-
-<a href="career-guidance.html#engineering" class="category-card">
-
-<span class="category-icon">💻</span>
-
-<h3>Engineering & Technology</h3>
-
-<p>
-
-Software Engineering
-
-AI
-
-Machine Learning
-
-Cloud
-
-Cybersecurity
-
-Full Stack
-
-DevOps
-
-Data Engineering
-
-Blockchain
-
-Robotics
-
-</p>
-
-<span class="category-link">
-
-Explore →
-
-</span>
-
-</a>
-
-<a href="career-guidance.html#commerce" class="category-card">
-
-<span class="category-icon">📊</span>
-
-<h3>Commerce & Finance</h3>
-
-<p>
-
-CA
-
-CFA
-
-FRM
-
-Investment Banking
-
-Financial Analytics
-
-Equity Research
-
-FinTech
-
-Quant Finance
-
-Corporate Finance
-
-</p>
-
-<span class="category-link">
-
-Explore →
-
-</span>
-
-</a>
-
-<a href="career-guidance.html#business" class="category-card">
-
-<span class="category-icon">📈</span>
-
-<h3>Management & Business</h3>
-
-<p>
-
-Product Management
-
-Business Analyst
-
-Consulting
-
-Operations
-
-Marketing
-
-Growth
-
-HR Analytics
-
-Supply Chain
-
-</p>
-
-<span class="category-link">
-
-Explore →
-
-</span>
-
-</a>
-
-<a href="career-guidance.html#data" class="category-card">
-
-<span class="category-icon">📉</span>
-
-<h3>Data, Mathematics & Statistics</h3>
-
-<p>
-
-Data Science
-
-Statistics
-
-Mathematics
-
-Business Analytics
-
-Decision Science
-
-Econometrics
-
-Operations Research
-
-Actuarial Science
-
-</p>
-
-<span class="category-link">
-
-Explore →
-
-</span>
-
-</a>
-
-<a href="career-guidance.html#emerging" class="category-card featured">
-
-<span class="category-icon">🚀</span>
-
-<h3>Emerging Careers</h3>
-
-<p>
-
-LLM Engineer
-
-AI Product Manager
-
-Decision Scientist
-
-Quant Developer
-
-AI Consultant
-
-MLOps
-
-Agentic AI
-
-AI Automation
-
-</p>
-
-<span class="category-link">
-
-Explore →
-
-</span>
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- TRENDING CAREERS -->
-<!-- ========================= -->
-
-<section class="trending-careers section-padding">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Trending Careers
-
-</span>
-
-<h2>
-
-Most In-Demand Careers in India
-
-</h2>
-
-</div>
-
-<div class="career-card-grid">
-
-<article class="career-card">
-
-<div class="badge high-demand">
-
-High Demand
-
-</div>
-
-<h3>AI Engineer</h3>
-
-<div class="career-meta">
-
-<span>₹8-45 LPA</span>
-
-<span>★★★★★</span>
-
-</div>
-
-<ul>
-
-<li>Future Demand: 98%</li>
-
-<li>AI Opportunity: Very High</li>
-
-<li>Job Ready: 8-12 Months</li>
-
-</ul>
-
-<div class="career-actions">
-
-<a href="#">Explore</a>
-
-<button class="popup-trigger">
-
-Book Call
-
-</button>
-
-</div>
-
-</article>
-
-<article class="career-card">
-
-<div class="badge high-demand">
-
-High Demand
-
-</div>
-
-<h3>Business Analyst</h3>
-
-<div class="career-meta">
-
-<span>₹6-30 LPA</span>
-
-<span>★★★★★</span>
-
-</div>
-
-<ul>
-
-<li>Future Demand: 95%</li>
-
-<li>Remote Jobs: High</li>
-
-<li>Excellent Career Growth</li>
-
-</ul>
-
-<div class="career-actions">
-
-<a href="#">Explore</a>
-
-<button class="popup-trigger">
-
-Book Call
-
-</button>
-
-</div>
-
-</article>
-
-<article class="career-card">
-
-<div class="badge high-demand">
-
-High Demand
-
-</div>
-
-<h3>Product Manager</h3>
-
-<div class="career-meta">
-
-<span>₹12-70 LPA</span>
-
-<span>★★★★★</span>
-
-</div>
-
-<ul>
-
-<li>Leadership Career</li>
-
-<li>AI Ready</li>
-
-<li>Global Opportunities</li>
-
-</ul>
-
-<div class="career-actions">
-
-<a href="#">Explore</a>
-
-<button class="popup-trigger">
-
-Book Call
-
-</button>
-
-</div>
-
-</article>
-
-<article class="career-card">
-
-<div class="badge high-demand">
-
-High Demand
-
-</div>
-
-<h3>Quantitative Finance</h3>
-
-<div class="career-meta">
-
-<span>₹15-80 LPA</span>
-
-<span>★★★★★</span>
-
-</div>
-
-<ul>
-
-<li>Strong Mathematics</li>
-
-<li>Finance + Programming</li>
-
-<li>Global Demand</li>
-
-</ul>
-
-<div class="career-actions">
-
-<a href="#">Explore</a>
-
-<button class="popup-trigger">
-
-Book Call
-
-</button>
-
-</div>
-
-</article>
-
-<article class="career-card">
-
-<div class="badge high-demand">
-
-High Demand
-
-</div>
-
-<h3>Data Scientist</h3>
-
-<div class="career-meta">
-
-<span>₹8-50 LPA</span>
-
-<span>★★★★★</span>
-
-</div>
-
-<ul>
-
-<li>Statistics + AI</li>
-
-<li>Business Impact</li>
-
-<li>High Salary Growth</li>
-
-</ul>
-
-<div class="career-actions">
-
-<a href="#">Explore</a>
-
-<button class="popup-trigger">
-
-Book Call
-
-</button>
-
-</div>
-
-</article>
-
-<article class="career-card">
-
-<div class="badge high-demand">
-
-High Demand
-
-</div>
-
-<h3>Investment Banking</h3>
-
-<div class="career-meta">
-
-<span>₹12-60 LPA</span>
-
-<span>★★★★★</span>
-
-</div>
-
-<ul>
-
-<li>Finance</li>
-
-<li>Strategy</li>
-
-<li>Excellent Growth</li>
-
-</ul>
-
-<div class="career-actions">
-
-<a href="#">Explore</a>
-
-<button class="popup-trigger">
-
-Book Call
-
-</button>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- CTA -->
-<!-- ========================= -->
-
-<section class="section-cta">
-
-<div class="container">
-
-<div class="cta-box">
-
-<h2>
-
-Still Unsure Which Career Is Right For You?
-
-</h2>
-
-<p>
-
-Book a personalized Career Guidance Call on WhatsApp for just ₹99 and get expert advice tailored to your goals.
-
-</p>
-
-<button class="btn-primary popup-trigger">
-
-Book ₹99 Career Call
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-</div>
-<!-- ========================================================= -->
-<!-- CAREER INTELLIGENCE DASHBOARD -->
-<!-- ========================================================= -->
-
-<section class="career-intelligence section-padding" id="career-intelligence">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Career Intelligence
-
-</span>
-
-<h2>
-
-Compare Careers Before You Decide
-
-</h2>
-
-<p>
-
-Understand future demand, salary growth, AI impact and learning difficulty before choosing a career.
-
-</p>
-
-</div>
-
-<div class="intelligence-grid">
-
-<div class="intelligence-card">
-
-<h3>Future Demand</h3>
-
-<div class="score">96/100</div>
-
-<p>Based on hiring trends and future industry growth.</p>
-
-</div>
-
-<div class="intelligence-card">
-
-<h3>Salary Growth</h3>
-
-<div class="score">★★★★★</div>
-
-<p>Expected salary progression over the next decade.</p>
-
-</div>
-
-<div class="intelligence-card">
-
-<h3>Global Opportunities</h3>
-
-<div class="score">High</div>
-
-<p>Remote and international career opportunities.</p>
-
-</div>
-
-<div class="intelligence-card">
-
-<h3>AI Opportunity</h3>
-
-<div class="score">Excellent</div>
-
-<p>How AI creates opportunities in this field instead of replacing it.</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- CAREER ROADMAPS -->
-<!-- ========================================================= -->
-
-<section class="career-roadmaps section-padding">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Career Roadmaps
-
-</span>
-
-<h2>
-
-Follow a Proven Learning Path
-
-</h2>
-
-<p>
-
-Every roadmap shows what to learn, when to learn it and how to become job ready.
-
-</p>
-
-</div>
-
-<div class="roadmap-grid">
-
-<div class="roadmap-card">
-
-<h3>AI Engineer</h3>
-
-<div class="roadmap">
-
-<span>Programming</span>
-
-↓
-
-<span>Python</span>
-
-↓
-
-<span>Statistics</span>
-
-↓
-
-<span>Machine Learning</span>
-
-↓
-
-<span>Deep Learning</span>
-
-↓
-
-<span>LLMs</span>
-
-↓
-
-<span>Projects</span>
-
-↓
-
-<span>Internship</span>
-
-↓
-
-<span>Job</span>
-
-</div>
-
-<a href="#">View Complete Roadmap →</a>
-
-</div>
-
-<div class="roadmap-card">
-
-<h3>Business Analyst</h3>
-
-<div class="roadmap">
-
-<span>Excel</span>
-
-↓
-
-<span>SQL</span>
-
-↓
-
-<span>Power BI</span>
-
-↓
-
-<span>Business Analysis</span>
-
-↓
-
-<span>Stakeholder Management</span>
-
-↓
-
-<span>Projects</span>
-
-↓
-
-<span>Interview</span>
-
-↓
-
-<span>Job</span>
-
-</div>
-
-<a href="#">View Complete Roadmap →</a>
-
-</div>
-
-<div class="roadmap-card">
-
-<h3>Quant Finance</h3>
-
-<div class="roadmap">
-
-<span>Mathematics</span>
-
-↓
-
-<span>Statistics</span>
-
-↓
-
-<span>Python</span>
-
-↓
-
-<span>Financial Markets</span>
-
-↓
-
-<span>Machine Learning</span>
-
-↓
-
-<span>Trading Models</span>
-
-↓
-
-<span>Internship</span>
-
-↓
-
-<span>Quant Developer</span>
-
-</div>
-
-<a href="#">View Complete Roadmap →</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- CAREER COMPARISON -->
-<!-- ========================================================= -->
-
-<section class="career-comparison section-padding">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Compare Careers
-
-</span>
-
-<h2>
-
-Not Sure Which Career To Choose?
-
-</h2>
-
-<p>
-
-Compare similar careers side by side before making your decision.
-
-</p>
-
-</div>
-
-<div class="comparison-grid">
-
-<a href="#">AI Engineer vs Data Scientist</a>
-
-<a href="#">Business Analyst vs Product Manager</a>
-
-<a href="#">CFA vs FRM</a>
-
-<a href="#">Data Analyst vs Data Scientist</a>
-
-<a href="#">BCA vs B.Tech</a>
-
-<a href="#">MBA vs MS</a>
-
-<a href="#">Cloud vs Cybersecurity</a>
-
-<a href="#">Investment Banking vs Corporate Finance</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- CERTIFICATIONS -->
-<!-- ========================================================= -->
-
-<section class="certifications section-padding">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Top Certifications
-
-</span>
-
-<h2>
-
-Boost Your Career With Industry Certifications
-
-</h2>
-
-</div>
-
-<div class="certificate-grid">
-
-<div class="certificate-card">
-
-<h3>AWS Cloud</h3>
-
-<p>Cloud Computing</p>
-
-<span>High Demand</span>
-
-</div>
-
-<div class="certificate-card">
-
-<h3>Microsoft Azure</h3>
-
-<p>Cloud & AI</p>
-
-<span>High Demand</span>
-
-</div>
-
-<div class="certificate-card">
-
-<h3>Google Cloud</h3>
-
-<p>Cloud Engineer</p>
-
-<span>High Demand</span>
-
-</div>
-
-<div class="certificate-card">
-
-<h3>CFA</h3>
-
-<p>Investment & Finance</p>
-
-<span>Global Recognition</span>
-
-</div>
-
-<div class="certificate-card">
-
-<h3>FRM</h3>
-
-<p>Risk Management</p>
-
-<span>Excellent Growth</span>
-
-</div>
-
-<div class="certificate-card">
-
-<h3>Power BI</h3>
-
-<p>Business Analytics</p>
-
-<span>Highly Recommended</span>
-
-</div>
-
-<div class="certificate-card">
-
-<h3>Tableau</h3>
-
-<p>Data Visualization</p>
-
-<span>Job Ready Skill</span>
-
-</div>
-
-<div class="certificate-card">
-
-<h3>Prompt Engineering</h3>
-
-<p>Generative AI</p>
-
-<span>Emerging Skill</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- JOB SEEKER -->
-<!-- ========================================================= -->
-
-<section class="job-seeker-preview section-padding">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Job Seeker
-
-</span>
-
-<h2>
-
-Everything You Need To Get Hired
-
-</h2>
-
-</div>
-
-<div class="job-grid">
-
-<div class="job-card">
-
-📄
-
-<h3>ATS Resume Review</h3>
-
-</div>
-
-<div class="job-card">
-
-💼
-
-<h3>LinkedIn Optimization</h3>
-
-</div>
-
-<div class="job-card">
-
-🎤
-
-<h3>Mock Interviews</h3>
-
-</div>
-
-<div class="job-card">
-
-🧠
-
-<h3>HR Interview Preparation</h3>
-
-</div>
-
-<div class="job-card">
-
-📈
-
-<h3>Salary Negotiation</h3>
-
-</div>
-
-<div class="job-card">
-
-🚀
-
-<h3>Off Campus Strategy</h3>
-
-</div>
-
-<div class="job-card">
-
-🤝
-
-<h3>Referral Strategy</h3>
-
-</div>
-
-<div class="job-card">
-
-📚
-
-<h3>Placement Preparation</h3>
-
-</div>
-
-</div>
-
-<div class="center-button">
-
-<a href="job-seeker.html" class="btn-primary">
-
-Explore Job Seeker Hub
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- LATEST INSIGHTS -->
-<!-- ========================================================= -->
-
-<section class="insights section-padding" id="insights">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-tag">Career Insights</span>
-
-            <h2>Latest Career Guides & Insights</h2>
-
-            <p>
-                Stay updated with industry trends, salary guides, certifications,
-                AI careers and hiring insights.
-            </p>
-
-        </div>
-
-        <div class="insight-grid">
-
-            <article class="insight-card">
-
-                <img src="assets/images/blog-ai.jpg" alt="AI Careers">
-
-                <div class="insight-content">
-
-                    <span class="category">Artificial Intelligence</span>
-
-                    <h3>
-                        Top AI Careers in India You Should Know in 2026
-                    </h3>
-
-                    <p>
-                        Explore the fastest-growing AI careers, required skills,
-                        salaries and future demand.
-                    </p>
-
-                    <a href="#">
-                        Read Article →
-                    </a>
-
-                </div>
-
-            </article>
-
-            <article class="insight-card">
-
-                <img src="assets/images/blog-cfa.jpg" alt="CFA Guide">
-
-                <div class="insight-content">
-
-                    <span class="category">Finance</span>
-
-                    <h3>
-                        CFA vs FRM: Which Certification Should You Choose?
-                    </h3>
-
-                    <p>
-                        Compare eligibility, salaries, syllabus, job roles
-                        and future opportunities.
-                    </p>
-
-                    <a href="#">
-                        Read Article →
-                    </a>
-
-                </div>
-
-            </article>
-
-            <article class="insight-card">
-
-                <img src="assets/images/blog-ba.jpg" alt="Business Analyst">
-
-                <div class="insight-content">
-
-                    <span class="category">Business</span>
-
-                    <h3>
-                        Complete Roadmap to Become a Business Analyst
-                    </h3>
-
-                    <p>
-                        Learn SQL, Excel, Power BI and business analysis
-                        from scratch.
-                    </p>
-
-                    <a href="#">
-                        Read Article →
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-slate/10">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Main Navigation">
+      <a href="/" class="display text-xl font-bold tracking-tight text-ink hover:opacity-80 transition-opacity">Career Catalog</a>
+
+      <!-- Desktop Tabs -->
+      <div class="hidden md:flex items-center gap-1 glass-tabs rounded-full p-1.5">
+        <a href="/career-guidance.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Career Guidance</a>
+        <a href="/career-guidance.html#panel-pjob" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Job Seeker</a>
+        <a href="/blog.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Insights</a>
+        <a href="#about" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">About</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!-- Replaced Newsletter with High-Intent Booking Button -->
+        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-white px-6 py-2.5 rounded-full bg-gradient-to-r from-indigo to-cyan btn-primary">
+          Book ₹99 Call
+        </button>
+        
+        <!-- Mobile Menu Toggle -->
+        <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation" class="md:hidden p-2 -mr-2 rounded-lg text-ink hover:bg-slate/10 transition-colors">
+          <svg class="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="md:hidden bg-paper/95 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-2 text-base font-semibold">
+        <a href="/career-guidance.html" class="py-3 px-3 rounded-xl hover:bg-indigo/5 text-ink">Career Guidance</a>
+        <a href="/career-guidance.html#panel-pjob" class="py-3 px-3 rounded-xl hover:bg-indigo/5 text-ink">Job Seeker</a>
+        <a href="/blog.html" class="py-3 px-3 rounded-xl hover:bg-indigo/5 text-ink">Insights</a>
+        <a href="#about" class="py-3 px-3 rounded-xl hover:bg-indigo/5 text-ink">About</a>
+        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="mt-4 w-full text-center text-white px-6 py-3.5 rounded-xl bg-gradient-to-r from-indigo to-cyan font-bold shadow-md">
+          Book ₹99 Career Call
+        </button>
+      </div>
     </div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- FAQ -->
-<!-- ========================================================= -->
-
-<section class="faq section-padding">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Frequently Asked Questions
-
-</span>
-
-<h2>
-
-Questions Students Frequently Ask
-
-</h2>
-
-</div>
-
-<div class="faq-container">
-
-<details>
-
-<summary>
-
-Which career has the highest future demand?
-
-</summary>
-
-<p>
-
-Artificial Intelligence, Data Science, Cybersecurity,
-Cloud Computing, Business Analytics, Product Management,
-Quant Finance and Business Analysis are among the fastest-growing careers.
-
-</p>
-
-</details>
-
-<details>
-
-<summary>
-
-Is the ₹99 Career Call worth it?
-
-</summary>
-
-<p>
-
-Yes. You'll receive personalized career guidance,
-roadmaps, skill recommendations and practical advice
-based on your current education and goals.
-
-</p>
-
-</details>
-
-<details>
-
-<summary>
-
-Who can book a Career Call?
-
-</summary>
-
-<p>
-
-School students, college students,
-graduates, job seekers and working professionals.
-
-</p>
-
-</details>
-
-<details>
-
-<summary>
-
-How is Career Catalog different?
-
-</summary>
-
-<p>
-
-Career Catalog focuses on practical,
-future-ready careers with structured roadmaps,
-AI impact analysis and industry trends.
-
-</p>
-
-</details>
-
-<details>
-
-<summary>
-
-How do I book?
-
-</summary>
-
-<p>
-
-Simply click any "Book ₹99 Career Call"
-button and you'll be redirected to WhatsApp.
-
-</p>
-
-</details>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- FINAL CTA -->
-<!-- ========================================================= -->
-
-<section class="final-cta">
-
-<div class="container">
-
-<div class="cta-wrapper">
-
-<span>
-
-🚀 Ready to Build Your Future?
-
-</span>
-
-<h2>
-
-Don't Leave Your Career to Chance.
-
-</h2>
-
-<p>
-
-Whether you're choosing a stream after 10th or 12th,
-planning your college journey, preparing for placements,
-switching careers or exploring AI-powered opportunities,
-we'll help you choose the right path.
-
-</p>
-
-<div class="cta-buttons">
-
-<button class="btn-primary popup-trigger">
-
-Book ₹99 Career Call
-
-</button>
-
-<a href="#careerCompass" class="btn-secondary">
-
-Take Career Compass
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-<!-- ========================================================= -->
-<!-- FOOTER -->
-<!-- ========================================================= -->
-
-<footer class="footer">
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-
-<h3>
-
-Career Catalog
-
-</h3>
-
-<p>
-
-Helping Indian students and professionals
-build successful careers through expert guidance,
-career roadmaps and industry insights.
-
-</p>
-
-</div>
-
-<div>
-
-<h4>
-
-Career Guidance
-
-</h4>
-
-<ul>
-
-<li><a href="#">Engineering & Technology</a></li>
-
-<li><a href="#">Commerce & Finance</a></li>
-
-<li><a href="#">Management & Business</a></li>
-
-<li><a href="#">AI & Emerging Careers</a></li>
-
-<li><a href="#">Career Roadmaps</a></li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h4>
-
-Resources
-
-</h4>
-
-<ul>
-
-<li><a href="#">Job Seeker</a></li>
-
-<li><a href="#">Career Compass</a></li>
-
-<li><a href="#">Salary Guides</a></li>
-
-<li><a href="#">Certifications</a></li>
-
-<li><a href="#">Career Comparison</a></li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h4>
-
-Company
-
-</h4>
-
-<ul>
-
-<li><a href="about.html">About</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
-<li><a href="privacy-policy.html">Privacy Policy</a></li>
-
-<li><a href="terms.html">Terms & Conditions</a></li>
-
-<li><a href="disclaimer.html">Disclaimer</a></li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-<p>
-
-© 2026 Career Catalog. All Rights Reserved.
-
-</p>
-
-<div class="footer-social">
-
-<a href="#" aria-label="LinkedIn">LinkedIn</a>
-
-<a href="#" aria-label="Instagram">Instagram</a>
-
-<a href="#" aria-label="YouTube">YouTube</a>
-
-<a href="#" aria-label="WhatsApp">WhatsApp</a>
-
-</div>
-
-</div>
-
-</div>
-
-</footer>
-
-<!-- ========================================================= -->
-<!-- JAVASCRIPT -->
-<!-- ========================================================= -->
-
-<script src="assets/js/app.js"></script>
-<script src="assets/js/popup.js"></script>
-<script src="assets/js/career-compass.js"></script>
-
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+  <main id="main">
+    
+    <!-- Hero Section -->
+    <section class="glow relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-28 md:pb-32 grid md:grid-cols-5 gap-12 items-center">
+        
+        <div class="md:col-span-3 z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo/10 border border-indigo/20 text-indigo text-xs font-bold tracking-widest uppercase mb-6">
+            <span class="w-2 h-2 rounded-full bg-indigo animate-pulse"></span> For Indian Students & Freshers
+          </div>
+          <h1 class="display text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold leading-[1.1] mb-6 tracking-tight">
+            Your career, mapped with <span class="gradient-text">absolute clarity</span>.
+          </h1>
+          <p class="text-lg md:text-xl text-slate max-w-lg mb-10 leading-relaxed font-medium">
+            Straightforward, highly actionable guidance. Know exactly what to learn, the right certifications to pick, and how to successfully land your first job. No jargon, no guesswork.
+          </p>
+          <div class="flex flex-col sm:flex-row flex-wrap gap-4">
+            <a href="/career-guidance.html" class="btn-primary text-center px-8 py-4 rounded-xl text-base font-bold text-white bg-ink shadow-lg shadow-ink/20">
+              Explore Career Paths
+            </a>
+            <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="btn-primary text-center px-8 py-4 rounded-xl text-base font-bold text-ink bg-white border border-slate/20 shadow-sm hover:border-indigo/30 hover:bg-slate/5">
+              Book a 10-Min Strategy Call
+            </button>
+          </div>
+        </div>
+
+        <!-- Abstract Trajectory Graphic & Trust Card -->
+        <div class="md:col-span-2 relative hidden md:block">
+          <svg viewBox="0 0 320 240" class="w-full h-auto drop-shadow-2xl" role="img" aria-label="Upward career trajectory illustration">
+            <defs>
+              <linearGradient id="pathGrad" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0%" stop-color="#4338CA"/>
+                <stop offset="100%" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+            <path d="M 10 210 C 80 210, 90 140, 140 130 S 210 60, 250 55 S 300 30, 310 15"
+                  fill="none" stroke="url(#pathGrad)" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="10" cy="210" r="7" fill="#4338CA"/>
+            <circle cx="140" cy="130" r="6" fill="#4338CA" opacity="0.8"/>
+            <circle cx="250" cy="55" r="6" fill="#06B6D4" opacity="0.9"/>
+            <circle cx="310" cy="15" r="8" fill="#06B6D4"/>
+          </svg>
+
+          <!-- Floating Trust Badge -->
+          <div class="absolute -bottom-6 left-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-slate/10 px-6 py-5 flex items-center gap-4 max-w-[260px] transform hover:-translate-y-1 transition-transform cursor-default">
+            <div class="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-indigo to-cyan flex items-center justify-center shadow-inner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <div>
+              <p class="text-base font-bold text-ink leading-tight">100% Free Access</p>
+              <p class="text-xs text-slate font-medium mt-1">Read all guides without signing up</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Strip -->
+      <div class="border-y border-slate/10 bg-white/50 backdrop-blur-sm mt-8 md:mt-0">
+        <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+          <div>
+            <p class="display text-2xl md:text-3xl font-bold leading-tight text-ink">Plain English</p>
+            <p class="text-sm font-medium text-slate mt-1.5">No confusing corporate jargon</p>
+          </div>
+          <div>
+            <p class="display text-2xl md:text-3xl font-bold leading-tight text-ink">Made for India</p>
+            <p class="text-sm font-medium text-slate mt-1.5">By early-career professionals</p>
+          </div>
+          <div>
+            <p class="display text-3xl font-bold text-ink">Zero Spam</p>
+            <p class="text-sm font-medium text-slate mt-1.5">Highly actionable content only</p>
+          </div>
+          <div>
+            <p class="display text-3xl font-bold text-ink">₹99</p>
+            <p class="text-sm font-medium text-slate mt-1.5">Flat fee for a 1:1 strategy call</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Guidance Category Teaser -->
+    <section id="guidance" class="max-w-7xl mx-auto px-6 py-24 scroll-mt-24">
+      <div class="rounded-[2rem] bg-ink p-8 sm:p-12 md:p-16 text-white relative overflow-hidden shadow-2xl">
+        <!-- Decorative Background -->
+        <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-indigo/40 via-ink to-cyan/20 opacity-50"></div>
+        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-indigo/30 blur-3xl"></div>
+        <div class="absolute -bottom-32 -left-20 w-80 h-80 rounded-full bg-cyan/20 blur-3xl"></div>
+
+        <div class="relative z-10 max-w-3xl">
+          <p class="text-sm font-bold tracking-[0.2em] uppercase text-cyan mb-6">Master Your Trajectory</p>
+          <h2 class="display text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
+            Everything you need to move your career forward, structured perfectly.
+          </h2>
+          <p class="text-white/80 leading-relaxed text-lg mb-10 font-medium max-w-2xl">
+            Whether you're finishing 12th, completing your degree, looking for the right certification, or actively hunting for your first job — we have an honest, reality-checked path for you.
+          </p>
+
+          <div class="flex flex-wrap gap-3 mb-10">
+            <a href="/career-guidance.html#panel-p12" class="text-sm font-semibold bg-white/10 hover:bg-white/20 border border-white/10 transition-colors px-4 py-2 rounded-full">After 12th</a>
+            <a href="/career-guidance.html#panel-pug" class="text-sm font-semibold bg-white/10 hover:bg-white/20 border border-white/10 transition-colors px-4 py-2 rounded-full">After UG</a>
+            <a href="/career-guidance.html#panel-pcert" class="text-sm font-semibold bg-white/10 hover:bg-white/20 border border-white/10 transition-colors px-4 py-2 rounded-full">Certifications</a>
+            <a href="/career-guidance.html#panel-pskill" class="text-sm font-semibold bg-white/10 hover:bg-white/20 border border-white/10 transition-colors px-4 py-2 rounded-full">Skill Combos</a>
+            <a href="/career-guidance.html#panel-pjob" class="text-sm font-semibold bg-cyan/20 text-cyan hover:bg-cyan/30 border border-cyan/30 transition-colors px-4 py-2 rounded-full">Job Seeker Prep</a>
+          </div>
+
+          <a href="/career-guidance.html" class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold bg-white text-ink shadow-lg">
+            Explore All Guides <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top In-Demand Careers in India -->
+    <section id="in-demand" class="bg-white border-y border-slate/10 scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-6 py-24">
+        <div class="max-w-2xl mb-16">
+          <h2 class="display text-3xl md:text-4xl font-bold mb-5 tracking-tight text-ink">Top in-demand careers in India right now</h2>
+          <p class="text-slate text-lg leading-relaxed font-medium">A reality check on where hiring is actually happening in 2026. Stop guessing what the market wants and start aiming for high-growth roles.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="career-card">
+            <span class="demand-pill demand-top">Highest Demand</span>
+            <h3 class="display text-xl font-bold mb-3 text-ink">AI & Machine Learning</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium">Building and deploying models behind automation and GenAI. Deep Python, prompt engineering, and strong math fundamentals outweigh generic degrees.</p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="career-card">
+            <span class="demand-pill demand-top">Highest Demand</span>
+            <h3 class="display text-xl font-bold mb-3 text-ink">Business & Financial Analytics</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium">Turning massive data sets into business decisions. Mastery of SQL, Python, Power BI/Tableau, and a sharp understanding of finance or credit risk guarantees entry.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="career-card">
+            <span class="demand-pill demand-high">High Demand</span>
+            <h3 class="display text-xl font-bold mb-3 text-ink">Cybersecurity Analyst</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium">With massive digital shifts, every firm needs threat monitoring. Entry-level demand heavily outpaces the supply of formally trained candidates.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="career-card">
+            <span class="demand-pill demand-high">High Demand</span>
+            <h3 class="display text-xl font-bold mb-3 text-ink">Cloud & DevOps Engineer</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium">Keeping apps running securely on AWS, Azure, or GCP. Just one respected associate-level cloud certification is frequently enough to secure an interview.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="career-card">
+            <span class="demand-pill demand-top">Highest Demand</span>
+            <h3 class="display text-xl font-bold mb-3 text-ink">Product Management</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium">Sitting at the intersection of business, UX, and tech. Highly lucrative for problem solvers who can translate user needs into engineering tasks.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="career-card">
+            <span class="demand-pill demand-high">High Demand</span>
+            <h3 class="display text-xl font-bold mb-3 text-ink">Full-Stack Developer</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium">The most durable tech role in India. Startups and legacy enterprises alike hire continuously for developers who can handle both front-end and back-end.</p>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="career-card">
+            <span class="demand-pill demand-rising">Fast-Rising</span>
+            <h3 class="display text-xl font-bold mb-3 text-ink">Performance Marketing / SEO</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium">As ad costs rise, companies strictly hire specialists who can prove ROI. Digital marketing with a heavy analytical focus is booming.</p>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="career-card">
+            <span class="demand-pill demand-rising">Fast-Rising</span>
+            <h3 class="display text-xl font-bold mb-3 text-ink">UX / Product Designer</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium">Designing how software feels. A meticulously crafted portfolio and understanding of human psychology matter far more than a design degree.</p>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="career-card">
+            <span class="demand-pill demand-rising">Fast-Rising</span>
+            <h3 class="display text-xl font-bold mb-3 text-ink">Renewable Energy & EV Eng.</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium">India's intense push toward sustainable tech is creating high-value core-engineering roles for mechanical and electrical graduates.</p>
+          </div>
+        </div>
+
+        <div class="mt-14 text-center md:text-left">
+          <a href="/career-guidance.html#panel-pskill" class="inline-flex items-center gap-2 text-base font-bold text-indigo hover:text-ink transition-colors group">
+            See the exact skills needed to break into these roles 
+            <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24 bg-paper">
+      <h2 class="display text-3xl md:text-4xl font-bold mb-16 tracking-tight text-center md:text-left text-ink">How Career Catalog works</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="relative">
+          <p class="step-num text-6xl font-bold mb-4 opacity-40 absolute -top-8 -left-4 z-0">1</p>
+          <div class="relative z-10">
+            <h3 class="display text-xl font-bold mb-3 text-ink">Identify your starting point</h3>
+            <p class="text-slate text-base leading-relaxed font-medium">Whether you are a 12th pass-out, a final year student, or a fresher trying to pivot — your current stage dictates your exact roadmap.</p>
+          </div>
+        </div>
+        <div class="relative">
+          <p class="step-num text-6xl font-bold mb-4 opacity-40 absolute -top-8 -left-4 z-0">2</p>
+          <div class="relative z-10">
+            <h3 class="display text-xl font-bold mb-3 text-ink">Get an honest roadmap</h3>
+            <p class="text-slate text-base leading-relaxed font-medium">We break down the precise skills you need to learn, the optimal order to learn them in, and a realistic timeframe to get hired.</p>
+          </div>
+        </div>
+        <div class="relative">
+          <p class="step-num text-6xl font-bold mb-4 opacity-40 absolute -top-8 -left-4 z-0">3</p>
+          <div class="relative z-10">
+            <h3 class="display text-xl font-bold mb-3 text-ink">Execute and apply</h3>
+            <p class="text-slate text-base leading-relaxed font-medium">Use our Job Seeker framework to fix your resume, bypass broken application portals, and ace technical interviews.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog & Insights -->
+    <section id="blog" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate/10 scroll-mt-24">
+      <div class="flex items-end justify-between mb-14 flex-wrap gap-6">
+        <div class="max-w-xl">
+          <h2 class="display text-3xl md:text-4xl font-bold mb-4 tracking-tight text-ink">From the Insights Blog</h2>
+          <p class="text-slate text-lg font-medium leading-relaxed">Short, highly practical reads written so you can actually implement the advice today.</p>
+        </div>
+        <a href="/blog.html" class="text-base font-bold text-indigo hover:text-ink transition-colors flex items-center gap-1 group">
+          View all articles <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Article 1 -->
+        <a href="/blog/ai-tools-for-students-2026.html" class="panel rounded-[1.5rem] border border-slate/15 bg-white overflow-hidden block flex flex-col h-full">
+          <div class="blog-thumb h-48 bg-gradient-to-br from-indigo to-cyan flex items-center justify-center">
+            <svg viewBox="0 0 200 100" class="w-full h-full opacity-70">
+              <circle cx="40" cy="30" r="22" fill="white" fill-opacity="0.15"/>
+              <circle cx="150" cy="70" r="34" fill="white" fill-opacity="0.12"/>
+            </svg>
+          </div>
+          <div class="p-8 flex-grow flex flex-col">
+            <p class="text-xs font-bold tracking-wider uppercase text-indigo mb-3">AI Tools · 5 min read</p>
+            <h3 class="display text-xl font-bold mb-3 leading-snug text-ink">5 AI tools every college student should know in 2026</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium flex-grow">Free, easy to learn, and genuinely useful for automating assignments and impressing at internships.</p>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="/blog/resume-that-gets-read.html" class="panel rounded-[1.5rem] border border-slate/15 bg-white overflow-hidden block flex flex-col h-full">
+          <div class="blog-thumb h-48 bg-ink flex items-center justify-center">
+            <svg viewBox="0 0 200 100" class="w-full h-full opacity-80">
+              <path d="M0 80 C 50 80, 60 40, 100 40 S 160 10, 200 10" stroke="#06B6D4" stroke-width="4" fill="none"/>
+              <circle cx="100" cy="40" r="5" fill="#06B6D4"/>
+            </svg>
+          </div>
+          <div class="p-8 flex-grow flex flex-col">
+            <p class="text-xs font-bold tracking-wider uppercase text-cyan mb-3">Job Search · 4 min read</p>
+            <h3 class="display text-xl font-bold mb-3 leading-snug text-ink">How to write a fresher resume that recruiters actually read</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium flex-grow">A simple framework, metrics-driven wording, and the top three fatal formatting mistakes to avoid.</p>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="/blog/data-analytics-portfolio.html" class="panel rounded-[1.5rem] border border-slate/15 bg-white overflow-hidden block flex flex-col h-full">
+          <div class="blog-thumb h-48 bg-gradient-to-br from-emerald to-cyan flex items-center justify-center">
+            <svg viewBox="0 0 200 100" class="w-full h-full opacity-60">
+              <rect x="20" y="20" width="40" height="50" fill="white" fill-opacity="0.2"/>
+              <rect x="75" y="40" width="40" height="30" fill="white" fill-opacity="0.3"/>
+              <rect x="130" y="10" width="40" height="60" fill="white" fill-opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="p-8 flex-grow flex flex-col">
+            <p class="text-xs font-bold tracking-wider uppercase text-emerald mb-3">Tech Skills · 6 min read</p>
+            <h3 class="display text-xl font-bold mb-3 leading-snug text-ink">Building a Data Analytics portfolio that gets you hired</h3>
+            <p class="text-slate text-sm leading-relaxed font-medium flex-grow">Why your Titanic dataset project is being ignored, and how to build a PowerBI/SQL portfolio that proves business value.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-ink text-paper scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-5 gap-16 items-center">
+        <div class="lg:col-span-3">
+          <p class="text-sm font-bold tracking-[0.2em] uppercase text-cyan mb-6">Our Mission</p>
+          <h2 class="display text-3xl md:text-5xl font-bold mb-8 tracking-tight leading-tight">
+            Career advice online was broken. So we built the fix.
+          </h2>
+          <p class="text-paper/80 leading-relaxed text-lg mb-6 max-w-2xl font-medium">
+            Most career websites rely on generic fluff, out-of-date college advice, or jargon meant for Western job markets. Career Catalog is engineered exclusively by Indian early-career professionals, for the Indian market.
+          </p>
+          <p class="text-paper/80 leading-relaxed text-lg max-w-2xl font-medium">
+            We focus on hard truths: what skills actually command a salary, how to bypass broken application systems, and how to structure a career when you don't have a Tier-1 college tag.
+          </p>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="grid grid-cols-2 gap-5">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+              <p class="display text-4xl font-bold mb-2 text-white">0%</p>
+              <p class="text-sm text-paper/70 font-medium">Corporate Jargon</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+              <p class="display text-4xl font-bold mb-2 text-white">100%</p>
+              <p class="text-sm text-paper/70 font-medium">Actionable Steps</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm col-span-2">
+              <p class="display text-2xl font-bold mb-2 text-white">The ₹99 Promise</p>
+              <p class="text-sm text-paper/70 font-medium leading-relaxed">Book a 1:1 strategy call with us. If you don't get absolute clarity on your next steps in 10 minutes, it's completely free.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof / Testimonials -->
+    <section class="max-w-7xl mx-auto px-6 py-24 bg-paper">
+      <h2 class="display text-3xl md:text-4xl font-bold mb-16 tracking-tight text-ink text-center md:text-left">What readers say</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-white p-8 rounded-2xl border border-slate/10 shadow-sm">
+          <p class="quote-mark text-indigo text-7xl mb-0 -mt-4">"</p>
+          <p class="text-lg leading-relaxed mb-6 text-ink font-medium">I used the Job Seeker resume framework right before applying for my first analytics role. The hiring manager explicitly mentioned my resume structure during the interview. No jargon, just results.</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-indigo/10 flex items-center justify-center text-indigo font-bold">V</div>
+            <div>
+              <p class="text-sm font-bold text-ink">Vikram S.</p>
+              <p class="text-xs text-slate font-medium">Business Analyst, Pune</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl border border-slate/10 shadow-sm">
+          <p class="quote-mark text-cyan text-7xl mb-0 -mt-4">"</p>
+          <p class="text-lg leading-relaxed mb-6 text-ink font-medium">I booked the ₹99 call because I was completely confused after my B.Com. In exactly 10 minutes, I had a specific roadmap for Financial Analytics and knew which tools to ignore.</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-cyan/10 flex items-center justify-center text-cyan font-bold">P</div>
+            <div>
+              <p class="text-sm font-bold text-ink">Priya M.</p>
+              <p class="text-xs text-slate font-medium">Finance Graduate, Mumbai</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+      <div class="rounded-[2rem] bg-gradient-to-r from-indigo to-cyan p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-2xl">
+        <div class="max-w-xl text-center md:text-left">
+          <h2 class="display text-3xl md:text-4xl font-bold mb-4">Stop guessing. Start building.</h2>
+          <p class="text-white/90 leading-relaxed text-lg font-medium">Jump on a quick 10-minute strategy call to audit your resume or map out your next career move. No fluff, just absolute clarity.</p>
+        </div>
+        <div class="w-full md:w-auto flex-shrink-0">
+          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="w-full md:w-auto btn-primary px-8 py-5 rounded-xl text-lg font-bold bg-ink text-white shadow-xl hover:bg-white hover:text-ink transition-colors whitespace-nowrap">
+            Book 1:1 Call (₹99)
+          </button>
+          <p class="text-xs text-white/70 text-center mt-4 font-medium">Secure. Honest. Fluff-free.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate/10 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-12">
+      <div class="sm:col-span-2">
+        <a href="/" class="display text-2xl font-bold text-ink">Career Catalog</a>
+        <p class="text-base text-slate mt-4 max-w-sm leading-relaxed font-medium">Premium career guidance, skill mapping, and hiring insights engineered for Indian students and early-career professionals.</p>
+      </div>
+      <div>
+        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Explore</p>
+        <div class="flex flex-col gap-4 text-base font-medium text-slate">
+          <a href="/career-guidance.html" class="hover:text-indigo transition-colors">Career Guidance</a>
+          <a href="/career-guidance.html#panel-pjob" class="hover:text-indigo transition-colors">Job Seeker</a>
+          <a href="/blog.html" class="hover:text-indigo transition-colors">Insights Blog</a>
+          <a href="#about" class="hover:text-indigo transition-colors">About Us</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Action</p>
+        <div class="flex flex-col gap-4 text-base font-medium text-slate">
+          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="text-left hover:text-indigo transition-colors font-bold text-indigo">Book ₹99 Call</button>
+          <a href="/contact.html" class="hover:text-indigo transition-colors">Contact</a>
+          <a href="/privacy.html" class="hover:text-indigo transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-6 border-t border-slate/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm font-medium text-slate">
+      <p>© 2026 Career Catalog. All rights reserved.</p>
+      <p>Built for India.</p>
+    </div>
+  </footer>
+
+  <!-- Popup Script (Must exist for booking functionality) -->
+  <script src="/popup.js?v=7"></script>
 </body>
 </html>
