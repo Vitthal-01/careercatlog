@@ -8,7 +8,6 @@
   <title>Career Insights & Job Strategies | Career Catalog India</title>
   <meta name="title" content="Career Insights & Job Strategies | Career Catalog India" />
   <meta name="description" content="No-fluff career insights, resume tips, and interview strategies for Indian students and freshers. Learn how to navigate the 2026 job market." />
-  <meta name="keywords" content="career blog India, interview tips freshers, ATS resume guide, cold emailing recruiters, AI tools for students, tech skills 2026" />
   <meta name="robots" content="index, follow" />
 
   <!-- Fonts -->
@@ -79,14 +78,14 @@
 
       <div class="hidden md:flex items-center gap-1 glass-tabs rounded-full p-1.5">
         <a href="career-guidance.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Career Guidance</a>
-        <a href="career-guidance.html#panel-pjob" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Job Seeker</a>
+        <a href="job-seeker.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Job Seeker</a>
         <a href="blog.html" class="glass-tab active px-5 py-2 rounded-full text-sm font-semibold">Insights</a>
         <a href="index.html#about" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">About</a>
       </div>
 
       <div class="flex items-center gap-4">
         <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-white px-7 py-3 rounded-full bg-gradient-to-r from-indigo to-cyan btn-primary shadow-md">
-          Book ₹99 Call
+          Talk to an Expert
         </button>
         <button id="menu-btn" class="md:hidden p-2 -mr-2 rounded-lg text-ink hover:bg-slate/10 transition-colors" aria-label="Toggle Menu">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -95,18 +94,15 @@
     </nav>
     <div id="mobile-menu" class="md:hidden bg-paper/95 backdrop-blur-md">
       <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-2 text-base font-semibold">
-        <a href="career-guidance.html" class="py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Career Guidance</a>
-        <a href="career-guidance.html#panel-pjob" class="py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Job Seeker</a>
-        <a href="blog.html" class="py-3 px-4 rounded-xl hover:bg-indigo/5 text-indigo transition-colors">Insights</a>
+        <a href="career-guidance.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Career Guidance</a>
+        <a href="job-seeker.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Job Seeker</a>
+        <a href="blog.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-indigo transition-colors">Insights</a>
         <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="mt-4 w-full text-center text-white px-6 py-4 rounded-xl bg-gradient-to-r from-indigo to-cyan font-bold shadow-lg">
-          Book ₹99 Career Call
+          Talk to an Expert
         </button>
       </div>
     </div>
   </header>
-  <script>
-    document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('open'));
-  </script>
 
   <main>
     <!-- ================= PAGE HEADER ================= -->
@@ -231,7 +227,7 @@
       </div>
     </section>
 
-    <!-- ================= INTERRUPTION CTA ================= -->
+    <!-- ================= HIGH CONTRAST CTA ================= -->
     <section class="max-w-7xl mx-auto px-6 pb-24">
       <div class="rounded-[2.5rem] bg-ink p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-2xl relative overflow-hidden">
         <!-- Decorative bg -->
@@ -244,7 +240,7 @@
         </div>
         <div class="w-full md:w-auto flex-shrink-0 relative z-10">
           <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="w-full md:w-auto btn-primary px-9 py-5 rounded-2xl text-lg font-bold bg-white text-ink shadow-xl">
-            Book 1:1 Call (₹99)
+            Book a Strategy Call
           </button>
         </div>
       </div>
@@ -263,7 +259,7 @@
         <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Explore</p>
         <div class="flex flex-col gap-4 text-base font-medium text-slate">
           <a href="career-guidance.html" class="hover:text-indigo transition-colors">Career Guidance</a>
-          <a href="career-guidance.html#panel-pjob" class="hover:text-indigo transition-colors">Job Seeker</a>
+          <a href="job-seeker.html" class="hover:text-indigo transition-colors">Job Seeker</a>
           <a href="blog.html" class="hover:text-indigo transition-colors text-indigo font-bold">Insights Blog</a>
           <a href="index.html#about" class="hover:text-indigo transition-colors">About Us</a>
         </div>
@@ -271,7 +267,7 @@
       <div>
         <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Action</p>
         <div class="flex flex-col gap-4 text-base font-medium text-slate">
-          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="text-left hover:text-indigo transition-colors font-bold text-indigo">Book ₹99 Call</button>
+          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="text-left hover:text-indigo transition-colors font-bold text-indigo">Talk to an Expert</button>
           <a href="#" class="hover:text-indigo transition-colors">Contact</a>
           <a href="#" class="hover:text-indigo transition-colors">Privacy Policy</a>
         </div>
@@ -317,6 +313,16 @@
         });
       });
     });
+  </script>
+
+  <!-- Mobile Menu Logic -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
   </script>
 
   <!-- Include Popup Script Locally -->
