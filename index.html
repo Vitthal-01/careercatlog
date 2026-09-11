@@ -4,501 +4,421 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- SEO & Meta Tags -->
-  <title>Career Catalog | Honest Career Guidance for India</title>
-  <meta name="title" content="Career Catalog | Honest Career Guidance for India" />
-  <meta name="description" content="Clear, reality-checked career guidance for Indian students and freshers. Explore 2026 career paths, master the job hunt, and book a 1:1 strategy call." />
+  <title>Career Catalog | Evidence-Based Career Guidance & Workplace AI Training</title>
+  <meta name="description" content="India's career intelligence platform. Explore 2026 career roadmaps, master workplace AI tools (Copilot, Claude, ChatGPT), and secure strategic 1:1 career guidance." />
+  <meta name="keywords" content="career guidance India, AI tools training, Microsoft Copilot in work, Claude 3.5 Sonnet, ChatGPT prompts for workplace, ATS resume format 2026" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://careercatalog.in/" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS Integration -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink: '#0B1120', paper: '#FAFAFA', indigo: '#4338CA',
-            cyan: '#06B6D4', emerald: '#10B981', slate: '#475569', amber: '#F59E0B',
-          },
-          fontFamily: {
-            display: ['"Space Grotesk"', 'sans-serif'], body: ['"Inter"', 'sans-serif'],
-          }
-        }
-      }
-    }
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Career Catalog | Evidence-Based Career Guidance & AI Tools Training" />
+  <meta property="og:description" content="Strategic career roadmaps, workplace AI tool masterclasses, and tactical job-search guidance for Indian students and professionals." />
+  <meta property="og:url" content="https://careercatalog.in/" />
+  <meta property="og:site_name" content="Career Catalog India" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Career Catalog India",
+    "url": "https://careercatalog.in/",
+    "description": "Evidence-based career guidance, job seeker tactics, and enterprise AI tools training for Indian students and working professionals.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://wa.me/919145723608"
+    ]
+  }
   </script>
-
-  <style>
-    body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #0B1120; }
-    h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
-    
-    .gradient-text {
-      background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    
-    .glow {
-      background: radial-gradient(circle at 20% 10%, rgba(67,56,202,0.07), transparent 55%),
-                  radial-gradient(circle at 85% 0%, rgba(6,182,212,0.07), transparent 50%);
-    }
-
-    .btn-primary { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px -5px rgba(67, 56, 202, 0.3), 0 8px 10px -6px rgba(67, 56, 202, 0.1); }
-
-    .glass-tabs {
-      background: rgba(255,255,255,0.75); backdrop-filter: blur(16px);
-      border: 1px solid rgba(11,17,32,0.08); box-shadow: 0 4px 24px rgba(11,17,32,0.04);
-    }
-    .glass-tab { transition: all 0.2s ease; color: #475569; }
-    .glass-tab.active, .glass-tab:hover {
-      background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); color: white;
-      box-shadow: 0 4px 14px rgba(67,56,202,0.25);
-    }
-
-    /* Interactive Career Cards */
-    .career-card {
-      border: 1px solid rgba(71,85,105,0.12); border-radius: 1.25rem;
-      background: #fff; padding: 2.25rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); height: 100%;
-    }
-    .career-card:hover { transform: translateY(-6px); box-shadow: 0 22px 40px rgba(11,17,32,0.08); border-color: rgba(67,56,202,0.3); }
-    
-    .demand-pill {
-      display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
-      padding: 0.35rem 0.85rem; border-radius: 9999px; margin-bottom: 1.2rem; text-transform: uppercase;
-    }
-    .demand-high { background: rgba(6,182,212,0.12); color: #0E7490; }
-    .demand-rising { background: rgba(245,158,11,0.14); color: #B45309; }
-    .demand-top { background: rgba(67,56,202,0.12); color: #4338CA; }
-
-    /* Quiz Widget Styles */
-    .quiz-container { background: #fff; border: 1px solid rgba(71,85,105,0.15); border-radius: 2rem; box-shadow: 0 20px 40px rgba(11,17,32,0.06); }
-    .quiz-option { transition: all 0.2s ease; border: 1.5px solid #E2E8F0; }
-    .quiz-option:hover { border-color: #4338CA; background: rgba(67,56,202,0.02); transform: translateY(-2px); }
-
-    /* Mobile Menu */
-    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    #mobile-menu.open { max-height: 400px; border-bottom: 1px solid rgba(71,85,105,0.1); }
-  </style>
 </head>
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-slate/10">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="display text-2xl font-bold tracking-tight text-ink hover:opacity-80 transition-opacity">Career Catalog</a>
+  <div style="background: #0F172A; color: #E2E8F0; font-size: 0.82rem; padding: 0.45rem 1rem; text-align: center; font-weight: 500;">
+    <span>⚡ <strong>New for 2026:</strong> Enterprise AI Tools Curriculum launched (Copilot, Claude 3.5, ChatGPT-4o). </span>
+    <a href="ai-tools.html" style="color: #38BDF8; font-weight: 700; text-decoration: underline; margin-left: 0.35rem;">Explore Modules &rarr;</a>
+  </div>
 
-      <!-- Desktop Tabs -->
-      <div class="hidden md:flex items-center gap-1 glass-tabs rounded-full p-1.5">
-        <a href="career-guidance.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Career Guidance</a>
-        <a href="job-seeker.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Job Seeker</a>
-        <a href="blog.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Insights</a>
-        <a href="#about" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">About</a>
-      </div>
+  <header class="header-glass">
+    <div class="container">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="2.5" stroke-linecap="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+          Career Catalog
+        </a>
 
-      <div class="flex items-center gap-4">
-        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-white px-7 py-3 rounded-full bg-gradient-to-r from-indigo to-cyan btn-primary shadow-md">
-          Talk to an Expert
-        </button>
-        <!-- Mobile Menu Toggle -->
-        <button id="menu-btn" class="md:hidden p-2 -mr-2 rounded-lg text-ink hover:bg-slate/10 transition-colors" aria-label="Toggle Menu">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-      </div>
-    </nav>
-    
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden bg-paper/95 backdrop-blur-md">
-      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-2 text-base font-semibold">
-        <a href="career-guidance.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Career Guidance</a>
-        <a href="job-seeker.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Job Seeker</a>
-        <a href="blog.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Insights</a>
-        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="mt-4 w-full text-center text-white px-6 py-4 rounded-xl bg-gradient-to-r from-indigo to-cyan font-bold shadow-lg">
-          Talk to an Expert
-        </button>
+        <div class="nav-tabs" role="tablist">
+          <a href="career-guidance.html" class="nav-tab">Career Guidance</a>
+          <a href="job-seeker.html" class="nav-tab">Job Seeker</a>
+          <a href="ai-tools.html" class="nav-tab">Get Trained: AI Tools <span class="badge-new">New</span></a>
+          <a href="blog.html" class="nav-tab">Insights</a>
+          <a href="company/about.html" class="nav-tab">About</a>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button data-modal-trigger data-topic="General Strategy Consultation" class="btn btn-primary" style="display: none;" id="desktop-cta">
+            Talk to an Expert
+          </button>
+          <style>@media(min-width: 640px){ #desktop-cta { display: inline-flex !important; } }</style>
+          
+          <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" style="background: transparent; border: 1px solid var(--color-slate-200); border-radius: var(--radius-md); padding: 0.45rem; color: var(--color-ink); cursor: pointer; display: flex; align-items: center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <style>@media(min-width: 900px){ #menu-toggle { display: none !important; } }</style>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" class="mobile-nav">
+        <div style="padding: 1rem 0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="career-guidance.html" class="mobile-link">Career Guidance</a>
+          <a href="job-seeker.html" class="mobile-link">Job Seeker Playbook</a>
+          <a href="ai-tools.html" class="mobile-link">Get Trained: AI Tools (Copilot, Claude, ChatGPT)</a>
+          <a href="blog.html" class="mobile-link">Insights & Guides</a>
+          <a href="company/about.html" class="mobile-link">About Career Catalog</a>
+          <a href="company/contact.html" class="mobile-link">Contact</a>
+          <button data-modal-trigger data-topic="Mobile Menu Request" class="btn btn-primary" style="margin-top: 0.75rem; width: 100%;">
+            Book Consultation (₹99)
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ================= HERO SECTION ================= -->
-    <section class="glow relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-28 md:pb-32 grid md:grid-cols-5 gap-12 items-center">
-        
-        <div class="md:col-span-3 z-10">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo/10 border border-indigo/20 text-indigo text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-indigo animate-pulse"></span> India's Premier Career Playbook
+    <section class="bg-glow" style="padding: 4.5rem 0 4rem; border-bottom: 1px solid var(--color-slate-200);">
+      <div class="container">
+        <div style="max-width: 48rem;">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); background: rgba(67, 56, 202, 0.08); border: 1px solid rgba(67, 56, 202, 0.18); font-size: 0.78rem; font-weight: 700; color: var(--color-indigo); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.5rem;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-indigo); display: inline-block;"></span>
+            India's Career Intelligence & AI Competency Platform
           </div>
-          <h1 class="display text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-bold leading-[1.1] mb-6 tracking-tight">
-            Your career, mapped with <span class="gradient-text">absolute clarity</span>.
+
+          <h1 style="font-size: clamp(2.3rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.12; letter-spacing: -0.03em; margin-bottom: 1.25rem;">
+            Navigate your career with <span class="gradient-text">verified clarity</span>.
           </h1>
-          <p class="text-lg md:text-xl text-slate max-w-lg mb-10 leading-relaxed font-medium">
-            Straightforward, reality-checked guidance for students and freshers. Know exactly what to learn, how to bypass HR portals, and land high-paying roles in 2026.
+
+          <p style="font-size: 1.15rem; color: var(--color-slate-600); line-height: 1.6; margin-bottom: 2rem; max-width: 42rem;">
+            Stop relying on generic campus advice or fragmented internet searches. Master high-income skills, learn workplace AI tools (Microsoft Copilot, Claude, ChatGPT), bypass ATS black holes, and consult directly with seasoned career strategists.
           </p>
-          <div class="flex flex-col sm:flex-row flex-wrap gap-4">
-            <a href="career-guidance.html" class="btn-primary text-center px-8 py-4 rounded-xl text-base font-bold text-white bg-ink shadow-xl">
+
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <a href="ai-tools.html" class="btn btn-dark" style="padding: 0.9rem 1.8rem; font-size: 1rem;">
+              Get Trained on AI Tools &rarr;
+            </a>
+            <a href="career-guidance.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1rem;">
               Explore Roadmaps
             </a>
-            <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="btn-primary text-center px-8 py-4 rounded-xl text-base font-bold text-ink bg-white border border-slate/20 shadow-md hover:border-indigo/40 hover:bg-slate/5">
-              Book a Strategy Call
+            <button data-modal-trigger data-topic="Hero 1:1 Consultation" class="btn btn-primary" style="padding: 0.9rem 1.8rem; font-size: 1rem;">
+              Book 1:1 Strategy Call
             </button>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Abstract Graphic & Trust Badge -->
-        <div class="md:col-span-2 relative hidden md:block">
-          <svg viewBox="0 0 320 240" class="w-full h-auto drop-shadow-2xl opacity-90">
-            <defs>
-              <linearGradient id="pathGrad" x1="0" y1="1" x2="1" y2="0">
-                <stop offset="0%" stop-color="#4338CA"/><stop offset="100%" stop-color="#06B6D4"/>
-              </linearGradient>
-            </defs>
-            <path d="M 10 210 C 80 210, 90 140, 140 130 S 210 60, 250 55 S 300 30, 310 15" fill="none" stroke="url(#pathGrad)" stroke-width="6" stroke-linecap="round"/>
-            <circle cx="10" cy="210" r="8" fill="#4338CA"/>
-            <circle cx="140" cy="130" r="7" fill="#4338CA" opacity="0.8"/>
-            <circle cx="250" cy="55" r="7" fill="#06B6D4" opacity="0.9"/>
-            <circle cx="310" cy="15" r="9" fill="#06B6D4"/>
-          </svg>
+    <!-- WORKPLACE AI TOOLS TRAINING PREVIEW -->
+    <section style="padding: 4.5rem 0; background: var(--color-white); border-bottom: 1px solid var(--color-slate-200);">
+      <div class="container">
+        <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; margin-bottom: 3rem; gap: 1rem;">
+          <div>
+            <div class="tool-badge-pill copilot">High-Impact Workforce Capability</div>
+            <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem;">
+              Master Enterprise AI Tools Used by Modern Teams
+            </h2>
+            <p style="color: var(--color-slate-600); font-size: 1.05rem; max-width: 44rem;">
+              Knowing how to prompt is no longer optional. Modern workplaces in India and globally expect professionals to 3x their output using integrated AI agents.
+            </p>
+          </div>
+        </div>
 
-          <!-- Floating Trust Badge -->
-          <div class="absolute -bottom-4 left-0 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-slate/10 px-6 py-5 flex items-center gap-4 max-w-[270px] transform hover:-translate-y-2 transition-transform duration-300">
-            <div class="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-indigo to-cyan flex items-center justify-center shadow-inner">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem;">
+          
+          <!-- Microsoft 365 Copilot -->
+          <div class="feature-card">
+            <div class="tool-logo-box">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <path d="M19.5 6C16.46 6 14 8.46 14 11.5V14H18.5C21.54 14 24 11.54 24 8.5C24 7.12 21.98 6 19.5 6Z" fill="#0078D4"/>
+                <path d="M12.5 26C15.54 26 18 23.54 18 20.5V18H13.5C10.46 18 8 20.46 8 23.5C8 24.88 10.02 26 12.5 26Z" fill="#28A8EA"/>
+                <path d="M14 11.5C14 8.46 16.46 6 19.5 6C20.65 6 21.7 6.36 22.56 6.97C20.42 8.35 19 10.74 19 13.5C19 15.22 19.58 16.8 20.56 18.06C19.78 17.4 18.73 17 17.5 17H14V11.5Z" fill="#005A9E"/>
+                <path d="M18 20.5C18 23.54 15.54 26 12.5 26C11.35 26 10.3 25.64 9.44 25.03C11.58 23.65 13 21.26 13 18.5C13 16.78 12.42 15.2 11.44 13.94C12.22 14.6 13.27 15 14.5 15H18V20.5Z" fill="#107C41"/>
+              </svg>
+            </div>
+            <span class="tool-badge-pill copilot">Workplace & Enterprise</span>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">Microsoft 365 Copilot</h3>
+            <p style="color: var(--color-slate-600); font-size: 0.95rem; line-height: 1.55; margin-bottom: 1.25rem;">
+              Automate complex Excel formulas, generate structured PowerPoint presentations from meeting transcripts, and draft executive summaries across Outlook and Word.
+            </p>
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-indigo);">
+              Key Application: Corporate Operations, Finance & MIS
+            </div>
+          </div>
+
+          <!-- Anthropic Claude 3.5 Sonnet -->
+          <div class="feature-card">
+            <div class="tool-logo-box">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <rect width="32" height="32" rx="6" fill="#D97706" fill-opacity="0.1"/>
+                <path d="M16 7L24 23H20L18 19H14L12 23H8L16 7ZM16 13L14.7 16H17.3L16 13Z" fill="#B45309"/>
+              </svg>
+            </div>
+            <span class="tool-badge-pill claude">Writing & Architecture</span>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">Claude 3.5 Sonnet</h3>
+            <p style="color: var(--color-slate-600); font-size: 0.95rem; line-height: 1.55; margin-bottom: 1.25rem;">
+              Leverage live interactive Artifacts to prototype web apps, generate nuanced long-form strategic documentation, and perform rigorous logic and code debugging.
+            </p>
+            <div style="font-size: 0.85rem; font-weight: 600; color: #B45309;">
+              Key Application: Engineering, Analysis & Thought Leadership
+            </div>
+          </div>
+
+          <!-- OpenAI ChatGPT -->
+          <div class="feature-card">
+            <div class="tool-logo-box">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <path d="M26.2 13.8C25.8 11.2 23.9 9.1 21.4 8.4C20.8 6.4 19.1 4.8 17 4.3C14.4 3.7 11.7 4.7 10.2 6.8C8.2 6.9 6.5 8.2 5.7 10.1C4.4 12.3 4.7 15.1 6.3 17C5.9 19.6 7.8 21.7 10.3 22.4C10.9 24.4 12.6 26 14.7 26.5C17.3 27.1 20 26.1 21.5 24C23.5 23.9 25.2 22.6 26 20.7C27.3 18.5 27 15.7 26.2 13.8Z" stroke="#10B981" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M16 11V21M11 16H21" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="tool-badge-pill hot">Productivity & Data</span>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">ChatGPT-4o & Data</h3>
+            <p style="color: var(--color-slate-600); font-size: 0.95rem; line-height: 1.55; margin-bottom: 1.25rem;">
+              Upload raw CSVs and financial statements for instant statistical regression, customer persona profiling, and automated routine communications.
+            </p>
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-emerald);">
+              Key Application: Market Research & Quantitative Wrangling
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <a href="ai-tools.html" class="btn btn-primary">
+            Explore All 6 AI Workplace Tool Tracks &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE PILLARS & STATS -->
+    <section style="padding: 4rem 0; border-bottom: 1px solid var(--color-slate-200); background: var(--color-slate-50);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; text-align: center;">
+          <div>
+            <p style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--color-indigo); margin-bottom: 0.25rem;">100%</p>
+            <p style="font-weight: 600; color: var(--color-slate-800); margin-bottom: 0.25rem;">Zero-Fluff Curriculum</p>
+            <p style="font-size: 0.85rem; color: var(--color-slate-500);">Tested frameworks built exclusively for the Indian economic and hiring climate.</p>
+          </div>
+          <div>
+            <p style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--color-cyan); margin-bottom: 0.25rem;">1-on-1</p>
+            <p style="font-weight: 600; color: var(--color-slate-800); margin-bottom: 0.25rem;">Personalized Strategy</p>
+            <p style="font-size: 0.85rem; color: var(--color-slate-500);">Direct evaluation of your academic standing, portfolio projects, and targets.</p>
+          </div>
+          <div>
+            <p style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--color-emerald); margin-bottom: 0.25rem;">6-Sec</p>
+            <p style="font-weight: 600; color: var(--color-slate-800); margin-bottom: 0.25rem;">ATS Optimization</p>
+            <p style="font-size: 0.85rem; color: var(--color-slate-500);">Single-column formats with XYZ quantified metrics that bypass HR parsers.</p>
+          </div>
+          <div>
+            <p style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--color-amber); margin-bottom: 0.25rem;">₹99</p>
+            <p style="font-weight: 600; color: var(--color-slate-800); margin-bottom: 0.25rem;">Accessible Intake</p>
+            <p style="font-size: 0.85rem; color: var(--color-slate-500);">Transparent, low-barrier entry to unlock verified career roadmap clarity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE TWO CORE HUBS -->
+    <section style="padding: 5rem 0; background: var(--color-paper);">
+      <div class="container">
+        <div style="text-align: center; max-width: 40rem; margin: 0 auto 3.5rem;">
+          <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.75rem;">
+            Two Integrated Pathways to Mastery
+          </h2>
+          <p style="color: var(--color-slate-600); font-size: 1.05rem;">
+            Whether you need to choose what to study next or need to secure high-paying placement offers, we have structured the journey.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          <!-- Hub 1 -->
+          <div style="background: var(--color-ink); color: white; border-radius: var(--radius-2xl); padding: 3rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-xl);">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.08em; color: var(--color-cyan); margin-bottom: 1rem; display: inline-block;">Education & Transition Strategy</span>
+              <h3 style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 1rem;">Career Guidance Roadmaps</h3>
+              <p style="color: #CBD5E1; font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">
+                Step-by-step decision trees for 12th pass-outs (PCM, PCB, Commerce, Arts), Undergraduate placement routes, and high-ROI multidisciplinary skill combinations.
+              </p>
             </div>
             <div>
-              <p class="text-base font-bold text-ink leading-tight">100% Free Access</p>
-              <p class="text-xs text-slate font-medium mt-1">Read all guides without logging in</p>
+              <a href="career-guidance.html" class="btn btn-primary" style="width: 100%;">
+                Explore Roadmaps &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Hub 2 -->
+          <div style="background: var(--color-white); border: 1px solid var(--color-slate-200); border-radius: var(--radius-2xl); padding: 3rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-lg);">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.08em; color: var(--color-indigo); margin-bottom: 1rem; display: inline-block;">Hiring Tactics & Interview Prep</span>
+              <h3 style="font-size: 2rem; font-weight: 700; color: var(--color-ink); margin-bottom: 1rem;">The Job Seeker Playbook</h3>
+              <p style="color: var(--color-slate-600); font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">
+                Bypass standard recruitment portals. Learn the Google XYZ formula for resume bullet points, cold-emailing hiring managers directly, and the STAR interview framework.
+              </p>
+            </div>
+            <div>
+              <a href="job-seeker.html" class="btn btn-dark" style="width: 100%;">
+                Open Job Playbook &rarr;
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= VALUE STRIP ================= -->
-    <section class="border-y border-slate/10 bg-white/50 backdrop-blur-sm">
-      <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
-        <div>
-          <p class="display text-2xl md:text-3xl font-bold leading-tight text-ink">Plain English</p>
-          <p class="text-sm font-medium text-slate mt-2">Zero confusing corporate jargon</p>
-        </div>
-        <div>
-          <p class="display text-2xl md:text-3xl font-bold leading-tight text-ink">Made for India</p>
-          <p class="text-sm font-medium text-slate mt-2">Built for the 2026 hiring market</p>
-        </div>
-        <div>
-          <p class="display text-3xl font-bold text-ink">Zero Spam</p>
-          <p class="text-sm font-medium text-slate mt-2">Highly actionable content only</p>
-        </div>
-        <div>
-          <p class="display text-3xl font-bold text-ink">1:1 Coaching</p>
-          <p class="text-sm font-medium text-slate mt-2">Talk directly to industry experts</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CORE PILLARS ================= -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="display text-3xl md:text-4xl font-bold mb-5 tracking-tight text-ink">Everything you need to move forward</h2>
-        <p class="text-slate text-lg leading-relaxed font-medium">We broke down the entire career journey into two actionable hubs. Figure out what to learn, and then learn how to sell it.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Pillar 1: Career Guidance -->
-        <div class="bg-ink text-white rounded-[2rem] p-10 md:p-14 relative overflow-hidden shadow-2xl group transition-transform hover:-translate-y-2 duration-300">
-          <div class="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-indigo/40 blur-3xl transition-all duration-500 group-hover:bg-indigo/60"></div>
-          <div class="relative z-10">
-            <h3 class="display text-3xl font-bold mb-4">Career Guidance</h3>
-            <p class="text-white/80 leading-relaxed font-medium mb-10 max-w-md">
-              Step-by-step roadmaps for 12th pass-outs, graduates, and pivoters. Discover the certifications and multidisciplinary skills that actually command high salaries in 2026.
-            </p>
-            <a href="career-guidance.html" class="inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-cyan hover:text-white transition-colors">
-              Explore Roadmaps <span class="text-lg leading-none">&rarr;</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Pillar 2: Job Seeker -->
-        <div class="bg-white border border-slate/15 rounded-[2rem] p-10 md:p-14 relative overflow-hidden shadow-xl group transition-transform hover:-translate-y-2 duration-300">
-          <div class="absolute -bottom-32 -right-32 w-80 h-80 rounded-full bg-cyan/10 blur-3xl transition-all duration-500 group-hover:bg-cyan/20"></div>
-          <div class="relative z-10">
-            <h3 class="display text-3xl font-bold mb-4 text-ink">Job Seeker Playbook</h3>
-            <p class="text-slate leading-relaxed font-medium mb-10 max-w-md">
-              Bypass the HR black hole. Master the 6-second ATS resume, learn how to cold-email hiring managers directly, and structure your interview answers to guarantee offers.
-            </p>
-            <a href="job-seeker.html" class="inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-indigo hover:text-ink transition-colors">
-              Unlock the Playbook <span class="text-lg leading-none">&rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= INTERACTIVE DIAGNOSTIC QUIZ ================= -->
-    <section class="max-w-4xl mx-auto px-6 py-10 mb-16">
-      <div class="quiz-container p-8 md:p-12">
-        <div id="quiz-intro">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo/10 text-indigo text-xs font-bold uppercase mb-4">
-            Interactive Assessment
-          </div>
-          <h2 class="display text-3xl md:text-4xl font-bold mb-4 text-ink">Are you actually ready for the 2026 job market?</h2>
-          <p class="text-slate text-base md:text-lg mb-8 font-medium">Take our 60-second diagnostic check to evaluate your skill stack, resume strength, and interview preparedness.</p>
-          <button onclick="startQuiz()" class="btn-primary px-8 py-4 rounded-xl text-base font-bold text-white bg-ink shadow-lg">
-            Start Free Assessment &rarr;
-          </button>
-        </div>
-
-        <!-- Question View (Hidden by default) -->
-        <div id="quiz-box" class="hidden">
-          <div class="flex justify-between items-center mb-6">
-            <span id="quiz-progress" class="text-xs font-bold uppercase tracking-widest text-indigo">Question 1 of 3</span>
-            <span id="quiz-step-count" class="text-xs font-bold text-slate-400">33%</span>
-          </div>
-          <h3 id="quiz-question" class="display text-2xl md:text-3xl font-bold mb-6 text-ink"></h3>
-          <div id="quiz-options" class="space-y-4 mb-8"></div>
-        </div>
-
-        <!-- Results View (Hidden by default) -->
-        <div id="quiz-results" class="hidden text-center">
-          <div class="w-16 h-16 rounded-full bg-amber/10 text-amber flex items-center justify-center mx-auto mb-6">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </div>
-          <h3 class="display text-2xl md:text-3xl font-bold mb-3 text-ink">Assessment Complete: High Risk of ATS Rejection</h3>
-          <p id="quiz-feedback" class="text-slate text-base md:text-lg mb-8 max-w-xl mx-auto font-medium leading-relaxed"></p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="btn-primary px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-indigo to-cyan shadow-lg">
-              Book a Strategy Call to Fix This
-            </button>
-            <button onclick="resetQuiz()" class="px-6 py-4 rounded-xl text-base font-semibold text-slate bg-slate-100 hover:bg-slate-200">
-              Retake Quiz
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= TOP IN-DEMAND CAREERS ================= -->
-    <section class="bg-paper border-t border-slate/10">
-      <div class="max-w-7xl mx-auto px-6 py-24">
-        <div class="max-w-2xl mb-16">
-          <h2 class="display text-3xl md:text-4xl font-bold mb-5 tracking-tight text-ink">Top in-demand careers in India (2026)</h2>
-          <p class="text-slate text-lg leading-relaxed font-medium">Stop guessing what the market wants. Based on current hiring trends, here are the highest-growth roles offering premium salaries to skilled freshers.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="career-card">
-            <span class="demand-pill demand-top">Highest Demand</span>
-            <h3 class="display text-2xl font-bold mb-3 text-ink">AI & Machine Learning</h3>
-            <p class="text-slate text-sm leading-relaxed font-medium">Deep Python, Prompt Engineering, and RAG architectures outweigh generic tech degrees.</p>
-          </div>
-          <div class="career-card">
-            <span class="demand-pill demand-top">Highest Demand</span>
-            <h3 class="display text-2xl font-bold mb-3 text-ink">Data Analytics & BI</h3>
-            <p class="text-slate text-sm leading-relaxed font-medium">Turning data sets into decisions. Mastery of SQL, Python, and Power BI guarantees entry.</p>
-          </div>
-          <div class="career-card">
-            <span class="demand-pill demand-high">High Demand</span>
-            <h3 class="display text-2xl font-bold mb-3 text-ink">Fintech & Quant</h3>
-            <p class="text-slate text-sm leading-relaxed font-medium">CFA candidates who also master Python and Financial Modeling are actively outcompeting others.</p>
-          </div>
-          <div class="career-card">
-            <span class="demand-pill demand-high">High Demand</span>
-            <h3 class="display text-2xl font-bold mb-3 text-ink">Cybersecurity</h3>
-            <p class="text-slate text-sm leading-relaxed font-medium">With massive digital shifts, entry-level demand heavily outpaces the supply of trained candidates.</p>
-          </div>
-          <div class="career-card">
-            <span class="demand-pill demand-high">High Demand</span>
-            <h3 class="display text-2xl font-bold mb-3 text-ink">Cloud & DevOps</h3>
-            <p class="text-slate text-sm leading-relaxed font-medium">Just one respected associate-level cloud certification (AWS/Azure) is frequently enough to secure an interview.</p>
-          </div>
-          <div class="career-card">
-            <span class="demand-pill demand-rising">Fast-Rising</span>
-            <h3 class="display text-2xl font-bold mb-3 text-ink">Performance Marketing</h3>
-            <p class="text-slate text-sm leading-relaxed font-medium">As ad costs rise, companies hire specialists who can prove ROI. Digital marketing is booming.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= ABOUT SECTION ================= -->
-    <section id="about" class="bg-ink text-paper">
-      <div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-5 gap-16 items-center">
-        <div class="lg:col-span-3">
-          <p class="text-sm font-bold tracking-[0.2em] uppercase text-cyan mb-6">Our Mission</p>
-          <h2 class="display text-3xl md:text-5xl font-bold mb-8 leading-tight">Career advice online was broken. So we built the fix.</h2>
-          <p class="text-paper/80 leading-relaxed text-lg mb-6 font-medium">Most career websites rely on generic fluff, outdated college advice, or jargon meant for Western job markets. Career Catalog is engineered exclusively by Indian early-career professionals, for the Indian market.</p>
-          <p class="text-paper/80 leading-relaxed text-lg font-medium">We focus on hard truths: what skills actually command a salary, how to bypass broken application systems, and how to structure a career when you don't have a Tier-1 college tag.</p>
-        </div>
-        <div class="lg:col-span-2">
-          <div class="grid grid-cols-2 gap-5">
-            <div class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-              <p class="display text-4xl font-bold mb-2 text-white">0%</p>
-              <p class="text-sm text-paper/70 font-medium">Corporate Jargon</p>
-            </div>
-            <div class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-              <p class="display text-4xl font-bold mb-2 text-white">100%</p>
-              <p class="text-sm text-paper/70 font-medium">Actionable Steps</p>
-            </div>
-            <div class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm col-span-2">
-              <p class="display text-2xl font-bold mb-2 text-white">Guaranteed Value</p>
-              <p class="text-sm text-paper/70 font-medium leading-relaxed">Our strategy calls are designed to give you absolute clarity on your next steps in 10 minutes flat.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= FINAL CTA ================= -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
-      <div class="rounded-[2.5rem] bg-gradient-to-r from-indigo to-cyan p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-2xl">
-        <div class="max-w-xl text-center md:text-left">
-          <h2 class="display text-3xl md:text-5xl font-bold mb-5">Stop guessing. Start building.</h2>
-          <p class="text-white/90 text-lg font-medium leading-relaxed">Jump on a quick 10-minute strategy call to audit your resume or map out your next career move. No fluff, just clarity.</p>
-        </div>
-        <div class="w-full md:w-auto flex-shrink-0">
-          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="w-full md:w-auto btn-primary px-9 py-5 rounded-2xl text-lg font-bold bg-ink text-white shadow-xl hover:bg-white hover:text-ink">
-            Talk to an Expert
-          </button>
-        </div>
+    <!-- CALL TO ACTION STRIP -->
+    <section style="padding: 4.5rem 0; background: linear-gradient(135deg, #1E1B4B 0%, #0F172A 100%); color: white;">
+      <div class="container" style="text-align: center; max-width: 44rem;">
+        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; color: white; margin-bottom: 1rem;">
+          Get tailored advice for your specific situation.
+        </h2>
+        <p style="color: #94A3B8; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+          Book a 1:1 strategy audit for ₹99. We evaluate your resume, analyze your technical skill gaps, or map your target career path in a focused session.
+        </p>
+        <button data-modal-trigger data-topic="Bottom Banner Consultation" class="btn btn-primary" style="padding: 1rem 2.2rem; font-size: 1.05rem;">
+          Schedule 1:1 Strategy Session
+        </button>
       </div>
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-slate/20 bg-white">
-    <div class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-12">
-      <div class="sm:col-span-2">
-        <a href="index.html" class="display text-2xl font-bold text-ink">Career Catalog</a>
-        <p class="text-base text-slate mt-4 max-w-sm leading-relaxed font-medium">Premium career guidance, skill mapping, and hiring insights engineered for Indian students and early-career professionals.</p>
-      </div>
-      <div>
-        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Explore</p>
-        <div class="flex flex-col gap-4 text-base font-medium text-slate">
-          <a href="career-guidance.html" class="hover:text-indigo transition-colors">Career Guidance</a>
-          <a href="job-seeker.html" class="hover:text-indigo transition-colors">Job Seeker</a>
-          <a href="blog.html" class="hover:text-indigo transition-colors">Insights Blog</a>
-          <a href="#about" class="hover:text-indigo transition-colors">About Us</a>
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">Career Catalog</a>
+          <p style="font-size: 0.9rem; color: var(--color-slate-600); max-width: 22rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Evidence-based career roadmaps, job search engineering, and enterprise AI tools training built for students and working professionals in India.
+          </p>
+          <p style="font-size: 0.82rem; color: var(--color-slate-500);">
+            Based in Pune & Solapur, Maharashtra, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Exploration & Learning</h4>
+          <ul class="footer-links">
+            <li><a href="career-guidance.html">After 12th Roadmaps</a></li>
+            <li><a href="career-guidance.html#panel-pug">After Graduation Planning</a></li>
+            <li><a href="ai-tools.html">Get Trained: AI Tools</a></li>
+            <li><a href="job-seeker.html">ATS Resume Blueprint</a></li>
+            <li><a href="job-seeker.html">Cold Email Masterclass</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Editorial & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Insights Hub</a></li>
+            <li><a href="articles.html#ai-tools">5 AI Tools for Students</a></li>
+            <li><a href="articles.html#resume">6-Second Resume Rules</a></li>
+            <li><a href="articles.html#portfolio">Data Analytics Portfolio</a></li>
+            <li><a href="articles.html#interview">STAR Interview Answers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="company/about.html">About & Methodology</a></li>
+            <li><a href="company/contact.html">Contact Us</a></li>
+            <li><a href="company/privacy.html">Privacy Policy</a></li>
+            <li><a href="company/terms.html">Terms of Service</a></li>
+            <li><button data-modal-trigger data-topic="Footer WhatsApp Link" style="background:none;border:none;color:var(--color-indigo);font-weight:700;cursor:pointer;padding:0;font-size:0.9rem;text-align:left;">Book Session (₹99)</button></li>
+          </ul>
         </div>
       </div>
-      <div>
-        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Action</p>
-        <div class="flex flex-col gap-4 text-base font-medium text-slate">
-          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="text-left hover:text-indigo transition-colors font-bold text-indigo">Talk to an Expert</button>
-          <a href="#" class="hover:text-indigo transition-colors">Contact</a>
-          <a href="#" class="hover:text-indigo transition-colors">Privacy Policy</a>
+
+      <div class="footer-bottom">
+        <div>© 2026 Career Catalog India. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="company/privacy.html">Privacy</a>
+          <a href="company/terms.html">Terms</a>
+          <a href="company/contact.html">Contact</a>
         </div>
       </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 py-6 border-t border-slate/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm font-medium text-slate">
-      <p>© 2026 Career Catalog. All rights reserved.</p>
-      <p>Built for India.</p>
     </div>
   </footer>
 
-  <!-- ================= JAVASCRIPT LOGIC ================= -->
-  <script>
-    // Mobile Menu Script
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+  <div id="consultation-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <button class="modal-close" aria-label="Close modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div style="display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; background: rgba(255,255,255,0.2); padding: 0.25rem 0.65rem; border-radius: var(--radius-full); margin-bottom: 0.75rem;">
+          1-on-1 Strategic Consultation (₹99)
+        </div>
+        <h3 id="modal-title" style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">
+          Schedule Your Session
+        </h3>
+        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.9); line-height: 1.5;">
+          Direct guidance via WhatsApp and 1:1 call to resolve your career and skill roadmaps.
+        </p>
+      </div>
 
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+      <div class="modal-body">
+        <div class="modal-form-wrapper">
+          <form id="consultation-form" novalidate>
+            <div class="form-group">
+              <label for="client-name" class="form-label">Full Name</label>
+              <input type="text" id="client-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+            </div>
 
-    // Quiz Script Logic
-    const quizData = [
-      {
-        question: "What format is your current resume in?",
-        options: [
-          { text: "A flashy 2-column Canva template with graphics/icons", score: 0, feedback: "Canva templates look nice to humans, but Automated Tracking Systems (ATS) cannot parse them. You are getting auto-rejected." },
-          { text: "Standard Microsoft Word or PDF, but unstructured", score: 1, feedback: "Decent, but lacking the hard metrics and XYZ formatting required to pass modern HR filters." },
-          { text: "Single-column, black & white ATS-optimized format", score: 2, feedback: "Great job! Your resume format is structurally sound." }
-        ]
-      },
-      {
-        question: "How do you primarily search for jobs?",
-        options: [
-          { text: "Clicking 'Easy Apply' on Naukri / LinkedIn job portals", score: 0, feedback: "Portal cold-applying has a ~2% conversion rate. You are competing against 10,000 other freshers blindly." },
-          { text: "Applying directly on company career pages", score: 1, feedback: "Better than portals, but still leaves you at the mercy of automated keyword screeners." },
-          { text: "Combining portal applications with direct cold outreach to managers", score: 2, feedback: "Excellent. Direct outreach is how the top 1% bypass the queue." }
-        ]
-      },
-      {
-        question: "Which best describes your technical skill stack for 2026?",
-        options: [
-          { text: "Only what my college syllabus taught me (Java/C++ basics)", score: 0, feedback: "College syllabi are 4 years behind the market. You need modern tools like SQL, Python, or Cloud." },
-          { text: "I have taken a few online video certificates", score: 1, feedback: "Certificates are good, but without a live portfolio project, recruiters cannot verify your skills." },
-          { text: "I have built and deployed 2+ real-world portfolio projects", score: 2, feedback: "Fantastic. Verifiable proof of work is your strongest asset." }
-        ]
-      }
-    ];
+            <div class="form-group">
+              <label for="client-phone" class="form-label">WhatsApp Number (10 digits)</label>
+              <input type="tel" id="client-phone" class="form-input" placeholder="e.g. 9876543210" maxlength="10" required />
+            </div>
 
-    let currentQuestion = 0;
-    let totalScore = 0;
+            <div class="form-group">
+              <label for="client-topic" class="form-label">Consultation Focus</label>
+              <select id="client-topic" class="form-select">
+                <option value="General Strategy Consultation">General Career Guidance</option>
+                <option value="AI Tools Workplace Training">AI Tools Workplace Training</option>
+                <option value="Resume & ATS Review">Resume & ATS Keyword Audit</option>
+                <option value="College & Stream Guidance (12th/UG)">College & Stream Selection</option>
+                <option value="Interview Preparation (STAR Method)">Mock Interview & STAR Answers</option>
+              </select>
+            </div>
 
-    function startQuiz() {
-      document.getElementById('quiz-intro').classList.add('hidden');
-      document.getElementById('quiz-box').classList.remove('hidden');
-      currentQuestion = 0;
-      totalScore = 0;
-      loadQuestion();
-    }
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem; margin-top: 0.5rem;">
+              Continue to WhatsApp &rarr;
+            </button>
+            <p style="font-size: 0.75rem; color: var(--color-slate-400); text-align: center; margin-top: 0.75rem;">
+              🔒 Zero spam. We never share your contact details.
+            </p>
+          </form>
+        </div>
 
-    function loadQuestion() {
-      const q = quizData[currentQuestion];
-      document.getElementById('quiz-progress').textContent = `Question ${currentQuestion + 1} of ${quizData.length}`;
-      document.getElementById('quiz-step-count').textContent = `${Math.round(((currentQuestion + 1) / quizData.length) * 100)}%`;
-      document.getElementById('quiz-question').textContent = q.question;
+        <div class="modal-success-view" style="display: none; text-align: center; padding: 1.5rem 0;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-emerald-light); color: var(--color-emerald); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Opening WhatsApp...</h4>
+          <p style="font-size: 0.9rem; color: var(--color-slate-600); line-height: 1.5; margin-bottom: 1.25rem;">
+            We've generated your custom consultation prompt. Please hit send in WhatsApp to confirm your slot.
+          </p>
+          <button type="button" class="btn btn-outline" onclick="window.CareerCatalog.closeBookingPopup()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      const optionsContainer = document.getElementById('quiz-options');
-      optionsContainer.innerHTML = '';
-
-      q.options.forEach((opt) => {
-        const btn = document.createElement('button');
-        btn.className = 'quiz-option w-full text-left p-4 rounded-xl text-base font-medium text-slate-700 bg-white flex items-center justify-between';
-        btn.innerHTML = `<span>${opt.text}</span> <span class="text-indigo font-bold">&rarr;</span>`;
-        btn.onclick = () => selectOption(opt.score, opt.feedback);
-        optionsContainer.appendChild(btn);
-      });
-    }
-
-    function selectOption(score, feedback) {
-      totalScore += score;
-      currentQuestion++;
-
-      if (currentQuestion < quizData.length) {
-        loadQuestion();
-      } else {
-        showResults();
-      }
-    }
-
-    function showResults() {
-      document.getElementById('quiz-box').classList.add('hidden');
-      document.getElementById('quiz-results').classList.remove('hidden');
-
-      let summaryText = "";
-      if (totalScore <= 2) {
-        summaryText = "Your current strategy has major blind spots, especially regarding resume formatting and job hunting channels. Without a fix, you risk getting ghosted by recruiters.";
-      } else if (totalScore <= 4) {
-        summaryText = "You have the right foundation, but you're missing the execution edge needed to stand out against thousands of other applicants in 2026.";
-      } else {
-        summaryText = "You're in a strong position! However, optimizing your outreach strategy can help you secure higher salary bands instantly.";
-      }
-      document.getElementById('quiz-feedback').textContent = summaryText;
-    }
-
-    function resetQuiz() {
-      document.getElementById('quiz-results').classList.add('hidden');
-      document.getElementById('quiz-intro').classList.remove('hidden');
-    }
-  </script>
-
-  <!-- Include Popup Script Locally -->
-  <script src="popup.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
