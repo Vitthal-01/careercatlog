@@ -4,328 +4,430 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- SEO & Meta Tags -->
-  <title>Insights Masterclass | Career Catalog India</title>
-  <meta name="title" content="Insights Masterclass | Career Catalog India" />
-  <meta name="description" content="Read our complete, fluff-free playbook on AI tools, ATS resumes, cold emailing, and interview prep for the 2026 Indian job market." />
+  <title>Insights Masterclasses | In-Depth Career, Hiring & AI Guides | Career Catalog India</title>
+  <meta name="description" content="Comprehensive long-form masterclasses on workplace AI tools, ATS resume engineering, data analytics portfolios, and STAR behavioral interview preparation." />
+  <meta name="keywords" content="career masterclass India, ATS resume guide, how to answer tell me about yourself, data analytics portfolio project, cold email hiring manager" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://careercatalog.in/articles.html" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: { 
-          colors: { ink: '#0B1120', paper: '#FAFAFA', indigo: '#4338CA', cyan: '#06B6D4', emerald: '#10B981', slate: '#475569' }, 
-          fontFamily: { display: ['"Space Grotesk"', 'sans-serif'], body: ['"Inter"', 'sans-serif'] } 
-        }
-      }
-    }
-  </script>
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Insights Masterclasses | Career Catalog India" />
+  <meta property="og:description" content="Read our complete, fluff-free masterclasses on AI tools, ATS resumes, cold emailing, and interview prep." />
+  <meta property="og:url" content="https://careercatalog.in/articles.html" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-    body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #0B1120; }
-    h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
-    .gradient-text { background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    
-    .btn-primary { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px -5px rgba(67, 56, 202, 0.3), 0 8px 10px -6px rgba(67, 56, 202, 0.1); }
-
-    .glass-tabs { background: rgba(255,255,255,0.75); backdrop-filter: blur(16px); border: 1px solid rgba(11,17,32,0.08); box-shadow: 0 4px 24px rgba(11,17,32,0.04); }
-    .glass-tab { transition: all 0.2s ease; color: #475569; }
-    .glass-tab.active, .glass-tab:hover { background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); color: white; box-shadow: 0 4px 14px rgba(67,56,202,0.25); }
-
-    /* Article Formatting */
-    .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #334155; font-size: 1.1rem; }
-    .prose h2 { font-family: 'Space Grotesk', sans-serif; font-size: 2.2rem; font-weight: 700; margin-top: 3.5rem; margin-bottom: 1.25rem; color: #0B1120; border-bottom: 2px solid rgba(71,85,105,0.1); padding-bottom: 0.5rem; }
-    .prose h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #0B1120; }
-    .prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc; color: #334155; font-size: 1.1rem; line-height: 1.8; }
-    .prose li { margin-bottom: 0.5rem; }
-    .prose strong { color: #0B1120; font-weight: 600; }
-    
-    .tool-box { background: #fff; border: 1px solid rgba(71,85,105,0.15); border-radius: 1rem; padding: 2rem; margin: 2rem 0; box-shadow: 0 10px 30px rgba(11,17,32,0.03); border-left: 4px solid #4338CA; }
-    .article-divider { height: 1px; background: rgba(71,85,105,0.2); margin: 5rem 0; width: 100%; position: relative; }
-    .article-divider::after { content: "✦"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #FAFAFA; padding: 0 1rem; color: #4338CA; font-size: 1.5rem; }
-
-    /* Sticky Sidebar active link styling */
-    .toc-link { transition: all 0.2s ease; display: block; padding: 0.5rem 0; color: #64748B; font-weight: 500; font-size: 0.95rem; border-left: 2px solid transparent; padding-left: 1rem; }
-    .toc-link:hover { color: #4338CA; }
-    .toc-link.active { color: #4338CA; border-left-color: #4338CA; font-weight: 700; background: linear-gradient(90deg, rgba(67,56,202,0.05) 0%, transparent 100%); }
-
-    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    #mobile-menu.open { max-height: 400px; border-bottom: 1px solid rgba(71,85,105,0.1); }
+    .article-container {
+      display: flex; flex-direction: column; gap: 3rem;
+    }
+    @media(min-width: 1024px) {
+      .article-layout {
+        display: grid; grid-template-columns: 260px 1fr; gap: 3.5rem; align-items: start;
+      }
+    }
+    .toc-sticky {
+      position: sticky; top: 5.5rem; background: var(--color-white);
+      border: 1px solid var(--color-slate-200); border-radius: var(--radius-xl);
+      padding: 1.5rem; box-shadow: var(--shadow-sm);
+    }
+    .toc-link {
+      display: block; padding: 0.5rem 0.75rem; border-left: 2.5px solid transparent;
+      font-size: 0.88rem; font-weight: 500; color: var(--color-slate-600);
+      transition: all var(--transition-fast); text-decoration: none; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .toc-link:hover {
+      color: var(--color-indigo); background: var(--color-slate-50);
+    }
+    .toc-link.active {
+      color: var(--color-indigo); border-left-color: var(--color-indigo);
+      font-weight: 700; background: var(--color-indigo-light);
+    }
+    .prose-content article {
+      background: var(--color-white); border: 1px solid var(--color-slate-200);
+      border-radius: var(--radius-2xl); padding: 2.5rem; margin-bottom: 3rem;
+      box-shadow: var(--shadow-sm); scroll-margin-top: 6rem;
+    }
+    @media(max-width: 640px) {
+      .prose-content article { padding: 1.75rem; }
+    }
+    .prose-content h2 {
+      font-size: 2rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--color-ink); line-height: 1.25;
+    }
+    .prose-content h3 {
+      font-size: 1.35rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--color-slate-900);
+    }
+    .prose-content p {
+      font-size: 1.05rem; line-height: 1.7; color: var(--color-slate-700); margin-bottom: 1.25rem;
+    }
+    .prose-content ul {
+      margin-left: 1.5rem; margin-bottom: 1.25rem; color: var(--color-slate-700);
+    }
+    .prose-content li {
+      margin-bottom: 0.5rem; line-height: 1.6; font-size: 1rem;
+    }
+    .callout-box {
+      background: var(--color-slate-50); border-left: 4px solid var(--color-indigo);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
   </style>
 </head>
 <body>
 
-  <!-- ================= HEADER & NAVIGATION ================= -->
-  <header class="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-slate/10">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="display text-2xl font-bold tracking-tight text-ink hover:opacity-80 transition-opacity">Career Catalog</a>
-      <div class="hidden md:flex items-center gap-1 glass-tabs rounded-full p-1.5">
-        <a href="career-guidance.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Career Guidance</a>
-        <a href="job-seeker.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Job Seeker</a>
-        <a href="blog.html" class="glass-tab active px-5 py-2 rounded-full text-sm font-semibold">Insights</a>
-        <a href="index.html#about" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">About</a>
-      </div>
-      <div class="flex items-center gap-4">
-        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-white px-7 py-3 rounded-full bg-gradient-to-r from-indigo to-cyan btn-primary shadow-md">Talk to an Expert</button>
-        <button id="menu-btn" class="md:hidden p-2 -mr-2 rounded-lg text-ink hover:bg-slate/10 transition-colors" aria-label="Toggle Menu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-      </div>
-    </nav>
-    <div id="mobile-menu" class="md:hidden bg-paper/95 backdrop-blur-md">
-      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-2 text-base font-semibold">
-        <a href="career-guidance.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Career Guidance</a>
-        <a href="job-seeker.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Job Seeker</a>
-        <a href="blog.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-indigo transition-colors">Insights</a>
-        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="mt-4 w-full text-center text-white px-6 py-4 rounded-xl bg-gradient-to-r from-indigo to-cyan font-bold shadow-lg">Talk to an Expert</button>
+  <header class="header-glass">
+    <div class="container">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="2.5" stroke-linecap="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+          Career Catalog
+        </a>
+
+        <div class="nav-tabs" role="tablist">
+          <a href="career-guidance.html" class="nav-tab">Career Guidance</a>
+          <a href="job-seeker.html" class="nav-tab">Job Seeker</a>
+          <a href="ai-tools.html" class="nav-tab">Get Trained: AI Tools <span class="badge-new">New</span></a>
+          <a href="blog.html" class="nav-tab active">Insights</a>
+          <a href="company/about.html" class="nav-tab">About</a>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button data-modal-trigger data-topic="Masterclass 1:1 Consultation" class="btn btn-primary" id="desktop-cta" style="display: none;">
+            Talk to an Expert
+          </button>
+          <style>@media(min-width: 640px){ #desktop-cta { display: inline-flex !important; } }</style>
+          
+          <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" style="background: transparent; border: 1px solid var(--color-slate-200); border-radius: var(--radius-md); padding: 0.45rem; color: var(--color-ink); cursor: pointer; display: flex; align-items: center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <style>@media(min-width: 900px){ #menu-toggle { display: none !important; } }</style>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" class="mobile-nav">
+        <div style="padding: 1rem 0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="career-guidance.html" class="mobile-link">Career Guidance</a>
+          <a href="job-seeker.html" class="mobile-link">Job Seeker Playbook</a>
+          <a href="ai-tools.html" class="mobile-link">Get Trained: AI Tools (Copilot, Claude, ChatGPT)</a>
+          <a href="blog.html" class="mobile-link active">Insights & Guides</a>
+          <a href="company/about.html" class="mobile-link">About Career Catalog</a>
+          <a href="company/contact.html" class="mobile-link">Contact</a>
+          <button data-modal-trigger data-topic="Articles Mobile Session" class="btn btn-primary" style="margin-top: 0.75rem; width: 100%;">
+            Book Consultation (₹99)
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-12 relative">
-    
-    <!-- ================= STICKY SIDEBAR (TABLE OF CONTENTS) ================= -->
-    <aside class="hidden lg:block w-1/4 flex-shrink-0">
-      <div class="sticky top-32 p-6 bg-white border border-slate/10 rounded-2xl shadow-sm">
-        <p class="font-bold text-xs tracking-widest uppercase text-indigo mb-4">Masterclass Directory</p>
-        <nav class="space-y-1" id="toc-menu">
-          <a href="#ai-tools" class="toc-link">1. AI Tools for Students</a>
-          <a href="#resume" class="toc-link">2. The 6-Second ATS Resume</a>
-          <a href="#portfolio" class="toc-link">3. Build a Data Portfolio</a>
-          <a href="#cold-email" class="toc-link">4. Cold Email Templates</a>
-          <a href="#engineering" class="toc-link">5. Beyond the B.Tech</a>
-          <a href="#interview" class="toc-link">6. "Tell me about yourself"</a>
-        </nav>
-        <div class="mt-8 pt-6 border-t border-slate/10">
-          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="w-full btn-primary px-4 py-3 rounded-xl text-sm font-bold bg-indigo/10 text-indigo hover:bg-indigo hover:text-white transition-colors border border-indigo/20">
-            Get 1:1 Coaching
-          </button>
-        </div>
-      </div>
-    </aside>
-
-    <!-- ================= ARTICLES CONTENT ================= -->
-    <div class="w-full lg:w-3/4 prose">
+  <main style="padding: 3.5rem 0 6rem;">
+    <div class="container">
       
-      <a href="blog.html" class="inline-flex items-center gap-2 text-sm font-bold text-indigo hover:text-cyan transition-colors mb-8 lg:hidden">&larr; Back to Insights</a>
-
-      <!-- ARTICLE 1 -->
-      <article id="ai-tools" class="scroll-mt-32">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="inline-block font-bold text-xs tracking-wider uppercase text-emerald bg-emerald/10 px-3 py-1 rounded-full">Tech Skills</span>
-          <span class="text-sm text-slate-500 font-medium">5 min read</span>
-        </div>
-        <h1 class="display text-4xl sm:text-5xl font-bold tracking-tight text-ink leading-[1.1] mb-6">5 AI tools every college student should know in 2026</h1>
+      <div class="article-layout">
         
-        <p>In 2026, putting "Prompt Engineering" on your resume isn't a flex anymore—it's a baseline expectation. Companies don't care if you know what AI is; they care if you know how to use it to do your job faster.</p>
-        <p>If you are still just pasting prompts into the free version of ChatGPT to write your college essays, you are falling behind. The top 1% of students are using specialized AI tools to automate their workflows, ace interviews, and build portfolios. Here are the 5 tools you need to bookmark immediately.</p>
+        <aside style="display: none; lg:display: block;">
+          <style>@media(min-width: 1024px){ aside { display: block !important; } }</style>
+          <div class="toc-sticky">
+            <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-indigo); margin-bottom: 1rem;">
+              Masterclass Index
+            </p>
+            <nav id="toc-nav" style="display: flex; flex-direction: column; gap: 0.25rem;">
+              <a href="#ai-tools" class="toc-link active">1. AI Tools for Students</a>
+              <a href="#resume" class="toc-link">2. The 6-Second Resume</a>
+              <a href="#portfolio" class="toc-link">3. Data Analytics Portfolio</a>
+              <a href="#cold-email" class="toc-link">4. Cold Emailing Managers</a>
+              <a href="#engineering" class="toc-link">5. Beyond the B.Tech Degree</a>
+              <a href="#interview" class="toc-link">6. 'Tell Me About Yourself'</a>
+            </nav>
 
-        <div class="tool-box">
-          <h3 class="mt-0 text-xl text-indigo">1. Perplexity AI (Research & Fact-Checking)</h3>
-          <p>Google is cluttered with SEO-optimized spam and ads. Perplexity is an AI search engine that actually cites its sources. When you have to write a research paper or prepare a company analysis before an interview, ask Perplexity. It doesn't hallucinate as often because it searches the live web and provides exact footnotes.</p>
+            <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--color-slate-200);">
+              <button data-modal-trigger data-topic="Masterclass Sidebar Audit" class="btn btn-primary" style="width: 100%; font-size: 0.85rem; padding: 0.65rem;">
+                Book Strategy Call
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <div class="prose-content">
+          
+          <!-- ARTICLE 1 -->
+          <article id="ai-tools">
+            <span class="blog-tag tag-tech">Enterprise AI Tools · 6 min read</span>
+            <h2>5 AI Tools Every College Student Should Master in 2026</h2>
+            <p>
+              In 2026, listing "Prompt Engineering" as a standalone skill on your resume is no longer a differentiator; it is a baseline literacy expectation. Corporate teams in India and globally do not reward conversational chatting—they reward candidates who use AI tools to systematically eliminate workflow friction.
+            </p>
+            <p>
+              Students who excel do not simply paste assignments into default chatbots. They leverage domain-specific engines:
+            </p>
+            
+            <div class="callout-box">
+              <h3 style="margin-top: 0; color: var(--color-indigo);">1. Perplexity AI (Fact-Checked Sourcing)</h3>
+              <p style="margin-bottom: 0;">
+                Unlike traditional search engines overrun by sponsored links, Perplexity provides real-time web retrieval paired with explicit footnote citations, making it invaluable for preparing company dossiers prior to interviews.
+              </p>
+            </div>
+
+            <div class="callout-box">
+              <h3 style="margin-top: 0; color: var(--color-indigo);">2. Claude 3.5 Sonnet & Live Artifacts</h3>
+              <p style="margin-bottom: 0;">
+                Anthropic's Claude 3.5 excels in logical syntax and nuanced prose. With interactive Artifacts, users can render front-end components and calculators directly on-screen, bypassing weeks of manual boilerplate coding.
+              </p>
+            </div>
+
+            <div class="callout-box">
+              <h3 style="margin-top: 0; color: var(--color-indigo);">3. Microsoft 365 Copilot in Work</h3>
+              <p style="margin-bottom: 0;">
+                Mastering Copilot across Excel and PowerPoint transforms 4-hour data formatting tasks into 5-minute verified commands, demonstrating immediate enterprise productivity to hiring managers.
+              </p>
+            </div>
+
+            <p>
+              Takeaway: Pair every theoretical concept you study with an AI tool implementation that produces a permanent, verifiable portfolio link.
+            </p>
+          </article>
+
+          <!-- ARTICLE 2 -->
+          <article id="resume">
+            <span class="blog-tag tag-job">Hiring Filters · 5 min read</span>
+            <h2>The 6-Second ATS Resume Framework</h2>
+            <p>
+              An executive recruiter spends an average of 6 seconds conducting initial triage on incoming resumes. They are scanning for three specific elements: technical competency keywords, institutional context, and quantified business impact.
+            </p>
+            <h3>Rule 1: Strict Single-Column Architecture</h3>
+            <p>
+              Fancy two-column Canva templates with graphic skill meters and circular profile photos fail standard ATS parsing algorithms (Workday, Greenhouse, Taleo). The parser reads horizontally across columns, scrambling your chronological work history. Use a clean, black-and-white, single-column document.
+            </p>
+            <h3>Rule 2: Eliminate the Objective Statement</h3>
+            <p>
+              Generic claims such as "seeking an entry-level position to utilize my skills" take up valuable vertical space. Replace this header with a dense <strong>Core Competencies</strong> section grouping hard tools: <em>Python, SQL, Power BI, Advanced Excel, Git.</em>
+            </p>
+            <h3>Rule 3: The Google XYZ Formula</h3>
+            <p>
+              Every bullet point under your academic or internship projects must follow this structure: <strong>Accomplished [X] as measured by [Y], by doing [Z].</strong>
+            </p>
+            <ul>
+              <li><strong>Weak:</strong> Handled customer data and built a dashboard.</li>
+              <li><strong>Strong:</strong> Designed an interactive Power BI dashboard tracking ₹50L+ in regional transactions, reducing executive reporting latency by 14 hours weekly.</li>
+            </ul>
+          </article>
+
+          <!-- ARTICLE 3 -->
+          <article id="portfolio">
+            <span class="blog-tag tag-tech">Proof of Work · 7 min read</span>
+            <h2>Building a Data Analytics Portfolio That Gets You Hired</h2>
+            <p>
+              If your public GitHub repository contains the classic <em>Titanic Survival</em> or <em>Iris Flower</em> datasets, recruiters frequently close the tab. These introductory tutorials confirm only that you followed a video, not that you can navigate dirty real-world enterprise databases.
+            </p>
+            <h3>The Two-Project Hiring Blueprint</h3>
+            <p>
+              Candidates who secure competitive interviews present two deep, self-directed projects rather than ten superficial ones:
+            </p>
+            <ul>
+              <li><strong>Project 1: The End-to-End Scraper & Pipeline.</strong> Write a Python script to extract messy public data (e.g., Maharashtra municipal real estate listings). Clean missing values in Pandas, load into a relational PostgreSQL database, and query key geographical trends.</li>
+              <li><strong>Project 2: The Decision-Oriented Business Dashboard.</strong> Build a Power BI or Tableau dashboard based on financial or logistics records. Conclude the report with explicit executive recommendations: <em>"42% of customer drop-offs occurred on payment timeouts; resolving gateway latency recovers an estimated ₹12L annually."</em></li>
+            </ul>
+          </article>
+
+          <!-- ARTICLE 4 -->
+          <article id="cold-email">
+            <span class="blog-tag tag-job">Direct Outreach · 6 min read</span>
+            <h2>The Exact Cold Email Template That Bypasses HR Portals</h2>
+            <p>
+              Cold applying via standard job portals places your application behind thousands of applicants. Reaching out directly to the prospective manager—the Engineering Lead, Analytics Director, or Founder—allows you to bypass automated filters entirely.
+            </p>
+            <h3>Execution Rules for High Response Rates</h3>
+            <ul>
+              <li><strong>Sub-100 Word Brevity:</strong> Hiring managers review emails on mobile devices between meetings.</li>
+              <li><strong>Zero "Job Begging":</strong> Do not ask for a job. Offer a specific solution to a problem their team is actively facing.</li>
+              <li><strong>Proof of Work Attachment:</strong> Include direct links to your GitHub code, live dashboard, or single-page resume.</li>
+            </ul>
+            <div class="callout-box">
+              <p style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6; margin: 0; color: var(--color-slate-800);">
+                <strong>Subject:</strong> Quick data project regarding [Company Name] / [Your Name]<br><br>
+                Hi [Manager Name],<br><br>
+                I noticed your team is expanding logistics operations in Maharashtra. I recently authored a Python script optimizing regional vehicle route allocation based on public transit datasets.<br><br>
+                I have attached my single-page resume and included the live project link here: [Link]. Do you have 5 minutes next Tuesday afternoon for a brief discussion? I would be glad to share the code regardless of active hiring openings.<br><br>
+                Best regards,<br>
+                [Your Name] | [Phone Number]
+              </p>
+            </div>
+          </article>
+
+          <!-- ARTICLE 5 -->
+          <article id="engineering">
+            <span class="blog-tag tag-strategy">Market Reality · 5 min read</span>
+            <h2>Why Your Engineering Degree Isn't Enough (And What to Do)</h2>
+            <p>
+              India produces over 1.5 million engineering graduates each year. In an era where modern AI tools automate routine boilerplate code, relying solely on a conventional B.Tech syllabus creates intense competition for standard entry-level roles.
+            </p>
+            <h3>The Multiplier: Multidisciplinary Skill Stacking</h3>
+            <p>
+              The market rewards cross-functional problem solvers who combine technical execution with business acumen:
+            </p>
+            <ul>
+              <li><strong>Tech + Financial Modeling:</strong> Software developers who understand corporate balance sheets, equity valuation, or CFA concepts secure lucrative Fintech analyst roles.</li>
+              <li><strong>Tech + Product Strategy:</strong> Engineers who understand user research and conversion metrics transition directly into Associate Product Manager (APM) positions.</li>
+              <li><strong>Core Branches + Applied AI:</strong> Mechanical and electrical engineers applying predictive maintenance machine learning algorithms command higher premiums than pure coders.</li>
+            </ul>
+          </article>
+
+          <!-- ARTICLE 6 -->
+          <article id="interview">
+            <span class="blog-tag tag-job">Behavioral Strategy · 5 min read</span>
+            <h2>How to Answer 'Tell Me About Yourself' in 90 Seconds</h2>
+            <p>
+              "Tell me about yourself" is the opening question in 95% of job interviews. Most candidates fail it by reciting their resume line by line. Interviewers already have your resume; they are evaluating your executive communication and strategic narrative.
+            </p>
+            <h3>The Present-Past-Future Structure</h3>
+            <ul>
+              <li><strong>Present (20s):</strong> State who you are right now and your primary technical specialization.</li>
+              <li><strong>Past (45s):</strong> Highlight one or two quantifiable accomplishments or internship milestones that demonstrate problem-solving.</li>
+              <li><strong>Future (25s):</strong> Explain precisely why this specific organization and role represent the logical next step in your career trajectory.</li>
+            </ul>
+            <p>
+              Conclude cleanly: <em>"That brings me to today, where I am eager to apply my data modeling background to your risk analytics team."</em> Smile and yield the floor.
+            </p>
+          </article>
+
         </div>
 
-        <div class="tool-box">
-          <h3 class="mt-0 text-xl text-indigo">2. Claude 3.5 Sonnet (Coding & Writing)</h3>
-          <p>Recruiters can spot a ChatGPT-written cover letter from a mile away. Anthropic's Claude writes much more naturally. It is also currently considered the absolute best model for writing and debugging code. Its "Artifacts" feature allows you to see the code it writes rendered live on the screen.</p>
-        </div>
-
-        <div class="tool-box">
-          <h3 class="mt-0 text-xl text-indigo">3. Gamma.app (Instant Presentations)</h3>
-          <p>College is full of mandatory presentations. Gamma allows you to type in a topic, and it will automatically generate a beautifully designed, fully formatted slide deck in under 30 seconds. You just saved 3 hours of formatting boxes in PowerPoint.</p>
-        </div>
-
-        <div class="tool-box">
-          <h3 class="mt-0 text-xl text-indigo">4. Teal / Resume Worded (ATS Optimization)</h3>
-          <p>Automated Tracking Systems (ATS) reject 70% of resumes before a human sees them. Tools like Teal let you upload your resume, paste the job description, and use AI to tell you exactly which keywords you are missing to bypass the robots.</p>
-        </div>
-
-        <div class="tool-box">
-          <h3 class="mt-0 text-xl text-indigo">5. Vercel v0 (Portfolio Building)</h3>
-          <p>v0 is a generative UI system. You can type "Build me a clean portfolio website for a data analyst," and it will generate the actual code and design instantly. A live, interactive portfolio link on your resume increases your callback rate significantly compared to a standard PDF.</p>
-        </div>
-      </article>
-
-      <div class="article-divider"></div>
-
-      <!-- ARTICLE 2 -->
-      <article id="resume" class="scroll-mt-32">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="inline-block font-bold text-xs tracking-wider uppercase text-cyan bg-cyan/10 px-3 py-1 rounded-full">Job Search</span>
-          <span class="text-sm text-slate-500 font-medium">4 min read</span>
-        </div>
-        <h1 class="display text-4xl sm:text-5xl font-bold tracking-tight text-ink leading-[1.1] mb-6">How to write a fresher resume that recruiters actually read</h1>
-        
-        <p>A recruiter spends an average of <strong>6 seconds</strong> looking at your resume before deciding whether to keep it or bin it. They are not reading your paragraphs; they are scanning for specific keywords and metrics.</p>
-        <p>If you are using a flashy, two-column Canva template with progress bars for your skills, you are actively sabotaging your job hunt. Most companies use ATS (Applicant Tracking Systems) to parse resumes. ATS software cannot read columns or graphics—it just scrambles your text and auto-rejects you.</p>
-
-        <h3>Rule 1: The One-Page, Single-Column Rule</h3>
-        <p>Unless you have 10+ years of hard industry experience, your resume must fit on one page. Use a standard, boring, single-column format (like the classic Harvard template). Use a clean serif or sans-serif font, black text, and standard margins.</p>
-
-        <h3>Rule 2: Kill the "Objective" Statement</h3>
-        <p>Nobody cares that you are a "highly motivated individual seeking to leverage skills in a dynamic environment." It is fluff. Replace the Objective with a <strong>Technical Summary</strong> or <strong>Core Competencies</strong> section. Just list your hard skills separated by commas: <em>Python, SQL, Tableau, Power BI, Advanced Excel.</em></p>
-
-        <h3>Rule 3: The XYZ Bullet Point Formula</h3>
-        <p>Never write: <em>"Managed the database for the college fest."</em></p>
-        <p>Instead, use Google's XYZ formula: <strong>Accomplished [X] as measured by [Y], by doing [Z].</strong></p>
-        <ul>
-          <li><strong>Bad:</strong> Created a dashboard for sales data.</li>
-          <li><strong>Good:</strong> Designed an interactive Power BI dashboard tracking ₹50L+ in monthly sales, reducing manual reporting time for the executive team by 15 hours per week.</li>
-        </ul>
-        <p>Numbers build trust. If you don't have corporate numbers, use numbers from your academic projects or college societies.</p>
-      </article>
-
-      <div class="article-divider"></div>
-
-      <!-- ARTICLE 3 -->
-      <article id="portfolio" class="scroll-mt-32">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="inline-block font-bold text-xs tracking-wider uppercase text-emerald bg-emerald/10 px-3 py-1 rounded-full">Tech Skills</span>
-          <span class="text-sm text-slate-500 font-medium">6 min read</span>
-        </div>
-        <h1 class="display text-4xl sm:text-5xl font-bold tracking-tight text-ink leading-[1.1] mb-6">Building a Data Analytics portfolio that gets you hired</h1>
-
-        <p>If your portfolio only consists of the <em>Titanic Survival Prediction</em> dataset or the <em>Iris Flower</em> dataset from Kaggle, recruiters are closing your link immediately. Everyone does those projects in their first bootcamp. They prove nothing about your ability to solve real business problems.</p>
-        
-        <h3>Stop Doing Toy Datasets</h3>
-        <p>Companies hire Data Analysts to make them money or save them money. Your portfolio needs to reflect this. You need to show that you can take messy, undocumented data, clean it, and extract a business insight that management can act on.</p>
-
-        <h3>The Anatomy of a Hiring Portfolio</h3>
-        <p>You only need <strong>two massive, high-quality projects</strong>, not ten mediocre ones.</p>
-        <ul>
-          <li><strong>Project 1: The End-to-End Scraper.</strong> Don't download a clean CSV. Write a Python script to scrape data from a real website (like scraping 10,000 real estate listings from MagicBricks). Clean the data using Pandas, handle the missing values, push it into a SQL database, and query it to find the most underpriced neighborhoods in Pune.</li>
-          <li><strong>Project 2: The Business Dashboard.</strong> Take a massive dataset (like an e-commerce sales ledger). Build a Power BI or Tableau dashboard. But don't just show graphs. Include a text box that says: <em>"Insight: 40% of our Q3 churn came from users in Tier 2 cities facing shipping delays. Recommendation: Re-route logistics to regional hubs to increase retention."</em></li>
-        </ul>
-        <p>That text box proves you aren't just a code monkey; you are a business asset.</p>
-      </article>
-
-      <div class="article-divider"></div>
-
-      <!-- ARTICLE 4 -->
-      <article id="cold-email" class="scroll-mt-32">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="inline-block font-bold text-xs tracking-wider uppercase text-cyan bg-cyan/10 px-3 py-1 rounded-full">Job Search</span>
-          <span class="text-sm text-slate-500 font-medium">7 min read</span>
-        </div>
-        <h1 class="display text-4xl sm:text-5xl font-bold tracking-tight text-ink leading-[1.1] mb-6">The exact cold email template that bypasses HR portals</h1>
-
-        <p>When you click "Apply Now" on a portal, your resume goes into a database with 5,000 other people. The secret to landing interviews in 2026 is bypassing the portal entirely and emailing the actual person who would be your boss.</p>
-
-        <h3>How to Find the Hiring Manager</h3>
-        <p>Go to LinkedIn. Search for the company name and add titles like "Head of Analytics", "Engineering Manager", or "Director of Marketing". Once you find the person, use tools like Hunter.io or Apollo.io to find their corporate email address.</p>
-
-        <h3>The Rules of Cold Emailing</h3>
-        <ul>
-          <li><strong>Rule 1:</strong> Keep it under 100 words. Managers check email on their phones between meetings.</li>
-          <li><strong>Rule 2:</strong> Don't ask for a job directly. Ask for a 5-minute chat.</li>
-          <li><strong>Rule 3:</strong> Lead with value. Show them you already understand their company's pain points.</li>
-        </ul>
-
-        <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 my-8">
-          <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">The Winning Template</p>
-          <p class="font-semibold text-ink mb-4">Subject: Feature idea for [Company Name] / [Your Name]</p>
-          <p class="text-slate-700 leading-relaxed">
-            Hi [Manager's Name],<br><br>
-            I noticed [Company] is scaling its operations in Maharashtra. I'm a Data Analyst with a background in logistics, and I recently built a Python script that optimizes delivery routing based on local traffic patterns.<br><br>
-            I saw your team is hiring for a Junior Analyst. I’ve attached my 1-page resume and linked my portfolio. <br><br>
-            Do you have 5 minutes next Tuesday for a quick chat? I'd love to share the code with you, whether there is a role available or not.<br><br>
-            Best,<br>
-            [Your Name]<br>
-            [Link to Portfolio / LinkedIn]
-          </p>
-        </div>
-      </article>
-
-      <div class="article-divider"></div>
-
-      <!-- ARTICLE 5 -->
-      <article id="engineering" class="scroll-mt-32">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="inline-block font-bold text-xs tracking-wider uppercase text-indigo bg-indigo/10 px-3 py-1 rounded-full">Career Strategy</span>
-          <span class="text-sm text-slate-500 font-medium">5 min read</span>
-        </div>
-        <h1 class="display text-4xl sm:text-5xl font-bold tracking-tight text-ink leading-[1.1] mb-6">Why your engineering degree isn't enough (and what to do)</h1>
-
-        <p>India graduates over 1.5 million engineers every single year. In the age of AI, where tools like GitHub Copilot and Claude can write boilerplate code in seconds, simply knowing HTML/CSS or basic Java does not guarantee you a job anymore.</p>
-
-        <h3>The Solution: Multidisciplinary Skill Stacking</h3>
-        <p>The market no longer rewards pure coders; it rewards problem solvers. You need to combine your technical background with a specialized domain. We call this "Skill Stacking."</p>
-
-        <ul>
-          <li><strong>Tech + Finance (Quant/Fintech):</strong> A coder is cheap. A coder who understands algorithmic trading, credit risk models, and CFA-level finance is incredibly rare and expensive.</li>
-          <li><strong>Tech + Business (Product Management):</strong> An engineer who can talk to customers, understand user psychology, and translate business needs into technical sprints is prime material for Product Manager roles.</li>
-          <li><strong>Tech + Marketing (Growth Hacker):</strong> If you can write code to automate SEO, scrape leads, and run complex A/B testing on ad creatives, marketing agencies will fight to hire you.</li>
-        </ul>
-        <p>Don't just learn another programming language. Learn a business function, and use your engineering brain to optimize it.</p>
-      </article>
-
-      <div class="article-divider"></div>
-
-      <!-- ARTICLE 6 -->
-      <article id="interview" class="scroll-mt-32">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="inline-block font-bold text-xs tracking-wider uppercase text-cyan bg-cyan/10 px-3 py-1 rounded-full">Job Search</span>
-          <span class="text-sm text-slate-500 font-medium">4 min read</span>
-        </div>
-        <h1 class="display text-4xl sm:text-5xl font-bold tracking-tight text-ink leading-[1.1] mb-6">How to answer 'Tell me about yourself' in interviews</h1>
-
-        <p>It is the first question in every interview, and 90% of candidates fail it instantly by reciting their resume chronologically. The interviewer has your resume right in front of them; they don't want you to read it out loud.</p>
-        <p>They are testing two things: your communication skills, and how well your narrative aligns with the job description. To nail this, use the <strong>Present-Past-Future</strong> framework. Keep it strictly under 90 seconds.</p>
-
-        <h3>The Present-Past-Future Framework</h3>
-        <ul>
-          <li><strong>Present (20 seconds):</strong> Start with who you are right now. <em>"Currently, I'm a final year student at [University] specializing in Business Analytics, where I spend most of my time building data visualization dashboards for local startups."</em></li>
-          <li><strong>Past (40 seconds):</strong> Highlight 1-2 relevant achievements that led you here. <em>"Before this, I interned at [Company], where I realized I loved the intersection of finance and tech. I led a project that automated their MIS reporting, saving the team 10 hours a week."</em></li>
-          <li><strong>Future (30 seconds):</strong> Connect it perfectly to the role you are interviewing for. <em>"Looking ahead, I want to bring my technical skills to a fast-growing fintech environment. That's why I'm so excited about this Analyst role at your firm—it perfectly aligns with my background in both coding and credit risk."</em></li>
-        </ul>
-        <p>End the answer cleanly. Do not trail off with "...so yeah, that's me." Stop talking, smile, and let them ask the next question.</p>
-      </article>
-
-      <!-- ================= BOTTOM CTA ================= -->
-      <div class="mt-20 bg-ink rounded-3xl p-10 text-center shadow-2xl relative overflow-hidden">
-        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-indigo/40 rounded-full blur-3xl"></div>
-        <div class="absolute -left-10 -top-10 w-48 h-48 bg-cyan/20 rounded-full blur-2xl"></div>
-        <div class="relative z-10">
-          <h3 class="display text-3xl md:text-4xl font-bold text-white mb-4">Want tailored advice for your specific career?</h3>
-          <p class="text-white/80 font-medium mb-8 max-w-lg mx-auto">
-            Stop reading and start executing. Book a 1:1 strategy call with us, and we'll audit your resume and map out your exact next steps.
-          </p>
-          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="btn-primary inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-bold bg-white text-ink shadow-lg">
-            Talk to an Expert
-          </button>
-        </div>
       </div>
 
     </div>
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-slate/20 bg-white mt-12">
-    <div class="max-w-7xl mx-auto px-6 py-12 flex justify-between items-center text-sm font-medium text-slate">
-      <a href="index.html" class="display text-xl font-bold text-ink">Career Catalog</a>
-      <p>© 2026 Career Catalog. Built for India.</p>
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">Career Catalog</a>
+          <p style="font-size: 0.9rem; color: var(--color-slate-600); max-width: 22rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Evidence-based career roadmaps, job search engineering, and enterprise AI tools training built for students and working professionals in India.
+          </p>
+          <p style="font-size: 0.82rem; color: var(--color-slate-500);">
+            Based in Pune & Solapur, Maharashtra, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Exploration & Learning</h4>
+          <ul class="footer-links">
+            <li><a href="career-guidance.html">After 12th Roadmaps</a></li>
+            <li><a href="career-guidance.html#panel-pug">After Graduation Planning</a></li>
+            <li><a href="ai-tools.html">Get Trained: AI Tools</a></li>
+            <li><a href="job-seeker.html">ATS Resume Blueprint</a></li>
+            <li><a href="job-seeker.html">Cold Email Masterclass</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Editorial & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Insights Hub</a></li>
+            <li><a href="articles.html#ai-tools">5 AI Tools for Students</a></li>
+            <li><a href="articles.html#resume">6-Second Resume Rules</a></li>
+            <li><a href="articles.html#portfolio">Data Analytics Portfolio</a></li>
+            <li><a href="articles.html#interview">STAR Interview Answers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="company/about.html">About & Methodology</a></li>
+            <li><a href="company/contact.html">Contact Us</a></li>
+            <li><a href="company/privacy.html">Privacy Policy</a></li>
+            <li><a href="company/terms.html">Terms of Service</a></li>
+            <li><button data-modal-trigger data-topic="Footer Masterclass Call" style="background:none;border:none;color:var(--color-indigo);font-weight:700;cursor:pointer;padding:0;font-size:0.9rem;text-align:left;">Book Session (₹99)</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Career Catalog India. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="company/privacy.html">Privacy</a>
+          <a href="company/terms.html">Terms</a>
+          <a href="company/contact.html">Contact</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    // Mobile Menu
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  <div id="consultation-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <button class="modal-close" aria-label="Close modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div style="display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; background: rgba(255,255,255,0.2); padding: 0.25rem 0.65rem; border-radius: var(--radius-full); margin-bottom: 0.75rem;">
+          1-on-1 Strategic Consultation (₹99)
+        </div>
+        <h3 id="modal-title" style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">
+          Schedule Your Session
+        </h3>
+        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.9); line-height: 1.5;">
+          Direct guidance via WhatsApp and 1:1 call to resolve your career and skill roadmaps.
+        </p>
+      </div>
 
-    // Sticky TOC Highlighting logic
+      <div class="modal-body">
+        <div class="modal-form-wrapper">
+          <form id="consultation-form" novalidate>
+            <div class="form-group">
+              <label for="client-name" class="form-label">Full Name</label>
+              <input type="text" id="client-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+            </div>
+
+            <div class="form-group">
+              <label for="client-phone" class="form-label">WhatsApp Number (10 digits)</label>
+              <input type="tel" id="client-phone" class="form-input" placeholder="e.g. 9876543210" maxlength="10" required />
+            </div>
+
+            <div class="form-group">
+              <label for="client-topic" class="form-label">Consultation Focus</label>
+              <select id="client-topic" class="form-select">
+                <option value="General Strategy Consultation" selected>General Career Guidance</option>
+                <option value="AI Tools Workplace Training">AI Tools Workplace Training</option>
+                <option value="Resume & ATS Review">Resume & ATS Keyword Audit</option>
+                <option value="Interview Preparation (STAR Method)">Mock Interview & STAR Answers</option>
+                <option value="College & Stream Guidance (12th/UG)">College & Stream Selection</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem; margin-top: 0.5rem;">
+              Continue to WhatsApp &rarr;
+            </button>
+            <p style="font-size: 0.75rem; color: var(--color-slate-400); text-align: center; margin-top: 0.75rem;">
+              🔒 Zero spam. We never share your contact details.
+            </p>
+          </form>
+        </div>
+
+        <div class="modal-success-view" style="display: none; text-align: center; padding: 1.5rem 0;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-emerald-light); color: var(--color-emerald); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Opening WhatsApp...</h4>
+          <p style="font-size: 0.9rem; color: var(--color-slate-600); line-height: 1.5; margin-bottom: 1.25rem;">
+            We've generated your custom consultation prompt. Please hit send in WhatsApp to confirm your slot.
+          </p>
+          <button type="button" class="btn btn-outline" onclick="window.CareerCatalog.closeBookingPopup()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
       const articles = document.querySelectorAll('article');
       const tocLinks = document.querySelectorAll('.toc-link');
 
-      const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -337,12 +439,10 @@
             });
           }
         });
-      }, observerOptions);
+      }, { rootMargin: '-20% 0px -70% 0px' });
 
-      articles.forEach(article => observer.observe(article));
+      articles.forEach(art => observer.observe(art));
     });
   </script>
-
-  <script src="popup.js"></script>
 </body>
 </html>
