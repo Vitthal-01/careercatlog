@@ -4,257 +4,338 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- SEO & Meta Tags -->
-  <title>The Job Seeker Playbook | Career Catalog India</title>
-  <meta name="title" content="The Job Seeker Playbook | Career Catalog India" />
-  <meta name="description" content="Stop getting ghosted. Master the 6-second ATS resume, learn cold emailing strategies, and ace your interviews with the 2026 Job Seeker Playbook." />
-  <meta name="keywords" content="ATS resume format India, cold email templates for freshers, STAR method interview, campus placement prep, how to get a job 2026" />
+  <title>The Job Seeker Playbook | 6-Second ATS Resume, Cold Outreach & STAR Interviews | Career Catalog India</title>
+  <meta name="description" content="Bypass HR portals. Master single-column ATS resume formats, the Google XYZ bullet formula, executive cold email templates, and the STAR interview method." />
+  <meta name="keywords" content="ATS resume format India 2026, cold email templates for hiring managers, STAR interview method freshers, PPO internship guide, campus placement prep" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://careercatalog.in/job-seeker.html" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Job Seeker Playbook | Career Catalog India" />
+  <meta property="og:description" content="Stop getting ghosted. Master the 6-second ATS resume, direct outreach, and interview execution." />
+  <meta property="og:url" content="https://careercatalog.in/job-seeker.html" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
   
-  <!-- Tailwind CSS Integration -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: { 
-          colors: { ink: '#0B1120', paper: '#FAFAFA', indigo: '#4338CA', cyan: '#06B6D4', emerald: '#10B981', slate: '#475569', amber: '#F59E0B' }, 
-          fontFamily: { display: ['"Space Grotesk"', 'sans-serif'], body: ['"Inter"', 'sans-serif'] } 
-        }
-      }
-    }
-  </script>
-
   <style>
-    body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #0B1120; }
-    h1, h2, h3, .display { font-family: 'Space Grotesk', sans-serif; }
-    .gradient-text { background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    
-    .glow { background: radial-gradient(circle at 20% 10%, rgba(67,56,202,0.06), transparent 55%), radial-gradient(circle at 85% 0%, rgba(6,182,212,0.06), transparent 50%); }
-
-    .btn-primary { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px -5px rgba(67, 56, 202, 0.3), 0 8px 10px -6px rgba(67, 56, 202, 0.1); }
-
-    /* Glass Navigation Tabs */
-    .glass-tabs { background: rgba(255,255,255,0.75); backdrop-filter: blur(16px); border: 1px solid rgba(11,17,32,0.08); box-shadow: 0 4px 24px rgba(11,17,32,0.04); }
-    .glass-tab { transition: all 0.2s ease; color: #475569; }
-    .glass-tab.active, .glass-tab:hover { background: linear-gradient(90deg, #4338CA 0%, #06B6D4 100%); color: white; box-shadow: 0 4px 14px rgba(67,56,202,0.25); }
-
-    /* Module Cards */
-    .module-card { border: 1px solid rgba(71,85,105,0.12); border-radius: 1.5rem; background: #fff; padding: 2.5rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
-    .module-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(11,17,32,0.08); border-color: rgba(67,56,202,0.3); }
-    
-    .step-badge { display: inline-flex; items-center; justify-content: center; width: 2rem; height: 2rem; border-radius: 0.5rem; background: rgba(67,56,202,0.1); color: #4338CA; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.25rem; }
-    
-    .module-card ul li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; color: #475569; font-weight: 500; line-height: 1.6; }
-    .module-card ul li::before { content: "→"; position: absolute; left: 0; color: #06B6D4; font-weight: 700; }
-
-    /* Mobile Menu */
-    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    #mobile-menu.open { max-height: 400px; border-bottom: 1px solid rgba(71,85,105,0.1); }
+    .module-card {
+      border: 1px solid var(--color-slate-200); border-radius: var(--radius-xl);
+      background: var(--color-white); padding: 2.25rem 2rem; transition: all var(--transition-normal);
+      display: flex; flex-direction: column; height: 100%;
+    }
+    .module-card:hover {
+      transform: translateY(-4px); box-shadow: var(--shadow-xl); border-color: rgba(67, 56, 202, 0.3);
+    }
+    .step-number {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 2rem; height: 2rem; border-radius: var(--radius-md);
+      background: rgba(67, 56, 202, 0.1); color: var(--color-indigo);
+      font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; margin-bottom: 1.25rem;
+    }
+    .module-list {
+      list-style: none; margin-bottom: 1.5rem;
+    }
+    .module-list li {
+      position: relative; padding-left: 1.4rem; margin-bottom: 0.65rem;
+      color: var(--color-slate-600); font-size: 0.95rem; line-height: 1.55;
+    }
+    .module-list li::before {
+      content: "→"; position: absolute; left: 0; color: var(--color-cyan); font-weight: 700;
+    }
   </style>
 </head>
 <body>
 
-  <!-- ================= HEADER & NAVIGATION ================= -->
-  <header class="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-slate/10">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="display text-2xl font-bold tracking-tight text-ink hover:opacity-80 transition-opacity">Career Catalog</a>
+  <header class="header-glass">
+    <div class="container">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="2.5" stroke-linecap="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+          Career Catalog
+        </a>
 
-      <div class="hidden md:flex items-center gap-1 glass-tabs rounded-full p-1.5">
-        <a href="career-guidance.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Career Guidance</a>
-        <a href="job-seeker.html" class="glass-tab active px-5 py-2 rounded-full text-sm font-semibold">Job Seeker</a>
-        <a href="blog.html" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">Insights</a>
-        <a href="index.html#about" class="glass-tab px-5 py-2 rounded-full text-sm font-semibold">About</a>
-      </div>
+        <div class="nav-tabs" role="tablist">
+          <a href="career-guidance.html" class="nav-tab">Career Guidance</a>
+          <a href="job-seeker.html" class="nav-tab active">Job Seeker</a>
+          <a href="ai-tools.html" class="nav-tab">Get Trained: AI Tools <span class="badge-new">New</span></a>
+          <a href="blog.html" class="nav-tab">Insights</a>
+          <a href="company/about.html" class="nav-tab">About</a>
+        </div>
 
-      <div class="flex items-center gap-4">
-        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-white px-7 py-3 rounded-full bg-gradient-to-r from-indigo to-cyan btn-primary shadow-md">
-          Talk to an Expert
-        </button>
-        <button id="menu-btn" class="md:hidden p-2 -mr-2 rounded-lg text-ink hover:bg-slate/10 transition-colors" aria-label="Toggle Menu">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-      </div>
-    </nav>
-    <div id="mobile-menu" class="md:hidden bg-paper/95 backdrop-blur-md">
-      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-2 text-base font-semibold">
-        <a href="career-guidance.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Career Guidance</a>
-        <a href="job-seeker.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-indigo transition-colors">Job Seeker</a>
-        <a href="blog.html" class="mobile-link py-3 px-4 rounded-xl hover:bg-indigo/5 text-ink transition-colors">Insights</a>
-        <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="mt-4 w-full text-center text-white px-6 py-4 rounded-xl bg-gradient-to-r from-indigo to-cyan font-bold shadow-lg">
-          Talk to an Expert
-        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button data-modal-trigger data-topic="Resume & ATS Review" class="btn btn-primary" id="desktop-cta" style="display: none;">
+            Audit My Resume (₹99)
+          </button>
+          <style>@media(min-width: 640px){ #desktop-cta { display: inline-flex !important; } }</style>
+          
+          <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" style="background: transparent; border: 1px solid var(--color-slate-200); border-radius: var(--radius-md); padding: 0.45rem; color: var(--color-ink); cursor: pointer; display: flex; align-items: center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <style>@media(min-width: 900px){ #menu-toggle { display: none !important; } }</style>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" class="mobile-nav">
+        <div style="padding: 1rem 0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="career-guidance.html" class="mobile-link">Career Guidance</a>
+          <a href="job-seeker.html" class="mobile-link active">Job Seeker Playbook</a>
+          <a href="ai-tools.html" class="mobile-link">Get Trained: AI Tools (Copilot, Claude, ChatGPT)</a>
+          <a href="blog.html" class="mobile-link">Insights & Guides</a>
+          <a href="company/about.html" class="mobile-link">About Career Catalog</a>
+          <a href="company/contact.html" class="mobile-link">Contact</a>
+          <button data-modal-trigger data-topic="Playbook Mobile Review" class="btn btn-primary" style="margin-top: 0.75rem; width: 100%;">
+            Audit My Resume
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ================= PAGE HEADER ================= -->
-    <section class="glow">
-      <div class="max-w-4xl mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-20 text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald/10 text-emerald text-xs font-bold tracking-widest uppercase mb-6">
-          <span class="w-2 h-2 rounded-full bg-emerald animate-pulse"></span> The 2026 Playbook
+    <section class="bg-glow" style="padding: 4.5rem 0 3.5rem; text-align: center; border-bottom: 1px solid var(--color-slate-200);">
+      <div class="container" style="max-width: 44rem;">
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.1); font-size: 0.78rem; font-weight: 700; color: #059669; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem;">
+          The Tactical Hiring Playbook 2026
         </div>
-        <h1 class="display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-ink leading-[1.1]">
-          Stop applying into the <span class="gradient-text">void.</span>
+        <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem;">
+          Stop applying into the <span class="gradient-text">void</span>.
         </h1>
-        <p class="text-lg md:text-xl text-slate font-medium max-w-2xl mx-auto leading-relaxed">
-          Cold applying on job portals has a ~2% success rate. Learn how to bypass the HR black hole, format your resume for ATS parsers, and get directly in front of hiring managers.
+        <p style="font-size: 1.15rem; color: var(--color-slate-600); line-height: 1.6; margin-bottom: 2rem;">
+          Clicking "Easy Apply" guarantees you compete against 4,000 blind submissions. Learn how to format single-column ATS resumes, bypass HR screeners via direct cold outreach, and command behavioral interviews.
         </p>
+        <button data-modal-trigger data-topic="Resume & ATS Review" class="btn btn-primary" style="padding: 0.9rem 1.8rem; font-size: 1rem;">
+          Book a 1:1 Resume & Hiring Audit (₹99)
+        </button>
       </div>
     </section>
 
-    <!-- ================= PLAYBOOK MODULES ================= -->
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-      <div class="grid md:grid-cols-2 gap-8">
-        
-        <!-- Module 1: The Resume -->
-        <div class="module-card">
-          <div class="step-badge">1</div>
-          <h3 class="display text-2xl font-bold mb-4 text-ink">The 6-Second ATS Resume</h3>
-          <p class="text-slate text-base font-medium mb-6 leading-relaxed">
-            Recruiters scan resumes for exactly 6 seconds. If your resume uses double columns, graphics, or progress bars, Automated Tracking Systems (ATS) will auto-reject you before a human ever sees it.
-          </p>
-          <ul class="mb-8">
-            <li><strong>Strictly 1 Page:</strong> Unless you have 10+ years of experience.</li>
-            <li><strong>Single Column Format:</strong> Black and white text only.</li>
-            <li><strong>The XYZ Formula:</strong> "Accomplished [X] as measured by [Y], by doing [Z]."</li>
-            <li><strong>Kill the Objective:</strong> Replace it with a hard-hitting summary of your technical stack.</li>
-          </ul>
-          <button onclick="window.CareerCatalog.openBookingPopup()" class="w-full sm:w-auto btn-primary px-6 py-3.5 rounded-xl text-sm font-bold bg-indigo/10 text-indigo hover:bg-indigo hover:text-white transition-colors border border-indigo/20">
-            Audit my resume
-          </button>
-        </div>
-
-        <!-- Module 2: Outreach -->
-        <div class="module-card">
-          <div class="step-badge">2</div>
-          <h3 class="display text-2xl font-bold mb-4 text-ink">Bypassing the Portal</h3>
-          <p class="text-slate text-base font-medium mb-6 leading-relaxed">
-            Applying through "Easy Apply" guarantees you are competing against 5,000 other people. The top 1% of candidates find the hiring manager directly on LinkedIn and send a cold email.
-          </p>
-          <div class="bg-slate-50 border border-slate-100 rounded-xl p-5 mb-8">
-            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Winning Cold Email Structure</p>
-            <p class="text-sm text-slate-700 font-medium leading-relaxed italic">
-              "Hi [Name],<br><br>I saw [Company] is hiring a [Role]. I recently built a project using [Tech Stack] that solves [Specific Problem related to company].<br><br>I’ve attached my single-page resume and linked my portfolio. Let me know if you have 5 minutes next week to chat."
+    <!-- 4 PLAYBOOK MODULES -->
+    <section style="padding: 5rem 0 6rem; background: var(--color-white);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          <!-- Module 1: The Resume -->
+          <div class="module-card">
+            <div class="step-number">1</div>
+            <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 0.5rem;">The 6-Second ATS Resume</h3>
+            <p style="color: var(--color-slate-600); font-size: 0.95rem; line-height: 1.55; margin-bottom: 1.25rem;">
+              Recruiters scan resumes for an average of 6 seconds. If your document uses two columns, profile photos, graphic icons, or skill rating bars, applicant tracking systems auto-reject you before human review.
             </p>
+            <ul class="module-list">
+              <li><strong>Strictly 1 Page:</strong> Mandatory for all candidates with under 8 years of experience.</li>
+              <li><strong>Single Column Format:</strong> Plain black-and-white layout parseable by Taleo, Greenhouse, and Workday.</li>
+              <li><strong>The Google XYZ Formula:</strong> "Accomplished [X] as measured by [Y], by doing [Z]."</li>
+              <li><strong>Kill the Objective:</strong> Replace generic statements with a dense, comma-separated Technical Skills stack.</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1rem;">
+              <button data-modal-trigger data-topic="ATS Resume Audit" class="btn btn-outline" style="width: 100%;">
+                Audit My Resume &rarr;
+              </button>
+            </div>
           </div>
-          <button onclick="window.CareerCatalog.openBookingPopup()" class="w-full sm:w-auto btn-primary px-6 py-3.5 rounded-xl text-sm font-bold bg-cyan/10 text-cyan-700 hover:bg-cyan-500 hover:text-white transition-colors border border-cyan/20">
-            Build an outreach strategy
-          </button>
-        </div>
 
-        <!-- Module 3: The Interview -->
-        <div class="module-card">
-          <div class="step-badge">3</div>
-          <h3 class="display text-2xl font-bold mb-4 text-ink">Mastering the Interview</h3>
-          <p class="text-slate text-base font-medium mb-6 leading-relaxed">
-            When asked behavioral questions (e.g., "Tell me about a time you failed"), rambling is an instant red flag. You must strictly adhere to the STAR format to keep your answer under 2 minutes.
-          </p>
-          <ul class="mb-8">
-            <li><strong>Situation:</strong> Set the scene contextually (10 seconds).</li>
-            <li><strong>Task:</strong> What was your specific goal? (10 seconds).</li>
-            <li><strong>Action:</strong> What did *you* (not your team) actually do? (60 seconds).</li>
-            <li><strong>Result:</strong> State the quantifiable outcome (e.g., "Saved 15 hours a week").</li>
-          </ul>
-          <button onclick="window.CareerCatalog.openBookingPopup()" class="w-full sm:w-auto btn-primary px-6 py-3.5 rounded-xl text-sm font-bold bg-indigo/10 text-indigo hover:bg-indigo hover:text-white transition-colors border border-indigo/20">
-            Schedule a mock interview
-          </button>
-        </div>
+          <!-- Module 2: Cold Outreach -->
+          <div class="module-card">
+            <div class="step-number">2</div>
+            <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 0.5rem;">Bypassing the Portal</h3>
+            <p style="color: var(--color-slate-600); font-size: 0.95rem; line-height: 1.55; margin-bottom: 1.25rem;">
+              The top 1% of candidates find the engineering or business hiring manager directly on LinkedIn and send a targeted cold email demonstrating existing domain value.
+            </p>
+            <div style="background: var(--color-slate-50); border: 1px solid var(--color-slate-200); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem;">
+              <p style="font-size: 0.75rem; font-weight: 700; color: var(--color-slate-400); text-transform: uppercase; margin-bottom: 0.5rem;">Winning Cold Email Architecture</p>
+              <p style="font-size: 0.88rem; color: var(--color-slate-700); font-style: italic; line-height: 1.5;">
+                "Hi [Manager Name], I saw [Company] is scaling operations in Maharashtra. I built a Python tool solving [Specific Bottleneck]. Attached is my 1-page resume and GitHub link. Do you have 5 mins next Tuesday to review the code?"
+              </p>
+            </div>
+            <div style="margin-top: auto; padding-top: 1rem;">
+              <button data-modal-trigger data-topic="Cold Email Strategy" class="btn btn-outline" style="width: 100%;">
+                Build My Outreach Plan &rarr;
+              </button>
+            </div>
+          </div>
 
-        <!-- Module 4: The PPO -->
-        <div class="module-card">
-          <div class="step-badge">4</div>
-          <h3 class="display text-2xl font-bold mb-4 text-ink">Securing the PPO</h3>
-          <p class="text-slate text-base font-medium mb-6 leading-relaxed">
-            Your internship is a 3-month behavioral interview. Pre-Placement Offers (PPOs) aren't given to the smartest intern; they are given to the intern who makes the manager's life the easiest.
-          </p>
-          <ul class="mb-8">
-            <li><strong>Over-Communicate:</strong> Send a brief End-of-Day (EOD) status update on Slack.</li>
-            <li><strong>Be Low-Maintenance:</strong> Google the error code *before* asking for help.</li>
-            <li><strong>Document Everything:</strong> Leave behind a guide for the next intern.</li>
-          </ul>
-          <button onclick="window.CareerCatalog.openBookingPopup()" class="w-full sm:w-auto btn-primary px-6 py-3.5 rounded-xl text-sm font-bold bg-cyan/10 text-cyan-700 hover:bg-cyan-500 hover:text-white transition-colors border border-cyan/20">
-            Talk to an Expert
-          </button>
+          <!-- Module 3: Interview Mastery -->
+          <div class="module-card">
+            <div class="step-number">3</div>
+            <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 0.5rem;">Mastering the Interview (STAR)</h3>
+            <p style="color: var(--color-slate-600); font-size: 0.95rem; line-height: 1.55; margin-bottom: 1.25rem;">
+              When asked behavioral questions ("Tell me about a time you resolved a team conflict"), rambling costs you the offer. Structure all responses into strict 90-second blocks.
+            </p>
+            <ul class="module-list">
+              <li><strong>Situation (10s):</strong> Set the organizational context and immediate challenge.</li>
+              <li><strong>Task (10s):</strong> What was your explicit, verifiable responsibility?</li>
+              <li><strong>Action (50s):</strong> What specific actions did *you* (not the team) implement?</li>
+              <li><strong>Result (20s):</strong> Quantify the outcome (e.g., "Saved 12 hours/week, 0 downtime").</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1rem;">
+              <button data-modal-trigger data-topic="Interview Preparation (STAR Method)" class="btn btn-outline" style="width: 100%;">
+                Practice Mock Interview &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Module 4: Internship to PPO -->
+          <div class="module-card">
+            <div class="step-number">4</div>
+            <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 0.5rem;">Securing the PPO (Full-Time Offer)</h3>
+            <p style="color: var(--color-slate-600); font-size: 0.95rem; line-height: 1.55; margin-bottom: 1.25rem;">
+              Internships are 3-month continuous behavioral assessments. Pre-Placement Offers (PPOs) are granted to the intern who makes their reporting manager's workload significantly lighter.
+            </p>
+            <ul class="module-list">
+              <li><strong>Proactive EOD Updates:</strong> Send a concise 3-bullet End-of-Day message on Slack/Teams.</li>
+              <li><strong>Low Maintenance Troubleshooting:</strong> Research error codes before interrupting senior engineers.</li>
+              <li><strong>Internal Documentation:</strong> Author clean setup guides for future incoming interns.</li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1rem;">
+              <button data-modal-trigger data-topic="PPO & Internship Strategy" class="btn btn-outline" style="width: 100%;">
+                Plan Internship Strategy &rarr;
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= HIGH CONTRAST CTA ================= -->
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-      <div class="rounded-[2.5rem] bg-ink p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-2xl relative overflow-hidden">
-        <!-- Decorative bg -->
-        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-emerald/30 rounded-full blur-3xl"></div>
-        <div class="absolute -left-10 -top-10 w-48 h-48 bg-indigo/30 rounded-full blur-2xl"></div>
-
-        <div class="max-w-xl text-center md:text-left relative z-10">
-          <h2 class="display text-3xl md:text-5xl font-bold mb-4">Is your resume holding you back?</h2>
-          <p class="text-white/80 text-lg font-medium leading-relaxed">Stop guessing why you aren't getting callbacks. Let us audit your resume, fix your formatting, and optimize your keywords in a focused 10-minute strategy call.</p>
-        </div>
-        <div class="w-full md:w-auto flex-shrink-0 relative z-10">
-          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="w-full md:w-auto btn-primary px-9 py-5 rounded-2xl text-lg font-bold bg-white text-ink shadow-xl hover:bg-slate-100 transition-colors">
-            Book a Strategy Call
-          </button>
-        </div>
+    <!-- BOTTOM STRATEGY AUDIT BANNER -->
+    <section style="padding: 4.5rem 0; background: var(--color-ink); color: white;">
+      <div class="container" style="text-align: center; max-width: 44rem;">
+        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; color: white; margin-bottom: 1rem;">
+          Is your resume getting auto-rejected right now?
+        </h2>
+        <p style="color: #94A3B8; font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+          Book a 1:1 strategy audit (₹99). We review your resume line-by-line, fix ATS formatting errors, and calibrate your bullet points with measurable impact metrics.
+        </p>
+        <button data-modal-trigger data-topic="Resume & ATS Review" class="btn btn-primary" style="padding: 1rem 2.2rem;">
+          Book My 1:1 Resume Audit
+        </button>
       </div>
     </section>
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-slate/20 bg-white">
-    <div class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-12">
-      <div class="sm:col-span-2">
-        <a href="index.html" class="display text-2xl font-bold text-ink">Career Catalog</a>
-        <p class="text-base text-slate mt-4 max-w-sm leading-relaxed font-medium">Premium career guidance, skill mapping, and hiring insights engineered for Indian students and early-career professionals.</p>
-      </div>
-      <div>
-        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Explore</p>
-        <div class="flex flex-col gap-4 text-base font-medium text-slate">
-          <a href="career-guidance.html" class="hover:text-indigo transition-colors">Career Guidance</a>
-          <a href="job-seeker.html" class="hover:text-indigo transition-colors text-indigo font-bold">Job Seeker</a>
-          <a href="blog.html" class="hover:text-indigo transition-colors">Insights Blog</a>
-          <a href="index.html#about" class="hover:text-indigo transition-colors">About Us</a>
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">Career Catalog</a>
+          <p style="font-size: 0.9rem; color: var(--color-slate-600); max-width: 22rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Evidence-based career roadmaps, job search engineering, and enterprise AI tools training built for students and working professionals in India.
+          </p>
+          <p style="font-size: 0.82rem; color: var(--color-slate-500);">
+            Based in Pune & Solapur, Maharashtra, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Exploration & Learning</h4>
+          <ul class="footer-links">
+            <li><a href="career-guidance.html">After 12th Roadmaps</a></li>
+            <li><a href="career-guidance.html#panel-pug">After Graduation Planning</a></li>
+            <li><a href="ai-tools.html">Get Trained: AI Tools</a></li>
+            <li><a href="job-seeker.html">ATS Resume Blueprint</a></li>
+            <li><a href="job-seeker.html">Cold Email Masterclass</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Editorial & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Insights Hub</a></li>
+            <li><a href="articles.html#ai-tools">5 AI Tools for Students</a></li>
+            <li><a href="articles.html#resume">6-Second Resume Rules</a></li>
+            <li><a href="articles.html#portfolio">Data Analytics Portfolio</a></li>
+            <li><a href="articles.html#interview">STAR Interview Answers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="company/about.html">About & Methodology</a></li>
+            <li><a href="company/contact.html">Contact Us</a></li>
+            <li><a href="company/privacy.html">Privacy Policy</a></li>
+            <li><a href="company/terms.html">Terms of Service</a></li>
+            <li><button data-modal-trigger data-topic="Footer Playbook Call" style="background:none;border:none;color:var(--color-indigo);font-weight:700;cursor:pointer;padding:0;font-size:0.9rem;text-align:left;">Book Session (₹99)</button></li>
+          </ul>
         </div>
       </div>
-      <div>
-        <p class="text-sm font-bold mb-5 uppercase tracking-wider text-ink">Action</p>
-        <div class="flex flex-col gap-4 text-base font-medium text-slate">
-          <button onclick="window.CareerCatalog && window.CareerCatalog.openBookingPopup()" class="text-left hover:text-indigo transition-colors font-bold text-indigo">Talk to an Expert</button>
-          <a href="#" class="hover:text-indigo transition-colors">Contact</a>
-          <a href="#" class="hover:text-indigo transition-colors">Privacy Policy</a>
+
+      <div class="footer-bottom">
+        <div>© 2026 Career Catalog India. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="company/privacy.html">Privacy</a>
+          <a href="company/terms.html">Terms</a>
+          <a href="company/contact.html">Contact</a>
         </div>
       </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 py-6 border-t border-slate/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm font-medium text-slate">
-      <p>© 2026 Career Catalog. All rights reserved.</p>
-      <p>Built for India.</p>
     </div>
   </footer>
 
-  <!-- Mobile Menu Auto-Close Logic -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+  <div id="consultation-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <button class="modal-close" aria-label="Close modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div style="display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; background: rgba(255,255,255,0.2); padding: 0.25rem 0.65rem; border-radius: var(--radius-full); margin-bottom: 0.75rem;">
+          1-on-1 Strategic Consultation (₹99)
+        </div>
+        <h3 id="modal-title" style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">
+          Schedule Your Session
+        </h3>
+        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.9); line-height: 1.5;">
+          Direct guidance via WhatsApp and 1:1 call to resolve your career and skill roadmaps.
+        </p>
+      </div>
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-    });
+      <div class="modal-body">
+        <div class="modal-form-wrapper">
+          <form id="consultation-form" novalidate>
+            <div class="form-group">
+              <label for="client-name" class="form-label">Full Name</label>
+              <input type="text" id="client-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+            </div>
 
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-      });
-    });
-  </script>
+            <div class="form-group">
+              <label for="client-phone" class="form-label">WhatsApp Number (10 digits)</label>
+              <input type="tel" id="client-phone" class="form-input" placeholder="e.g. 9876543210" maxlength="10" required />
+            </div>
 
-  <!-- Load popup script locally -->
-  <script src="popup.js"></script>
+            <div class="form-group">
+              <label for="client-topic" class="form-label">Consultation Focus</label>
+              <select id="client-topic" class="form-select">
+                <option value="Resume & ATS Review" selected>Resume & ATS Keyword Audit</option>
+                <option value="AI Tools Workplace Training">AI Tools Workplace Training</option>
+                <option value="Interview Preparation (STAR Method)">Mock Interview & STAR Answers</option>
+                <option value="General Strategy Consultation">General Career Guidance</option>
+                <option value="College & Stream Guidance (12th/UG)">College & Stream Selection</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem; margin-top: 0.5rem;">
+              Continue to WhatsApp &rarr;
+            </button>
+            <p style="font-size: 0.75rem; color: var(--color-slate-400); text-align: center; margin-top: 0.75rem;">
+              🔒 Zero spam. We never share your contact details.
+            </p>
+          </form>
+        </div>
+
+        <div class="modal-success-view" style="display: none; text-align: center; padding: 1.5rem 0;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-emerald-light); color: var(--color-emerald); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Opening WhatsApp...</h4>
+          <p style="font-size: 0.9rem; color: var(--color-slate-600); line-height: 1.5; margin-bottom: 1.25rem;">
+            We've generated your custom consultation prompt. Please hit send in WhatsApp to confirm your slot.
+          </p>
+          <button type="button" class="btn btn-outline" onclick="window.CareerCatalog.closeBookingPopup()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
