@@ -71,6 +71,8 @@
       border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 1.25rem 1.5rem;
       margin: 1.5rem 0;
     }
+    @media(min-width: 640px){ #desktop-cta { display: inline-flex !important; } }
+    @media(min-width: 900px){ #menu-toggle { display: none !important; } }
   </style>
 </head>
 <body>
@@ -95,12 +97,10 @@
           <button data-modal-trigger data-topic="Masterclass 1:1 Consultation" class="btn btn-primary" id="desktop-cta" style="display: none;">
             Talk to an Expert
           </button>
-          <style>@media(min-width: 640px){ #desktop-cta { display: inline-flex !important; } }</style>
           
           <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" style="background: transparent; border: 1px solid var(--color-slate-200); border-radius: var(--radius-md); padding: 0.45rem; color: var(--color-ink); cursor: pointer; display: flex; align-items: center;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           </button>
-          <style>@media(min-width: 900px){ #menu-toggle { display: none !important; } }</style>
         </div>
       </nav>
 
@@ -297,7 +297,6 @@
     </div>
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="footer-main">
     <div class="container">
       <div class="footer-grid">
