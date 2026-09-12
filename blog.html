@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-IN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Career Insights & Hiring Intelligence | Career Catalog India</title>
+  <meta name="description" content="Editorial analysis on ATS resumes, AI workplace tools, recruiter cold-emailing, and multidisciplinary skill stacking for Indian students and professionals." />
+  <meta name="keywords" content="career articles India, fresher hiring trends 2026, tech skill stacking, cold email templates, ATS resume breakdown" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://careercatalog.in/blog.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Career Insights & Hiring Intelligence | Career Catalog India" />
+  <meta property="og:description" content="Tested strategies for navigating campus placements, industry pivots, and enterprise AI tools." />
+  <meta property="og:url" content="https://careercatalog.in/blog.html" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .filter-btn {
+      padding: 0.45rem 1.15rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 600;
+      color: var(--color-slate-600); background: var(--color-white); border: 1px solid var(--color-slate-300);
+      cursor: pointer; transition: all var(--transition-fast);
+    }
+    .filter-btn:hover { border-color: var(--color-indigo); color: var(--color-indigo); }
+    .filter-btn.active {
+      background: var(--color-ink); color: var(--color-white); border-color: var(--color-ink);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .blog-card {
+      border: 1px solid var(--color-slate-200); border-radius: var(--radius-xl);
+      background: var(--color-white); overflow: hidden; display: flex; flex-direction: column;
+      transition: all var(--transition-normal); height: 100%; text-decoration: none; color: inherit;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px); box-shadow: var(--shadow-xl); border-color: rgba(67, 56, 202, 0.25);
+    }
+    .blog-header-thumb {
+      height: 10rem; display: flex; align-items: center; justify-content: center; position: relative;
+    }
+    .blog-body {
+      padding: 1.75rem; display: flex; flex-direction: column; flex-grow: 1;
+    }
+    .blog-tag {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;
+    }
+    .tag-tech { color: var(--color-emerald); }
+    .tag-job { color: var(--color-cyan); }
+    .tag-strategy { color: var(--color-indigo); }
+
+    @media(min-width: 640px){ #desktop-cta { display: inline-flex !important; } }
+    @media(min-width: 900px){ #menu-toggle { display: none !important; } }
+  </style>
+</head>
+<body>
+
+  <header class="header-glass">
+    <div class="container">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="2.5" stroke-linecap="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+          Career Catalog
+        </a>
+
+        <div class="nav-tabs" role="tablist">
+          <a href="career-guidance.html" class="nav-tab">Career Guidance</a>
+          <a href="job-seeker.html" class="nav-tab">Job Seeker</a>
+          <a href="ai-tools.html" class="nav-tab">Get Trained: AI Tools <span class="badge-new">New</span></a>
+          <a href="blog.html" class="nav-tab active">Insights</a>
+          <a href="company/about.html" class="nav-tab">About</a>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button data-modal-trigger data-topic="General Strategy Consultation" class="btn btn-primary" id="desktop-cta" style="display: none;">
+            Talk to an Expert
+          </button>
+          
+          <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" style="background: transparent; border: 1px solid var(--color-slate-200); border-radius: var(--radius-md); padding: 0.45rem; color: var(--color-ink); cursor: pointer; display: flex; align-items: center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" class="mobile-nav">
+        <div style="padding: 1rem 0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="career-guidance.html" class="mobile-link">Career Guidance</a>
+          <a href="job-seeker.html" class="mobile-link">Job Seeker Playbook</a>
+          <a href="ai-tools.html" class="mobile-link">Get Trained: AI Tools (Copilot, Claude, ChatGPT)</a>
+          <a href="blog.html" class="mobile-link active">Insights & Guides</a>
+          <a href="company/about.html" class="mobile-link">About Career Catalog</a>
+          <a href="company/contact.html" class="mobile-link">Contact</a>
+          <button data-modal-trigger data-topic="Insights Mobile Session" class="btn btn-primary" style="margin-top: 0.75rem; width: 100%;">
+            Book Consultation (₹99)
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-glow" style="padding: 4rem 0 3rem; text-align: center; border-bottom: 1px solid var(--color-slate-200);">
+      <div class="container" style="max-width: 44rem;">
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); background: rgba(6, 182, 212, 0.1); font-size: 0.78rem; font-weight: 700; color: #0891B2; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem;">
+          The Career Catalog Journal
+        </div>
+        <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1rem;">
+          Insights that actually <span class="gradient-text">get you hired</span>.
+        </h1>
+        <p style="font-size: 1.1rem; color: var(--color-slate-600); line-height: 1.6;">
+          Zero fluff. No corporate buzzwords. Tested tactical frameworks authored by early-career strategists who have built portfolios, secured offers, and navigated modern hiring filters.
+        </p>
+      </div>
+    </section>
+
+    <!-- ARTICLES DIRECTORY -->
+    <section style="padding: 4rem 0 6rem; background: var(--color-white);">
+      <div class="container">
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-bottom: 3.5rem;">
+          <button class="filter-btn active" data-filter="all">All Masterclasses</button>
+          <button class="filter-btn" data-filter="job">Job Search & Outreach</button>
+          <button class="filter-btn" data-filter="tech">AI & Data Skills</button>
+          <button class="filter-btn" data-filter="strategy">Strategic Career Moves</button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          
+          <!-- Article 1: AI Tools -->
+          <a href="articles.html#ai-tools" class="blog-card" data-category="tech">
+            <div class="blog-header-thumb" style="background: linear-gradient(135deg, #312E81 0%, #06B6D4 100%);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="blog-body">
+              <span class="blog-tag tag-tech">Enterprise AI · 6 min read</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-ink);">5 AI Tools Every College Student Should Master in 2026</h3>
+              <p style="color: var(--color-slate-600); font-size: 0.92rem; line-height: 1.55; flex-grow: 1; margin-bottom: 1.25rem;">
+                Why prompt engineering is a baseline expectation, and how to command Claude 3.5, Perplexity, and Copilot to produce verifiable portfolio artifacts.
+              </p>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-indigo); display: inline-flex; align-items: center; gap: 0.35rem;">
+                Read Masterclass &rarr;
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 2: ATS Resume -->
+          <a href="articles.html#resume" class="blog-card" data-category="job">
+            <div class="blog-header-thumb" style="background: var(--color-ink);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="1.7"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+            </div>
+            <div class="blog-body">
+              <span class="blog-tag tag-job">Hiring Filters · 5 min read</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-ink);">The 6-Second ATS Resume Framework</h3>
+              <p style="color: var(--color-slate-600); font-size: 0.92rem; line-height: 1.55; flex-grow: 1; margin-bottom: 1.25rem;">
+                A single-column template, metric-driven Google XYZ formulas, and the top three fatal formatting errors that trigger immediate automated rejection.
+              </p>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-indigo); display: inline-flex; align-items: center; gap: 0.35rem;">
+                Read Masterclass &rarr;
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 3: Data Portfolio -->
+          <a href="articles.html#portfolio" class="blog-card" data-category="tech">
+            <div class="blog-header-thumb" style="background: linear-gradient(135deg, #059669 0%, #0891B2 100%);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="blog-body">
+              <span class="blog-tag tag-tech">Proof of Work · 7 min read</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-ink);">Building a Data Analytics Portfolio That Gets You Hired</h3>
+              <p style="color: var(--color-slate-600); font-size: 0.92rem; line-height: 1.55; flex-grow: 1; margin-bottom: 1.25rem;">
+                Why your Titanic Kaggle dataset is closing doors, and how to build a Power BI/SQL portfolio that demonstrates direct business P&L impact.
+              </p>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-indigo); display: inline-flex; align-items: center; gap: 0.35rem;">
+                Read Masterclass &rarr;
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 4: Cold Email -->
+          <a href="articles.html#cold-email" class="blog-card" data-category="job">
+            <div class="blog-header-thumb" style="background: linear-gradient(135deg, #D97706 0%, #E11D48 100%);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="blog-body">
+              <span class="blog-tag tag-job">Direct Outreach · 6 min read</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-ink);">The Exact Cold Email Template That Bypasses HR Portals</h3>
+              <p style="color: var(--color-slate-600); font-size: 0.92rem; line-height: 1.55; flex-grow: 1; margin-bottom: 1.25rem;">
+                Stop relying on passive job board applications. Here is the exact subject line, proof-of-work pitch, and 5-minute call ask to get responses from founders.
+              </p>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-indigo); display: inline-flex; align-items: center; gap: 0.35rem;">
+                Read Masterclass &rarr;
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 5: Beyond B.Tech -->
+          <a href="articles.html#engineering" class="blog-card" data-category="strategy">
+            <div class="blog-header-thumb" style="background: linear-gradient(135deg, #1E293B 0%, #4338CA 100%);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+            </div>
+            <div class="blog-body">
+              <span class="blog-tag tag-strategy">Market Reality · 5 min read</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-ink);">Why Your Engineering Degree Isn't Enough</h3>
+              <p style="color: var(--color-slate-600); font-size: 0.92rem; line-height: 1.55; flex-grow: 1; margin-bottom: 1.25rem;">
+                India graduates over 1.5 million engineers annually. Learn how to stack finance, data modeling, or design onto your base degree to eliminate commoditization.
+              </p>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-indigo); display: inline-flex; align-items: center; gap: 0.35rem;">
+                Read Masterclass &rarr;
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 6: Interview Narrative -->
+          <a href="articles.html#interview" class="blog-card" data-category="job">
+            <div class="blog-header-thumb" style="background: linear-gradient(135deg, #0284C7 0%, #4338CA 100%);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div class="blog-body">
+              <span class="blog-tag tag-job">Behavioral Strategy · 5 min read</span>
+              <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-ink);">How to Answer 'Tell Me About Yourself' in 90 Seconds</h3>
+              <p style="color: var(--color-slate-600); font-size: 0.92rem; line-height: 1.55; flex-grow: 1; margin-bottom: 1.25rem;">
+                Stop reciting your resume chronologically. Use the Present-Past-Future narrative framework to captivate interviewers in the critical opening minute.
+              </p>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-indigo); display: inline-flex; align-items: center; gap: 0.35rem;">
+                Read Masterclass &rarr;
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOTTOM STRATEGY AUDIT BANNER -->
+    <section style="padding: 4.5rem 0; background: var(--color-ink); color: white;">
+      <div class="container" style="text-align: center; max-width: 44rem;">
+        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; color: white; margin-bottom: 1rem;">
+          Want tailored feedback on your career assets?
+        </h2>
+        <p style="color: #94A3B8; font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+          Schedule a 1:1 strategy consultation for ₹99. We audit your portfolio links, cold email drafts, and interview stories directly.
+        </p>
+        <button data-modal-trigger data-topic="Insights Strategy Session" class="btn btn-primary" style="padding: 1rem 2.2rem;">
+          Book 1:1 Consultation
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">Career Catalog</a>
+          <p style="font-size: 0.9rem; color: var(--color-slate-600); max-width: 22rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Evidence-based career roadmaps, job search engineering, and enterprise AI tools training built for students and working professionals in India.
+          </p>
+          <p style="font-size: 0.82rem; color: var(--color-slate-500);">
+            Based in Pune & Solapur, Maharashtra, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Exploration & Learning</h4>
+          <ul class="footer-links">
+            <li><a href="career-guidance.html">After 12th Roadmaps</a></li>
+            <li><a href="career-guidance.html#panel-pug">After Graduation Planning</a></li>
+            <li><a href="ai-tools.html">Get Trained: AI Tools</a></li>
+            <li><a href="job-seeker.html">ATS Resume Blueprint</a></li>
+            <li><a href="job-seeker.html">Cold Email Masterclass</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Editorial & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Insights Hub</a></li>
+            <li><a href="articles.html#ai-tools">5 AI Tools for Students</a></li>
+            <li><a href="articles.html#resume">6-Second Resume Rules</a></li>
+            <li><a href="articles.html#portfolio">Data Analytics Portfolio</a></li>
+            <li><a href="articles.html#interview">STAR Interview Answers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="company/about.html">About & Methodology</a></li>
+            <li><a href="company/contact.html">Contact Us</a></li>
+            <li><a href="company/privacy.html">Privacy Policy</a></li>
+            <li><a href="company/terms.html">Terms of Service</a></li>
+            <li><button data-modal-trigger data-topic="Footer Insights Call" style="background:none;border:none;color:var(--color-indigo);font-weight:700;cursor:pointer;padding:0;font-size:0.9rem;text-align:left;">Book Session (₹99)</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Career Catalog India. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="company/privacy.html">Privacy</a>
+          <a href="company/terms.html">Terms</a>
+          <a href="company/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="consultation-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <button class="modal-close" aria-label="Close modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div style="display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; background: rgba(255,255,255,0.2); padding: 0.25rem 0.65rem; border-radius: var(--radius-full); margin-bottom: 0.75rem;">
+          1-on-1 Strategic Consultation (₹99)
+        </div>
+        <h3 id="modal-title" style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">
+          Schedule Your Session
+        </h3>
+        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.9); line-height: 1.5;">
+          Direct guidance via WhatsApp and 1:1 call to resolve your career and skill roadmaps.
+        </p>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-form-wrapper">
+          <form id="consultation-form" novalidate>
+            <div class="form-group">
+              <label for="client-name" class="form-label">Full Name</label>
+              <input type="text" id="client-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+            </div>
+
+            <div class="form-group">
+              <label for="client-phone" class="form-label">WhatsApp Number (10 digits)</label>
+              <input type="tel" id="client-phone" class="form-input" placeholder="e.g. 9876543210" maxlength="10" required />
+            </div>
+
+            <div class="form-group">
+              <label for="client-topic" class="form-label">Consultation Focus</label>
+              <select id="client-topic" class="form-select">
+                <option value="General Strategy Consultation" selected>General Career Guidance</option>
+                <option value="AI Tools Workplace Training">AI Tools Workplace Training</option>
+                <option value="Resume & ATS Review">Resume & ATS Keyword Audit</option>
+                <option value="Interview Preparation (STAR Method)">Mock Interview & STAR Answers</option>
+                <option value="College & Stream Guidance (12th/UG)">College & Stream Selection</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem; margin-top: 0.5rem;">
+              Continue to WhatsApp &rarr;
+            </button>
+            <p style="font-size: 0.75rem; color: var(--color-slate-400); text-align: center; margin-top: 0.75rem;">
+              🔒 Zero spam. We never share your contact details.
+            </p>
+          </form>
+        </div>
+
+        <div class="modal-success-view" style="display: none; text-align: center; padding: 1.5rem 0;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-emerald-light); color: var(--color-emerald); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Opening WhatsApp...</h4>
+          <p style="font-size: 0.9rem; color: var(--color-slate-600); line-height: 1.5; margin-bottom: 1.25rem;">
+            We've generated your custom consultation prompt. Please hit send in WhatsApp to confirm your slot.
+          </p>
+          <button type="button" class="btn btn-outline" onclick="window.CareerCatalog.closeBookingPopup()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.blog-card').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
