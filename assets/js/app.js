@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  const WHATSAPP_PHONE = "919168796201";
+  const WHATSAPP_PHONE = "91";
 
   window.CareerCatalog = window.CareerCatalog || {};
 
