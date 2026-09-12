@@ -1,6 +1,6 @@
 :root {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --color-ink: #0F172A;
@@ -17,7 +17,6 @@
   --color-slate-50: #F8FAFC;
   --color-slate-100: #F1F5F9;
   --color-slate-200: #E2E8F0;
-  --color-slate-300: #CBD5E1;
   --color-slate-400: #94A3B8;
   --color-slate-500: #64748B;
   --color-slate-600: #475569;
