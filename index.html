@@ -2,1753 +2,1492 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Professional Resume Writing Services | Career Catalog</title>
-<meta name="description" content="Get a professional, ATS-friendly resume made by Career Catalog. Resume writing services for freshers, graduates and experienced professionals.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Resume Writing | Career Catalog</title>
+<meta name="description" content="Get a professionally written, ATS-conscious resume with Career Catalog. Explore premium resume designs and get job portal assistance.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root{
---navy:#14213D;
---blue:#263D66;
---gold:#C6A56C;
---cream:#F7F6F2;
---white:#fff;
---text:#263247;
---muted:#727E91;
---line:#E5E8ED;
---head:'Inter',sans-serif;
+:root {
+    --bg: #f4f6fb;
+    --navy: #101c35;
+    --blue: #315efb;
+    --text: #19243a;
+    --muted: #718096;
+    --glass: rgba(255,255,255,.76);
+    --border: rgba(255,255,255,.9);
+    --shadow: 0 20px 60px rgba(30,45,80,.09);
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-font-family:var(--head);
-background:var(--cream);
-color:var(--text);
-line-height:1.6;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-button,a{font:inherit}
-button{cursor:pointer}
-a{text-decoration:none;color:inherit}
-
-.wrap{
-max-width:1160px;
-margin:auto;
-padding:0 25px;
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
 }
 
-.btn{
-border:0;
-border-radius:7px;
-padding:14px 24px;
-background:var(--navy);
-color:white;
-font-size:13px;
-font-weight:700;
-transition:.25s;
+button, input {
+    font: inherit;
 }
 
-.btn:hover{
-background:var(--blue);
-transform:translateY(-2px);
+button {
+    cursor: pointer;
 }
 
-.gold{
-background:var(--gold);
-color:var(--navy);
+.background-glow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(92,129,255,.14), transparent 32%),
+        radial-gradient(circle at 90% 30%, rgba(140,108,255,.12), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(68,194,220,.10), transparent 35%);
 }
 
-.gold:hover{background:#D7B986}
-
-/* NAVBAR */
-
-nav{
-position:sticky;
-top:0;
-z-index:50;
-background:rgba(255,255,255,.96);
-backdrop-filter:blur(15px);
-border-bottom:1px solid var(--line);
+.container {
+    width: min(1160px, 92%);
+    margin: auto;
 }
 
-.nav{
-height:72px;
-display:flex;
-align-items:center;
-justify-content:space-between;
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,.78);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border-bottom: 1px solid rgba(220,228,244,.7);
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:20px;
-font-weight:800;
-color:var(--navy);
+.nav-inner {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.logo-icon{
-width:38px;
-height:38px;
-background:var(--navy);
-color:var(--gold);
-display:grid;
-place-items:center;
-border-radius:9px;
-font-family:Georgia,serif;
-font-size:23px;
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--navy);
 }
 
-.nav-links{
-display:flex;
-align-items:center;
-gap:25px;
-font-size:13px;
-font-weight:600;
-color:#59647A;
+.logo span {
+    color: var(--blue);
 }
 
-.nav-links a:hover{color:var(--gold)}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    color: #536079;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-btn {
+    border: 0;
+    background: var(--navy);
+    color: white;
+    padding: 12px 19px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 13px;
+}
 
 /* HERO */
 
-.hero{
-background:linear-gradient(125deg,#14213D,#2B4269);
-color:white;
-padding:78px 0;
+.hero {
+    padding: 90px 0 65px;
+    text-align: center;
 }
 
-.hero-content{max-width:800px}
-
-.eyebrow{
-font-size:11px;
-font-weight:800;
-letter-spacing:2.5px;
-color:var(--gold);
-margin-bottom:17px;
-text-transform:uppercase;
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 15px;
+    border-radius: 50px;
+    background: rgba(255,255,255,.72);
+    border: 1px solid white;
+    box-shadow: 0 5px 20px rgba(30,45,80,.05);
+    color: #5267a3;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
 }
 
-.hero h1{
-font-size:clamp(38px,6vw,65px);
-line-height:1.12;
-letter-spacing:-2px;
-margin-bottom:20px;
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(36px, 5.5vw, 65px);
+    line-height: 1.12;
+    letter-spacing: -3px;
+    font-weight: 800;
+    max-width: 850px;
+    margin: 25px auto 20px;
+    color: var(--navy);
 }
 
-.hero h1 span{
-font-family:'Playfair Display',serif;
-color:var(--gold);
-font-weight:500;
+.hero h1 span {
+    background: linear-gradient(110deg,#315efb,#8b68ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-.hero p{
-font-size:16px;
-color:#D7DFEB;
-max-width:620px;
-margin-bottom:27px;
+.hero p {
+    color: var(--muted);
+    max-width: 620px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.hero-actions{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
+.hero-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    flex-wrap: wrap;
 }
 
-.outline{
-background:transparent;
-border:1px solid #9AA8BE;
-color:white;
+.primary-btn, .secondary-btn {
+    padding: 15px 23px;
+    border-radius: 13px;
+    font-weight: 800;
+    font-size: 13px;
+    border: 1px solid transparent;
+    transition: .25s;
 }
 
-/* TRUST */
-
-.trust{
-background:white;
-border-bottom:1px solid var(--line);
+.primary-btn {
+    background: linear-gradient(120deg,#315efb,#644ce8);
+    color: white;
+    box-shadow: 0 10px 25px rgba(49,94,251,.22);
 }
 
-.trust-inner{
-min-height:65px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:12px;
+.secondary-btn {
+    background: rgba(255,255,255,.7);
+    border-color: white;
+    color: var(--navy);
 }
 
-.trust-item{
-font-size:12px;
-font-weight:700;
-color:#566178;
+.primary-btn:hover, .secondary-btn:hover {
+    transform: translateY(-3px);
 }
 
-.trust-item span{
-color:#B08B4F;
-margin-right:6px;
+/* TRUST STRIP */
+
+.trust-strip {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding: 22px;
+    margin: 15px auto 70px;
+    max-width: 900px;
+    border: 1px solid white;
+    background: rgba(255,255,255,.56);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
 }
 
-/* GENERAL SECTIONS */
-
-section{padding:75px 0}
-
-.heading{
-text-align:center;
-max-width:720px;
-margin:0 auto 38px;
+.trust-item {
+    font-size: 12px;
+    color: #56637a;
+    font-weight: 700;
 }
 
-.heading small{
-display:block;
-font-size:11px;
-font-weight:800;
-letter-spacing:2px;
-color:#A17E47;
-margin-bottom:10px;
+.trust-item span {
+    color: #315efb;
+    margin-right: 6px;
 }
 
-.heading h2{
-font-size:clamp(29px,4vw,43px);
-color:var(--navy);
-line-height:1.2;
-letter-spacing:-1.4px;
-margin-bottom:12px;
+/* SECTION */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
 }
 
-.heading p{
-font-size:14px;
-color:var(--muted);
+.section-heading .small-label {
+    color: var(--blue);
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
-/* TEMPLATE GALLERY */
-
-.gallery{background:#F1F2F1}
-
-.templates{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:23px;
+.section-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(27px,4vw,42px);
+    letter-spacing: -1.5px;
+    margin: 12px 0;
+    color: var(--navy);
 }
 
-.template{
-position:relative;
-background:white;
-padding:11px;
-border:1px solid #E4E6E9;
-border-radius:11px;
-text-align:left;
-transition:.3s;
-overflow:hidden;
-width:100%;
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
 }
 
-.template:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 45px rgba(20,33,61,.12);
-border-color:var(--gold);
+/* TEMPLATE GRID */
+
+.templates-section {
+    padding: 10px 0 90px;
 }
 
-.resume{
-width:100%;
-aspect-ratio:210/297;
-overflow:hidden;
-background:white;
-border:1px solid #E5E7EB;
-padding:6% 7%;
-font-family:Arial,sans-serif;
-font-size:clamp(5px,.65vw,7.5px);
-line-height:1.3;
-color:#252D3B;
-text-align:left;
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 28px;
 }
 
-.resume h3{
-font-size:2.7em;
-line-height:1.1;
-font-weight:800;
+.template-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+    transition: .3s ease;
+    overflow: hidden;
 }
 
-.resume .role{
-font-size:1em;
-font-weight:700;
-letter-spacing:.7px;
-margin:4px 0;
+.template-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 25px 65px rgba(30,45,80,.15);
 }
 
-.resume .contact{
-font-size:.85em;
-color:#687487;
-line-height:1.5;
+.template-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.resume .section-title{
-font-size:1.1em;
-font-weight:800;
-letter-spacing:.7px;
-text-transform:uppercase;
-border-bottom:1px solid #D9DEE6;
-padding-bottom:3px;
-margin:9px 0 5px;
+.template-name {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--navy);
 }
 
-.resume .summary{
-font-size:.92em;
-line-height:1.45;
-color:#3D4858;
+.template-tag {
+    font-size: 9px;
+    padding: 6px 9px;
+    background: #e9efff;
+    color: #315efb;
+    border-radius: 30px;
+    font-weight: 800;
 }
 
-.resume .job{margin:6px 0}
+/* RESUME PAPER */
 
-.resume .job-title{
-display:flex;
-justify-content:space-between;
-gap:5px;
-font-size:1em;
-font-weight:700;
+.resume-paper {
+    width: 100%;
+    aspect-ratio: 0.707 / 1;
+    background: #fff;
+    padding: 7.5%;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(20,30,60,.10);
+    color: #222;
+    font-family: Arial, sans-serif;
+    position: relative;
+    border: 1px solid #e8eaf0;
 }
 
-.resume .date{
-font-size:.82em;
-font-weight:500;
-white-space:nowrap;
-color:#687487;
+.resume-paper * {
+    box-sizing: border-box;
 }
 
-.resume .company{
-font-size:.86em;
-font-style:italic;
-color:#657186;
-margin:2px 0;
+.r-name {
+    font-size: clamp(12px,1.6vw,17px);
+    font-weight: 800;
+    letter-spacing: .5px;
+    line-height: 1.2;
 }
 
-.resume ul{
-padding-left:12px;
-margin:3px 0;
+.r-role {
+    font-size: clamp(6px,.8vw,8px);
+    color: #555;
+    margin-top: 4px;
 }
 
-.resume li{
-font-size:.9em;
-line-height:1.35;
-margin-bottom:3px;
+.r-contact {
+    font-size: clamp(5px,.65vw,7px);
+    color: #555;
+    margin-top: 6px;
+    line-height: 1.6;
 }
 
-.resume .education{
-margin:4px 0;
+.r-line {
+    height: 1px;
+    background: #cbd2df;
+    margin: 10px 0 8px;
 }
 
-.resume .education strong{font-size:.95em}
-
-.resume .skills{
-font-size:.92em;
-line-height:1.6;
+.r-heading {
+    font-size: clamp(6px,.8vw,8px);
+    font-weight: 800;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    margin: 9px 0 4px;
 }
 
-.resume .project{
-margin:5px 0;
+.r-text {
+    font-size: clamp(5px,.68vw,7px);
+    line-height: 1.55;
+    color: #444;
 }
 
-.resume .project strong{font-size:.95em}
-
-.resume .project p{
-font-size:.88em;
-line-height:1.35;
-color:#505B6D;
+.r-entry {
+    margin-bottom: 6px;
 }
 
-/* EDITORIAL */
-
-.editorial{
-font-family:Georgia,serif;
+.r-entry strong {
+    font-size: clamp(5px,.7vw,7px);
+    display: block;
 }
 
-.editorial h3{
-font-family:Georgia,serif;
-text-align:center;
-letter-spacing:1px;
+.r-date {
+    font-size: clamp(4.5px,.6vw,6px);
+    color: #777;
+    margin: 2px 0;
 }
 
-.editorial .role,
-.editorial .contact{text-align:center}
-
-.editorial .section-title{
-border-color:#555;
+.r-bullets {
+    padding-left: 10px;
+    margin-top: 3px;
 }
 
-/* EXECUTIVE */
-
-.executive{padding:0}
-
-.executive .top{
-background:#14213D;
-color:white;
-padding:8%;
-border-bottom:4px solid var(--gold);
+.r-bullets li {
+    font-size: clamp(4.5px,.62vw,6px);
+    line-height: 1.5;
+    margin-bottom: 2px;
 }
 
-.executive .top h3{color:white}
-.executive .top .role{color:#E5C995}
-.executive .top .contact{color:#DCE3ED}
-.executive .body{padding:4% 7%}
+/* Template variations */
 
-/* SIDEBAR */
-
-.sidebar{
-padding:0;
-display:grid;
-grid-template-columns:32% 68%;
+.resume-executive .r-name {
+    font-family: Georgia,serif;
+    font-size: clamp(15px,2vw,21px);
+    color: #142b49;
 }
 
-.sidebar .left{
-background:#192D4D;
-color:white;
-padding:12% 10%;
+.resume-executive .r-heading {
+    color: #142b49;
+    border-bottom: 1px solid #9caec4;
+    padding-bottom: 3px;
 }
 
-.sidebar .left h3{
-font-size:2em;
-overflow-wrap:anywhere;
+.resume-modern {
+    display: grid;
+    grid-template-columns: 32% 68%;
+    padding: 0;
 }
 
-.sidebar .left .section-title{
-color:#E5C995;
-border-color:#64738B;
-font-size:.95em;
+.resume-modern .r-side {
+    background: #172b46;
+    color: white;
+    padding: 12% 9%;
 }
 
-.sidebar .left .contact,
-.sidebar .left .skills{
-color:#E3EAF4;
-overflow-wrap:anywhere;
+.resume-modern .r-side .r-heading,
+.resume-modern .r-side .r-text,
+.resume-modern .r-side .r-contact {
+    color: white;
 }
 
-.sidebar .right{padding:7% 7%}
-
-.sidebar .right .section-title{color:#203E6A}
-
-/* MINIMAL */
-
-.minimal .section-title{
-border-left:3px solid #7589A9;
-padding-left:7px;
+.resume-modern .r-main {
+    padding: 9% 8%;
 }
 
-/* CREATIVE */
-
-.creative{padding:0}
-
-.creative .top{
-background:#EAE7FA;
-padding:8%;
-border-bottom:4px solid #8172C7;
+.resume-modern .r-name {
+    font-size: clamp(10px,1.4vw,15px);
 }
 
-.creative .top h3{color:#382F70}
-.creative .top .role{color:#6758A6}
-.creative .body{padding:4% 7%}
-.creative .section-title{color:#6758A6}
-
-/* PROFESSIONAL */
-
-.professional{padding:0}
-
-.professional .top{
-background:#123D36;
-color:white;
-padding:8%;
-border-bottom:4px solid #BBA36D;
+.resume-minimal .r-name {
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
-.professional .top h3{color:white}
-.professional .top .role{color:#D6E9DE}
-.professional .top .contact{color:#E1EAE5}
-.professional .body{padding:4% 7%}
-.professional .section-title{color:#155349}
-
-/* HOVER */
-
-.overlay{
-position:absolute;
-inset:11px;
-z-index:5;
-background:rgba(18,32,61,.95);
-color:white;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:18px;
-opacity:0;
-transition:.25s;
+.resume-minimal .r-heading {
+    color: #315efb;
+    letter-spacing: 1.2px;
 }
 
-.template:hover .overlay,
-.template:focus-visible .overlay{opacity:1}
-
-.overlay strong{
-font-family:'Playfair Display',serif;
-font-size:25px;
-margin-bottom:8px;
+.resume-creative .r-name {
+    color: #7b4ce0;
 }
 
-.overlay p{
-font-size:12px;
-color:#DCE3ED;
-margin-bottom:18px;
+.resume-creative .r-line {
+    background: #bba2ef;
 }
 
-.overlay span{
-background:var(--gold);
-color:var(--navy);
-padding:10px 16px;
-font-size:10px;
-font-weight:800;
-border-radius:5px;
+.resume-finance .r-name {
+    color: #0f594e;
 }
 
-.template-info{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:12px 3px 3px;
-gap:8px;
+.resume-finance .r-heading {
+    color: #0f594e;
+    border-bottom: 1px solid #b6d7d0;
+    padding-bottom: 3px;
 }
 
-.template-info strong{
-font-size:13px;
-color:var(--navy);
+/* CARD CTA */
+
+.template-footer {
+    padding: 15px 2px 2px;
 }
 
-.template-info span{
-font-size:9px;
-font-weight:800;
-color:#987849;
+.template-footer p {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
-/* NOTE */
-
-.gallery-note{
-font-size:11px;
-color:var(--muted);
-text-align:center;
-margin-top:22px;
+.template-action {
+    width: 100%;
+    padding: 12px;
+    border-radius: 11px;
+    border: 1px solid #dce4fa;
+    color: #315efb;
+    background: rgba(255,255,255,.85);
+    font-size: 12px;
+    font-weight: 800;
+    transition: .2s;
 }
 
-/* WHY RESUME */
-
-.why{background:white}
-
-.benefits{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
+.template-action:hover {
+    background: #315efb;
+    color: white;
 }
 
-.benefit{
-padding:26px;
-border:1px solid var(--line);
-border-radius:10px;
+/* INTERVIEW ASSISTANCE */
+
+.assistance {
+    padding: 75px 0;
+    margin-bottom: 85px;
+    border-radius: 30px;
+    background: linear-gradient(120deg,#142440,#273d69);
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-.icon{
-width:43px;
-height:43px;
-background:#F4F0E7;
-color:#A17E47;
-border-radius:9px;
-display:grid;
-place-items:center;
-font-size:20px;
-margin-bottom:15px;
+.assistance::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(91,125,255,.18);
+    filter: blur(60px);
+    right: -100px;
+    top: -150px;
 }
 
-.benefit h3{
-font-size:16px;
-color:var(--navy);
-margin-bottom:7px;
+.assistance-inner {
+    width: min(980px,90%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 45px;
+    align-items: center;
+    position: relative;
 }
 
-.benefit p{
-font-size:12px;
-color:var(--muted);
+.assistance-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #a9bdff;
+    font-weight: 800;
 }
 
-/* WHO */
-
-.audience{background:#F1F2F1}
-
-.audience-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
+.assistance h2 {
+    font-family: 'Manrope',sans-serif;
+    font-size: clamp(27px,4vw,42px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 16px 0;
 }
 
-.audience-card{
-background:white;
-border:1px solid var(--line);
-border-radius:10px;
-padding:25px;
+.assistance p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #c2cde0;
 }
 
-.audience-card h3{
-font-size:16px;
-color:var(--navy);
-margin-bottom:8px;
+.assistance-list {
+    margin-top: 23px;
+    display: grid;
+    gap: 12px;
 }
 
-.audience-card p{
-font-size:12px;
-color:var(--muted);
+.assistance-list div {
+    font-size: 13px;
+    color: #edf2ff;
+}
+
+.assistance-list span {
+    color: #8faaff;
+    margin-right: 8px;
+}
+
+.assistance-box {
+    padding: 28px;
+    background: rgba(255,255,255,.10);
+    border: 1px solid rgba(255,255,255,.17);
+    backdrop-filter: blur(20px);
+    border-radius: 22px;
+}
+
+.assistance-box h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.assistance-box p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.assistance-box button {
+    width: 100%;
+    background: white;
+    color: #172b4b;
+    border: 0;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 12px;
+    font-weight: 800;
 }
 
 /* PROCESS */
 
-.process{background:white}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
+.process-section {
+    padding: 0 0 90px;
 }
 
-.step{
-background:#F7F7F5;
-border:1px solid var(--line);
-padding:24px;
-border-radius:10px;
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
 }
 
-.step b{
-display:block;
-font-family:Georgia,serif;
-font-size:30px;
-color:var(--gold);
-margin-bottom:9px;
+.process-card {
+    padding: 27px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.72);
+    border: 1px solid white;
+    box-shadow: 0 12px 35px rgba(30,45,80,.05);
 }
 
-.step h3{
-font-size:15px;
-color:var(--navy);
-margin-bottom:6px;
+.process-number {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #e9efff;
+    color: #315efb;
+    font-weight: 800;
+    margin-bottom: 18px;
 }
 
-.step p{
-font-size:12px;
-color:var(--muted);
+.process-card h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
-/* CTA */
-
-.cta{
-background:var(--navy);
-color:white;
-text-align:center;
-padding:70px 20px;
-}
-
-.cta h2{
-font-family:'Playfair Display',serif;
-font-size:clamp(29px,4vw,42px);
-margin-bottom:12px;
-}
-
-.cta p{
-font-size:13px;
-color:#D8E0EB;
-margin-bottom:23px;
-}
-
-/* FAQ */
-
-.faq{background:white}
-
-.faq-list{
-max-width:780px;
-margin:auto;
-}
-
-details{border-bottom:1px solid var(--line)}
-
-summary{
-list-style:none;
-cursor:pointer;
-padding:17px 0;
-font-size:13px;
-font-weight:700;
-color:var(--navy);
-display:flex;
-justify-content:space-between;
-gap:15px;
-}
-
-summary::-webkit-details-marker{display:none}
-
-summary:after{
-content:"+";
-font-size:19px;
-color:var(--gold);
-}
-
-details[open] summary:after{content:"−"}
-
-details p{
-font-size:12px;
-color:var(--muted);
-padding:0 0 17px;
+.process-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
 }
 
 /* FOOTER */
 
-footer{
-background:#101C33;
-color:#D5DCE8;
-padding:25px 0;
-font-size:11px;
+footer {
+    padding: 35px 0;
+    background: rgba(255,255,255,.65);
+    border-top: 1px solid white;
 }
 
-.footer{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:12px;
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-inner p {
+    font-size: 11px;
+    color: var(--muted);
 }
 
 /* MODAL */
 
-.modal{
-position:fixed;
-inset:0;
-z-index:100;
-background:rgba(8,17,34,.75);
-backdrop-filter:blur(8px);
-display:none;
-align-items:center;
-justify-content:center;
-padding:18px;
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,19,39,.60);
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    z-index: 200;
 }
 
-.modal.active{display:flex}
-
-.modal-box{
-background:white;
-width:100%;
-max-width:430px;
-padding:30px;
-border-radius:13px;
-position:relative;
-max-height:94vh;
-overflow:auto;
+.modal-overlay.active {
+    display: flex;
 }
 
-.close{
-position:absolute;
-right:12px;
-top:12px;
-width:34px;
-height:34px;
-border:0;
-border-radius:50%;
-background:#F0F1F5;
-font-size:21px;
+.modal {
+    width: min(470px,100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 32px;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 24px;
+    box-shadow: 0 30px 100px rgba(0,0,0,.25);
+    position: relative;
+    animation: modalIn .25s ease;
 }
 
-.modal small{
-color:#A17E47;
-font-size:10px;
-font-weight:800;
-letter-spacing:2px;
+@keyframes modalIn {
+    from {opacity:0;transform:translateY(15px) scale(.98);}
+    to {opacity:1;transform:translateY(0) scale(1);}
 }
 
-.modal h2{
-font-family:'Playfair Display',serif;
-font-size:29px;
-color:var(--navy);
-margin:9px 0;
+.close-modal {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 0;
+    background: #edf0f7;
+    color: #24314b;
+    font-size: 20px;
 }
 
-.modal-description{
-font-size:12px;
-color:var(--muted);
-margin-bottom:17px;
+.modal-label {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    color: var(--blue);
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
-.selected{
-padding:11px;
-border-radius:7px;
-background:#F5F2EA;
-border:1px solid #E8DDC8;
-font-size:12px;
-font-weight:700;
-margin-bottom:15px;
+.modal h2 {
+    font-family: 'Manrope',sans-serif;
+    font-size: 25px;
+    letter-spacing: -.7px;
+    margin: 10px 0;
+    color: var(--navy);
 }
 
-label{
-display:block;
-font-size:12px;
-font-weight:700;
-color:var(--navy);
-margin:13px 0 6px;
+.modal-description {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 20px;
 }
 
-input{
-width:100%;
-padding:12px;
-border:1px solid #DDE1E9;
-border-radius:7px;
-font:13px var(--head);
-outline:none;
+.selected-service {
+    padding: 11px 13px;
+    background: #edf2ff;
+    color: #315efb;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 10px;
+    margin-bottom: 18px;
 }
 
-input:focus{border-color:var(--gold)}
-
-.submit{
-width:100%;
-margin-top:20px;
+.form-group {
+    margin-bottom: 14px;
 }
 
-.note{
-font-size:10px;
-color:var(--muted);
-text-align:center;
-margin-top:11px;
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    color: #43506a;
+    margin-bottom: 7px;
 }
 
-.error{
-display:none;
-color:#B42318;
-font-size:12px;
-margin-top:10px;
+.form-group input {
+    width: 100%;
+    border: 1px solid #dfe5f0;
+    background: white;
+    padding: 13px;
+    border-radius: 11px;
+    outline: none;
+    font-size: 13px;
 }
 
-.success{
-display:none;
-text-align:center;
-padding:20px 0;
+.form-group input:focus {
+    border-color: #315efb;
+    box-shadow: 0 0 0 3px rgba(49,94,251,.09);
 }
 
-.success h3{
-font-family:'Playfair Display',serif;
-font-size:26px;
-color:var(--navy);
-margin-bottom:8px;
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(120deg,#315efb,#684be8);
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    margin-top: 5px;
 }
 
-.success p{
-font-size:13px;
-color:var(--muted);
-margin-bottom:20px;
+.form-note {
+    font-size: 10px;
+    color: #8490a4;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 13px;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:900px){
-.templates{grid-template-columns:repeat(2,1fr)}
-.nav-links a{display:none}
+.success-message {
+    display: none;
+    background: #e8f8ef;
+    color: #167344;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-top: 15px;
 }
 
-@media(max-width:600px){
-.wrap{padding:0 17px}
-.nav{height:65px}
-.logo{font-size:17px}
-.logo-icon{width:34px;height:34px}
-.hero{padding:60px 0}
-.hero h1{letter-spacing:-1.5px}
-section{padding:58px 0}
-.trust-inner{padding:14px 0}
-.templates{gap:11px}
-.template{padding:7px}
-.resume{font-size:6px}
-.template-info{display:block;padding:8px 3px}
-.template-info strong{font-size:11px}
-.template-info span{font-size:7px}
-.overlay{inset:7px;padding:8px}
-.overlay strong{font-size:16px}
-.overlay p{font-size:9px;margin-bottom:10px}
-.overlay span{font-size:8px;padding:8px}
-.benefits,.audience-grid,.steps{grid-template-columns:1fr}
-.modal-box{padding:25px 20px}
-.footer{display:block;text-align:center}
-.footer>*{display:block;margin:7px}
+/* MOBILE */
+
+@media(max-width:900px) {
+    .template-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .assistance-inner {
+        grid-template-columns: 1fr;
+    }
 }
 
-@media(prefers-reduced-motion:reduce){
-*{transition:none!important;scroll-behavior:auto!important}
+@media(max-width:600px) {
+    .nav-inner {
+        min-height: 65px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 65px 0 45px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.7px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .trust-strip {
+        gap: 15px;
+        margin-bottom: 55px;
+    }
+
+    .template-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 390px;
+        margin: auto;
+    }
+
+    .resume-paper {
+        aspect-ratio: 0.707 / 1;
+    }
+
+    .r-name {
+        font-size: 17px;
+    }
+
+    .r-role {
+        font-size: 8px;
+    }
+
+    .r-contact {
+        font-size: 7px;
+    }
+
+    .r-heading {
+        font-size: 8px;
+    }
+
+    .r-text {
+        font-size: 7px;
+    }
+
+    .r-entry strong {
+        font-size: 7px;
+    }
+
+    .r-date {
+        font-size: 6px;
+    }
+
+    .r-bullets li {
+        font-size: 6px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .assistance {
+        border-radius: 20px;
+        padding: 50px 0;
+    }
+
+    .modal {
+        padding: 27px 20px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<div class="background-glow"></div>
 
-<nav>
-<div class="wrap nav">
-<a class="logo" href="#top">
-<span class="logo-icon">C</span>
-CAREER CATALOG
-</a>
+<nav class="navbar">
+    <div class="container nav-inner">
+        <div class="logo">CAREER<span> CATALOG</span></div>
 
-<div class="nav-links">
-<a href="#templates">Resume Designs</a>
-<a href="#services">Our Services</a>
-<a href="#process">How It Works</a>
-<button class="btn" data-contact>Get My Resume</button>
-</div>
-</div>
+        <div class="nav-links">
+            <a href="#templates">Resume Designs</a>
+            <a href="#assistance">Job Assistance</a>
+            <a href="#process">How It Works</a>
+        </div>
+
+        <button class="nav-btn" onclick="openModal('Professional Resume Writing')">
+            Get My Resume
+        </button>
+    </div>
 </nav>
 
-<!-- HERO -->
-
-<header class="hero" id="top">
-<div class="wrap">
-<div class="hero-content">
-
-<div class="eyebrow">Professional Resume Writing Services</div>
-
-<h1>Get a Resume That<br><span>Represents You Better.</span></h1>
-
-<p>
-Your resume is often the first thing an employer sees. We help you create a professional, well-written and ATS-friendly resume that clearly shows your skills, education and work experience.
-</p>
-
-<div class="hero-actions">
-<a href="#templates" class="btn gold">Explore Resume Designs</a>
-<button class="btn outline" data-contact>Get My Resume</button>
-</div>
-
-</div>
-</div>
-</header>
-
-<!-- TRUST -->
-
-<div class="trust">
-<div class="wrap trust-inner">
-<div class="trust-item"><span>✓</span> Professional Resume Writing</div>
-<div class="trust-item"><span>✓</span> ATS-Friendly Formatting</div>
-<div class="trust-item"><span>✓</span> Freshers & Experienced</div>
-<div class="trust-item"><span>✓</span> Personalised Resume</div>
-</div>
-</div>
-
-<!-- TEMPLATES -->
-
-<section class="gallery" id="templates">
-<div class="wrap">
-
-<div class="heading">
-<small>OUR RESUME COLLECTION</small>
-<h2>Choose a Resume Design You Like.</h2>
-<p>Explore our resume designs. Select your favourite and let our team create a professional resume for you.</p>
-</div>
-
-<div class="templates">
-
-<!-- TEMPLATE 1 -->
-
-<button class="template" data-template="Classic Professional">
-
-<div class="resume editorial">
-<h3>RAHUL SHARMA</h3>
-<div class="role">BUSINESS ANALYST</div>
-<div class="contact">Pune, India | +91 98765 43210 | rahul@email.com | LinkedIn</div>
-
-<div class="section-title">Professional Summary</div>
-<p class="summary">Business Analyst with 4 years of experience in reporting, data analysis and business operations. Skilled in identifying business trends, improving reporting processes and supporting management decisions.</p>
-
-<div class="section-title">Work Experience</div>
-<div class="job">
-<div class="job-title"><span>Business Analyst</span><span class="date">2023–Present</span></div>
-<div class="company">ABC Technologies, Pune</div>
-<ul>
-<li>Prepared business reports and analysed key performance indicators.</li>
-<li>Created dashboards to track business performance and trends.</li>
-<li>Worked with teams to improve reporting accuracy and efficiency.</li>
-</ul>
-</div>
-<div class="job">
-<div class="job-title"><span>Operations Associate</span><span class="date">2021–2023</span></div>
-<div class="company">XYZ Services, Pune</div>
-<ul>
-<li>Managed daily operational reports and documentation.</li>
-<li>Supported process improvements and data validation.</li>
-</ul>
-</div>
-
-<div class="section-title">Education</div>
-<div class="education"><strong>MBA – Business Analytics</strong> | 2023</div>
-<div class="education"><strong>B.Com</strong> | 2021</div>
-
-<div class="section-title">Skills</div>
-<div class="skills">Excel · SQL · Power BI · Data Analysis · Reporting · Communication · Problem Solving</div>
-
-<div class="section-title">Certifications</div>
-<div class="skills">Google Data Analytics · Advanced Excel</div>
-</div>
-
-<div class="overlay">
-<strong>Classic Professional</strong>
-<p>A clean, traditional resume design for almost every professional field.</p>
-<span>GET THIS RESUME →</span>
-</div>
-
-<div class="template-info">
-<strong>Classic Professional</strong>
-<span>CLASSIC</span>
-</div>
-</button>
-
-<!-- TEMPLATE 2 -->
-
-<button class="template" data-template="Executive Resume">
-
-<div class="resume executive">
-<div class="top">
-<h3>JAMES WILSON</h3>
-<div class="role">FINANCE MANAGER</div>
-<div class="contact">Mumbai, India | +91 98765 43210 | james@email.com<br>linkedin.com/in/jameswilson</div>
-</div>
-
-<div class="body">
-<div class="section-title">Professional Summary</div>
-<p class="summary">Finance professional with 7 years of experience in financial planning, budgeting, reporting and business performance analysis. Experienced in supporting management decisions through accurate financial insights.</p>
-
-<div class="section-title">Professional Experience</div>
-<div class="job">
-<div class="job-title"><span>Finance Manager</span><span class="date">2023–Present</span></div>
-<div class="company">Global Financial Services</div>
-<ul>
-<li>Managed annual budgeting and financial forecasting activities.</li>
-<li>Prepared monthly financial reports and variance analysis.</li>
-<li>Identified cost-saving opportunities across departments.</li>
-<li>Presented financial performance reports to senior management.</li>
-</ul>
-</div>
-
-<div class="job">
-<div class="job-title"><span>Senior Financial Analyst</span><span class="date">2020–2023</span></div>
-<div class="company">ABC Business Solutions</div>
-<ul>
-<li>Performed financial analysis and management reporting.</li>
-<li>Supported monthly closing and reconciliation activities.</li>
-</ul>
-</div>
-
-<div class="section-title">Education</div>
-<div class="education"><strong>MBA – Finance</strong> | 2020</div>
-<div class="education"><strong>B.Com</strong> | 2018</div>
-
-<div class="section-title">Core Skills</div>
-<div class="skills">Financial Modelling · Budgeting · Forecasting · Advanced Excel · Power BI · SAP</div>
-
-<div class="section-title">Certifications</div>
-<div class="skills">CFA Program Candidate · Financial Modelling</div>
-</div>
-</div>
-
-<div class="overlay">
-<strong>Executive Resume</strong>
-<p>A strong corporate design for experienced professionals and managers.</p>
-<span>GET THIS RESUME →</span>
-</div>
-
-<div class="template-info">
-<strong>Executive Resume</strong>
-<span>EXECUTIVE</span>
-</div>
-</button>
-
-<!-- TEMPLATE 3 -->
-
-<button class="template" data-template="Modern Sidebar Resume">
-
-<div class="resume sidebar">
-
-<div class="left">
-<h3>PRIYA<br>MEHTA</h3>
-<div class="role">DATA ANALYST</div>
-
-<div class="section-title">Contact</div>
-<div class="contact">Pune, India<br>+91 98765 43210<br>priya@email.com<br>LinkedIn Profile</div>
-
-<div class="section-title">Technical Skills</div>
-<div class="skills">SQL<br>Python<br>Power BI<br>Excel<br>Tableau<br>Statistics<br>Data Visualisation</div>
-
-<div class="section-title">Education</div>
-<div class="skills">MBA – Analytics<br>2023<br><br>B.Com<br>2021</div>
-
-<div class="section-title">Languages</div>
-<div class="skills">English<br>Hindi<br>Marathi</div>
-</div>
-
-<div class="right">
-<div class="section-title">Professional Summary</div>
-<p class="summary">Data Analyst with 3 years of experience in business reporting, data visualisation and analytics. Skilled in working with large datasets and creating reports that support business decisions.</p>
-
-<div class="section-title">Work Experience</div>
-<div class="job">
-<div class="job-title"><span>Data Analyst</span></div>
-<div class="company">ABC Analytics | 2023–Present</div>
-<ul>
-<li>Created interactive Power BI dashboards for business reporting.</li>
-<li>Used SQL to extract, clean and analyse business data.</li>
-<li>Automated reports using Excel and Python.</li>
-<li>Presented insights to business stakeholders.</li>
-</ul>
-</div>
-
-<div class="job">
-<div class="job-title"><span>Data Analyst Intern</span></div>
-<div class="company">Digital Solutions | 2022–2023</div>
-<ul>
-<li>Supported reporting and data validation activities.</li>
-<li>Prepared analytical reports for internal teams.</li>
-</ul>
-</div>
-
-<div class="section-title">Projects</div>
-<div class="project">
-<strong>Sales Dashboard</strong>
-<p>Created a dashboard to monitor sales, revenue and regional performance.</p>
-</div>
-<div class="project">
-<strong>Customer Analysis</strong>
-<p>Analysed customer behaviour using Python and Excel.</p>
-</div>
-
-<div class="section-title">Certifications</div>
-<div class="skills">Google Data Analytics · Microsoft Power BI</div>
-</div>
-</div>
-
-<div class="overlay">
-<strong>Modern Sidebar</strong>
-<p>A modern two-column resume design with a professional sidebar.</p>
-<span>GET THIS RESUME →</span>
-</div>
-
-<div class="template-info">
-<strong>Modern Sidebar</strong>
-<span>MODERN</span>
-</div>
-</button>
-
-<!-- TEMPLATE 4 -->
-
-<button class="template" data-template="Minimal Resume">
-
-<div class="resume minimal">
-<h3>ADITYA PATEL</h3>
-<div class="role">PROJECT COORDINATOR</div>
-<div class="contact">Pune, India | +91 98765 43210 | aditya@email.com | LinkedIn</div>
-
-<div class="section-title">Professional Summary</div>
-<p class="summary">Project coordination professional with 4 years of experience in project tracking, stakeholder communication and operational planning. Skilled in managing timelines, documentation and team coordination.</p>
-
-<div class="section-title">Professional Experience</div>
-<div class="job">
-<div class="job-title"><span>Project Coordinator</span><span class="date">2023–Present</span></div>
-<div class="company">ABC Consulting</div>
-<ul>
-<li>Coordinated project schedules, deliverables and team activities.</li>
-<li>Prepared project progress reports and status updates.</li>
-<li>Maintained project documentation and action trackers.</li>
-</ul>
-</div>
-
-<div class="job">
-<div class="job-title"><span>Operations Executive</span><span class="date">2021–2023</span></div>
-<div class="company">XYZ Solutions</div>
-<ul>
-<li>Supported business operations and project documentation.</li>
-<li>Coordinated with teams to ensure timely completion of tasks.</li>
-</ul>
-</div>
-
-<div class="section-title">Education</div>
-<div class="education"><strong>MBA – Operations</strong> | 2021</div>
-<div class="education"><strong>BBA</strong> | 2019</div>
-
-<div class="section-title">Key Skills</div>
-<div class="skills">Project Management · MS Excel · Documentation · Communication · Team Coordination · Reporting</div>
-
-<div class="section-title">Projects</div>
-<div class="project">
-<strong>Process Improvement Project</strong>
-<p>Supported workflow improvements and reporting standardisation.</p>
-</div>
-
-<div class="section-title">Certifications</div>
-<div class="skills">Project Management Fundamentals · Advanced Excel</div>
-</div>
-
-<div class="overlay">
-<strong>Minimal Resume</strong>
-<p>Simple, clean and professional formatting with a focus on readability.</p>
-<span>GET THIS RESUME →</span>
-</div>
-
-<div class="template-info">
-<strong>Minimal Resume</strong>
-<span>MINIMAL</span>
-</div>
-</button>
-
-<!-- TEMPLATE 5 -->
-
-<button class="template" data-template="Creative Resume">
-
-<div class="resume creative">
-<div class="top">
-<h3>NEHA KAPOOR</h3>
-<div class="role">DIGITAL MARKETING SPECIALIST</div>
-<div class="contact">Pune, India | +91 98765 43210 | neha@email.com<br>Portfolio: nehakapoor.com</div>
-</div>
-
-<div class="body">
-<div class="section-title">About Me</div>
-<p class="summary">Digital marketing professional with 4 years of experience in SEO, social media, content marketing and campaign management. Passionate about building brands and improving online engagement.</p>
-
-<div class="section-title">Work Experience</div>
-<div class="job">
-<div class="job-title"><span>Digital Marketing Specialist</span><span class="date">2023–Present</span></div>
-<div class="company">Creative Media Studio</div>
-<ul>
-<li>Planned and managed digital marketing campaigns.</li>
-<li>Improved website visibility through SEO activities.</li>
-<li>Managed social media calendars and content strategy.</li>
-<li>Analysed campaign performance and engagement.</li>
-</ul>
-</div>
-
-<div class="job">
-<div class="job-title"><span>Marketing Executive</span><span class="date">2021–2023</span></div>
-<div class="company">Digital Solutions</div>
-<ul>
-<li>Conducted market and competitor research.</li>
-<li>Created marketing reports and campaign summaries.</li>
-</ul>
-</div>
-
-<div class="section-title">Projects</div>
-<div class="project">
-<strong>Brand Growth Campaign</strong>
-<p>Planned and executed digital campaigns for brand awareness and audience growth.</p>
-</div>
-
-<div class="section-title">Education</div>
-<div class="education"><strong>MBA – Marketing</strong> | 2021</div>
-
-<div class="section-title">Skills</div>
-<div class="skills">SEO · Digital Marketing · Content Strategy · Social Media · Google Analytics · Market Research</div>
-
-<div class="section-title">Certifications</div>
-<div class="skills">Google Digital Marketing · HubSpot Content Marketing</div>
-</div>
-</div>
-
-<div class="overlay">
-<strong>Creative Resume</strong>
-<p>A fresh and modern design for marketing, design and creative professionals.</p>
-<span>GET THIS RESUME →</span>
-</div>
-
-<div class="template-info">
-<strong>Creative Resume</strong>
-<span>CREATIVE</span>
-</div>
-</button>
-
-<!-- TEMPLATE 6 -->
-
-<button class="template" data-template="Professional Resume">
-
-<div class="resume professional">
-<div class="top">
-<h3>VIKRAM SHAH</h3>
-<div class="role">FINANCE PROFESSIONAL</div>
-<div class="contact">Pune, India | +91 98765 43210 | vikram@email.com<br>LinkedIn Profile</div>
-</div>
-
-<div class="body">
-<div class="section-title">Professional Summary</div>
-<p class="summary">Finance professional with 5 years of experience in financial operations, reporting, reconciliations and business analysis. Strong knowledge of financial reporting, Excel and performance analysis.</p>
-
-<div class="section-title">Work Experience</div>
-<div class="job">
-<div class="job-title"><span>Financial Analyst</span><span class="date">2023–Present</span></div>
-<div class="company">Global Business Services</div>
-<ul>
-<li>Prepared monthly financial reports and management summaries.</li>
-<li>Performed variance analysis and identified reporting differences.</li>
-<li>Supported budgeting and forecasting activities.</li>
-<li>Improved reporting workflows using advanced Excel.</li>
-</ul>
-</div>
-
-<div class="job">
-<div class="job-title"><span>Finance Associate</span><span class="date">2021–2023</span></div>
-<div class="company">Financial Solutions Pvt. Ltd.</div>
-<ul>
-<li>Performed financial reconciliations and account reviews.</li>
-<li>Supported month-end reporting and documentation.</li>
-<li>Maintained financial records and reporting accuracy.</li>
-</ul>
-</div>
-
-<div class="section-title">Education</div>
-<div class="education"><strong>MBA – Finance</strong> | 2021</div>
-<div class="education"><strong>B.Com – Banking & Finance</strong> | 2019</div>
-
-<div class="section-title">Skills</div>
-<div class="skills">Financial Analysis · Advanced Excel · Power BI · SQL · Budgeting · Forecasting · Reconciliation</div>
-
-<div class="section-title">Certifications</div>
-<div class="skills">CFA Program Candidate · Financial Modelling · Advanced Excel</div>
-</div>
-</div>
-
-<div class="overlay">
-<strong>Professional Resume</strong>
-<p>A polished corporate resume for finance, business and experienced professionals.</p>
-<span>GET THIS RESUME →</span>
-</div>
-
-<div class="template-info">
-<strong>Professional Resume</strong>
-<span>CORPORATE</span>
-</div>
-</button>
-
-</div>
-
-<p class="gallery-note">
-These are sample resume designs. Your actual resume will be written using your own education, skills, work experience and achievements. ATS compatibility depends on the final document layout.
-</p>
-
-</div>
+<main>
+
+<section class="hero">
+    <div class="container">
+        <div class="eyebrow">✦ Professional Resume Services</div>
+
+        <h1>
+            Your Experience Deserves a
+            <span>Better Resume.</span>
+        </h1>
+
+        <p>
+            Get a professionally written resume with a clean design,
+            proper formatting and clear presentation of your skills
+            and experience.
+        </p>
+
+        <div class="hero-actions">
+            <button class="primary-btn" onclick="document.getElementById('templates').scrollIntoView({behavior:'smooth'})">
+                Explore Resume Designs →
+            </button>
+
+            <button class="secondary-btn" onclick="openModal('Job Portal & Interview Assistance')">
+                Explore Job Assistance
+            </button>
+        </div>
+    </div>
 </section>
 
-<!-- WHY A GOOD RESUME -->
-
-<section class="why" id="services">
-<div class="wrap">
-
-<div class="heading">
-<small>WHY YOUR RESUME MATTERS</small>
-<h2>A Good Resume Can Make a Difference.</h2>
-<p>Your resume should clearly explain what you know, what you have done and what you can bring to a company.</p>
+<div class="container">
+    <div class="trust-strip">
+        <div class="trust-item"><span>✓</span> Professional Formatting</div>
+        <div class="trust-item"><span>✓</span> ATS-Conscious Structure</div>
+        <div class="trust-item"><span>✓</span> Industry-Focused Content</div>
+        <div class="trust-item"><span>✓</span> Personal Assistance</div>
+    </div>
 </div>
 
-<div class="benefits">
+<section class="templates-section" id="templates">
+    <div class="container">
 
-<div class="benefit">
-<div class="icon">✦</div>
-<h3>Professional Resume</h3>
-<p>A neat, well-written resume that presents your education, experience and skills clearly.</p>
-</div>
+        <div class="section-heading">
+            <div class="small-label">Resume Collection</div>
+            <h2>Choose Your Resume Style</h2>
+            <p>
+                Explore professionally designed resume layouts.
+                We will help you create a resume that suits your profile.
+            </p>
+        </div>
 
-<div class="benefit">
-<div class="icon">✓</div>
-<h3>ATS-Friendly Resume</h3>
-<p>Clear headings, relevant keywords and readable formatting to support applicant tracking systems.</p>
-</div>
+        <div class="template-grid">
 
-<div class="benefit">
-<div class="icon">✧</div>
-<h3>Better Presentation</h3>
-<p>Show your achievements, responsibilities and strengths in a clear and professional way.</p>
-</div>
+            <!-- TEMPLATE 1 -->
+            <article class="template-card">
+                <div class="template-top">
+                    <div class="template-name">Classic Professional</div>
+                    <div class="template-tag">POPULAR</div>
+                </div>
 
-</div>
-</div>
+                <div class="resume-paper">
+                    <div class="r-name">ALEX MORGAN</div>
+                    <div class="r-role">BUSINESS ANALYST</div>
+                    <div class="r-contact">Mumbai, India | alex@email.com | +91 98765 43210 | LinkedIn</div>
+                    <div class="r-line"></div>
+
+                    <div class="r-heading">Professional Summary</div>
+                    <div class="r-text">Analytical professional with experience in business reporting, data analysis and process improvement. Skilled in transforming business information into actionable insights.</div>
+
+                    <div class="r-heading">Work Experience</div>
+                    <div class="r-entry">
+                        <strong>Business Analyst | ABC Technologies</strong>
+                        <div class="r-date">2023 – Present</div>
+                        <ul class="r-bullets">
+                            <li>Prepared business reports and performance dashboards.</li>
+                            <li>Analysed operational data to identify improvement areas.</li>
+                            <li>Collaborated with cross-functional teams.</li>
+                        </ul>
+                    </div>
+                    <div class="r-entry">
+                        <strong>Analyst Intern | XYZ Solutions</strong>
+                        <div class="r-date">2022 – 2023</div>
+                        <ul class="r-bullets">
+                            <li>Supported reporting and data validation activities.</li>
+                            <li>Maintained structured business documentation.</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-heading">Education</div>
+                    <div class="r-entry">
+                        <strong>MBA – Business Administration</strong>
+                        <div class="r-date">University Name | 2022</div>
+                    </div>
+
+                    <div class="r-heading">Core Skills</div>
+                    <div class="r-text">Business Analysis • Advanced Excel • Power BI • SQL • Reporting • Communication</div>
+
+                    <div class="r-heading">Certifications</div>
+                    <div class="r-text">Microsoft Power BI | Business Analytics Fundamentals</div>
+                </div>
+
+                <div class="template-footer">
+                    <p>Clean, structured and suitable for a wide range of professional roles.</p>
+                    <button class="template-action" onclick="openModal('Classic Professional Resume')">Choose This Resume →</button>
+                </div>
+            </article>
+
+            <!-- TEMPLATE 2 -->
+            <article class="template-card">
+                <div class="template-top">
+                    <div class="template-name">Executive Resume</div>
+                    <div class="template-tag">PREMIUM</div>
+                </div>
+
+                <div class="resume-paper resume-executive">
+                    <div style="text-align:center">
+                        <div class="r-name">JAMES WILLIAMS</div>
+                        <div class="r-role">SENIOR OPERATIONS MANAGER</div>
+                        <div class="r-contact">Delhi, India | james@email.com | +91 98765 12345</div>
+                    </div>
+                    <div class="r-line"></div>
+
+                    <div class="r-heading">Executive Profile</div>
+                    <div class="r-text">Results-oriented management professional with experience in operations, team leadership, strategic planning and performance management.</div>
+
+                    <div class="r-heading">Professional Experience</div>
+                    <div class="r-entry">
+                        <strong>Senior Operations Manager | Global Services</strong>
+                        <div class="r-date">2021 – Present</div>
+                        <ul class="r-bullets">
+                            <li>Managed operational delivery across multiple teams.</li>
+                            <li>Improved reporting and performance tracking processes.</li>
+                            <li>Coordinated strategic initiatives and business reviews.</li>
+                        </ul>
+                    </div>
+                    <div class="r-entry">
+                        <strong>Operations Lead | Enterprise Group</strong>
+                        <div class="r-date">2018 – 2021</div>
+                        <ul class="r-bullets">
+                            <li>Led daily business operations and team activities.</li>
+                            <li>Monitored KPIs and prepared management reports.</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-heading">Education</div>
+                    <div class="r-text">MBA – Management | National Business School</div>
+
+                    <div class="r-heading">Leadership Skills</div>
+                    <div class="r-text">Strategic Planning • Team Leadership • Stakeholder Management • Process Improvement • Business Operations</div>
+
+                    <div class="r-heading">Certifications</div>
+                    <div class="r-text">Project Management Fundamentals | Leadership Development</div>
+                </div>
+
+                <div class="template-footer">
+                    <p>Designed for experienced professionals and leadership profiles.</p>
+                    <button class="template-action" onclick="openModal('Executive Resume')">Choose This Resume →</button>
+                </div>
+            </article>
+
+            <!-- TEMPLATE 3 -->
+            <article class="template-card">
+                <div class="template-top">
+                    <div class="template-name">Modern Sidebar</div>
+                    <div class="template-tag">MODERN</div>
+                </div>
+
+                <div class="resume-paper resume-modern">
+                    <div class="r-side">
+                        <div class="r-name">EMILY CLARK</div>
+                        <div class="r-role" style="color:#d3dced">MARKETING SPECIALIST</div>
+
+                        <div class="r-heading" style="margin-top:22px">Contact</div>
+                        <div class="r-contact">Pune, India<br>emily@email.com<br>+91 98765 12345</div>
+
+                        <div class="r-heading" style="margin-top:20px">Skills</div>
+                        <div class="r-text">Digital Marketing<br>SEO<br>Content Strategy<br>Google Analytics<br>Campaign Planning</div>
+
+                        <div class="r-heading" style="margin-top:20px">Tools</div>
+                        <div class="r-text">Google Analytics<br>Canva<br>Excel<br>Meta Ads</div>
+
+                        <div class="r-heading" style="margin-top:20px">Languages</div>
+                        <div class="r-text">English<br>Hindi</div>
+                    </div>
+
+                    <div class="r-main">
+                        <div class="r-heading">Profile</div>
+                        <div class="r-text">Marketing professional with experience in digital campaigns, content planning and performance analysis.</div>
+
+                        <div class="r-heading">Experience</div>
+                        <div class="r-entry">
+                            <strong>Marketing Specialist</strong>
+                            <div class="r-date">2022 – Present</div>
+                            <ul class="r-bullets">
+                                <li>Managed digital campaign execution.</li>
+                                <li>Monitored campaign performance and engagement.</li>
+                                <li>Prepared monthly marketing reports.</li>
+                            </ul>
+                        </div>
+
+                        <div class="r-entry">
+                            <strong>Marketing Associate</strong>
+                            <div class="r-date">2020 – 2022</div>
+                            <ul class="r-bullets">
+                                <li>Supported social media campaigns.</li>
+                                <li>Assisted with content calendars.</li>
+                            </ul>
+                        </div>
+
+                        <div class="r-heading">Education</div>
+                        <div class="r-text">MBA – Marketing<br>City University | 2020</div>
+
+                        <div class="r-heading">Projects</div>
+                        <div class="r-text">Digital Campaign Performance Analysis</div>
+                    </div>
+                </div>
+
+                <div class="template-footer">
+                    <p>Contemporary two-column layout for selected professional profiles.</p>
+                    <button class="template-action" onclick="openModal('Modern Sidebar Resume')">Choose This Resume →</button>
+                </div>
+            </article>
+
+            <!-- TEMPLATE 4 -->
+            <article class="template-card">
+                <div class="template-top">
+                    <div class="template-name">Minimal Resume</div>
+                    <div class="template-tag">CLEAN</div>
+                </div>
+
+                <div class="resume-paper resume-minimal">
+                    <div class="r-name">DANIEL ROBERTS</div>
+                    <div class="r-role">FINANCIAL ANALYST</div>
+                    <div class="r-contact">Bengaluru, India | daniel@email.com | +91 98765 54321</div>
+                    <div class="r-line"></div>
+
+                    <div class="r-heading">About</div>
+                    <div class="r-text">Finance professional with experience in financial reporting, budgeting, forecasting and variance analysis. Strong analytical and problem-solving abilities.</div>
+
+                    <div class="r-heading">Experience</div>
+                    <div class="r-entry">
+                        <strong>Financial Analyst | Finance Partners</strong>
+                        <div class="r-date">2022 – Present</div>
+                        <ul class="r-bullets">
+                            <li>Prepared monthly financial reports.</li>
+                            <li>Supported budgeting and forecasting exercises.</li>
+                            <li>Performed financial and variance analysis.</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-entry">
+                        <strong>Finance Associate | Business Solutions</strong>
+                        <div class="r-date">2020 – 2022</div>
+                        <ul class="r-bullets">
+                            <li>Supported account reconciliations.</li>
+                            <li>Maintained financial records and reports.</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-heading">Education</div>
+                    <div class="r-text">M.Com – Finance | 2020<br>B.Com – 2018</div>
+
+                    <div class="r-heading">Technical Skills</div>
+                    <div class="r-text">Advanced Excel • Power BI • Financial Modelling • SQL • Financial Reporting</div>
+
+                    <div class="r-heading">Certifications</div>
+                    <div class="r-text">Financial Modelling | Excel for Finance</div>
+                </div>
+
+                <div class="template-footer">
+                    <p>Simple typography and a clear layout for focused professional presentation.</p>
+                    <button class="template-action" onclick="openModal('Minimal Resume')">Choose This Resume →</button>
+                </div>
+            </article>
+
+            <!-- TEMPLATE 5 -->
+            <article class="template-card">
+                <div class="template-top">
+                    <div class="template-name">Creative Professional</div>
+                    <div class="template-tag">DISTINCTIVE</div>
+                </div>
+
+                <div class="resume-paper resume-creative">
+                    <div class="r-name">OLIVIA ANDERSON</div>
+                    <div class="r-role">UI / UX DESIGNER</div>
+                    <div class="r-contact">Hyderabad, India | olivia@email.com | +91 98765 22222</div>
+                    <div class="r-line"></div>
+
+                    <div class="r-heading">Professional Summary</div>
+                    <div class="r-text">Creative designer focused on user experience, interface design and digital product development. Experienced in translating user needs into clear design solutions.</div>
+
+                    <div class="r-heading">Experience</div>
+                    <div class="r-entry">
+                        <strong>UI/UX Designer | Design Studio</strong>
+                        <div class="r-date">2022 – Present</div>
+                        <ul class="r-bullets">
+                            <li>Created user flows and interface layouts.</li>
+                            <li>Developed prototypes for digital products.</li>
+                            <li>Collaborated with developers and product teams.</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-entry">
+                        <strong>Junior Designer | Creative Works</strong>
+                        <div class="r-date">2020 – 2022</div>
+                        <ul class="r-bullets">
+                            <li>Assisted with website and mobile app designs.</li>
+                            <li>Prepared design assets and documentation.</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-heading">Education</div>
+                    <div class="r-text">Bachelor of Design | 2020</div>
+
+                    <div class="r-heading">Design Skills</div>
+                    <div class="r-text">Wireframing • Prototyping • User Research • Visual Design • Design Systems</div>
+
+                    <div class="r-heading">Tools</div>
+                    <div class="r-text">Figma • Adobe Photoshop • Illustrator</div>
+                </div>
+
+                <div class="template-footer">
+                    <p>Distinctive presentation for design and selected creative roles.</p>
+                    <button class="template-action" onclick="openModal('Creative Professional Resume')">Choose This Resume →</button>
+                </div>
+            </article>
+
+            <!-- TEMPLATE 6 -->
+            <article class="template-card">
+                <div class="template-top">
+                    <div class="template-name">Finance Professional</div>
+                    <div class="template-tag">INDUSTRY STYLE</div>
+                </div>
+
+                <div class="resume-paper resume-finance">
+                    <div class="r-name">MICHAEL THOMAS</div>
+                    <div class="r-role">ACCOUNTING & FINANCE PROFESSIONAL</div>
+                    <div class="r-contact">Chennai, India | michael@email.com | +91 98765 67890</div>
+                    <div class="r-line"></div>
+
+                    <div class="r-heading">Career Summary</div>
+                    <div class="r-text">Detail-oriented finance professional experienced in accounting operations, reconciliations, reporting and financial documentation.</div>
+
+                    <div class="r-heading">Professional Experience</div>
+                    <div class="r-entry">
+                        <strong>Senior Finance Associate | ABC Group</strong>
+                        <div class="r-date">2022 – Present</div>
+                        <ul class="r-bullets">
+                            <li>Performed account reconciliations and financial checks.</li>
+                            <li>Prepared periodic financial reports.</li>
+                            <li>Supported month-end closing activities.</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-entry">
+                        <strong>Accounts Executive | XYZ Ltd.</strong>
+                        <div class="r-date">2020 – 2022</div>
+                        <ul class="r-bullets">
+                            <li>Maintained accounting records and ledgers.</li>
+                            <li>Assisted with invoice processing and reporting.</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-heading">Education</div>
+                    <div class="r-text">M.Com – Accounting & Finance | 2020</div>
+
+                    <div class="r-heading">Core Competencies</div>
+                    <div class="r-text">Financial Reporting • Reconciliation • Accounts Payable • Accounts Receivable • Month-End Closing</div>
+
+                    <div class="r-heading">Software Skills</div>
+                    <div class="r-text">SAP • Tally • Advanced Excel • Power BI</div>
+                </div>
+
+                <div class="template-footer">
+                    <p>Structured presentation for accounting, finance and operations profiles.</p>
+                    <button class="template-action" onclick="openModal('Finance Professional Resume')">Choose This Resume →</button>
+                </div>
+            </article>
+
+        </div>
+    </div>
 </section>
 
-<!-- WHO NEEDS A RESUME -->
+<!-- JOB PORTAL ASSISTANCE -->
 
-<section class="audience">
-<div class="wrap">
+<section class="container" id="assistance">
+    <div class="assistance">
+        <div class="assistance-inner">
+            <div>
+                <div class="assistance-label">BEYOND RESUME WRITING</div>
 
-<div class="heading">
-<small>RESUME SERVICES FOR EVERY CAREER STAGE</small>
-<h2>Who Can Get a Resume Made?</h2>
-<p>We create resumes for people at different stages of their careers.</p>
-</div>
+                <h2>Need Help Getting More Interview Opportunities?</h2>
 
-<div class="audience-grid">
+                <p>
+                    A good resume is only one part of your job search.
+                    Career Catalog can also assist you with your job portal
+                    profile and job application process.
+                </p>
 
-<div class="audience-card">
-<h3>Freshers & Students</h3>
-<p>Starting your career? We help present your education, projects, internships, skills and certifications in a professional resume.</p>
-</div>
+                <div class="assistance-list">
+                    <div><span>✓</span> Job portal profile setup and improvement</div>
+                    <div><span>✓</span> Resume upload and profile optimisation</div>
+                    <div><span>✓</span> Job search and relevant vacancy guidance</div>
+                    <div><span>✓</span> Job application assistance</div>
+                    <div><span>✓</span> Interview preparation guidance</div>
+                </div>
+            </div>
 
-<div class="audience-card">
-<h3>Working Professionals</h3>
-<p>Looking for a new job? We help organise your work experience, achievements and skills into a better resume.</p>
-</div>
+            <div class="assistance-box">
+                <h3>Take the Next Step</h3>
+                <p>
+                    Tell us about your requirements.
+                    Our team can explain the available resume
+                    and job search assistance services.
+                </p>
 
-<div class="audience-card">
-<h3>Experienced Professionals</h3>
-<p>Have several years of experience? We help highlight your responsibilities, achievements and career growth.</p>
-</div>
-
-</div>
-</div>
+                <button onclick="openModal('Job Portal & Interview Assistance')">
+                    Get Job Assistance →
+                </button>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- PROCESS -->
 
-<section class="process" id="process">
-<div class="wrap">
+<section class="process-section" id="process">
+    <div class="container">
+        <div class="section-heading">
+            <div class="small-label">Simple Process</div>
+            <h2>How It Works</h2>
+            <p>Getting started with your professional resume is simple.</p>
+        </div>
 
-<div class="heading">
-<small>HOW IT WORKS</small>
-<h2>Get Your Resume Made in 3 Simple Steps.</h2>
-<p>Choose your design and connect with our team. We will take care of your resume.</p>
-</div>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-number">01</div>
+                <h3>Choose a Resume Design</h3>
+                <p>Explore our resume collection and select a design that suits your professional profile.</p>
+            </div>
 
-<div class="steps">
+            <div class="process-card">
+                <div class="process-number">02</div>
+                <h3>Connect With Us</h3>
+                <p>Share your contact details. Our team will get in touch to understand your requirements.</p>
+            </div>
 
-<div class="step">
-<b>01</b>
-<h3>Choose a Resume Design</h3>
-<p>Explore our resume samples and select the design you like.</p>
-</div>
-
-<div class="step">
-<b>02</b>
-<h3>Connect With Us</h3>
-<p>Share your name and contact number. Our team will get in touch with you.</p>
-</div>
-
-<div class="step">
-<b>03</b>
-<h3>Get Your Resume</h3>
-<p>We will create your personalised resume based on your details and career goals.</p>
-</div>
-
-</div>
-</div>
+            <div class="process-card">
+                <div class="process-number">03</div>
+                <h3>Get Your Professional Resume</h3>
+                <p>We will discuss your requirements and help create your professionally written resume.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- FINAL CTA -->
-
-<section class="cta">
-<div class="wrap">
-<div class="eyebrow">CAREER CATALOG</div>
-<h2>Ready to Get Your Resume Made?</h2>
-<p>Let us help you create a resume that presents you professionally.</p>
-<button class="btn gold" data-contact>Get My Resume →</button>
-</div>
-</section>
-
-<!-- FAQ -->
-
-<section class="faq">
-<div class="wrap">
-
-<div class="heading">
-<small>YOUR QUESTIONS</small>
-<h2>Frequently Asked Questions.</h2>
-<p>Here are answers to common questions about our resume services.</p>
-</div>
-
-<div class="faq-list">
-
-<details>
-<summary>What is a professional resume?</summary>
-<p>A professional resume is a document that presents your education, work experience, skills, achievements and qualifications to employers.</p>
-</details>
-
-<details>
-<summary>What is an ATS-friendly resume?</summary>
-<p>ATS stands for Applicant Tracking System. It is software many companies use to organise and review job applications. An ATS-friendly resume uses clear headings, readable formatting and relevant job-related keywords.</p>
-</details>
-
-<details>
-<summary>Can you make a resume for freshers?</summary>
-<p>Yes. We create resumes for freshers using their education, internships, projects, skills, certifications and achievements.</p>
-</details>
-
-<details>
-<summary>Can you improve my existing resume?</summary>
-<p>Yes. We can help rewrite and improve your existing resume to make it clearer, more professional and relevant to your target job.</p>
-</details>
-
-<details>
-<summary>Do you create resumes for experienced professionals?</summary>
-<p>Yes. We create resumes for professionals across different industries, experience levels and job roles.</p>
-</details>
-
-<details>
-<summary>How do I order a resume?</summary>
-<p>Select a design from our collection, click on it and share your contact details. Our team will contact you to discuss your requirements.</p>
-</details>
-
-<details>
-<summary>Will you write the resume for me?</summary>
-<p>Yes. Our team will create your resume based on the information and documents you share with us.</p>
-</details>
-
-</div>
-</div>
-</section>
-
-<!-- FOOTER -->
+</main>
 
 <footer>
-<div class="wrap footer">
-<div>© 2026 Career Catalog. All rights reserved.</div>
-<div>
-<a href="https://careercatalog.in/company/privacy.html">Privacy</a>
-&nbsp; · &nbsp;
-<a href="https://careercatalog.in/company/terms.html">Terms</a>
-&nbsp; · &nbsp;
-<a href="https://careercatalog.in/company/about.html">About</a>
-</div>
-</div>
+    <div class="container footer-inner">
+        <div class="logo">CAREER<span> CATALOG</span></div>
+        <p>Professional Resume Writing & Career Assistance</p>
+        <p>© 2026 Career Catalog. All rights reserved.</p>
+    </div>
 </footer>
 
-<!-- ENQUIRY FORM -->
+<!-- CONTACT MODAL -->
 
-<div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-overlay" id="contactModal" onclick="overlayClose(event)">
+    <div class="modal">
+        <button class="close-modal" onclick="closeModal()">×</button>
 
-<div class="modal-box">
+        <div class="modal-label">CAREER CATALOG</div>
+        <h2>Let's Discuss Your Requirements.</h2>
 
-<button class="close" id="closeModal" type="button">×</button>
+        <p class="modal-description">
+            Share your contact details. Our team will connect with you
+            to discuss the service and next steps.
+        </p>
 
-<form id="contactForm">
+        <div class="selected-service" id="selectedService">
+            Selected Service: Professional Resume Writing
+        </div>
 
-<small>CAREER CATALOG · RESUME SERVICES</small>
+        <form id="leadForm">
+            <input type="hidden" name="access_key" value="317b85e0-743a-46e4-9749-dcbebc5aaa4f">
+            <input type="hidden" name="subject" value="New Career Catalog Enquiry">
+            <input type="hidden" name="from_name" value="Career Catalog Website">
+            <input type="hidden" name="selected_service" id="serviceInput">
 
-<h2 id="modalTitle">Get Your Resume Made.</h2>
+            <div class="form-group">
+                <label for="customerName">Your Name *</label>
+                <input type="text" id="customerName" name="name" placeholder="Enter your full name" required>
+            </div>
 
-<p class="modal-description" id="modalDescription">
-Share your details and our team will contact you.
-</p>
+            <div class="form-group">
+                <label for="customerPhone">Mobile Number *</label>
+                <input type="tel" id="customerPhone" name="phone" placeholder="Enter your mobile number" pattern="[0-9+\s()-]{10,18}" required>
+            </div>
 
-<div class="selected" id="selectedDesign">
-Selected Service: Resume Creation
-</div>
+            <div class="form-group">
+                <label for="customerEmail">Email Address (Optional)</label>
+                <input type="email" id="customerEmail" name="email" placeholder="Enter your email address">
+            </div>
 
-<label for="customerName">Your Name *</label>
-<input id="customerName" name="name" type="text" placeholder="Enter your name" required>
+            <button class="submit-btn" type="submit" id="submitButton">
+                Submit Enquiry →
+            </button>
 
-<label for="customerPhone">Phone / WhatsApp Number *</label>
-<input id="customerPhone" name="phone" type="tel" placeholder="Enter your phone number" required>
+            <div class="success-message" id="successMessage">
+                Thank you! Your enquiry has been submitted successfully.
+                Our team will contact you.
+            </div>
 
-<label for="customerEmail">Email Address (Optional)</label>
-<input id="customerEmail" name="email" type="email" placeholder="Enter your email">
-
-<button class="btn submit" id="submitBtn" type="submit">
-Request a Callback →
-</button>
-
-<div class="error" id="formError"></div>
-
-<p class="note">Your contact details will only be used to respond to your enquiry.</p>
-
-</form>
-
-<div class="success" id="successMessage">
-<h3>Thank You!</h3>
-<p>Your resume enquiry has been received. Our team will contact you shortly.</p>
-<button class="btn" id="doneBtn" type="button">Done</button>
-</div>
-
-</div>
+            <p class="form-note">
+                Your details will only be used to contact you regarding your enquiry.
+            </p>
+        </form>
+    </div>
 </div>
 
 <script>
+const modal = document.getElementById('contactModal');
+const serviceDisplay = document.getElementById('selectedService');
+const serviceInput = document.getElementById('serviceInput');
 
-/* WEB3FORMS */
-
-const ACCESS_KEY = "317b85e0-743a-46e4-9749-dcbebc5aaa4f";
-
-const modal = document.getElementById("contactModal");
-const form = document.getElementById("contactForm");
-const errorBox = document.getElementById("formError");
-const successBox = document.getElementById("successMessage");
-const submitBtn = document.getElementById("submitBtn");
-
-let selectedTemplate = "General Resume Enquiry";
-let previousFocus = null;
-
-/* OPEN FORM */
-
-function openContact(template = "General Resume Enquiry"){
-
-selectedTemplate = template;
-previousFocus = document.activeElement;
-
-document.getElementById("selectedDesign").textContent =
-"Selected Resume: " + template;
-
-document.getElementById("modalTitle").textContent =
-template === "General Resume Enquiry"
-? "Get Your Resume Made."
-: "Get This Resume Design.";
-
-document.getElementById("modalDescription").textContent =
-template === "General Resume Enquiry"
-? "Enter your details and our team will contact you about your resume."
-: "You selected " + template + ". Share your details and our team will help create your resume.";
-
-modal.classList.add("active");
-document.body.style.overflow = "hidden";
-
-form.style.display = "block";
-successBox.style.display = "none";
-errorBox.style.display = "none";
-
-setTimeout(()=>{
-document.getElementById("customerName").focus();
-},100);
-
+function openModal(service) {
+    serviceDisplay.textContent = 'Selected Service: ' + service;
+    serviceInput.value = service;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
 
-/* CLOSE FORM */
-
-function closeContact(){
-
-modal.classList.remove("active");
-document.body.style.overflow = "";
-
-if(previousFocus) previousFocus.focus();
-
+function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
-/* ALL CONTACT BUTTONS */
+function overlayClose(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+}
 
-document.querySelectorAll("[data-contact]").forEach(button=>{
-button.addEventListener("click",()=>openContact());
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') closeModal();
 });
 
-/* TEMPLATE BUTTONS */
+document.getElementById('leadForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-document.querySelectorAll("[data-template]").forEach(card=>{
-card.addEventListener("click",()=>{
-openContact(card.dataset.template);
+    const form = event.target;
+    const button = document.getElementById('submitButton');
+    const success = document.getElementById('successMessage');
+
+    button.disabled = true;
+    button.textContent = 'Submitting...';
+
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: new FormData(form)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+            success.style.display = 'block';
+            form.reset();
+            button.textContent = 'Enquiry Submitted ✓';
+        } else {
+            throw new Error(result.message || 'Submission failed');
+        }
+    } catch (error) {
+        alert('Unable to submit your enquiry right now. Please try again.');
+        button.disabled = false;
+        button.textContent = 'Submit Enquiry →';
+    }
 });
-});
-
-/* CLOSE EVENTS */
-
-document.getElementById("closeModal").onclick = closeContact;
-document.getElementById("doneBtn").onclick = closeContact;
-
-modal.addEventListener("click",event=>{
-if(event.target===modal) closeContact();
-});
-
-document.addEventListener("keydown",event=>{
-if(event.key==="Escape" && modal.classList.contains("active")){
-closeContact();
-}
-});
-
-/* SUBMIT FORM */
-
-form.addEventListener("submit",async event=>{
-
-event.preventDefault();
-
-errorBox.style.display="none";
-
-const name=document.getElementById("customerName").value.trim();
-const phone=document.getElementById("customerPhone").value.trim();
-const email=document.getElementById("customerEmail").value.trim();
-
-if(name.length<2){
-showError("Please enter your name.");
-return;
-}
-
-const digits=phone.replace(/\D/g,"");
-
-if(digits.length<10 || digits.length>13){
-showError("Please enter a valid phone number.");
-return;
-}
-
-if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-showError("Please enter a valid email address.");
-return;
-}
-
-submitBtn.disabled=true;
-submitBtn.textContent="Sending...";
-
-try{
-
-const response=await fetch("https://api.web3forms.com/submit",{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json",
-"Accept":"application/json"
-},
-
-body:JSON.stringify({
-
-access_key:ACCESS_KEY,
-
-subject:"New Resume Enquiry - "+name,
-
-name:name,
-
-phone:phone,
-
-email:email || "Not provided",
-
-selected_resume:selectedTemplate,
-
-service:"Professional Resume Writing",
-
-from_name:"Career Catalog Website"
-
-})
-
-});
-
-const result=await response.json();
-
-if(!response.ok || !result.success){
-throw new Error("Submission failed");
-}
-
-form.style.display="none";
-successBox.style.display="block";
-form.reset();
-
-}catch(error){
-
-showError("Unable to send your request. Please try again.");
-
-}finally{
-
-submitBtn.disabled=false;
-submitBtn.textContent="Request a Callback →";
-
-}
-
-});
-
-/* ERROR MESSAGE */
-
-function showError(message){
-
-errorBox.textContent=message;
-errorBox.style.display="block";
-
-}
-
 </script>
 
 </body>
