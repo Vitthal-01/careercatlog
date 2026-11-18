@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Career Catalog | Resume creation and job-search strategy. No interview call, full refund</title>
-<meta name="description" content="Freshers and job hunters: get an ATS-ready resume and a strategy to land interview calls with a 1:1 career call. No interview call, we refund your money.">
+<meta name="description" content="Freshers and job hunters: get an ATS-ready resume and a strategy to land interview calls with a 1:1 career call. No interview call, we refund your money. Free resume builder included.">
 <meta name="theme-color" content="#FFE7D4">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%2312203F%22/><text x=%2250%22 y=%2272%22 font-size=%2262%22 font-family=%22Arial%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23FFF6EA%22>C</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Lora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ===== CAREER CATALOG | NEW UI THEME (peach + royal blue) =====
    Change the colours here once and the whole page updates. */
@@ -57,6 +57,7 @@ button{font:inherit}
 .btn-line:hover{background:#fff}
 .btn svg{width:20px;height:20px;flex:none}
 .btn.sm{padding:12px 24px;font-size:15px}
+.btn:disabled{opacity:.6;cursor:wait;transform:none}
 
 /* nav */
 nav{position:sticky;top:0;z-index:30;background:rgba(255,240,230,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(43,61,160,.08)}
@@ -173,8 +174,8 @@ footer a:hover{color:var(--blue);text-decoration:underline}
 .box .meta{display:inline-flex;align-items:center;gap:8px;background:var(--lavender);color:var(--blue);border-radius:999px;padding:6px 16px;font:700 14px var(--head);margin:10px 0 18px}
 .box p.lead2{color:var(--mute);font-size:15.5px;margin-bottom:6px}
 label{display:block;font:700 14px var(--head);margin:18px 0 8px;color:var(--navy)}
-input{width:100%;padding:15px 18px;border-radius:16px;border:1.5px solid var(--line);background:var(--lavender);color:var(--ink);font:500 16px var(--body)}
-input:focus{outline:none;border-color:var(--blue);background:#fff}
+input,textarea{width:100%;padding:15px 18px;border-radius:16px;border:1.5px solid var(--line);background:var(--lavender);color:var(--ink);font:500 16px var(--body)}
+input:focus,textarea:focus{outline:none;border-color:var(--blue);background:#fff}
 .pick{display:flex;flex-wrap:wrap;gap:8px}
 .pick button{padding:11px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--navy);font:700 14.5px var(--head);cursor:pointer;transition:.15s}
 .pick button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
@@ -188,6 +189,97 @@ input:focus{outline:none;border-color:var(--blue);background:#fff}
 .done .ic svg{width:30px;height:30px}
 .done p{color:var(--mute);margin:10px 0 24px}
 
+/* ===== FREE RESUME BUILDER (page UI) ===== */
+.free-tag{display:inline-block;background:var(--blue);color:#fff;border-radius:999px;padding:7px 18px;font:700 14px var(--head);margin-bottom:18px}
+.bgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+.bform{background:#fff;border-radius:var(--r-md);padding:30px;box-shadow:var(--shadow)}
+.bform h3{font-size:20px;font-weight:800;color:var(--navy);margin:26px 0 4px;letter-spacing:-.02em}
+.bform h3:first-child{margin-top:0}
+.bform label{margin:14px 0 6px;font-size:13.5px}
+.bform input,.bform textarea{padding:12px 15px;border-radius:14px;font-size:15px}
+.bform textarea{resize:vertical;min-height:84px;line-height:1.5}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hint{font-size:13px;color:var(--mute);margin-top:4px;line-height:1.45}
+.tpls{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:6px}
+.tpl{border:2px solid var(--line);background:#fff;border-radius:18px;padding:10px;cursor:pointer;text-align:left;transition:.15s;color:var(--navy)}
+.tpl:hover{border-color:var(--blue)}
+.tpl[aria-pressed="true"]{border-color:var(--blue);box-shadow:0 0 0 3px rgba(43,61,160,.15)}
+.tpl svg{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line);margin-bottom:8px}
+.tpl b{display:block;font:800 14px var(--head)}
+.tpl small{display:block;font:600 12px var(--body);color:var(--mute);line-height:1.3}
+.entry{border:1.5px solid var(--line);border-radius:18px;padding:6px 16px 16px;margin-top:12px;background:#FBFBFF;position:relative}
+.entry .rm{position:absolute;top:8px;right:8px;border:0;background:var(--lavender);color:var(--blue);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;line-height:1}
+.addbtn{margin-top:12px;border:2px dashed var(--blue);background:transparent;color:var(--blue);border-radius:999px;padding:9px 18px;font:700 14px var(--head);cursor:pointer}
+.addbtn:hover{background:var(--lavender)}
+.bactions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.bactions .btn{flex:1;min-width:170px;padding:15px 22px}
+.sample{border:0;background:none;color:var(--blue);font:700 14px var(--head);cursor:pointer;text-decoration:underline;padding:0;margin-top:14px}
+.bprev{position:sticky;top:92px}
+.pvlabel{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font:700 14px var(--head);color:var(--mute)}
+.pvbox{background:#fff;border-radius:18px;box-shadow:var(--shadow);overflow:hidden;position:relative;border:1px solid var(--line)}
+.pvbox .r{transform-origin:top left;position:absolute;top:0;left:0}
+.warn{display:none;margin-top:10px;background:#FFF4E5;color:#8A4B00;border-radius:14px;padding:10px 14px;font:600 13.5px var(--body)}
+.berr{display:none;margin-top:12px;color:#B42318;font:600 14px var(--body)}
+.upsell{margin-top:22px;background:var(--blue);color:#fff;border-radius:22px;padding:20px 22px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.upsell p{font:600 15px/1.45 var(--body);max-width:360px}
+.upsell .btn{background:#fff;color:var(--blue);padding:12px 22px;font-size:15px}
+#printRoot{display:none}
+
+/* ===== RESUME DOCUMENT (A4 = 794 x 1123 px) ===== */
+.r{width:794px;min-height:1123px;background:#fff;color:#1c1c1c;font:400 13px/1.5 'Inter',Arial,sans-serif;text-align:left;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.r *{box-sizing:border-box}
+.r h1,.r h2,.r h3{margin:0;letter-spacing:0}
+.r ul{margin:4px 0 0;padding-left:17px}
+.r li{margin:0 0 2px;padding:0}
+.r .it{margin-bottom:11px;break-inside:avoid;page-break-inside:avoid}
+.r .row{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.r .row b{font-weight:700}
+.r .dt{white-space:nowrap;font-size:12px;color:#555}
+.r .s2{font-size:12.5px;color:#444}
+.r .sm{font-size:12.5px}
+
+/* Template 1 : Classic (ATS-safe, single column, serif) */
+.t1{padding:46px 54px;font-family:'Lora',Georgia,'Times New Roman',serif;font-size:13px;color:#111}
+.t1 header{text-align:center;padding-bottom:14px;border-bottom:2px solid #111;margin-bottom:6px}
+.t1 h1{font-size:32px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.t1 .ti{font-size:14px;margin-top:3px;color:#333;font-style:italic}
+.t1 .ct{font-size:12px;margin-top:8px;color:#333}
+.t1 .s{margin-top:16px}
+.t1 h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;border-bottom:1px solid #999;padding-bottom:3px;margin-bottom:9px}
+.t1 .s2{font-style:italic}
+.t1 .dt{color:#333;font-style:italic}
+
+/* Template 2 : Modern sidebar */
+.t2{display:grid;grid-template-columns:250px 1fr;background:linear-gradient(to right,#1B2D55 250px,#fff 250px);font-family:'Inter',Arial,sans-serif}
+.t2 aside{padding:44px 26px;color:#fff}
+.t2 aside h1{font-size:27px;line-height:1.12;font-weight:800;margin-bottom:6px;word-break:break-word}
+.t2 aside .ti{font-size:13px;color:#FFD9BD;font-weight:600;margin-bottom:6px}
+.t2 aside h2{font-size:11.5px;text-transform:uppercase;letter-spacing:1.8px;color:#FFD9BD;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:5px;margin:24px 0 10px;font-weight:700}
+.t2 aside .ci{font-size:12px;margin-bottom:6px;word-break:break-word;color:#E8ECFA}
+.t2 aside .sk{display:block;font-size:12.5px;margin-bottom:5px;color:#fff}
+.t2 aside .it{margin-bottom:10px}
+.t2 aside .row{display:block}
+.t2 aside .dt{color:#C9D1EE;display:block;font-size:11.5px}
+.t2 aside .s2{color:#E8ECFA;font-size:12px}
+.t2 main{padding:44px 38px 44px 34px}
+.t2 main .s{margin-bottom:18px}
+.t2 main h2{font-size:14px;text-transform:uppercase;letter-spacing:1.6px;color:#2B3DA0;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.t2 main h2::after{content:"";flex:1;height:2px;background:#E0E3F3}
+
+/* Template 3 : Executive banner */
+.t3{font-family:'Inter',Arial,sans-serif}
+.t3 header{background:#12203F;color:#fff;padding:40px 52px 28px;border-bottom:6px solid #E8A87C}
+.t3 h1{font-size:36px;font-weight:800;letter-spacing:-.5px;line-height:1.1}
+.t3 .ti{font-size:15px;color:#FFD9BD;font-weight:600;margin-top:5px}
+.t3 .ct{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:14px;font-size:12px;color:#DDE3F5}
+.t3 .body{padding:26px 52px 44px}
+.t3 .s{margin-bottom:18px}
+.t3 h2{font-size:13px;text-transform:uppercase;letter-spacing:1.6px;font-weight:800;color:#12203F;margin-bottom:10px;padding-left:11px;border-left:5px solid #E8A87C;line-height:1.2}
+.t3 .it{padding-left:14px;border-left:2px solid #E0E3F3;margin-left:2px}
+.t3 .s2{color:#2B3DA0;font-weight:600}
+.t3 .chips{display:flex;flex-wrap:wrap;gap:7px}
+.t3 .chips span{background:#EEF0FF;color:#12203F;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600}
+
 @media(max-width:900px){
   .links a:not(.btn){display:none}
   .hero{padding:56px 0 64px}
@@ -196,6 +288,8 @@ input:focus{outline:none;border-color:var(--blue);background:#fff}
   .grid3,.steps{grid-template-columns:1fr}
   section{padding:72px 0}
   .final{padding:60px 24px;border-radius:30px}
+  .bgrid{grid-template-columns:1fr}
+  .bprev{position:static}
 }
 @media(max-width:520px){
   body{font-size:16px}
@@ -209,12 +303,24 @@ input:focus{outline:none;border-color:var(--blue);background:#fff}
   .cta-row .btn{width:100%}
   summary{font-size:19px}
   details p{padding-right:0}
+  .bform{padding:22px 18px}
+  .two{grid-template-columns:1fr}
+  .tpl small{display:none}
   .bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:25;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));gap:12px;align-items:center;border-top:1px solid var(--line);box-shadow:0 -10px 30px rgba(43,61,160,.1)}
   .bar div{color:var(--navy);font:700 14px var(--head);line-height:1.2}
   .bar div b{display:block;color:var(--blue);font-size:22px}
   .bar .btn{flex:1}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* print: only the resume */
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff!important}
+  body>*:not(#printRoot){display:none!important}
+  #printRoot{display:block!important}
+  #printRoot .r{transform:none!important;position:static!important}
+}
 </style>
 </head>
 <body>
@@ -222,6 +328,7 @@ input:focus{outline:none;border-color:var(--blue);background:#fff}
 <nav><div class="wrap">
   <a class="logo" href="#top" aria-label="Career Catalog home">Career Catalog<i></i></a>
   <div class="links">
+    <a href="#builder">Free resume builder</a>
     <a href="#offer">What you get</a>
     <a href="#refund">Refund promise</a>
     <a href="#how">How it works</a>
@@ -239,7 +346,7 @@ input:focus{outline:none;border-color:var(--blue);background:#fff}
       <button class="btn btn-amber" data-book>Book a call
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </button>
-      <a class="btn btn-line" href="#offer">See what you get</a>
+      <a class="btn btn-line" href="#builder">Build a free resume</a>
     </div>
     <div class="trust">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Refund if no interview call</span>
@@ -264,6 +371,92 @@ input:focus{outline:none;border-color:var(--blue);background:#fff}
     <div class="guarantee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>No interview call? We refund your money.</div>
   </aside>
 </div></header>
+
+<!-- ===================== FREE RESUME BUILDER ===================== -->
+<section id="builder" class="paper"><div class="wrap">
+  <span class="free-tag">100% free · No sign-up</span>
+  <h2>Build your resume free. Download in one click.</h2>
+  <p class="sub">Fill in your details, pick one of three professional templates and download your resume as a PDF. Your data stays in your browser and is never uploaded.</p>
+
+  <div class="bgrid">
+    <!-- FORM -->
+    <div class="bform" id="bform">
+      <h3>1. Choose a template</h3>
+      <div class="tpls" id="tpls">
+        <button type="button" class="tpl" data-t="t1" aria-pressed="true">
+          <svg viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="150" fill="#fff"/><rect x="30" y="12" width="60" height="7" fill="#111"/><rect x="40" y="23" width="40" height="3" fill="#888"/><rect x="12" y="32" width="96" height="1.5" fill="#111"/><rect x="12" y="42" width="30" height="3" fill="#111"/><rect x="12" y="48" width="96" height="1" fill="#999"/><rect x="12" y="54" width="96" height="2.5" fill="#ccc"/><rect x="12" y="60" width="80" height="2.5" fill="#ccc"/><rect x="12" y="72" width="30" height="3" fill="#111"/><rect x="12" y="78" width="96" height="1" fill="#999"/><rect x="12" y="84" width="96" height="2.5" fill="#ccc"/><rect x="12" y="90" width="90" height="2.5" fill="#ccc"/><rect x="12" y="96" width="70" height="2.5" fill="#ccc"/><rect x="12" y="108" width="30" height="3" fill="#111"/><rect x="12" y="114" width="96" height="1" fill="#999"/><rect x="12" y="120" width="96" height="2.5" fill="#ccc"/></svg>
+          <b>Classic</b><small>Single column, ATS-safe</small>
+        </button>
+        <button type="button" class="tpl" data-t="t2" aria-pressed="false">
+          <svg viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="150" fill="#fff"/><rect width="42" height="150" fill="#1B2D55"/><rect x="7" y="14" width="26" height="6" fill="#fff"/><rect x="7" y="24" width="20" height="3" fill="#FFD9BD"/><rect x="7" y="40" width="26" height="1" fill="#6B7AA8"/><rect x="7" y="47" width="24" height="2.5" fill="#9AA6CC"/><rect x="7" y="53" width="20" height="2.5" fill="#9AA6CC"/><rect x="7" y="70" width="26" height="1" fill="#6B7AA8"/><rect x="7" y="77" width="22" height="2.5" fill="#9AA6CC"/><rect x="50" y="14" width="30" height="4" fill="#2B3DA0"/><rect x="50" y="24" width="62" height="2.5" fill="#ccc"/><rect x="50" y="30" width="56" height="2.5" fill="#ccc"/><rect x="50" y="46" width="30" height="4" fill="#2B3DA0"/><rect x="50" y="56" width="62" height="2.5" fill="#ccc"/><rect x="50" y="62" width="58" height="2.5" fill="#ccc"/><rect x="50" y="68" width="50" height="2.5" fill="#ccc"/><rect x="50" y="84" width="30" height="4" fill="#2B3DA0"/><rect x="50" y="94" width="62" height="2.5" fill="#ccc"/></svg>
+          <b>Modern</b><small>Blue sidebar layout</small>
+        </button>
+        <button type="button" class="tpl" data-t="t3" aria-pressed="false">
+          <svg viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="150" fill="#fff"/><rect width="120" height="38" fill="#12203F"/><rect y="38" width="120" height="3" fill="#E8A87C"/><rect x="12" y="10" width="56" height="8" fill="#fff"/><rect x="12" y="22" width="34" height="3" fill="#FFD9BD"/><rect x="12" y="29" width="80" height="2" fill="#9AA6CC"/><rect x="12" y="52" width="2.5" height="8" fill="#E8A87C"/><rect x="18" y="54" width="30" height="3.5" fill="#12203F"/><rect x="12" y="66" width="96" height="2.5" fill="#ccc"/><rect x="12" y="72" width="88" height="2.5" fill="#ccc"/><rect x="12" y="86" width="2.5" height="8" fill="#E8A87C"/><rect x="18" y="88" width="30" height="3.5" fill="#12203F"/><rect x="12" y="100" width="20" height="8" rx="4" fill="#EEF0FF"/><rect x="36" y="100" width="20" height="8" rx="4" fill="#EEF0FF"/><rect x="60" y="100" width="20" height="8" rx="4" fill="#EEF0FF"/></svg>
+          <b>Executive</b><small>Bold header, accent line</small>
+        </button>
+      </div>
+
+      <h3>2. Personal details</h3>
+      <div class="two">
+        <div><label for="f_name">Full name *</label><input id="f_name" data-f="name" autocomplete="name" placeholder="e.g. Rahul Sharma"></div>
+        <div><label for="f_title">Target role / headline</label><input id="f_title" data-f="title" placeholder="e.g. Software Engineer"></div>
+        <div><label for="f_email">Email</label><input id="f_email" data-f="email" type="email" autocomplete="email" placeholder="you@email.com"></div>
+        <div><label for="f_phone">Phone</label><input id="f_phone" data-f="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210"></div>
+        <div><label for="f_loc">City</label><input id="f_loc" data-f="loc" placeholder="Pune, Maharashtra"></div>
+        <div><label for="f_link">LinkedIn / Portfolio</label><input id="f_link" data-f="link" placeholder="linkedin.com/in/yourname"></div>
+      </div>
+
+      <h3>3. Summary</h3>
+      <label for="f_summary" class="sr" style="margin-top:8px">Professional summary</label>
+      <textarea id="f_summary" data-f="summary" placeholder="2-3 lines: who you are, what you're good at, what role you want."></textarea>
+
+      <h3>4. Education</h3>
+      <div id="edu"></div>
+      <button type="button" class="addbtn" data-add="edu">+ Add education</button>
+
+      <h3>5. Work experience / internships</h3>
+      <p class="hint">Freshers: add internships or part-time work. One bullet point per line. Start with a verb and add a number.</p>
+      <div id="exp"></div>
+      <button type="button" class="addbtn" data-add="exp">+ Add experience</button>
+
+      <h3>6. Projects</h3>
+      <div id="proj"></div>
+      <button type="button" class="addbtn" data-add="proj">+ Add project</button>
+
+      <h3>7. Skills</h3>
+      <label for="f_skills" style="margin-top:8px">Separate with commas</label>
+      <textarea id="f_skills" data-f="skills" placeholder="Python, SQL, Excel, Communication, Teamwork"></textarea>
+
+      <h3>8. Certifications / achievements</h3>
+      <label for="f_extras" style="margin-top:8px">One per line (optional)</label>
+      <textarea id="f_extras" data-f="extras" placeholder="Google Data Analytics Certificate&#10;Winner, Smart India Hackathon 2025"></textarea>
+
+      <button type="button" class="sample" id="sampleBtn">Fill with sample data</button>
+
+      <div class="bactions">
+        <button type="button" class="btn btn-amber" id="dlBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+          Download PDF
+        </button>
+        <button type="button" class="btn btn-line" id="prBtn">Save as text PDF (ATS)</button>
+      </div>
+      <p class="hint" style="margin-top:10px">"Download PDF" saves instantly. "Save as text PDF" opens your browser's print window: choose <b>Save as PDF</b> to get selectable text that job portals can read.</p>
+      <div class="berr" id="berr" role="alert"></div>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="bprev">
+      <div class="pvlabel"><span>Live preview</span><span id="tplName">Classic</span></div>
+      <div class="pvbox" id="pvbox"><div id="resume" class="r"></div></div>
+      <div class="warn" id="warn">Your resume runs onto a second page. For best results with recruiters, trim it to one page.</div>
+      <div class="upsell">
+        <p>Want an expert to review your resume and build a plan to get interview calls?</p>
+        <button class="btn" data-book>Book a 1:1 call</button>
+      </div>
+    </div>
+  </div>
+</div></section>
 
 <section id="offer"><div class="wrap">
   <h2>Everything you need to get interview calls.</h2>
@@ -331,6 +524,7 @@ input:focus{outline:none;border-color:var(--blue);background:#fff}
   <h2>Questions, answered.</h2>
   <p class="sub">Still unsure? Book the call and ask us anything.</p>
   <div class="faq">
+    <details><summary>Is the resume builder really free?</summary><p>Yes. Fill in your details, choose a template and download your PDF. No sign-up and no payment. Your details stay in your browser and are not uploaded.</p></details>
     <details><summary>What happens on the call?</summary><p>A 1:1 call with a career strategist: a resume audit, a job-search strategy to get interview calls and a mock interview.</p></details>
     <details><summary>What if I don't get an interview call?</summary><p>We refund your money. Contact us and we'll take care of it.</p></details>
     <details><summary>Who is this for?</summary><p>Fresh graduates, early-career professionals and anyone actively job hunting.</p></details>
@@ -388,6 +582,9 @@ input:focus{outline:none;border-color:var(--blue);background:#fff}
   </div>
 </div>
 
+<div id="printRoot"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
 <script>
 /* ===== SETUP: get a free key at https://web3forms.com (enter your email, key arrives by mail) ===== */
 const ACCESS_KEY="317b85e0-743a-46e4-9749-dcbebc5aaa4f";
@@ -426,6 +623,161 @@ f.addEventListener('submit',async e=>{
   }catch(_){showErr('Could not send. Check your connection and try again.')}
   go.textContent='Request my call';go.disabled=false;
 });
+
+/* ===================== FREE RESUME BUILDER ===================== */
+(function(){
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  const pvbox=$('#pvbox'), warn=$('#warn'), berr=$('#berr');
+  let tpl='t1';
+  const NAMES={t1:'Classic',t2:'Modern',t3:'Executive'};
+
+  /* repeatable blocks */
+  const CFG={
+    edu:{max:3,fields:[['degree','Degree / course','B.Tech in Computer Science'],['school','College / university','Savitribai Phule Pune University'],['year','Year','2022 - 2026'],['score','CGPA / %','8.4 CGPA']],area:null},
+    exp:{max:4,fields:[['role','Job title','Data Analyst Intern'],['company','Company','Acme Analytics, Pune'],['dates','Dates','Jun 2025 - Aug 2025']],area:['points','Bullet points (one per line)','Built a Power BI dashboard used by 40+ managers\nCut weekly reporting time by 35% by automating Excel tasks']},
+    proj:{max:4,fields:[['title','Project name','Sales Forecasting Model'],['tech','Tech used','Python, Pandas, Scikit-learn']],area:['points','What you did (one per line)','Predicted monthly sales with 91% accuracy on 3 years of data']}
+  };
+  function addEntry(key,vals){
+    const c=CFG[key],box=$('#'+key);
+    if(box.children.length>=c.max)return;
+    const d=document.createElement('div');d.className='entry';
+    let h='<button type="button" class="rm" aria-label="Remove">×</button><div class="two">';
+    c.fields.forEach(([k,l,p])=>{h+=`<div><label>${l}</label><input data-k="${k}" placeholder="e.g. ${p}"></div>`});
+    h+='</div>';
+    if(c.area){h+=`<label>${c.area[1]}</label><textarea data-k="${c.area[0]}" placeholder="${c.area[2].replace(/\n/g,'&#10;')}"></textarea>`}
+    d.innerHTML=h;box.appendChild(d);
+    if(vals)d.querySelectorAll('[data-k]').forEach(i=>i.value=vals[i.dataset.k]||'');
+    d.querySelector('.rm').onclick=()=>{d.remove();render()};
+    render();
+  }
+  $$('[data-add]').forEach(b=>b.onclick=()=>addEntry(b.dataset.add));
+
+  /* read form */
+  function entries(key){return $$('#'+key+' .entry').map(e=>{const o={};e.querySelectorAll('[data-k]').forEach(i=>o[i.dataset.k]=i.value.trim());return o})}
+  function collect(){
+    const d={};$$('[data-f]').forEach(i=>d[i.dataset.f]=i.value.trim());
+    d.edu=entries('edu');d.exp=entries('exp');d.proj=entries('proj');return d;
+  }
+  const isEmpty=d=>!['name','title','email','phone','loc','link','summary','skills','extras'].some(k=>d[k])&&![...d.edu,...d.exp,...d.proj].some(o=>Object.values(o).some(Boolean));
+
+  const SAMPLE={name:'Rahul Sharma',title:'Data Analyst',email:'rahul.sharma@email.com',phone:'+91 98765 43210',loc:'Pune, Maharashtra',link:'linkedin.com/in/rahulsharma',
+    summary:'Final-year B.Tech graduate with hands-on experience in SQL, Python and Power BI. Built dashboards and models that turned raw data into decisions for business teams. Looking for a Data Analyst role.',
+    skills:'Python, SQL, Power BI, Excel, Pandas, Data Visualisation, Statistics, Communication',
+    extras:'Google Data Analytics Professional Certificate\nWinner, Smart India Hackathon 2025 (college round)',
+    edu:[{degree:'B.Tech in Computer Science',school:'Savitribai Phule Pune University',year:'2022 - 2026',score:'8.4 CGPA'},{degree:'Class XII (Science)',school:'Fergusson College, Pune',year:'2022',score:'91%'}],
+    exp:[{role:'Data Analyst Intern',company:'Acme Analytics, Pune',dates:'Jun 2025 - Aug 2025',points:'Built a Power BI dashboard used by 40+ managers to track sales\nAutomated weekly Excel reports with Python, cutting effort by 35%\nCleaned and analysed 2M+ rows of customer data using SQL'}],
+    proj:[{title:'Sales Forecasting Model',tech:'Python, Pandas, Scikit-learn',points:'Predicted monthly sales with 91% accuracy on 3 years of data\nPresented findings to a panel of 5 faculty members'}]};
+
+  /* helpers */
+  const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const lines=s=>(s||'').split('\n').map(x=>x.trim().replace(/^[•\-\*]\s*/,'')).filter(Boolean);
+  const ul=s=>{const l=lines(s);return l.length?'<ul>'+l.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':''};
+  const sec=(t,b)=>b?`<section class="s"><h2>${t}</h2>${b}</section>`:'';
+  const skills=d=>(d.skills||'').split(/[,\n]/).map(x=>x.trim()).filter(Boolean);
+
+  const expH=d=>d.exp.filter(e=>e.role||e.company).map(e=>`<div class="it"><div class="row"><b>${esc(e.role)}</b><span class="dt">${esc(e.dates)}</span></div><div class="s2">${esc(e.company)}</div>${ul(e.points)}</div>`).join('');
+  const eduH=d=>d.edu.filter(e=>e.degree||e.school).map(e=>`<div class="it"><div class="row"><b>${esc(e.degree)}</b><span class="dt">${esc(e.year)}</span></div><div class="s2">${esc(e.school)}${e.score?' · '+esc(e.score):''}</div></div>`).join('');
+  const projH=d=>d.proj.filter(e=>e.title).map(e=>`<div class="it"><div class="row"><b>${esc(e.title)}</b></div>${e.tech?`<div class="s2">${esc(e.tech)}</div>`:''}${ul(e.points)}</div>`).join('');
+  const sumH=d=>d.summary?`<p>${esc(d.summary)}</p>`:'';
+  const extH=d=>ul(d.extras);
+  const contact=d=>[d.email,d.phone,d.loc,d.link].filter(Boolean);
+
+  function t1(d){
+    const sk=skills(d);
+    return `<div class="r t1"><header><h1>${esc(d.name||'Your Name')}</h1>${d.title?`<div class="ti">${esc(d.title)}</div>`:''}<div class="ct">${contact(d).map(esc).join(' &nbsp;|&nbsp; ')}</div></header>`+
+      sec('Professional Summary',sumH(d))+sec('Experience',expH(d))+sec('Education',eduH(d))+sec('Projects',projH(d))+
+      sec('Skills',sk.length?`<p>${sk.map(esc).join(' &nbsp;•&nbsp; ')}</p>`:'')+sec('Certifications &amp; Achievements',extH(d))+'</div>';
+  }
+  function t2(d){
+    const sk=skills(d),ct=contact(d);
+    const side=`<h1>${esc(d.name||'Your Name')}</h1>${d.title?`<div class="ti">${esc(d.title)}</div>`:''}`+
+      (ct.length?`<h2>Contact</h2>${ct.map(c=>`<div class="ci">${esc(c)}</div>`).join('')}`:'')+
+      (sk.length?`<h2>Skills</h2>${sk.map(s=>`<span class="sk">${esc(s)}</span>`).join('')}`:'')+
+      (eduH(d)?`<h2>Education</h2>${eduH(d)}`:'');
+    return `<div class="r t2"><aside>${side}</aside><main>`+sec('Profile',sumH(d))+sec('Experience',expH(d))+sec('Projects',projH(d))+sec('Certifications &amp; Achievements',extH(d))+'</main></div>';
+  }
+  function t3(d){
+    const sk=skills(d);
+    return `<div class="r t3"><header><h1>${esc(d.name||'Your Name')}</h1>${d.title?`<div class="ti">${esc(d.title)}</div>`:''}<div class="ct">${contact(d).map(c=>`<span>${esc(c)}</span>`).join('')}</div></header><div class="body">`+
+      sec('Profile',sumH(d))+sec('Experience',expH(d))+sec('Projects',projH(d))+sec('Education',eduH(d))+
+      sec('Skills',sk.length?`<div class="chips">${sk.map(s=>`<span>${esc(s)}</span>`).join('')}</div>`:'')+sec('Certifications &amp; Achievements',extH(d))+'</div></div>';
+  }
+  const T={t1,t2,t3};
+
+  function html(){const d=collect();return {h:T[tpl](isEmpty(d)?SAMPLE:d),d}}
+
+  function fitNow(n){
+    const w=pvbox.clientWidth,s=w/794;
+    n.style.transform='scale('+s+')';
+    pvbox.style.height=Math.max(n.offsetHeight*s,200)+'px';
+    warn.style.display=n.offsetHeight>1130?'block':'none';
+  }
+  function render(){
+    const holder=document.createElement('div');holder.innerHTML=html().h;
+    const n=holder.firstElementChild;n.id='resume';
+    document.getElementById('resume').replaceWith(n);
+    fitNow(n);
+  }
+  const _render=render;
+
+  /* wire events */
+  document.addEventListener('input',e=>{if(e.target.closest('#bform'))_render()});
+  $$('#tpls .tpl').forEach(b=>b.onclick=()=>{
+    tpl=b.dataset.t;$$('#tpls .tpl').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    $('#tplName').textContent=NAMES[tpl];_render();
+  });
+  window.addEventListener('resize',()=>fitNow($('#resume')));
+
+  $('#sampleBtn').onclick=()=>{
+    $$('[data-f]').forEach(i=>i.value=SAMPLE[i.dataset.f]||'');
+    ['edu','exp','proj'].forEach(k=>{$('#'+k).innerHTML='';SAMPLE[k].forEach(v=>addEntry(k,v))});
+    _render();
+  };
+
+  /* downloads */
+  function need(){
+    const d=collect();
+    if(!d.name){berr.textContent='Enter your full name before downloading.';berr.style.display='block';$('#f_name').focus();return null}
+    berr.style.display='none';return d;
+  }
+  function cleanClone(d){
+    const holder=document.createElement('div');holder.innerHTML=T[tpl](d);
+    const n=holder.firstElementChild;n.style.transform='none';return n;
+  }
+  $('#dlBtn').onclick=async()=>{
+    const d=need();if(!d)return;
+    if(typeof html2pdf==='undefined'){berr.textContent='PDF tool is still loading. Try again in a moment, or use "Save as text PDF".';berr.style.display='block';return}
+    const btn=$('#dlBtn'),txt=btn.innerHTML;btn.disabled=true;btn.textContent='Preparing...';
+    const wrap=document.createElement('div');
+    wrap.style.cssText='position:fixed;left:0;top:0;width:794px;z-index:-1;background:#fff';
+    const n=cleanClone(d);wrap.appendChild(n);document.body.appendChild(wrap);
+    try{
+      await document.fonts.ready;
+      await html2pdf().set({
+        margin:0,
+        filename:(d.name.replace(/[^\w]+/g,'_')||'Resume')+'_Resume.pdf',
+        image:{type:'jpeg',quality:.98},
+        html2canvas:{scale:2,useCORS:true,scrollX:0,scrollY:0,windowWidth:794,backgroundColor:'#ffffff'},
+        jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},
+        pagebreak:{mode:['css','legacy'],avoid:['.it']}
+      }).from(n).save();
+    }catch(e){berr.textContent='Could not create the PDF. Please try "Save as text PDF".';berr.style.display='block'}
+    wrap.remove();btn.disabled=false;btn.innerHTML=txt;
+  };
+  $('#prBtn').onclick=()=>{
+    const d=need();if(!d)return;
+    const pr=$('#printRoot');pr.innerHTML='';pr.appendChild(cleanClone(d));
+    const t=document.title;document.title=(d.name.replace(/[^\w]+/g,'_')||'Resume')+'_Resume';
+    const after=()=>{pr.innerHTML='';document.title=t;window.removeEventListener('afterprint',after)};
+    window.addEventListener('afterprint',after);
+    setTimeout(()=>window.print(),80);
+  };
+
+  /* init */
+  addEntry('edu');addEntry('exp');addEntry('proj');
+  _render();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>fitNow($('#resume')));
+})();
 </script>
 </body>
 </html>
